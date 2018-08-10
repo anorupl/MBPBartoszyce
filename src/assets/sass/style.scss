@@ -1,0 +1,275 @@
+/*--------------------------------------------------------------
+-- setting/
+--------------------------------------------------------------*/
+
+@import "../../../node_modules/susy/sass/susy";
+@import "../../../node_modules/compass-mixins/lib/compass";
+
+@import "setting/function";
+@import "setting/mixin";
+@import "setting/susy";
+@import "setting/variables";
+
+/*
+sass/
+|-- setting/
+|   |-- _function.scss +
+|   |-- _mixin.scss  +
+|   |-- _susy.scss +
+|   `-- _variables.scss +
+|
+|-- framework/
+|   |-- base/
+|   |   `-- _icon_font.scss +
+|   |
+|   |-- components/
+|   |   |-- _alignments.scss +
+|   |   |-- _alignments__rwd--tablet.scss +
+|   |   |-- _base_html_tags.scss +
+|   |   |-- _gallery.scss +
+|   |   |-- _gallery__rwd--phone.scss +
+|   |   |-- _headings.scss +
+|   |   |-- _links.scss +
+|   |   |-- _list.scss +
+|   |   |-- _list__rwd--tablet.scss +
+|   |   |-- _media.scss +
+|   |   |-- _tables.scss +
+|   |   |
+|   |   `-- forms/
+|   |       |-- _forms.scss+
+|   |       |-- _forms__normalize.scss +
+|   |       |-- _pretty_checkbox.scss +
+|   |       |-- _pretty_select.scss +
+|   |       `-- _swip_checkbox.scss +
+|   |
+|   |-- layout/
+|   |   |-- _gird.scss
+|   |   `-- _gird__rwd__tablet.scss
+|   |
+|   |-- vendors/
+|       |
+|       `-- pluginy_js/
+|       |   |-- _justifiedGallery.scss
+|       |   |-- _magnificPopup.scss
+|       |   `-- _ui-tabs.scss
+|       |
+|       |
+|       `-- pluginy_wp/
+|       |   |-- _tribe_event.scss
+|       |
+|       `-- pattern-css/
+|           |-- _attachment.scss
+|           |-- _block_post.scss
+|           |-- _boxes_porto.scss
+|           |-- _client_reviews.scss
+|           |-- _feturad_fr.scss
+|           |-- _hexagons.scss
+|           |-- _pricing_table.scss
+|           |-- _related.scss
+|           |-- _stage.scss
+|           |-- _stage__rwd--tablet.scss
+|           |-- _feturad_box.scss
+|           `-- fatured/
+|               |-- _feturad_box_icon
+|               |-- _feturad_box_icon_double
+|               |-- _feturad_box_image
+|               |-- _feturad_box_text
+|               `-- _feturad_image
+|
+|-- theme/
+|   |-- _accessibility.scss
+|   |-- _coments.scss
+|   |-- _coments__rwd--tablet.scss
+|   |-- _post_format.scss
+|   |-- _shortcode.scss
+|   |-- _theme.scss
+|   |-- _theme__rwd--tablet.scss
+|   |-- _widgets.scss
+|   |-- _widgets__rwd--tablet.scss
+|   |
+|    `-- nav/
+|       |-- _nav_horizontal.scss
+|       |-- _nav_horizontal__rwd.scss
+|       |-- _nav_pagination.scss
+|       |-- _nav_pagination__rwd--tablet.scss
+|       |-- _nav_small.scss
+|       |-- _nav_small__rwd--tablet.scss
+|       |-- _nav_verticall.scss
+|       |-- _nav_verticall__rwd.scss
+|
+|
+`-- style.scss
+*/
+/*--------------------------------------------------------------
+-- framework/base/
+--------------------------------------------------------------*/
+@import "framework/base/icon_font";
+
+/*--------------------------------------------------------------
+-- framework/components/
+--------------------------------------------------------------*/
+@import "framework/components/alignments";
+@import "framework/components/base_html_tags";
+@import "framework/components/gallery";
+@import "framework/components/headings";
+@import "framework/components/links";
+@import "framework/components/list";
+@import "framework/components/media";
+@import "framework/components/tables";
+
+/*--------------------------------------------------------------
+-- framework/components/forms/
+--------------------------------------------------------------*/
+@import "framework/components/forms/forms__normalize";
+@import "framework/components/forms/forms";
+//@import "framework/components/forms/pretty_checkbox";
+//@import "framework/components/forms/pretty_select";
+//@import "framework/components/forms/swip_checkbox";
+
+/*--------------------------------------------------------------
+-- framework/layout/
+--------------------------------------------------------------*/
+@import "framework/layout/gird";
+
+/*--------------------------------------------------------------
+-- framework/vendors/pattern-css/
+--------------------------------------------------------------*/
+//@import "framework/vendors/pattern-css/attachment";
+//@import "framework/vendors/pattern-css/block_post";
+//@import "framework/vendors/pattern-css/boxes_porto";
+//@import "framework/vendors/pattern-css/client_reviews";
+//@import "framework/vendors/pattern-css/feturad_fr";
+//@import "framework/vendors/pattern-css/hexagons";
+//@import "framework/vendors/pattern-css/pricing_table";
+//@import "framework/vendors/pattern-css/related";
+//@import "framework/vendors/pattern-css/stage";
+//@import "framework/vendors/pattern-css/feturad_box";
+//-- framework/vendors/pattern-css/fatured/
+//@import "framework/vendors/pattern-css/fatured/feturad_box_icon";
+//@import "framework/vendors/pattern-css/fatured/feturad_box_icon_double";
+//@import "framework/vendors/pattern-css/fatured/feturad_box_image";
+//@import "framework/vendors/pattern-css/fatured/feturad_box_text";
+//@import "framework/vendors/pattern-css/fatured/feturad_image";
+
+/*--------------------------------------------------------------
+-- framework/vendors/pluginy_js/
+--------------------------------------------------------------*/
+//@import "framework/vendors/pluginy_js/_justifiedGallery";
+@import "framework/vendors/pluginy_js/_magnificPopup";
+//@import "framework/vendors/pluginy_js/_ui_tabs";
+
+/*--------------------------------------------------------------
+//-- framework/vendors/pluginy_wp/
+--------------------------------------------------------------*/
+//@import "framework/vendors/pluginy_wp/tribe_event";
+
+/*--------------------------------------------------------------
+//-- theme/
+--------------------------------------------------------------*/
+
+@import "theme/theme";
+@import "theme/widgets";
+@import "theme/coments";
+@import "theme/accessibility";
+
+/*--------------------------------------------------------------
+-- theme/nav/
+--------------------------------------------------------------*/
+@import "theme/nav/nav_horizontal";
+@import "theme/nav/nav_pagination";
+@import "theme/nav/nav_small";
+@import "theme/nav/nav_verticall";
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////
+
+/*----------------------------------
+*  Base RWD
+* ---------------------------------*/
+
+/*--------------------------------------------------------------
+-- Responsive breakpoint phone
+--------------------------------------------------------------*/
+@media (max-width: $phone) {
+
+}
+/*--------------------------------------------------------------
+-- Responsive breakpoint tablet
+--------------------------------------------------------------*/
+@media (max-width: $tablet) {
+   
+}
+/*--------------------------------------------------------------
+-- Responsive breakpoint desktop
+--------------------------------------------------------------*/
+@media (max-width: $desktop) {
+ 
+    .hide-on-small {
+        display: none;
+    }
+
+    @import "theme/nav/nav_horizontal_rwd-tablet";
+}
+/*--------------------------------------------------------------
+-- Responsive breakpoint desktop min
+--------------------------------------------------------------*/
+@media (min-width: $desktop-min) {
+    
+    .hide-desktop {
+        display:none;
+    }
+
+    @import "framework/layout/gird__rwd-desktop";
+    @import "theme/theme__rwd-desktop";
+    @import "theme/nav/nav_horizontal__rwd-desktop";    
+}
+/*--------------------------------------------------------------
+-- Responsive breakpoint desktop hd
+--------------------------------------------------------------*/
+@media (max-width: $desktop-hd) {
+
+}
+
+/*----------------------------------
+*  Special Breakpoint Tables
+* ---------------------------------*/
+@media (max-width:max-width 360px) {
+    table tbody td { 
+        word-break: break-all;
+    }
+}
+@media (max-width:max-width 600px) {
+    .hentry table {
+        caption { 
+            background-image: none;
+        }
+        thead, table th { 
+            display: none; 
+        }
+
+        td {
+            display: block; 
+            @include font-size(1.1);
+        }
+
+        tbody td::before {
+            content: attr(data-th); 
+            float: left; 
+            width: 30%; 
+            font-weight: bold; }
+        tbody td::after { 
+            content: ''; 
+            display:block; 
+            clear: both; 
+        }
+    }
+}

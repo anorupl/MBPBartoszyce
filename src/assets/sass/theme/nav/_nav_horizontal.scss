@@ -1,0 +1,104 @@
+/*
+ * All
+ * */
+ .h-nav	{
+
+    /*
+     *  li all
+     * -----------*/
+    li                          {position: relative;}
+    li a                        {display: block; position:relative; padding: 10px 20px;}
+
+    /*
+     *  ul
+     * -----------*/
+    .menu                       {display: flex; flex-direction: column;}
+    .menu > li                  {float: left; padding: 10px 0;}
+
+    /*
+     *  ul ul
+     * -----------*/
+    .sub-menu                       {display: block; position: absolute; left: -999em; margin-top: 10px; z-index: 3;}
+    .sub-menu li                    {clear: both; padding: 0 10px; min-width: 210px; text-align: center;}
+    .sub-menu li a                  {padding: 10px 15px;}
+
+    /* li - submenu active*/
+    .menu > li:hover > .sub-menu,
+    .menu > li.focus > .sub-menu    {left:50%; -webkit-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); -o-transform: translate(-50%, 0); transform: translate(-50%, 0);}
+
+    /*
+     *  ul ul ul
+     * -----------*/
+    .sub-menu li > .sub-menu {border:0}
+    /* li li - submenu active*/
+    .menu ul.sub-menu li:hover > ul.sub-menu,
+    .menu ul.sub-menu li.focus > ul.sub-menu    {left: 100%; top: -10px;}
+
+    /*
+     *  current li a
+     * -----------*/
+    .current_page_item > a,
+    .current-menu-item > a        {font-weight: bold;}
+
+
+    /*
+     *  highlight
+     * -----------*/
+    .menu .highlight > a                                  {color: $four-bw; background: $two-color; border-radius: 5px;}
+    .menu .highlight > a:hover                            {background-color: $one-color; color: $four-bw;}
+    .menu .highlight.menu-item-has-children > a::after    {color: $four-bw; }
+}
+.h-nav--color {
+
+    .menu li > a                {color: $hv-a;}
+    .menu li > a:hover          {color: $hv-ahover;}
+    
+    .sub-menu li                {background: $hv-lili;}
+    .sub-menu li a              {color: $hv-aa;}
+    .sub-menu li > a:hover      {color: $hv-aahover; background: $hv-lilihover; }
+    .sub-menu li li  > a:hover  {color: $hv-aahover; background: $hv-lilihover; }    
+}
+
+.h-nav--arrow {
+    /* Add border arrow */
+    .menu > li > .sub-menu::before  {content: ''; position: absolute; bottom: 100%; left: 50%; margin-left: -8px; width: 0; height: 0; border-bottom: 8px solid $hv-plus; border-right: 8px solid transparent; border-left: 8px solid transparent;}
+
+    .sub-menu    {border-top: 2px solid $hv-plus;}
+    .sub-menu li {border-bottom: 1px solid $hv-border;}
+    /*
+     *  strzalki
+     * -----------*/
+     .menu-item-has-children > a:after {
+        display: inline;
+        color: $hv-plus;
+        margin-left: 9px;
+        font-weight: bold;
+    }
+    /* pierwszy poziom strzalka w dół */
+	.menu > .menu-item-has-children > a:after 	{
+	    @extend [class^="icon-"];
+	    content: "\f107";
+	}
+	/* drugi poziom strzalkaw prawo */
+	.sub-menu .menu-item-has-children > a:after 	{
+	    @extend [class^="icon-"];
+	    content: "\f105";
+	}    
+}
+
+
+.h-nav--desc {
+    font-family: $font-second;
+    @include font-size(($size-base+0.2),0,false);
+    font-weight: bold;
+    text-transform: uppercase;
+      
+    .menu-item-description {
+        display: block;
+        clear: both;
+        text-transform: initial;
+        font-size: 14px;
+        color: $five-bw;
+        margin-top: 10px;
+    }    
+}

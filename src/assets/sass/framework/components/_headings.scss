@@ -1,0 +1,35 @@
+/* Headings
+========================================================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.class-h1,
+.class-h2,
+.class-h3,
+.class-h4,
+.class-h5 {
+	display: block;
+	padding: 0;
+	margin: 0.5em 0;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	font-family: $font-bold;
+}
+
+h1,.class-h1        { @include font-size(($size-base + 2.3),0,true);}
+h2,.class-h2        { @include font-size(($size-base + 1.6),0,true);}
+h3,.class-h3        { @include font-size(($size-base + 1.1),0,true);}
+h4,.class-h4        { @include font-size(($size-base + 0.6),0,true);}
+h5, h6, .class-h5   { @include font-size(($size-base + 0.3),0,true); letter-spacing: 0.1em; text-transform: uppercase;}
+
+.widget {
+	h1,.class-h1    { @include font-size(($size-base + 0.6),0,true);}
+	h2,.class-h2    { @include font-size(($size-base + 0.4),0,true);}
+	h3,.class-h3    { @include font-size(($size-base + 0.2),0,true);}
+	h4,.class-h4    { @include font-size(($size-base + 0.1),0,true);}
+	h5, h6          { @include font-size(($size-base),0,true);}
+}

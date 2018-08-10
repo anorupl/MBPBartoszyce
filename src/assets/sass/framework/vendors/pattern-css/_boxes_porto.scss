@@ -1,0 +1,97 @@
+/* boxes porto
+========================================================================== */
+.boxes-porto {
+    background-color: $two-color;
+    clear: both;
+
+    .header-center h2 {
+        color: $four-bw;
+        background-color: $two-color;
+    }
+    > div {
+        position: relative;
+        height: 690px;
+        clear: both;
+        width: 100%;
+        padding-left: 2.08333%;
+        padding-right: 2.08333%;
+        margin: auto;
+    }
+    .box {
+        height: 230px;
+        width: 230px;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+        transform: rotate(45deg);
+        position: absolute;
+        > a {
+            width: 100%;
+            height: 100%;
+            z-index: 15;
+            position: absolute;
+            text-indent: -9999px;
+            display: block;
+        }
+        span {
+            opacity:0;
+            color: $four-bw;
+            @include font-size(3.8);
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            margin-top: -2.1rem;
+            margin-top: -21px;
+            transform: rotate(-45deg);
+            width: 100%;
+            text-align: center;
+        }
+
+        img {
+            transform: rotate(-45deg);
+            margin-left: -190px;
+            width: 265%;
+            max-width: none;
+            margin-top: -95px;
+        }
+    }
+    .box.active, .box:hover  {
+        span {
+            opacity: 1;
+        }
+        img {
+            opacity: 0.5;
+        }
+    }
+    .box:nth-of-type(1){
+        left: 50%;
+        top: 33px;
+        margin-left: -444px;
+    }
+    .box:nth-of-type(2){
+        left: 50%;
+        top: 32px;
+        margin-left: -115px;
+    }
+    .box:nth-of-type(3){
+        left: 50%;
+        top: 32px;
+        margin-left: 213px;
+    }
+    .box:nth-of-type(4){
+        left: 50%;
+        top: 196px;
+        margin-left: -279px;
+    }
+    .box:nth-of-type(5){
+        left: 50%;
+        top: 196px;
+        margin-left: 49px;
+    }
+    .box:nth-of-type(6){
+        left: 50%;
+        top: 360px;
+        margin-left: -115px;
+    }
+}

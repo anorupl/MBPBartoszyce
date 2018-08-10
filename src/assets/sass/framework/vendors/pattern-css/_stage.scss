@@ -1,0 +1,150 @@
+/* Stages
+========================================================================== */
+.section-stages {
+    > div {
+        color: $white;
+    }
+    > div > div {
+        position: relative;
+        height: 150px;
+        margin-top: 10px;
+    }
+}
+.section-1,
+.section-2  {
+    position:relative;
+    float: left;
+    width: 50%;
+}
+.section-1 .stage {
+    padding: 10px 180px 10px 10px;
+}
+.section-2 .stage {
+    padding: 10px 10px 10px 180px;
+}
+.section-1:after,
+.section-2 .stage:before,
+.section-2 .stage:after {
+    position:absolute;
+    content: '';
+    display: block;
+}
+.section-1:after {
+    width: 1px;
+    height:81%;
+    top: 68px;
+    right: 1px;
+    z-index: 2;
+    border:0;
+    border-right: 3px dotted $one-color;
+}
+.section-2 .stage:before {
+    width: 150px;
+    height: 150px;
+    top:0;
+    left:-75px;
+    transform:rotate(45deg);
+    @include linear-gradient($white ,lighten($border-color , 14%));
+}
+.section-2 .stage:after {
+    width: 40px;
+    height: 40px;
+    top: 36.5%;
+    left: -23px;
+    background: #EEEEEE;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.section-1 .stage-number {
+    right: 115px;
+}
+.section-2 .stage-number {
+    left: 115px;
+}
+.stage-number {
+    position: absolute;
+    top: 34%;
+    display: block;
+    background: $four-bw ;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-weight: bolder;
+    font-size: 23px;
+    line-height: 50px;
+    text-align: center;
+}
+
+$color-stage-1: #065381;
+$color-stage-2: #35b3e5;
+$color-stage-3: #21cdb3;
+$color-stage-4: #a9d442;
+$color-stage-5: #89ce30;
+$color-stage-6: #065381;
+$color-stage-7: #35b3e5;
+$color-stage-8: #21cdb3;
+$color-stage-9: #a9d442;
+$color-stage-10: #89ce30;
+
+
+#stages-1 {
+    background: $color-stage-1;
+    .stage-number {
+        color: $color-stage-1;
+    }
+}
+#stages-2 {
+    background: $color-stage-2;
+    .stage-number {
+        color: $color-stage-2;
+    }
+}
+#stages-3 {
+    background: $color-stage-3;
+    .stage-number {
+        color: $color-stage-3;
+    }
+}
+#stages-4 {
+    background: $color-stage-4;
+    .stage-number {
+        color: $color-stage-4;
+    }
+}
+#stages-5 {
+    background: $color-stage-5;
+    .stage-number {
+        color: $color-stage-5;
+    }
+}
+#stages-6 {
+    background: $color-stage-6;
+    .stage-number {
+        color: $color-stage-6;
+    }
+}
+#stages-7 {
+    background: $color-stage-7;
+    .stage-number {
+        color: $color-stage-7;
+    }
+}
+#stages-8 {
+    background: $color-stage-8;
+    .stage-number {
+        color: $color-stage-8;
+    }
+}
+#stages-9 {
+    background: $color-stage-9;
+    .stage-number {
+        color: $color-stage-9;
+    }
+}
+#stages-10 {
+    background: $color-stage-10;
+    .stage-number {
+        color: $color-stage-10;
+    }
+}

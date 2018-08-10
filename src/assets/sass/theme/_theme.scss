@@ -1,0 +1,228 @@
+/* Theme style
+========================================================================== */
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS - hentry for tablet:
+----------------------------------------------------------------
+1.0 Base
+2.0 Layout
+4.2 Section
+5.3 Header slider
+6.4 Other elements
+7.0 Header
+4.0 Footer
+5.0 hentry
+    5.1 plural
+    5.5 singular
+    5.3 hentry elements
+--------------------------------------------------------------*/
+
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    overflow-x: auto
+}
+body,
+html {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+body {
+    overflow: hidden;
+    font-family: $font-base;
+    @include font-size($size-base);
+    line-height: 1.5;
+    background: $four-bw;
+    color: $one-bw;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+main { 
+    display: block; 
+}
+
+/* 2.0 Layout
+======================= */
+.radius {
+    border-radius: 5px;
+}
+.white-a {
+    color: $white;
+    a, a:hover {
+        color: $white;
+    }
+}
+
+/* 3.0 Header
+======================= */
+
+// Top bar Header
+.header-top {
+    .contact-item, i {
+        display: inline-block;
+        padding: 0 10px;
+    }
+    padding: 20px gutter();
+    border-bottom: 1px solid $light-border;
+    @include font-size($size-medium,0,false);
+}
+#h-adress {
+    margin-left: -20px;
+}
+
+
+// Bottom bar Header
+#site-header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-bottom: 1px solid $light-border;
+    padding: 10px gutter();
+}
+.title-area {
+    max-width: 275px;
+    flex: 1 1 auto;
+}
+.site-title {
+    margin: 0;
+}
+
+/* 4.0 Section
+======================= */
+.page-section {
+    padding-top: gutter();
+}
+
+/* Home page - header section with post */
+#posts-header {
+    position: relative;
+}
+// First post
+.f-post-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} 
+.f-post-header {
+    background-color: $one-color;
+    .entry-header {
+        flex: 0 1 auto;
+    }
+    .entry-summary {
+        flex: 0 1 auto;
+    }
+}
+.f-post-thumbnail {
+    flex: 1 1 auto;
+    background-size: cover;
+    background-position: center;
+    height: 320px;
+}
+
+
+// Block w other post - small
+.header-offslider {
+    width: 100%;
+    overflow: hidden;
+
+    article {
+        float: left;    
+        width: 100%;
+        background: $two-color;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        @include font-size($size-base,0,false);
+    }
+}
+.s-post-thumbnail {
+    height: 220px;
+    background-position: center;
+    background-size: cover;    
+}
+.s-post-content {
+    position: relative;
+    height: 110px;
+    overflow: hidden; 
+ 
+}
+.arrow-more-icon {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 20px;   
+    border: none;
+    overflow:hidden;
+    height: 44px;
+    width: 44px;
+    padding: 0;
+    @include font-size(4.2,0.1,true);    
+}
+.arrow-allpost-icon {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: $one-color;
+    margin: auto;
+    padding: 30px 10px 10px;   
+    
+    > i {
+        clear: both;
+        display: block;
+        text-align: right;
+    }
+}
+
+// Continer for menu
+#header-nav-bottom {
+    background-color: $four-bw;
+    box-shadow: 0px 3px 10px 0px rgba($one-color, 0.3);
+}
+
+/* Home page - section with clubs */
+.clubs {
+    background-color: $two-color;
+}
+
+.club-item {
+
+    padding: gutters();
+
+    img {
+        width: 50%;
+    }
+    &:first-child {
+        background-color: $four-color;
+    }
+    &:nth-child(2) {
+        background-color: lighten($two-color, 5);
+    }
+    &:nth-child(3) {
+        background-color: $three-color;
+    }
+    &:nth-child(4) {
+        background-color: lighten($four-color, 5);
+    }    
+}
+
+.clubs-bottom::after {
+    content: '';
+    display: block;    
+    width: 100%;
+    height: 70px;
+    background-color: $four-bw;
+    margin-top: -70px;
+}
+
+.stage:first-child {
+    background: #065381;
+}

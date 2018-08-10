@@ -1,0 +1,101 @@
+
+@mixin vertical-align($position: relative) {
+    position: $position;
+    top: 50%;
+    -webkit-transform: perspective(1px) translateY(-50%);
+    -ms-transform: perspective(1px) translateY(-50%);
+    transform: perspective(1px) translateY(-50%);
+}
+
+
+
+
+
+
+@mixin icon($name, $content, $size: 1.4, $tlo:'') {
+    .icon-#{$name}:before {
+        content: unquote("\"")+unquote(str-insert($content,"\\", 1))+unquote("\"");
+        font-size: (10*$size) + px;
+        font-size: $size+rem;
+
+        @if $tlo != '' {
+            background: $tlo;
+        }
+        @content;
+    }
+
+}
+
+@mixin sample() {
+
+       min-height: 40px;
+       background: hsla(random(365), 90, 50, 1);
+
+ 
+}
+
+
+
+@mixin font-size($size, $plus: 0, $line:'false') {
+    font-size: (10*$size) + px;
+    font-size: $size+rem;
+
+    @if $line != 'false' {
+        @if $plus > 0 {
+
+
+
+            line-height: ((10*($size+$plus))+5) + px;
+            line-height: (($size+$plus)+0.5)+rem;
+        }
+        @else {
+            line-height: ((10*$size)+5) + px;
+            line-height: ($size+0.5)+rem;
+        }
+
+
+    }
+}
+
+
+
+@mixin font-size-procent($size) {
+
+    font-size: (($size*100)/$size-base)#{'%'};
+
+}
+
+
+
+
+
+@mixin bg-op($color, $opacity: 0.8) {
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+}
+
+
+
+/////////////////////// compass
+
+// ----
+// Sass (v3.4.7)
+// Compass (v1.0.1)
+// ----
+
+/// Mixin printing a linear-gradient
+/// as well as a plain color fallback
+/// and the `-webkit-` prefixed declaration
+/// @access public
+/// @param {String | List | Angle} $direction - Linear gradient direction
+/// @param {Arglist} $color-stops - List of color-stops composing the gradient
+@mixin linear-gradient($direction, $color-stops...) {
+    @if is-direction($direction) == false {
+        $color-stops: ($direction, $color-stops);
+        $direction: 180deg;
+    }
+
+    background: nth(nth($color-stops, 1), 1);
+    background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+    background: linear-gradient($direction, $color-stops);
+}

@@ -1,0 +1,149 @@
+*:before, *:after {
+  box-sizing: border-box; }
+
+#customize-control-wpg_contact_maps {
+    margin-bottom: 40px;
+}
+#sub-accordion-section-wpg_contact_stc li[id$="_1"],
+#sub-accordion-section-wpg_contact_stc li[id$="_2"],
+#sub-accordion-section-wpg_contact_stc li[id$="_3"],
+#sub-accordion-section-wpg_contact_stc li[id$="_4"] {
+    background: #fff;
+    padding: 7% 5%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -5%;
+}
+.customize-control-google_map {
+  margin-bottom: 40px;
+}
+
+
+#customize-control-wpg_body_font,
+#customize-control-wpg_body_google_font,
+#customize-control-wpg_body_google_variants,
+#customize-control-wpg_heading_font,
+#customize-control-wpg_heading_google_font,
+#customize-control-wpg_heading_google_variants,
+#customize-control-google_subsets,
+
+#customize-control-wpg_featured_term,
+#customize-control-wpg_featured_term_title,
+#customize-control-wpg_featured_term_tax,
+#customize-control-wpg_featured_term_terms {
+    background: #fff;
+    padding: 5%;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#customize-control-wpg_heading_font.customize-control {
+    margin-top: 20px;
+}
+#customize-control-google_subsets {
+    margin: 30px auto;
+}
+#customize-control-wpg_featured_term {
+    margin-bottom: 20px;
+}
+
+#customize-control-wpg_featured_term_terms .checkbox-list {
+    max-height: 255px;
+    overflow: hidden;
+    overflow-y: auto;
+    width: 80%;
+}
+#customize-control-wpg_featured_term_terms .checkbox-list ul {
+    display: none;
+}
+#customize-control-wpg_featured_term_terms .checkbox-list ul.show-list {
+    display: block;
+}
+
+
+/*----------------------------
+ * Change checkbox to Swip
+ *---------------------------- */
+input.onoffswitch-checkbox:empty {
+  position: absolute;
+  margin-left: -999px; }
+
+input.onoffswitch-checkbox:empty ~ label span.onoffswitch {
+  display: inherit;
+  position: absolute;
+  height: 30px;
+  width: 90px;
+  overflow: hidden;
+  text-indent: 0;
+  border-radius: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; }
+
+input.onoffswitch-checkbox:empty ~ label.onoffswitch-label {
+  display: block;
+  position: relative;
+  height: 30px;
+  margin: 2px 5px 2px 0;
+  clear: both;
+  text-indent: 7em;
+  cursor: pointer;
+  font-size: 16px;
+  
+  line-height: 32px;
+   }
+
+input.onoffswitch-checkbox:empty ~ label span.onoffswitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s; }
+
+input.onoffswitch-checkbox:empty ~ label span.onoffswitch-inner:before,
+input.onoffswitch-checkbox:empty ~ label span.onoffswitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 100%;
+  padding: 0;
+  color: #FFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold; }
+
+input.onoffswitch-checkbox:empty ~ label span.onoffswitch-inner:before {
+  content: "TAK";
+  padding-left: 10px;
+  background-color: #FC1041;
+  color: #FFF; }
+
+input.onoffswitch-checkbox:empty ~ label span.onoffswitch-inner:after {
+  content: "NIE";
+  padding-right: 10px;
+  background-color: white;
+  color: #FC1041;
+  text-align: right; }
+
+input.onoffswitch-checkbox:empty ~ label span.onoffswitch-switch {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 56px;
+  width: 18px;
+  margin: 6px;
+  background: #FFF;
+  border: 2px solid #D4D4D4;
+  border-radius: 20px;
+  transition: all 0.3s ease-in 0s; }
+
+input.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0; }
+
+input.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px; }
+
+
+
+
+

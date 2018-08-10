@@ -1,0 +1,27 @@
+/* feturad-box
+========================================================================== */
+.feturad-box {
+
+    .small-border {
+        display: block;
+        height: 1px;
+        width: 70%;
+        background-color: scale-lightness($one-bw, 50%);
+        margin: 0 auto;
+    }
+    .box-icon, .box-content, .box-image {
+        text-align: center;
+        margin:  20px 0;
+        p {color: scale-lightness($one-bw, 50%);}
+    }
+    .wrapper-radius {
+        border-radius: 50%;
+    }
+
+    // import style
+    //@import "fatured/feturad_image";
+    //@import "fatured/feturad_box_text";
+    @import "fatured/feturad_box_image";
+    //@import "fatured/feturad_box_icon";
+    //@import "fatured/feturad_box_icon_double";
+}

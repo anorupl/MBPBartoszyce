@@ -1,0 +1,29 @@
+/*--------------------------------------------------------------
+-- Slick
+----------------------------------------------------------------
+sass/
+|-- setting/
+|   |-- _function.scss +
+|   |-- _mixin.scss  +
+|   `-- _variables.scss +
+|
+|-- framework/vendors/pluginy_js/
+|   |-- _slick.scss
+|   `-- _slick__theme.scss
+|
+`slick.css
+*/
+
+
+/*--------------------------------------------------------------
+-- setting/
+--------------------------------------------------------------*/
+@import "setting/function";
+@import "setting/mixin";
+@import "setting/variables";
+
+/*--------------------------------------------------------------
+-- framework/vendors/pluginy_js/
+--------------------------------------------------------------*/
+@import "framework/vendors/pluginy_js/slick";
+@import "framework/vendors/pluginy_js/slick__theme";

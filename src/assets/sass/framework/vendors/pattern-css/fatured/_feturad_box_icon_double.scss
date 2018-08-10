@@ -1,0 +1,34 @@
+/* Feturad Box - icon double
+========================================================================== */
+.wrapper-rotated {
+    .box-icon, .box-content {
+        margin:  55px 0;
+    }
+    .icon-wrapper {
+        transform: rotate(45deg);
+    }
+    .icon-wrapper i {
+        transform: rotate(-45deg);
+    }
+    .icon-wrapper:before,.icon-wrapper:after {
+        position: absolute;
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        border: 1px solid transparent;
+        border-color: inherit;
+        z-index: 0;
+    }
+    .icon-wrapper:before {
+        left: -15px;
+        right: 0;
+        top: 0;
+        bottom: -15px;
+    }
+    .icon-wrapper:after {
+        left: 0;
+        right: -15px;
+        top: -15px;
+        bottom: 0;
+    }
+}

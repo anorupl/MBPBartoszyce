@@ -1,0 +1,15 @@
+/* Feturad Box - Image
+========================================================================== */
+.box-image.wrapper-radius {
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    margin: 20px auto;
+}
+.box-image {
+
+    padding-top: gutter();
+    padding-bottom: gutter();
+    background: $four-bw;
+    border: 2px solid $three-bw;
+}

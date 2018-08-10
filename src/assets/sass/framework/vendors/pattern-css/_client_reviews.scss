@@ -1,0 +1,29 @@
+/* client reviews
+========================================================================== */
+.client-reviews {
+    .header-center {
+        padding: 30px 0 100px 0;
+        .border {
+            bottom: 67%;
+        }
+    }
+    .flexslider {
+        overflow: visible;
+    }
+}
+
+#client-reviews {
+    padding-bottom: 2%;
+    .slides {
+        margin-top: -100px;
+    }
+
+    .thumbnail {
+        border-radius: 50%;
+        width: 140px;
+        overflow: hidden;
+        height: 140px;
+        margin: 20px auto;
+        background: 50% 50% no-repeat cover;
+    }
+}

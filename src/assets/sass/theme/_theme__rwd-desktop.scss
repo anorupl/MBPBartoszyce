@@ -1,0 +1,77 @@
+/* Theme style
+========================================================================== */
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS - hentry for tablet:
+----------------------------------------------------------------
+1.0 Base
+2.0 Layout
+4.2 Section
+5.3 Header slider
+6.4 Other elements
+7.0 Header
+4.0 Footer
+5.0 hentry
+    5.1 plural
+    5.5 singular
+    5.3 hentry elements
+--------------------------------------------------------------*/
+
+// Header
+#site-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.title-area {
+
+    flex-basis: 264px;
+}
+
+
+/* section header post */
+#posts-header {
+    margin-bottom: 150px;
+}
+.f-post-content,
+.f-post-thumbnail {
+    height: 660px;
+}
+.f-post-header {
+    .entry-summary {
+        flex-basis: 60%;
+    }
+}
+.col-8.f-post-thumbnail {
+    float: right;
+}
+// samll post header
+.header-offslider {
+    width: 660px;
+    position: absolute;
+    top: 30px;
+    right: 3%;
+}
+.header-offslider article {
+    width: 220px;
+    height: 440px;
+}
+.s-post-thumbnail,
+.s-post-content {
+    width: 220px;
+    height: 220px;;
+}
+.arrow-allpost-icon {
+
+    position: absolute;
+    right: 1%;
+    top: 355px;
+    width: 100px;
+}
+
+#header-nav-bottom {
+    position: absolute;
+    bottom: -75px;
+    right: 3%;    
+    min-height: 150px;
+}

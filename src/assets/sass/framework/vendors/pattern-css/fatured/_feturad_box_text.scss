@@ -1,0 +1,34 @@
+/* Feturad Box - Text
+========================================================================== */
+.box-text-header {
+    margin-top: 10px;
+    padding-top: 10px;
+
+    .icon-text-wrapper {
+        float:left;
+        width: span(1 of 3);
+        padding-right: 25px;
+        text-align: right;
+
+        i {
+            @include font-size(6.2,0,true);
+        }
+    }
+
+    h3 {
+        display: block;;
+        @include span (2 of 3 no-gutters)
+    }
+}
+
+.box-text-content {
+    padding: 10px;
+    &.right {
+        text-align: right;
+    }
+    p {
+        color: scale-lightness($one-bw, 50%);
+        margin-top: 0;
+        text-align: left;
+    }
+}

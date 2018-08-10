@@ -1,0 +1,26 @@
+/* stages RWD -- Tablet
+========================================================================== */
+.section-1, .section-2 {
+    width: 100%;
+}
+
+.section-1:after,
+.section-2 .stage:after,
+.section-2 .stage:before {
+    display: none;
+}
+.section-1 {
+    .stage {
+        padding-right:80px;
+    }
+    .stage-number {
+        right: 15px;
+    }
+}
+.section-2 {
+    .stage {
+        padding-left:80px;}
+        .stage-number {
+            left: 15px;
+        }
+    }

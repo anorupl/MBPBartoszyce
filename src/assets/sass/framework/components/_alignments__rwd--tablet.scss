@@ -1,0 +1,16 @@
+/* Alignments  RWD -- tablet
+========================================================================== */
+.alignleft,
+.alignright {
+    display: block;
+    float: none;
+}
+.wp-caption.alignleft,
+.wp-caption.alignright,
+blockquote.alignleft,
+blockquote.alignright,
+img.alignleft,
+img.alignright, {
+    display: block;
+    margin: 1.2em auto;
+}

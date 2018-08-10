@@ -1,0 +1,12 @@
+/*
+ * All
+ * */
+ .h-nav	{
+    .menu {
+        flex-direction: row;
+    }    
+ }
+
+ .h-nav--desc {
+    .menu > li {width: 25%;}
+ }

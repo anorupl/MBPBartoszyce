@@ -1,0 +1,44 @@
+/* List
+==========================================================================
+
+* ol, ul    - Lista z numerami, lista bez numerów
+* li        - Pojedynczy element listy
+* dl,dd,dt  - Lista definicji
+
+*/
+ul, ol {
+    margin: 0 0 0.2em 1em;
+}
+
+ul {
+    list-style: disc inside;
+}
+
+ol {
+    list-style: decimal inside;
+}
+
+/* Definition Lists */
+dl {
+    margin-bottom: 20px;
+}
+dt {
+    font-weight: bold;
+}
+dd {
+    margin-left: 10px;
+}
+
+ul.menu,
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.clear-list {
+    list-style-position: outside;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}

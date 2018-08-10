@@ -1,0 +1,17 @@
+/* Related
+========================================================================== */
+#related {
+
+	ul {@extend .clear-list}
+
+	ul li {
+		padding-left: 15px;
+		margin: 7px 0;
+		@include font-size-procent($size-big);
+	}
+
+	[class^="icon-"], [class*="icon-"] {
+		@include font-size-procent($size-big);
+		color: $one-bw;
+	}
+}

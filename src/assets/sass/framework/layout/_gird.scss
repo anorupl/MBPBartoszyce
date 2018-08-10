@@ -1,0 +1,54 @@
+/* Gird 12 column
+========================================================================== */
+.container  {
+    position:relative;
+    max-width: 1600px;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    margin: auto;
+    clear: both;
+    overflow: hidden;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.gutters {
+    @include gutters();
+}
+
+%col-styles {
+    position: relative;
+    @include span(12 no-gutters); 
+    margin-left:0; 
+    margin-right:0; 
+}
+
+@for $i from 1 through 12 {
+    .col-#{$i} { @extend %col-styles; }
+    
+}
+
+
+
+/* clear */
+.clear {
+    display: block;
+    clear: both;
+    width: 100%;
+    height: 1px;
+}
+.clear-both {
+    clear: both;
+    width: 100%;
+    &:after {
+        content: ".";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0;
+    }
+}
+

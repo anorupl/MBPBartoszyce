@@ -1,0 +1,80 @@
+/* Pretty Radiobox & Checkbox
+========================================================================== */
+.checkbox-wpg span.checkbox-continer {
+	display: inline-block;
+	position: relative;
+	min-height:25px;
+	padding-top:5px;
+	padding-left:35px;
+	margin-right:15px;
+	cursor:pointer;
+}
+
+.checkbox-wpg input {
+	position:absolute;
+	top:0;
+	left:0;
+	width:25px;
+	height:25px;
+	z-index: 2;
+	cursor:pointer;
+	padding:0;
+	margin:0;
+	opacity: 0;
+}
+.checkbox-wpg input ~ span {
+	/* label */
+	font-weight:300;
+	font-size:0.9em;
+}
+.checkbox-wpg .state {
+	display: inline-block;
+	position:absolute;
+	top:0;
+	left:0;
+	width:25px;
+	height:25px;
+	z-index: 1;
+
+	vertical-align: top;
+	border:1px solid $fields-border;
+	background: $fields-bg;
+	border-radius:2px;
+	box-shadow:inset 0 1px 3px rgba(0,0,0,0.1);
+}
+.checkbox-wpg input[type=radio] + .state {
+	border-radius:50%;
+}
+.checkbox-wpg .state:before {
+	width:7px;
+	top:13px;
+	left:6px;
+	transform: rotate(45deg);
+}
+.checkbox-wpg .state:after {
+	width:10px;
+	top:12px;
+	left:9px;
+	transform: rotate(-45deg);
+}
+.checkbox-wpg .state:before,
+.checkbox-wpg .state:after {
+	content:'';
+	display: block;
+	position: absolute;
+	height:3px;
+	background: #eee;
+	transition: background 0.3s;
+}
+.checkbox-wpg input:checked + .state:before,
+.checkbox-wpg input:checked + .state:after {
+	background: $fields-color;
+}
+.checkbox-wpg input:disabled + .state {
+	background: $fields-bg;
+	box-shadow:none;
+	border:1px solid $fields-border;
+}
+.checkbox-wpg input:disabled ~ span {
+	cursor:not-allowed !important;
+}

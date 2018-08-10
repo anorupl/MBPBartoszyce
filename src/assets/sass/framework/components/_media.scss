@@ -1,0 +1,62 @@
+/* Media - Embade
+========================================================================== */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+.twitter-tweet {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-video,
+.wp-video-shortcode,
+.mejs-overlay.load {
+	width: 100% !important;
+}
+
+/* Media - continer oEmbade - video
+========================================================================== */
+.fluid-width-video-wrapper {
+	width: 100%;
+	position: relative;
+	padding: 54.1667% 0 0 0;
+	margin-bottom: 1.5em;
+
+	.mejs-container.mejs-video {
+		position: absolute;
+		top:0;
+		left:0;
+		max-width: 100%;
+		max-height: 100%;
+	}
+
+	.mejs-overlay-play {
+		max-height: 100%;
+	}
+
+	iframe,
+	object,
+	embed {
+		position: absolute !important;
+		top: 0 !important;
+		left: 0 !important;
+		width: 100% !important;
+		height: 100% !important;
+	}
+}
+
+
+/* Media - poprawia bład w ie odnośnie svg
+========================================================================== */
+svg:not(:root) {
+	overflow: hidden;
+}
+.svg-element        {
+	display: none;
+}
+.svg .svg-element {
+	display: block; 
+	width: 100%;
+}

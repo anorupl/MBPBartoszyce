@@ -1,0 +1,29 @@
+/* Feturad Box - icon
+========================================================================== */
+.icon-wrapper {
+    display: inline-block;
+    vertical-align: top;
+    width: 140px;
+    height: 140px;
+    line-height: 130px;
+
+    position: relative;
+    text-align: center;
+    border: 1px solid transparent;
+    border-color: inherit;
+    z-index: 0;
+    transition: background .4s;
+}
+.icon-wrapper i {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    vertical-align: middle;
+    @include font-size(5.3,0,true);
+}
+.icon-wrapper:hover {
+    background: $two-color;
+    i {
+        color: invert($one-bw);
+    }
+}

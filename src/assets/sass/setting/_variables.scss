@@ -1,0 +1,160 @@
+/*--------------------------------------------------------------
+>>> variables
+----------------------------------------------------------------
+|
+|-- Path
+|-- Font
+|-- Breakpoint (continer max-width 1300px)
+|
+|-- Color
+|----- Menu horizontal
+|----- Menu vertical
+|----- Menu small
+|----- Pagination
+|
+*/
+
+/*--------------------------------------------------------------
+>>> Path
+---------------------------------------------------------------*/
+$img-path:  "img/";
+$svg-path:  "img/svg/";
+$mime-path: "img/mime/";
+$font-path: "fonts/";
+/*--------------------------------------------------------------
+>>> Font
+---------------------------------------------------------------*/
+$font-base	: Lato, Arial, Helvetica, sans-serif;
+$font-second: Roboto, 'Open Sans', sans-serif;
+$font-bold	: Tahoma, Geneva, sans-serif;
+$font-code	: Monaco, Menlo, Consolas, "Courier New", monospace;
+
+$size-min	    : 1;
+$size-small	    : 1.2;
+$size-medium	: 1.4;
+$size-base      : 1.6;
+$size-big       : 2.4;
+$size-x-large	: 2.9;
+$size-xl-large  : 3.4;
+/*--------------------------------------------------------------
+>>> Breakpoint (continer max-width 1300px)
+---------------------------------------------------------------*/
+$phone          : #{pem(576)};
+$tablet         : #{pem(768)};
+$desktop        : #{pem(992)};
+$desktop-min    : #{pem(992)};
+$desktop-hd     : #{pem(1200)};
+
+/*--------------------------------------------------------------
+>>> Color
+---------------------------------------------------------------*/
+$one-color      : #543d4f;
+$two-color      : #f25e44;      
+$three-color    : #0bd69f;
+$four-color     : #ecb842;
+
+$one-bw         : #2d3942;  // text
+$two-bw         : #192e43;  // icon
+$three-bw       : #ededed;
+$four-bw        : #ffffff;   
+$five-bw        : #7e7e7e;
+$white          : #ffffff;
+
+
+$border-color   : #cecbc7;
+$light-border   : #f5f5f5;
+
+$wcag-herf      : #FFFE00;
+$wcag-text      : #ffffff;
+$wcag-bg        : #000000;
+
+$fields-fff     : $four-bw;
+$fields-text    : $one-bw;
+$fields-color   : $two-color;
+$fields-bg      : lighten($three-bw, 50%);
+$fields-border  : $border-color;
+$fields-active  : $one-color;
+$button-border  : $two-color;
+
+$outline        : 1px solid $one-color;
+/*--------------------------------------------------------------
+>>> Menu horizontal
+---------------------------------------------------------------*/
+/* all */
+$hv-li:             transparent;
+$hv-lili:           $four-bw;
+
+$hv-lihover:        transparent;
+$hv-lilihover:      $four-bw;
+
+$hv-a:              $one-color;
+$hv-ahover:         $two-color;
+
+$hv-aa:             $one-color;
+$hv-aahover:        $two-color;
+
+$hv-border:         $one-color;
+$hv-plus:           $two-color;
+
+/* over */
+$hv-ov-a:           $four-bw;
+$hv-ov-ahover:      $four-bw;
+$hv-ov-li:          transparent;
+$hv-ov-lihover:     transparent;
+
+
+
+/*--------------------------------------------------------------
+>>> Menu vertical
+---------------------------------------------------------------*/
+$vertical-font-size: 1.4;
+$vertical-font-size-lili: 1.4;
+
+//level 1
+$vertical-lv-color-a:              $white;
+$vertical-lv-color-ahover:         $one-color;
+$vertical-lv-background:           '';
+$vertical-lv-background-hover:     $white;
+
+//level 2
+$vertical-lv2-color-a:              $one-color;
+$vertical-lv2-color-ahover:         $one-color;
+$vertical-lv2-background:           $white;
+$vertical-lv2-background-hover:     $white;
+
+$vertical-border:                   $white;
+
+
+
+/*--------------------------------------------------------------
+>>> Color Menu small
+---------------------------------------------------------------*/
+
+$small-button-color:            $two-color; 
+$small-border:                  $light-border;
+$small-background:              $two-color;
+// lv
+$small-color-a:                 $two-color;
+$small-background-li:           $four-bw;
+// lv:hover
+$small-color-ahover:            $two-color;
+$small-background-lihover:      $four-bw;
+// lv2:hover
+$small-color-aa:                $two-bw;
+$small-background-lili:         $four-bw;
+// lv2:hover
+$small-color-aahover:           $two-color;
+$small-background-lilihover:    $four-bw;
+
+
+
+/*--------------------------------------------------------------
+>>> Color Menu Pagination
+---------------------------------------------------------------*/
+$nav-border             : $two-color;
+
+$nav-color              : $two-color;
+$nav-text               : $four-bw;
+
+$nav-background         : $four-bw;
+$nav-background-active  : $four-bw;

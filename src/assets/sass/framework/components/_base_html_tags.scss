@@ -1,0 +1,266 @@
+/* Base html tags
+==========================================================================
+
+* p             - akapit
+* span,         - Służy do zgrupowania elementów typu inline
+
+* figure        - Obszar obrazka do artykułu
+* figcaption    - Opis obrazka
+* img           - Obrazek
+
+* b,strong      - Tekst pogrubiony,
+* big           - Tekst powiększony,
+* small         - Tekst zmniejszony,
+* u             - Tekst podkreślony (html4), html5 tekst który ma odrózniać się odzwykłego tekstu (css),
+* i,em          - Tekst pochylony (<i> używany font icon)
+* dfn			- Oznaczenie definiowanego tekstu, słowa (Koniecznie stosowany w połączeniu z dt,dd || p || section)
+* font			- Zdeprecjonowane, dotyczy stylizacji tekstu, czcionka, rozmiar, color),
+* s,strike		- Tekst przekreślony (<s> zdeprecjonowane)
+* sub			- Zmienia format tekstu na indeks dolny,
+* sup			- Zmienia format tekstu na indeks górny.
+
+* del,          - Używany do zaznaczenia tekstu który jest już nieprawidłowy, nieaktualny, Przekreśla tekst
+* ins           - Używane do zaznaczenia sekcji dokumentu, które zostały wstawione w stosunku do innej wersji dokumentu.
+* mark          - Używanydo wyróznienia tekstu (zaznaczenie markerem)
+
+* hr            - Używany do umieszczania poziomej linii
+* br            - Przesunięcie o jedną linię w dół,
+
+* blockquote    - Cytat blokowy oznacza, że dany tekst jest większym cytatem,
+* cite          - Zawiera cytowanie lub odwołanie do innych zasobów,
+* q             - Liniowy cytat
+
+* abbr, acronym - Do skrótów typu mgr,np: <abbr title="magister">mgr</abbr>
+* address       - Służy do wyświetlenia bloku z adresem
+
+* pre           - Służy do wyświetlenia bloku tekstu z zachowaniem jego oryginalnego formatowania,
+* kbd           - Tworzy element liniowy wyświetlany domyślną dla przeglądarki czcionką o stałej szerokości
+
+* tt            - Zdeprecjonowane zastąpić <code> lub css.
+* samp          - Służy do oznaczenia przykładu kodu komputerowego
+* code          - Służy do oznaczenia bloku kodu komputerowego
+* var           - Tekst do zonaczenia zmiennych w programowaniu (Defines a variable)
+
+
+* details,summary  - Strzałki pokaż, ukryj (HTML5 - słabe wsparcie). <detalis><summary>Tytul</summary> opis detali</detalis>)
+
+
+* <map>
+* ------------------------------------------------------------------------
+* map       - Służy do stworzenia mapy obrazów z klikalnymi obszarami (<area>)
+* area      - Do oznaczenia obszaru klikalnego pola
+*
+* Exapmle:
+* <img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
+*
+* <map name="planetmap">
+*    <area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun">
+* </map>
+
+
+* <table>
+* ------------------------------------------------
+* caption   - tytul tabeli),
+* col       - columny w tabeli
+* thead     - Grupa nagłówków
+* th        - pojedynczy nagłowek
+* tbody     - Grupa treści tabeli
+* tr        - wiersz tabeli
+* td        - pojedyncze pole
+* tfoot     - grupa stopka tabeli
+*/
+
+p {
+    margin-top: 0;
+    margin-bottom: 1.6em;
+}
+
+
+figure {
+    margin: 0;
+    overflow: hidden;
+}
+
+img {
+    display: block;
+    max-width:100%;
+    height: auto;
+    border: 0;
+}
+
+b,
+strong 	{
+    font-weight: bold;
+}
+
+small {
+    font-size: 75%;
+}
+
+big 	{
+    font-size: 125%;
+}
+
+u,dfn {
+    text-decoration: underline;
+}
+
+em,
+i,
+dfn,
+cite,
+q,
+var	{
+    font-style: italic;
+}
+
+del,
+s,
+strike 	{
+    text-decoration: line-through;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+sub {
+    bottom: -0.25em;
+}
+
+
+mark,
+ins {
+    background-color: $two-color;
+    color: $one-bw;
+    text-decoration: none;
+}
+
+hr {
+    clear: both;
+    height: 0;
+    border: 0;
+    border-bottom: 1px solid $light-border;
+
+    &.style-two {
+        height: 1px;
+        border-top: 0;
+        border-bottom: 0;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    }
+    &.style-three {
+        padding: 0;
+        border: none;
+        border-top: medium double #333;
+        color: $two-bw;
+        text-align: center;
+    }
+    &.style-three:after {
+        content: "§";
+        display: inline-block;
+        position: relative;
+        top: -0.7em;
+        font-size: 1.5em;
+        padding: 0 0.25em;
+        background: white;
+    }
+}
+
+
+
+
+blockquote {
+    position: relative;
+    padding: 10px 10px 10px 100px;
+    margin: 0.5em 0 1.6667em 0;
+    min-width: 35vw;
+
+    @include font-size-procent($size-big);
+
+    font-style: italic;
+    border-top: 1px solid $two-color;
+    border-bottom: 1px solid $two-color;
+    overflow: hidden;
+
+    &:before {
+        @extend [class^="icon-"];
+        content: "\e977";
+        display: block;
+        position:absolute;
+        top: 0.1em;
+        left: 18px;
+        @include font-size(6.2, 0, true);
+        color: $two-bw;
+    }
+
+    em, i, cite {
+        font-style: normal;
+    }
+
+    & > p:last-child {
+        margin-bottom: 0;
+    }
+
+    q, cite, small {
+        @include font-size-procent($size-small);
+    }
+}
+
+
+abbr[title],
+abbr[data-original-title],
+acronym {
+    border-bottom: 1px dotted $two-color;
+    text-decoration: none;
+}
+
+address {
+    font-style: italic;
+    margin: 0 0 1.6em;
+}
+
+pre {
+    max-width: 100%;
+    overflow: auto;
+    padding: 0.8em;
+    margin-bottom: 1.6em;
+
+    color:	$one-color;
+    background-color: $three-bw;
+    border: 1px solid $border-color;
+
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+code,
+kbd,
+tt,
+var,
+samp,
+pre {
+    font-family: $font-code;
+    @include font-size-procent(($size-medium));
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+kbd,
+var,
+samp,
+code, {
+    padding: 1px 4px;
+    white-space: nowrap;
+    color:	$one-color;
+    background-color: $three-bw;
+    border: 1px solid $border-color;
+}

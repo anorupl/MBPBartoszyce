@@ -1,0 +1,85 @@
+/* Swip checkbox 
+========================================================================== */
+input.onoffswitch-checkbox:empty
+{
+	position: absolute;
+	margin-left: -999px;
+}
+
+input.onoffswitch-checkbox:empty ~ label span.onoffswitch {
+	display: inherit;
+	position: absolute;
+	height: 30px;
+	width: 90px;
+	overflow: hidden;
+	text-indent: 0;
+	border-radius: 2px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+input.onoffswitch-checkbox:empty ~ label.onoffswitch-label {
+	display: block;
+	position: relative;
+	height: 30px;
+	margin: 2px 5px 2px 0;
+	clear: both;
+	text-indent: 7em;
+	cursor: pointer;
+	font-size: 16px;
+	font-size: 1.6rem;
+	line-height: 32px;
+	line-height: 3.2rem;
+}
+input.onoffswitch-checkbox:empty ~ label span.onoffswitch-inner {
+	display: block;
+	width: 200%;
+	margin-left: -100%;
+	transition: margin 0.3s ease-in 0s;
+
+}
+input.onoffswitch-checkbox:empty ~ label span.onoffswitch-inner:before,
+input.onoffswitch-checkbox:empty ~ label span.onoffswitch-inner:after {
+	display: block;
+	float: left;
+	width: 50%;
+	height: 100%;
+	padding: 0;
+	color: $fields-fff;
+	font-family: $font-base;
+	font-weight: bold;
+
+}
+input.onoffswitch-checkbox:empty ~ label span.onoffswitch-inner:before {
+	content: "TAK";
+	padding-left: 10px;
+	background-color: $fields-color;
+	color: $fields-fff;
+}
+input.onoffswitch-checkbox:empty ~ label span.onoffswitch-inner:after {
+	content: "NIE";
+	padding-right: 10px;
+	background-color: $fields-bg;
+	color: $fields-color;
+	text-align: right;
+}
+input.onoffswitch-checkbox:empty ~ label span.onoffswitch-switch {
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 56px;
+	width: 18px;
+	margin: 6px;
+	background: $fields-fff;
+	border: 2px solid $fields-border;
+	border-radius: 20px;
+	transition: all 0.3s ease-in 0s;
+}
+input.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+	margin-left: 0;
+}
+input.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+	right: 0px;
+}

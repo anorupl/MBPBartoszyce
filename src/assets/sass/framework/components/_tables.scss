@@ -1,0 +1,44 @@
+/* Tables
+========================================================================== */
+table {
+	width: 100%;
+	margin: 0 0 20px;
+	border: 0;
+	border-bottom: 1px solid $border-color;
+	border-collapse: collapse;
+	border-spacing: 0;
+	text-align: left;
+}
+table caption, td, th   {
+	padding: 5px;
+	text-align: inherit;
+}
+table caption {
+	font-weight: normal;
+	border-bottom: 1px dotted $border-color;
+	border-top: 1px dotted $border-color;
+	margin-bottom: 10px;
+}
+th {
+	background: lighten($one-bw, 50%);
+	color: $four-bw;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+td {
+	border: 0;
+	border-bottom: 1px solid $border-color;
+}
+td[scope=col] {
+	border-right: 1px solid $border-color;
+	width: 25%;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 25px;
+}
+tr:nth-child(odd) {
+	background: $four-bw;
+}
+tr:nth-child(even) {
+	background: $three-bw;
+}

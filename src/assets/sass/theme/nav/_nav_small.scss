@@ -1,0 +1,65 @@
+.icon-button-small-menu {
+    border: none;
+    overflow:hidden;
+    height: 44px;
+    width: 44px;
+    padding: 0;
+    @include font-size(4.2,0.1,true);
+    &.center-button	{
+        margin: gutter() auto;
+    }
+    &.right-button	{
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 0.333333em gutter();
+        z-index: 300;
+    }
+    &:before {
+        content: "\f039";
+        display: inline-block;
+        font-size: inherit;
+        line-height: inherit;
+        vertical-align: top;
+        color: $small-button-color;
+    }
+}
+.js {
+    .hide-menu {
+        top:-9999px; 
+        position: absolute; 
+        height: 1px;
+    }
+}
+
+.small-menu {
+    .menu li a {
+    display: block;
+    padding: 1.6rem;
+    line-height: 1;
+    color: #00ade9;
+    border-bottom: 1px solid #eeeeee;
+    }
+}
+
+.small-menu {
+    .menu {
+        display: flex;
+        flex-direction: column;       
+        margin: 0; 
+        z-index:9990;     
+        background: $four-bw;
+    }
+    .menu ul                    {background: $three-bw; margin: 0;}
+    .menu li                    {position:relative;}
+    .menu li a                  {display: block; padding: 1.6rem; line-height:1; color: $small-color-a; border-bottom: 1px solid $small-border;}
+
+    .menu li li a               {padding-left: 50px;}
+    
+    /*rozszerzenie ikony dodane recznie*/
+    .menu li li.menu-item a:before { content: "\f105"; margin: 0 10px 0 -15px; font-weight: bold; color: $two-color;}
+}
+
+
+
+
