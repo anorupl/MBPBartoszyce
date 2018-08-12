@@ -206,31 +206,32 @@ sass/
 -- Responsive breakpoint tablet
 --------------------------------------------------------------*/
 @media (max-width: $tablet) {
-   
+
 }
 /*--------------------------------------------------------------
 -- Responsive breakpoint desktop
 --------------------------------------------------------------*/
 @media (max-width: $desktop) {
- 
+
     .hide-on-small {
         display: none;
     }
-
+    
+    @import "theme/theme_rwd-tablet";
     @import "theme/nav/nav_horizontal_rwd-tablet";
 }
 /*--------------------------------------------------------------
 -- Responsive breakpoint desktop min
 --------------------------------------------------------------*/
 @media (min-width: $desktop-min) {
-    
+
     .hide-desktop {
         display:none;
     }
 
     @import "framework/layout/gird__rwd-desktop";
     @import "theme/theme__rwd-desktop";
-    @import "theme/nav/nav_horizontal__rwd-desktop";    
+    @import "theme/nav/nav_horizontal__rwd-desktop";
 }
 /*--------------------------------------------------------------
 -- Responsive breakpoint desktop hd
@@ -243,33 +244,33 @@ sass/
 *  Special Breakpoint Tables
 * ---------------------------------*/
 @media (max-width:max-width 360px) {
-    table tbody td { 
+    table tbody td {
         word-break: break-all;
     }
 }
 @media (max-width:max-width 600px) {
     .hentry table {
-        caption { 
+        caption {
             background-image: none;
         }
-        thead, table th { 
-            display: none; 
+        thead, table th {
+            display: none;
         }
 
         td {
-            display: block; 
+            display: block;
             @include font-size(1.1);
         }
 
         tbody td::before {
-            content: attr(data-th); 
-            float: left; 
-            width: 30%; 
+            content: attr(data-th);
+            float: left;
+            width: 30%;
             font-weight: bold; }
-        tbody td::after { 
-            content: ''; 
-            display:block; 
-            clear: both; 
+        tbody td::after {
+            content: '';
+            display:block;
+            clear: both;
         }
     }
 }

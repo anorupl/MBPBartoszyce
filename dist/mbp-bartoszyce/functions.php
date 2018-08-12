@@ -12,7 +12,7 @@
 Global constants
 
 Nie nadpiswyane przez child, absolutna(/home/user/) lub uri(http://..):
-- get_template_directory() - 
+- get_template_directory() -
 - get_template_directory_uri() -
 
 Nadpisywane przez child:
@@ -97,7 +97,7 @@ if ( ! function_exists( 'wpg_setup' ) ) :
 		/**
 		* Update image size;
 		*/
-		
+
 		//thumbnail
 		update_option( 'thumbnail_size_w', 320 );
         update_option( 'thumbnail_size_h', 480 );
@@ -124,7 +124,7 @@ function wpg_enqueue() {
 
 	// jquery and plugins
 	wp_enqueue_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js');
-	
+
 	// fallback for flexbox
 	wp_enqueue_script( 'wpg-modernizr-flexbox', THEME_URL . 'js/assets/modernizr-flexbox.min.js','', THEME_VERSION);
 
@@ -146,11 +146,13 @@ function wpg_enqueue() {
 		'error_image' => __('it cannot be loaded.', 'wpg_theme')
 	));
 
+	wp_enqueue_script( 'tabs-js', THEME_URL . 'js/assets/jquery-accessible-tabs.min.js',array('jquery'), THEME_VERSION, true );
+
 
 	// Old ie
 	wp_enqueue_style( 'wpg-ie', THEME_URL . 'css/ie.css');
 	wp_enqueue_script( 'html5', THEME_URL . 'js/assets/html5shiv.min.js',array(), THEME_VERSION, false );
-	
+
 	wp_style_add_data( 'wpg-ie', 'conditional', 'lt IE 9' );
 	wp_script_add_data( 'html5', 'conditional', 'lt IE 9' );
 

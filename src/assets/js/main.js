@@ -40,6 +40,30 @@ $.fn.nav = function (nav) {
   });
 };
 
+$.fn.slick_small_sllider = function(setting) {
+
+  return this.each(function () {
+      var $this = $(this);
+
+        if ($(window).width() < 992) {
+             $this.slick(setting);
+        };
+
+      $(window).on('resize orientationchange', function () {
+           if ($(window).width() < 992) {
+
+              if (!$this.hasClass('slick-initialized')) {
+                 $this.slick(setting);
+              }
+              return;
+           };
+           if ($this.hasClass('slick-initialized')) {
+              return $this.slick('unslick');
+          };
+      });
+  });
+};
+
 
 
   /*********************************************************
@@ -74,6 +98,8 @@ $.fn.nav = function (nav) {
             $( this ).parents().toggleClass( 'focus' );
         });
     });
+
+    $('#header-content').slick_small_sllider(settings = {});
 
 
   });

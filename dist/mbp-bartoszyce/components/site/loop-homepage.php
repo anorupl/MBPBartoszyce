@@ -7,7 +7,7 @@
  * @since 0.1.0
  */
 ?>
-<section id="posts-header">
+<section id="posts-header" class="clear-both">
     <main id="main" class="site-main clear-both white-a">
 
     <?php
@@ -16,13 +16,13 @@
     /* Start the Loop */
         while (have_posts()): the_post();
 
-            $url_thumb = get_the_post_thumbnail_url($post, 'medium');
+            $url_thumb = get_the_post_thumbnail_url($post, 'full');
             if ($url_thumb == false) {
                 $url_thumb = get_template_directory_uri() . '/img/default/no_image.jpg';
             }
 
             if ($i == 0): ?>
-            <article id="post-<?php the_ID();?>" <?php post_class('f-post-header col-8');?> >
+            <article id="post-<?php the_ID();?>" <?php post_class('f-post col-8');?> >
                 <div class="f-post-thumbnail col-8" style="background-image:url('<?php echo esc_url($url_thumb); ?>');"></div>
                 <div class="f-post-content col-4 gutters">
                     <header class="entry-header">
@@ -36,7 +36,7 @@
 
             <?php else: ?>
 
-        <?php if ($i == 1) {echo '<div id="header-content" class="slider-header header-offslider hentry-header">';}?>
+        <?php if ($i == 1) {echo '<div id="header-content" class="slider-header arrows-tr header-offslider hentry-header">';}?>
             <div>
                 <article id="post-<?php the_ID();?>" <?php post_class();?>>
                     <div class="s-post-thumbnail" style="background-image:url('<?php echo esc_url($url_thumb); ?>');"></div>

@@ -15,19 +15,19 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/404.php:15
+#: src/404.php:29
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: src/404.php:18, src/components/content_multi/content-none.php:15
+#: src/404.php:35, src/components/content_multi/content-none.php:29
 msgid "It looks like nothing was found at this location."
 msgstr ""
 
-#: src/attachment.php:31
+#: src/attachment.php:61
 msgid "Click to download"
 msgstr ""
 
-#: src/attachment.php:35
+#: src/attachment.php:69
 msgid "File size: "
 msgstr ""
 
@@ -42,11 +42,11 @@ msgstr[1] ""
 msgid "Comments are closed."
 msgstr ""
 
-#: src/components/content_multi/content-none.php:12
+#: src/components/content_multi/content-none.php:23
 msgid "Nothing Found"
 msgstr ""
 
-#: src/components/content_multi/content.php:23
+#: src/components/content_multi/content.php:45
 msgid "Continue reading"
 msgstr ""
 
@@ -54,15 +54,15 @@ msgstr ""
 msgid "Page published on <time class=\"entry-date published updated\" itemprop=\"datePublished dateModified\" datetime=\"%1$s\">%2$s</time>, by <span class=\"author vcard\" ><span class=\"fn\">%3$s</span></span>"
 msgstr ""
 
-#: src/components/content_single/content-page.php:63, src/components/content_single/content.php:31
+#: src/components/content_single/content-page.php:63, src/components/content_single/content.php:61
 msgid "Pages:"
 msgstr ""
 
-#: src/components/content_single/content-page.php:71, src/components/content_single/content.php:35, src/index.php:43, src/search.php:36
+#: src/components/content_single/content-page.php:71, src/components/content_single/content.php:69, src/index.php:85, src/search.php:71
 msgid "Page"
 msgstr ""
 
-#: src/components/content_single/content.php:16
+#: src/components/content_single/content.php:31
 msgid "Post published in category %1$s, on <time class=\"entry-date published updated\" datetime=\"%2$s\">%3$s</time>, by <span class=\"author vcard\"><span class=\"fn\">%4$s</span></span>"
 msgstr ""
 
@@ -70,7 +70,7 @@ msgstr ""
 msgid "Show more "
 msgstr ""
 
-#: src/footer.php:18
+#: src/footer.php:35
 msgid "All Rights Reserved"
 msgstr ""
 
@@ -110,15 +110,19 @@ msgstr ""
 msgid "it cannot be loaded."
 msgstr ""
 
-#: src/header.php:62, src/header.php:76
+#: src/header.php:123, src/header.php:151
 msgid "Menu"
 msgstr ""
 
-#: src/header.php:80
+#: src/header.php:159
 msgid "Add menu"
 msgstr ""
 
-#: src/image.php:23
+#: src/home.php:59, src/inc/customizer/setting_control/inc_setting_club.php:63, src/inc/customizer/wpg_customizer.php:263
+msgid "Clubs in the library"
+msgstr ""
+
+#: src/image.php:45
 msgid "Photo published in size <a href=\"%1$s\" title=\"Link to original file\">%2$s pixels <span class=\"screen-reader-text\">(Image Width)</span> to %3$s pixels <span class=\"screen-reader-text\">(Image Height)</span></a> in the article <a href=\"%4$s\" title=\"Back to %5$s\" rel=\"gallery\">%6$s</a>"
 msgstr ""
 
@@ -126,27 +130,27 @@ msgstr ""
 msgid "Opening Hours"
 msgstr ""
 
-#: src/inc/customizer/helpers/inc_helpers.php:100, src/inc/customizer/setting_control/inc_setting_club.php:175, src/inc/customizer/setting_control/inc_setting_new.php:95, src/inc/template-tags.php:191, src/inc/template-tags.php:251
+#: src/inc/customizer/helpers/inc_helpers.php:199, src/inc/customizer/setting_control/inc_setting_club.php:175, src/inc/customizer/setting_control/inc_setting_new.php:95, src/inc/template-tags.php:191, src/inc/template-tags.php:251
 msgid "Category"
 msgstr ""
 
-#: src/inc/customizer/helpers/inc_helpers.php:124, src/inc/customizer/helpers/inc_helpers.php:171
+#: src/inc/customizer/helpers/inc_helpers.php:247, src/inc/customizer/helpers/inc_helpers.php:341
 msgid "All Categories"
 msgstr ""
 
-#: src/inc/customizer/helpers/inc_helpers.php:153
+#: src/inc/customizer/helpers/inc_helpers.php:305
 msgid "Profile on the site "
 msgstr ""
 
-#: src/inc/customizer/helpers/inc_helpers.php:157
+#: src/inc/customizer/helpers/inc_helpers.php:313
 msgid "Find us on"
 msgstr ""
 
-#: src/inc/customizer/helpers/inc_helpers.php:170, src/inc/customizer/setting_control/inc_setting_club.php:275
+#: src/inc/customizer/helpers/inc_helpers.php:339, src/inc/customizer/setting_control/inc_setting_club.php:275
 msgid "Select Category"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_blog.php:25, src/inc/customizer/wpg_customizer.php:204
+#: src/inc/customizer/setting_control/inc_setting_blog.php:25, src/inc/customizer/wpg_customizer.php:407
 msgid "Last post"
 msgstr ""
 
@@ -188,10 +192,6 @@ msgstr ""
 
 #: src/inc/customizer/setting_control/inc_setting_catl.php:211
 msgid "Tab Description"
-msgstr ""
-
-#: src/inc/customizer/setting_control/inc_setting_club.php:63, src/inc/customizer/wpg_customizer.php:132
-msgid "Clubs in the library"
 msgstr ""
 
 #: src/inc/customizer/setting_control/inc_setting_club.php:109, src/inc/customizer/setting_control/inc_setting_club.php:237
@@ -242,75 +242,75 @@ msgstr ""
 msgid "Select a location on map"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:36
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:71
 msgid "Body Font Family"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:37, src/inc/customizer/setting_control/inc_setting_fonts.php:98
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:73, src/inc/customizer/setting_control/inc_setting_fonts.php:195
 msgid "Select font or option Google Font to see advanced options google fonts."
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:54
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:107
 msgid "Google Font Family"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:72, src/inc/customizer/setting_control/inc_setting_fonts.php:133
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:143, src/inc/customizer/setting_control/inc_setting_fonts.php:265
 msgid "Font Variant"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:73, src/inc/customizer/setting_control/inc_setting_fonts.php:134
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:145, src/inc/customizer/setting_control/inc_setting_fonts.php:267
 msgid "Different variants of the font, provides control over font-weight and italics"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:97
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:193
 msgid "Heading Font Family"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:115
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:229
 msgid "Heading - Google Font Family"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:151
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:301
 msgid "Latin"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:152
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:303
 msgid "Latin Extended"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:153
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:305
 msgid "Greek"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:154
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:307
 msgid "Greek Extended"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:155
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:309
 msgid "Cyrillic"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:156
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:311
 msgid "Cyrillic Extended"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:157
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:313
 msgid "Vietnamese"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:158
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:315
 msgid "Arabic"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:159
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:317
 msgid "Khmer"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:160
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:319
 msgid "Devanagari"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_fonts.php:174
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:347
 msgid "Choose Google Font Subsets"
 msgstr ""
 
@@ -330,35 +330,35 @@ msgstr ""
 msgid "Link to  %1$s"
 msgstr ""
 
-#: src/inc/customizer/wpg_customizer.php:84
+#: src/inc/customizer/wpg_customizer.php:167
 msgid "Theme Settings"
 msgstr ""
 
-#: src/inc/customizer/wpg_customizer.php:107
+#: src/inc/customizer/wpg_customizer.php:213
 msgid "Typography"
 msgstr ""
 
-#: src/inc/customizer/wpg_customizer.php:118
+#: src/inc/customizer/wpg_customizer.php:235
 msgid "News and event"
 msgstr ""
 
-#: src/inc/customizer/wpg_customizer.php:146
+#: src/inc/customizer/wpg_customizer.php:291
 msgid "New releases"
 msgstr ""
 
-#: src/inc/customizer/wpg_customizer.php:160
+#: src/inc/customizer/wpg_customizer.php:319
 msgid "Catl"
 msgstr ""
 
-#: src/inc/customizer/wpg_customizer.php:171
+#: src/inc/customizer/wpg_customizer.php:341
 msgid "Contact"
 msgstr ""
 
-#: src/inc/customizer/wpg_customizer.php:182
+#: src/inc/customizer/wpg_customizer.php:363
 msgid "Social networks"
 msgstr ""
 
-#: src/inc/customizer/wpg_customizer.php:193
+#: src/inc/customizer/wpg_customizer.php:385
 msgid "Partners"
 msgstr ""
 
@@ -398,26 +398,26 @@ msgstr ""
 msgid "Newer Comments"
 msgstr ""
 
-#: src/index.php:41, src/search.php:34
+#: src/index.php:81, src/search.php:67
 msgid "Previous page"
 msgstr ""
 
-#: src/index.php:42, src/search.php:35
+#: src/index.php:83, src/search.php:69
 msgid "Next page"
 msgstr ""
 
-#: src/search.php:17
+#: src/search.php:33
 msgid "Search Results for: %s"
 msgstr ""
 
-#: src/searchform.php:13, src/searchform.php:14, src/searchform.php:15
+#: src/searchform.php:25, src/searchform.php:27, src/searchform.php:29
 msgid "Search"
 msgstr ""
 
-#: src/single.php:30
+#: src/single.php:59
 msgid "Next"
 msgstr ""
 
-#: src/single.php:32
+#: src/single.php:63
 msgid "Previous"
 msgstr ""

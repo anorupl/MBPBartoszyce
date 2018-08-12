@@ -7,23 +7,23 @@
  */
  	// ==============================================
 	//  = Show/Hidde 							=
-	//  =============================================  
+	//  =============================================
 	$wp_customize->add_setting('wpg_new_active', array(
 		'default'    => false,
 		'capability' => 'edit_theme_options',
 	));
-	
+
 	$wp_customize->add_control(
 		        new WPG_Customize_Control_Switch($wp_customize, 'wpg_new_active', array(
 
-		                'settings' 	=> 'wpg_clubs_active',
+		                'settings' 	=> 'wpg_new_active',
 		                'section'  	=> $new_section_id,
 		                'label'    	=> __('Show section', 'wpg_theme'),
 		                'type'		=> 'switch'
 		            )
 		        )
     );
-    
+
  	// ==============================================
     //  = Section title						=
     //  =============================================
@@ -43,7 +43,7 @@
 
     // ======================================
     //  = New tab category =
-    //  =====================================    
+    //  =====================================
     $tab_category_lists = get_all_terms(false, true, array(
         'categorycollection' => __('Category', 'wpg_theme'),
     ));
@@ -61,4 +61,4 @@
             'choices' => $tab_category_lists['categorycollection'],
         )
         )
-    ); 
+    );

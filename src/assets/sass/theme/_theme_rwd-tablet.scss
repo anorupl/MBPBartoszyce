@@ -1,0 +1,10 @@
+// Header
+/* section header post */
+#posts-header {
+  background-color: $one-color;
+}
+
+.f-post {
+  border-bottom: dashed 1px $two-color;
+  margin-bottom: gutter();
+}

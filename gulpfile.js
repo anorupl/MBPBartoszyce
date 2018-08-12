@@ -16,8 +16,8 @@ var gulp        = require('gulp'),
 	rename      = require('gulp-rename'),
 	wpPot       = require('gulp-wp-pot'),
 	sort        = require('gulp-sort'),
-	ftp         = require('vinyl-ftp'),
-	ftp_config  = require('./ftp.json'),
+	//ftp         = require('vinyl-ftp'),
+	//ftp_config  = require('./ftp.json'),
 	header      = require('gulp-header'),
 	gutil       = require('gulp-util'),
 	browserSync = require('browser-sync');
@@ -100,7 +100,7 @@ gulp.task('copy-assets', function() {
 	//Customizer assets
 	gulp.src(theme.customizer_assets.src).pipe(changed(theme.customizer_assets.dist))
 		.pipe(gulp.dest(theme.customizer_assets.dist));
-	
+
 		//Copy all custom fonts
 	gulp.src(theme.fonts.src)
 		.pipe(gulp.dest(theme.fonts.dist));
@@ -109,11 +109,11 @@ gulp.task('copy-assets', function() {
 
 //Generate script
 gulp.task('theme-js', function() {
-	
+
 	//Copy Js assets: silder, html5shiv
 	gulp.src([slider, html5shiv]).pipe(changed(project_dir + dist_assets_js))
 		.pipe(gulp.dest(project_dir + dist_assets_js));
-	
+
 	//Copy Js for gallery and images
 	gulp.src([imagePopup]).pipe(changed(project_dir + dist_assets_js))
 		.pipe(concat('wpg-image.js')).pipe(uglify()).pipe(rename({suffix: '.min'}))

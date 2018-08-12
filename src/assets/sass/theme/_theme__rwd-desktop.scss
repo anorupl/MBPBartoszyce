@@ -37,7 +37,7 @@
 .f-post-thumbnail {
     height: 660px;
 }
-.f-post-header {
+.f-post {
     .entry-summary {
         flex-basis: 60%;
     }
@@ -47,10 +47,9 @@
 }
 // samll post header
 .header-offslider {
-    width: 660px;
     position: absolute;
     top: 30px;
-    right: 3%;
+    right: -3%;
 }
 .header-offslider article {
     width: 220px;
@@ -62,16 +61,23 @@
     height: 220px;;
 }
 .arrow-allpost-icon {
-
     position: absolute;
     right: 1%;
     top: 355px;
-    width: 100px;
+    background-color: $one-color;
 }
 
 #header-nav-bottom {
     position: absolute;
     bottom: -75px;
-    right: 3%;    
+    right: 3%;
     min-height: 150px;
+}
+
+/* Home page - section with New item */
+.tabs__item {
+  display: block;
+  text-align: left;
+
+
 }
