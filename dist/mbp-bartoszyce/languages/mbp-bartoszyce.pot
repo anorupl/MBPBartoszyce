@@ -122,6 +122,30 @@ msgstr ""
 msgid "Clubs in the library"
 msgstr ""
 
+#: src/home.php:267
+msgid "Show"
+msgstr ""
+
+#: src/home.php:279
+msgid "Show older"
+msgstr ""
+
+#: src/home.php:339
+msgid "Tab "
+msgstr ""
+
+#: src/home.php:353
+msgid "Tab content"
+msgstr ""
+
+#: src/home.php:367, src/inc/customizer/setting_control/inc_setting_catl.php:97
+msgid "Go to the website"
+msgstr ""
+
+#: src/home.php:391, src/inc/customizer/setting_control/inc_setting_contact.php:63
+msgid "let's stay in contact"
+msgstr ""
+
 #: src/image.php:45
 msgid "Photo published in size <a href=\"%1$s\" title=\"Link to original file\">%2$s pixels <span class=\"screen-reader-text\">(Image Width)</span> to %3$s pixels <span class=\"screen-reader-text\">(Image Height)</span></a> in the article <a href=\"%4$s\" title=\"Back to %5$s\" rel=\"gallery\">%6$s</a>"
 msgstr ""
@@ -174,10 +198,6 @@ msgstr ""
 msgid "Digital archive of local tradition"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_catl.php:97
-msgid "Go to the website"
-msgstr ""
-
 #: src/inc/customizer/setting_control/inc_setting_catl.php:113
 msgid "Button title"
 msgstr ""
@@ -208,10 +228,6 @@ msgstr ""
 
 #: src/inc/customizer/setting_control/inc_setting_club.php:277
 msgid "Select category to show in Section."
-msgstr ""
-
-#: src/inc/customizer/setting_control/inc_setting_contact.php:63
-msgid "let's stay in contact"
 msgstr ""
 
 #: src/inc/customizer/setting_control/inc_setting_contact.php:115

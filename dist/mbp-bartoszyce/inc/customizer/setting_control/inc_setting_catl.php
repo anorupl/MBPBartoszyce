@@ -8,12 +8,12 @@
 
  	// ==============================================
 	//  = Show/Hidde 							=
-	//  =============================================  
+	//  =============================================
 	$wp_customize->add_setting('wpg_catl_active', array(
 		'default'    => false,
 		'capability' => 'edit_theme_options',
 	));
-	
+
 	$wp_customize->add_control(
 		        new WPG_Customize_Control_Switch($wp_customize, 'wpg_catl_active', array(
 
@@ -24,7 +24,7 @@
 		            )
 		        )
     );
-    
+
  	// ==============================================
     //  = Section title						=
     //  =============================================
@@ -63,7 +63,7 @@
     //  = button url					=
     //  =============================================
     $wp_customize->add_setting('wpg_catl_btn_url', array(
-        'default' => '',
+        'default' => '#',
         'capability' => 'edit_theme_options',
         'sanitize_callback' => 'esc_url_raw',
     ));
@@ -100,7 +100,7 @@
             'default'           => '',
             'sanitize_callback' => 'sanitize_text_field'
         ));
-            
+
         $wp_customize->add_control( "wpg_catl_tabcontent_$i", array(
             'settings' => "wpg_catl_tabcontent_$i",
             'label'   => __('Tab Description', 'wpg_theme'),
@@ -108,6 +108,3 @@
             'type'    => 'textarea'
         ));
     }
-
-
-

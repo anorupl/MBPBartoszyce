@@ -114,9 +114,24 @@
 
 
 
-#coletions-links {
+#coletions-link {
   position: absolute;
   left: -280px;
   bottom: 0px;
   z-index: 5;
+}
+
+
+
+/* contact */
+
+#contact .header-section::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: $two-color;
+    position: absolute;
+    transform: skewY(4deg) translateY(50%);
+    bottom: 0;
 }

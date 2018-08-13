@@ -1576,11 +1576,8 @@ form select {
 .container {
   position: relative;
   max-width: 1600px;
-  padding-left: 4rem;
-  padding-right: 4rem;
   margin: auto;
   clear: both;
-  overflow: hidden;
 }
 
 .row {
@@ -2215,11 +2212,6 @@ main {
   margin-left: 5%;
 }
 
-.tabs-home__contents {
-  display: table-cell;
-  vertical-align: top;
-}
-
 .js-tabcontent[aria-hidden=true] {
   display: none;
 }
@@ -2450,14 +2442,10 @@ main {
   margin: 40px;
 }
 
-#coletions-links {
+#coletions-link {
   clear: both;
   padding: 40px;
   text-align: center;
-}
-
-.coletions-links__link {
-  margin: 40px;
 }
 
 /* section catl */
@@ -2928,6 +2916,10 @@ a.skip-main:active {
   }
   /* Gird 12 column
 ========================================================================== */
+  .container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
   .col-1 {
     width: 8.33333%;
     float: left;
@@ -3082,7 +3074,7 @@ a.skip-main:active {
         justify-content: center;
     height: 280px;
   }
-  #coletions-links {
+  #coletions-link {
     position: absolute;
     left: -280px;
     bottom: 0px;

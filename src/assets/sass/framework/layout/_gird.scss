@@ -3,11 +3,8 @@
 .container  {
     position:relative;
     max-width: 1600px;
-    padding-left: 4rem;
-    padding-right: 4rem;
     margin: auto;
     clear: both;
-    overflow: hidden;
 }
 
 .row {
@@ -20,14 +17,14 @@
 
 %col-styles {
     position: relative;
-    @include span(12 no-gutters); 
-    margin-left:0; 
-    margin-right:0; 
+    @include span(12 no-gutters);
+    margin-left:0;
+    margin-right:0;
 }
 
 @for $i from 1 through 12 {
     .col-#{$i} { @extend %col-styles; }
-    
+
 }
 
 
@@ -51,4 +48,3 @@
         height: 0;
     }
 }
-

@@ -105,7 +105,7 @@ if (!empty($number_clubs)) {
             <?php endforeach; //tabs?>
           </ul>
 
-          <div class="tabs-home__contents white-a col-9">
+          <div class="white-a col-9">
             <?php foreach ( $terms as $term ) : ?>
               <div id="id_<?php echo $term->slug;?>" class="js-tabcontent col-12">
                 <?php
@@ -136,7 +136,7 @@ if (!empty($number_clubs)) {
 
                 <?php endwhile; endif; wp_reset_query(); ?>
 
-                <div id="coletions-links">
+                <div id="coletions-link">
                   <a id="colection_<?php echo $term->slug;?>" class="btn" href="#"><?php _e('Show older', 'wpg_theme'); ?></a>
                 </div>
               </div>
@@ -171,7 +171,7 @@ if (!empty($number_clubs)) {
         </li>
         <?php endfor; ?>
       </ul>
-      <div class="tabs-home__contents">
+      <div class="js-tabs__contents">
         <?php for ($i=1; $i <= 3; $i++) : ?>
           <div id="id_catl_tab_<?php echo $i; ?>" class="js-tabcontent">
               <?php echo esc_html(get_theme_mod("wpg_catl_tabcontent_$i",__('Tab content', 'wpg_theme'))); ?>
@@ -180,10 +180,31 @@ if (!empty($number_clubs)) {
       </div>
     </div>
   </div>
+  <a id="ctl_btn" class="btn btn--catl" href="<?php echo esc_url(get_theme_mod("wpg_catl_btn_url",'#')); ?>">
+      <?php echo esc_html(get_theme_mod("wpg_catl_btn_title",__('Go to the website', 'wpg_theme'))); ?>
+  </a>
 </div>
 </div>
 </section>
 
+
+
+<section id="contact" class="newitems page-section clear-both">
+  <div class="container">
+      <header class="header-section">
+          <span class="header-span">
+              <h2><?php echo esc_html(get_theme_mod('wpg_contact_title',__('let\'s stay in contact', 'wpg_theme'))); ?></h2>
+              <span class="border"></span>
+          </span>
+      </header>
+  </div>
+<div id="contact__content" class="col-7">
+
+</div>
+<div id="contact__map" class="col-5">
+  			<div id="map-canvas"></div>
+</div>
+</section
 
 
 
