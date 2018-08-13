@@ -262,11 +262,11 @@ function wpg_get_last_post_gallery(  $post_id, $html = true ) {
 *
 * @return	string with html
 */
-function wpg_the_image_attachment($size = 'large', $limit = 0, $offset = 0) {
+function wpg_the_image_attachment($size = 'large', $limit = 0,$column= 3, $offset = 0) {
 
 	global $post;
 
-	$thumb_id 	= get_post_thumbnail_id($post->ID); // gets the post thumbnail ID
+	$thumb_id = get_post_thumbnail_id($post->ID); // gets the post thumbnail ID
 	$images 	= get_children( array('post_parent' => $post->ID, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'exclude' => $thumb_id ) );
 
 	if ($images) {
@@ -277,7 +277,7 @@ function wpg_the_image_attachment($size = 'large', $limit = 0, $offset = 0) {
 		if ($limit > 0) : $stop = $limit+$start; else : $stop = $num_of_images; endif;
 
 		$i = 0;
-		echo '<div id="gallery-'. $post->ID .'" class="gallery gallery-columns-4">';
+		echo '<div id="gallery-'. $post->ID .'" class="gallery gallery-columns-'. $column. '">';
 
 		foreach ($images as $image) {
 			if ($start <= $i and $i < $stop) {
@@ -459,4 +459,22 @@ function wpg_strip_shortcode_gallery($content, $code)
     } else {
         echo apply_filters('the_content', $content);
     }
+}
+/**
+* If post not have thumbnail display default image
+*
+* sizes: thumbnail, medium, medium_large, large, full.
+*
+* @param string $size.
+* @return string html
+
+*/
+function wpg_the_thumbnail( $size='thumbnail' ){
+
+	if (has_post_thumbnail()) {
+		the_post_thumbnail( ($size) );
+	} else {
+		echo '<img alt="Domyślna fotografia Bartoszyc" src="'. $urlimg .'/img/photo-category-page.jpg" width="177" height="118"/>';
+	}
+
 }

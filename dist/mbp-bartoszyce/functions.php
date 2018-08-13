@@ -169,7 +169,7 @@ require THEME_PATH . '/inc/customizer/wpg_customizer.php';
 */
 require THEME_PATH . 'inc/fn_disabled.php';
 require THEME_PATH . 'inc/template-functions.php';
-//require THEME_PATH . 'inc/template-tags.php';
+require THEME_PATH . 'inc/template-tags.php';
 
 /**
 * Include file with custom admin setting:

@@ -62,6 +62,50 @@ main {
 .size-h3 {
   @include font-size(($size-base + 1.1),0,true);
 }
+
+.btn {
+    color: $four-bw;
+    background-color: $two-color;
+    border: 1px solid $two-color;
+    padding: 5px;
+    min-width: 200px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 25px;
+    &:hover {
+      background-color: $one-color;
+    }
+}
+
+// tabs
+.js-tablist {
+  text-align: center;
+  list-style-type: none;
+  padding-left: 0;
+  overflow: hidden;
+}
+.tabs__item {
+  display: inline-block;
+  padding: 10px;
+}
+.tabs__link {
+  cursor: pointer;
+  span {
+      margin-left: 5%;
+  }
+}
+.tabs-home__contents {
+    display: table-cell;
+    vertical-align: top;
+}
+.js-tabcontent[aria-hidden=true]{
+    display: none;
+}
+
+
+
+
+
 /* 3.0 Header
 ======================= */
 
@@ -99,7 +143,8 @@ main {
 /* 4.0 Section
 ======================= */
 .page-section {
-    padding-top: gutter();
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
 /* Home page - header section with post */
@@ -231,41 +276,56 @@ main {
 
 
 /* Home page - section with New item */
-
-.tab-home {
-  max-width: 80%;
-  margin: auto;
-}
-.js-tablist {
-text-align: center;
-list-style-type: none;
-padding-left: 0;
-overflow: hidden;
-}
-.tabs__item {
-  display: inline-block;
-  padding: 10px;
-  margin-left: 15px;
-  margin-right: 15px;
-  min-width: 50px;
-  border-bottom: 1px solid $light-border;
-
-}
-.tabs__link {
-  cursor: pointer;
-
-  span {
-      margin-left: 5%;
-  }  
+.newitems {
+  .tabs__item {
+    margin-left: 15px;
+    margin-right: 15px;
+    min-width: 50px;
+    border-bottom: 1px solid $light-border;
+  }
+  .tabs-home__contents {
+    img {
+      box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.5);
+    }
+  }
 }
 
+.coletion-image,
+.coletion-content {
+  padding: 2.08333% 2.08333% 0 2.08333%;
+  background-color: $two-color;
 
-
-.tabs-home__contents {
-    display: table-cell;
-    vertical-align: top;
-    padding-left: 1.43em;
+  img {
+    width: auto;
+    max-height: 370px;
+    margin: auto;
+  }
 }
-.js-tabcontent[aria-hidden=true]{
-    display: none;
+.coletion-gallery {
+  background-color: $one-color;
+  text-align: center;
+
+  .btn {
+    margin: 40px;
+  }
+}
+
+#coletions-links {
+  clear: both;
+  padding: 40px;
+  text-align: center;
+}
+.coletions-links__link {
+  margin: 40px;
+}
+
+
+
+/* section catl */
+.catl {
+  background-color: $one-color;
+}
+.catl-svg,
+.catl-content {
+  min-height: 300px;
 }

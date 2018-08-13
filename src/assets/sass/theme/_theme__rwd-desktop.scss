@@ -75,9 +75,48 @@
 }
 
 /* Home page - section with New item */
-.tabs__item {
-  display: block;
-  text-align: left;
+.newitems {
+  .tabs__item {
+    display: block;
+    text-align: left;
+  }
+}
+
+.coletion-image,
+.coletion-content  {
+   height: 370px;
+   img {
+       margin-top: 20px;
+   }
+}
+.coletion-content {
+  overflow: hidden;
+}
+.coletion-gallery {
+    height: 370px;
+    padding: 2.08333% 0 2.08333% 2.08333%;
+    text-align: right;
+
+    .gallery{
+      margin-right: -40px
+    }
+    .btn {
+      margin: auto 30px;
+    }
+}
+.coletion-gallery__gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 280px;
+}
 
 
+
+
+#coletions-links {
+  position: absolute;
+  left: -280px;
+  bottom: 0px;
+  z-index: 5;
 }

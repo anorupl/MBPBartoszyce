@@ -8,12 +8,12 @@
 
  	// ==============================================
 	//  = Show/Hidde 							=
-	//  =============================================  
+	//  =============================================
 	$wp_customize->add_setting('wpg_contact_active', array(
 		'default'    => false,
 		'capability' => 'edit_theme_options',
 	));
-	
+
 	$wp_customize->add_control(
 		        new WPG_Customize_Control_Switch($wp_customize, 'wpg_contact_active', array(
 
@@ -24,7 +24,7 @@
 		            )
 		        )
     );
-    
+
  	// ==============================================
     //  = Section title						=
     //  =============================================
@@ -73,7 +73,7 @@
         'label'   => __('Show google map in contact', 'wpg_theme'),
         'section'  => $contact_section_id,
         'type'=> 'checkbox'
-    ));   
+    ));
 
     for ( $i = 1; $i <= 4; $i++ ) {
         // ==============================================
@@ -87,7 +87,7 @@
         ));
 
         $wp_customize->add_control( "wpg_contact_place_$i", array(
-            'settings' => "wpg_catl_tab_$i",
+            'settings' => "wpg_contact_place_$i",
             'label'   => __('Tab #', 'wpg_theme') . $i,
             'section'  => $contact_section_id,
             'type'    => 'text'
@@ -140,7 +140,7 @@
 
         // ==============================================
         //  = Opening Hours							=
-        //  =============================================  
+        //  =============================================
         $wp_customize->add_setting("wpg_contact_open_$i", array(
             'default'    => base64_encode('{"mo":"9:00-17:00","tu":"9:00-17:00","we":"9:00-17:00","th":"9:00-17:00","fr":"9:00-17:00","sa":"9:00-17:00","su":"9:00-17:00"}'),
             'capability' => 'edit_theme_options',
@@ -169,6 +169,6 @@
                 'section'  => $contact_section_id,
                 'label'    => __('Tab #', 'wpg_theme') . $i . ' ' . __( 'Select a location on map', 'wpg_theme' )
             ))
-        );   
+        );
 
     }
