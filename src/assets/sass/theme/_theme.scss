@@ -59,6 +59,21 @@ main {
         color: $white;
     }
 }
+
+.text-color-two {
+  color: $four-bw;
+  a {
+    color: $four-bw;
+  }
+  a:hover {
+    color: $one-color
+  }
+}
+
+
+
+
+
 .size-h3 {
   @include font-size(($size-base + 1.1),0,true);
 }
@@ -79,14 +94,14 @@ main {
 
 // tabs
 .js-tablist {
-  text-align: center;
   list-style-type: none;
   padding-left: 0;
-  overflow: hidden;
+  margin-left: 0;
+  text-align: center;
 }
 .tabs__item {
   display: inline-block;
-  padding: 10px;
+  padding: 10px 0;
 }
 .tabs__link {
   cursor: pointer;
@@ -313,12 +328,87 @@ main {
 
 
 
-
 /* section catl */
-.catl {
+#catl {
   background-color: $one-color;
+
+  .tabs__item {
+    margin: 0;
+    a {
+      margin-right: 10px;
+      padding: 10px 25px;
+    }
+    a[aria-selected=true] {
+      color: $three-color;
+      border-bottom: 2px solid $three-color;
+    }
+  }
+
+  .btn {
+    color: $three-color;
+    background-color: $one-color;
+    border-color: $three-color;
+
+    &:hover {
+      color: $one-color;
+      background-color: $three-color;
+
+    }
+  }
+
+
+}
+.catl-links {
+  text-align: center;
+  padding: 40px;
+}
+
+.catl-svg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  img {
+    width: 100%;
+  }
 }
 .catl-svg,
 .catl-content {
+  width: 100%;
+  float: left;
   min-height: 300px;
+}
+
+
+
+#contact {
+  .header-section {
+    position: relative;
+    > div {
+        z-index: 5;
+        position: relative;
+    }
+    h2 {
+      display: inline-block;
+      padding: 35px 2%;
+      background-color: $two-color;
+    }
+  }
+ h3 {
+    @include font-size($size-base);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;   
+ }
+
+
+}
+#contact__content,
+#contact__map {
+  background-color: $two-color;
+}
+
+#tabs-contact {
+  i {
+    @include font-size($size-xl-large);
+  }
 }

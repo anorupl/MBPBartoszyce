@@ -138,11 +138,11 @@ msgstr ""
 msgid "Tab content"
 msgstr ""
 
-#: src/home.php:367, src/inc/customizer/setting_control/inc_setting_catl.php:97
+#: src/home.php:369, src/inc/customizer/setting_control/inc_setting_catl.php:97
 msgid "Go to the website"
 msgstr ""
 
-#: src/home.php:391, src/inc/customizer/setting_control/inc_setting_contact.php:63
+#: src/home.php:395, src/inc/customizer/setting_control/inc_setting_contact.php:63
 msgid "let's stay in contact"
 msgstr ""
 
@@ -206,11 +206,15 @@ msgstr ""
 msgid "Button url"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_catl.php:163, src/inc/customizer/setting_control/inc_setting_catl.php:179, src/inc/customizer/setting_control/inc_setting_contact.php:165
+#: src/inc/customizer/setting_control/inc_setting_catl.php:169
+msgid "Left image"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_catl.php:211, src/inc/customizer/setting_control/inc_setting_catl.php:227, src/inc/customizer/setting_control/inc_setting_contact.php:165
 msgid "Tab"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_catl.php:211
+#: src/inc/customizer/setting_control/inc_setting_catl.php:259
 msgid "Tab Description"
 msgstr ""
 

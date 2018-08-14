@@ -17,6 +17,16 @@
     5.3 hentry elements
 --------------------------------------------------------------*/
 
+
+/* 2.0 Layout
+======================= */
+// tabs
+.js-tablist {
+  text-align: left;
+}
+
+
+
 // Header
 #site-header {
     flex-direction: row;
@@ -121,17 +131,40 @@
   z-index: 5;
 }
 
+/* section catl */
+#catl {
+  .js-tablist {
+    border-bottom: 2px solid $four-bw;
+  }
+}
+.catl-svg {
+  width: 35%;
+}
+.catl-content {
+  width: 65%;
+}
+
+
+.catl-links {
+text-align: right;
+}
+.catl-content {
+  padding: 40px 0;
+}
+
 
 
 /* contact */
 
-#contact .header-section::after {
+#contact {
+  .header-section::after {
     content: '';
     display: block;
     width: 100%;
     height: 100%;
     background-color: $two-color;
     position: absolute;
-    transform: skewY(4deg) translateY(50%);
+    transform: skewY(4deg) translateY(60%);
     bottom: 0;
+  }
 }

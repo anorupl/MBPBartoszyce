@@ -2170,6 +2170,18 @@ main {
   color: #ffffff;
 }
 
+.text-color-two {
+  color: #ffffff;
+}
+
+.text-color-two a {
+  color: #ffffff;
+}
+
+.text-color-two a:hover {
+  color: #543d4f;
+}
+
 .size-h3 {
   font-size: 27px;
   font-size: 2.7rem;
@@ -2193,15 +2205,15 @@ main {
 }
 
 .js-tablist {
-  text-align: center;
   list-style-type: none;
   padding-left: 0;
-  overflow: hidden;
+  margin-left: 0;
+  text-align: center;
 }
 
 .tabs__item {
   display: inline-block;
-  padding: 10px;
+  padding: 10px 0;
 }
 
 .tabs__link {
@@ -2449,13 +2461,90 @@ main {
 }
 
 /* section catl */
-.catl {
+#catl {
   background-color: #543d4f;
+}
+
+#catl .tabs__item {
+  margin: 0;
+}
+
+#catl .tabs__item a {
+  margin-right: 10px;
+  padding: 10px 25px;
+}
+
+#catl .tabs__item a[aria-selected=true] {
+  color: #0bd69f;
+  border-bottom: 2px solid #0bd69f;
+}
+
+#catl .btn {
+  color: #0bd69f;
+  background-color: #543d4f;
+  border-color: #0bd69f;
+}
+
+#catl .btn:hover {
+  color: #543d4f;
+  background-color: #0bd69f;
+}
+
+.catl-links {
+  text-align: center;
+  padding: 40px;
+}
+
+.catl-svg {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.catl-svg img {
+  width: 100%;
 }
 
 .catl-svg,
 .catl-content {
+  width: 100%;
+  float: left;
   min-height: 300px;
+}
+
+#contact .header-section {
+  position: relative;
+}
+
+#contact .header-section > div {
+  z-index: 5;
+  position: relative;
+}
+
+#contact .header-section h2 {
+  display: inline-block;
+  padding: 35px 2%;
+  background-color: #f25e44;
+}
+
+#contact h3 {
+  font-size: 16px;
+  font-size: 1.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+#contact__content,
+#contact__map {
+  background-color: #f25e44;
+}
+
+#tabs-contact i {
+  font-size: 34px;
+  font-size: 3.4rem;
 }
 
 /* Widget
@@ -2985,6 +3074,11 @@ a.skip-main:active {
     5.5 singular
     5.3 hentry elements
 --------------------------------------------------------------*/
+  /* 2.0 Layout
+======================= */
+  .js-tablist {
+    text-align: left;
+  }
   #site-header {
     -ms-flex-direction: row;
         flex-direction: row;
@@ -3080,6 +3174,34 @@ a.skip-main:active {
     bottom: 0px;
     z-index: 5;
   }
+  /* section catl */
+  #catl .js-tablist {
+    border-bottom: 2px solid #ffffff;
+  }
+  .catl-svg {
+    width: 35%;
+  }
+  .catl-content {
+    width: 65%;
+  }
+  .catl-links {
+    text-align: right;
+  }
+  .catl-content {
+    padding: 40px 0;
+  }
+  /* contact */
+  #contact .header-section::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #f25e44;
+    position: absolute;
+    -ms-transform: skewY(4deg) translateY(60%);
+        transform: skewY(4deg) translateY(60%);
+    bottom: 0;
+  }
   /*
  * All
  * */
@@ -3095,6 +3217,13 @@ a.skip-main:active {
 /*--------------------------------------------------------------
 -- Responsive breakpoint desktop hd
 --------------------------------------------------------------*/
+@media (min-width: 75em) {
+  .catl-svg,
+  .catl-content {
+    width: 50%;
+  }
+}
+
 /*----------------------------------
 *  Special Breakpoint Tables
 * ---------------------------------*/

@@ -149,62 +149,144 @@ if (!empty($number_clubs)) {
 
 
 
-<section class="catl white-a page-section clear-both">
-<div class="container">
-<div class="catl-svg col-5">
-
-</div>
-<div class="catl-content col-7">
-  <header class="header-section">
-      <span class="header-span">
-          <h2><?php echo esc_html(get_theme_mod('wpg_catl_title','Digital archive of local tradition')); ?></h2>
-          <span class="border"></span>
-      </span>
-      <p><?php echo esc_html(get_theme_mod('wpg_clubs_desc','')); ?></p>
-  </header>
-  <div class="tab-home">
-    <div class="js-tabs col-12">
-      <ul class="js-tablist">
-        <?php for ($i=1; $i <= 3; $i++) : ?>
-        <li class="class-h3 js-tablist__item">
-          <a href="#id_catl_tab_<?php echo $i; ?>" id="label_id_catl_tab_<?php echo $i; ?>" class="js-tablist__link"><?php echo esc_html(get_theme_mod("wpg_catl_tab_$i",__('Tab ', 'wpg_theme'))); ?></a>
-        </li>
-        <?php endfor; ?>
-      </ul>
-      <div class="js-tabs__contents">
-        <?php for ($i=1; $i <= 3; $i++) : ?>
-          <div id="id_catl_tab_<?php echo $i; ?>" class="js-tabcontent">
-              <?php echo esc_html(get_theme_mod("wpg_catl_tabcontent_$i",__('Tab content', 'wpg_theme'))); ?>
+<section id="catl" class="catl white-a page-section clear-both">
+  <div class="container clear-both">
+  <div class="catl-svg hide-on-small">
+    <?php echo wp_get_attachment_image( absint( get_theme_mod('wpg_catl_image')), 'full'); ?>
+  </div>
+    <div class="catl-content">
+      <header class="header-section">
+          <span class="header-span">
+              <h2><?php echo esc_html(get_theme_mod('wpg_catl_title','Digital archive of local tradition')); ?></h2>
+              <span class="border"></span>
+          </span>
+          <p><?php echo esc_html(get_theme_mod('wpg_clubs_desc','')); ?></p>
+      </header>
+      <div class="tab-home">
+        <div class="js-tabs">
+          <ul class="js-tablist">
+            <?php for ($i=1; $i <= 3; $i++) : ?>
+            <li class="class-h4 js-tablist__item">
+              <a href="#id_catl_tab_<?php echo $i; ?>" id="label_id_catl_tab_<?php echo $i; ?>" class="js-tablist__link"><?php echo esc_html(get_theme_mod("wpg_catl_tab_$i",__('Tab ', 'wpg_theme'))); ?></a>
+            </li>
+            <?php endfor; ?>
+          </ul>
+          <div class="js-tabs__contents">
+            <?php for ($i=1; $i <= 3; $i++) : ?>
+              <div id="id_catl_tab_<?php echo $i; ?>" class="js-tabcontent">
+                  <?php echo esc_html(get_theme_mod("wpg_catl_tabcontent_$i",__('Tab content', 'wpg_theme'))); ?>
+              </div>
+            <?php endfor; ?>
           </div>
-        <?php endfor; ?>
+        </div>
+      </div>
+      <div class="catl-links">
+        <a id="catl-btn" class="btn btn--catl" href="<?php echo esc_url(get_theme_mod("wpg_catl_btn_url",'#')); ?>">
+            <?php echo esc_html(get_theme_mod("wpg_catl_btn_title",__('Go to the website', 'wpg_theme'))); ?>
+        </a>
       </div>
     </div>
   </div>
-  <a id="ctl_btn" class="btn btn--catl" href="<?php echo esc_url(get_theme_mod("wpg_catl_btn_url",'#')); ?>">
-      <?php echo esc_html(get_theme_mod("wpg_catl_btn_title",__('Go to the website', 'wpg_theme'))); ?>
-  </a>
-</div>
-</div>
 </section>
 
 
 
-<section id="contact" class="newitems page-section clear-both">
-  <div class="container">
-      <header class="header-section">
-          <span class="header-span">
-              <h2><?php echo esc_html(get_theme_mod('wpg_contact_title',__('let\'s stay in contact', 'wpg_theme'))); ?></h2>
-              <span class="border"></span>
-          </span>
-      </header>
-  </div>
-<div id="contact__content" class="col-7">
+<section id="contact" class="page-section clear-both">
+  <header class="header-section text-center">
+    <div><h2><?php echo esc_html(get_theme_mod('wpg_contact_title',__('let\'s stay in contact', 'wpg_theme'))); ?></h2></div>
+  </header>
+  <div id="contact__content" class="text-color-two col-7">
 
-</div>
-<div id="contact__map" class="col-5">
-  			<div id="map-canvas"></div>
-</div>
-</section
+    <?php
+    $days = [
+      'mo' => __('Monday'),
+      'tu' => __('Tuesday'),
+      'we' => __('Wednesday'),
+      'th' => __('Thursday'),
+      'fr' => __('Friday'),
+      'sa' => __('Saturday'),
+      'su' => __('Sunday'),
+    ];
+    ?>
+    <div id="tabs-contact" class="clear-both">
+      <div class="js-tabs">
+        <!-- Tabs Contact -->
+        <ul class="js-tablist">
+          <?php for ($i=1; $i <= 4; $i++) : ?>
+            <li class="class-h4 js-tablist__item">
+              <a href="#id_contact_tab_<?php echo $i; ?>" id="label_id_contact_tab_<?php echo $i; ?>" class="js-tablist__link"><?php echo esc_html(get_theme_mod("wpg_contact_place_$i",__('Tab ', 'wpg_theme'))); ?></a>
+            </li>
+          <?php endfor; ?>
+        </ul>
+        <!-- Tab content container -->
+        <div class="js-tabs__contents">
+          <?php for ($i=1; $i <= 4; $i++) : ?>
+            <!-- Tab content -->
+            <div id="id_contact_tab_<?php echo $i; ?>" class="js-tabcontent">
+              <!-- Left contact blok -->
+              <div id="contact-info" class="col-6">
+                <!-- Address -->
+                <div class="contact-item address">
+                  <div class="contact-item__icon">
+                  <i class="icon-map-marker"></i><h3><?php _e('Address', 'wpg_theme');?></h3>
+                  </div>
+                  <div class="contact-item__text col-10">
+                    <?php echo esc_html(get_theme_mod("wpg_contact_adres_$i",'')); ?>
+                  </div>
+                </div>
+                <!-- Email -->
+                <div class="contact-item email">
+                  <div class="contact-item__icon col-2">
+                    <i class="icon-envelope"></i>
+                  </div>
+                  <div class="contact-item__text col-10">
+                    <h3><?php _e('E-mail', 'wpg_theme');?></h3>
+                    <?php printf('<a href="mailto:%1s">%1$s</a>', antispambot(get_theme_mod("wpg_contact_email_$i"))); ?>
+                  </div>
+                </div>
+                <!-- Phone -->
+                <div class="contact-item phone">
+                  <div class="contact-item__icon col-2">
+                    <i class="icon-phone_android"></i>
+                  </div>
+                  <div class="contact-item__text col-10">
+                    <h3><?php _e('Telephone number', 'wpg_theme');?></h3>
+                    <?php printf('<a href="tel:%1s">%1$s</a>', antispambot(get_theme_mod("wpg_contact_phone_$i"))); ?>
+                  </div>
+                </div>
+              </div>
+              <!-- Right contact blok -->
+              <div id="open-hours" class="col-6">
+                <div class="contact-item__icon col-2">
+                  <i class="icon-clock"></i>
+                </div>
+                <div class="contact-item__text col-10">
+                  <h3><?php _e('Opening Hours', 'wpg_theme');?></h3>
+                  <?php
+                  $open_hours = get_theme_mod("wpg_contact_open_$i", '');
+
+                  if ($open_hours !== '') :
+
+                    $open_hours = json_decode(base64_decode($open_hours));
+
+                    foreach ($open_hours as $key => $value) :
+                      ?>
+                      <div class="day col-6"><?php echo $days[$key]; ?></div>
+                      <div class="hours col-6"> <?php echo $value; ?></div>
+                    <?php endforeach ?>
+                  <?php endif ?>
+                </div><!-- contact-item__text -->
+              </div>
+            </div>
+          <?php endfor; ?>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="contact__map" class="col-5">
+    <div id="map-canvas"></div>
+  </div>
+</section>
 
 
 

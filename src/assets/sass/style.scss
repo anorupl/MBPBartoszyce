@@ -216,7 +216,7 @@ sass/
     .hide-on-small {
         display: none;
     }
-    
+
     @import "theme/theme_rwd-tablet";
     @import "theme/nav/nav_horizontal_rwd-tablet";
 }
@@ -236,9 +236,12 @@ sass/
 /*--------------------------------------------------------------
 -- Responsive breakpoint desktop hd
 --------------------------------------------------------------*/
-@media (max-width: $desktop-hd) {
-
+@media (min-width: $desktop-hd) {
+  @import "theme/theme__rwd-desktop-hd";
 }
+
+
+
 
 /*----------------------------------
 *  Special Breakpoint Tables

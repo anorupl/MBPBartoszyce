@@ -74,6 +74,30 @@
         'type' => 'url',
     ));
 
+		// ==============================================
+	  //  = left - image					=
+	  //  =============================================
+		$wp_customize->add_setting( 'wpg_catl_image', array(
+		'sanitize_callback' => 'absint'
+		));
+
+		$wp_customize->add_control( new WP_Customize_Cropped_Image_Control( $wp_customize, 'wpg_catl_image', array(
+		'label' => __('Left image', 'wpg_theme'),
+		'section' => $catl_section_id,
+		'height' => 1030,
+		'width' => 1460,
+		'flex_width ' => true,
+		'flex_height ' => true,
+		)));
+
+
+
+
+
+
+
+
+
     for ( $i = 1; $i <= 3; $i++ ) {
         // ==============================================
         //  = Tab title						=
