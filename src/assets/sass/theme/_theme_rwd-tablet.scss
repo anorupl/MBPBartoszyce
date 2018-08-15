@@ -8,3 +8,15 @@
   border-bottom: dashed 1px $two-color;
   margin-bottom: gutter();
 }
+
+#catl .tabs__item,
+#contact .tabs__item {
+  display: block;
+}
+
+#contact {
+  .js-tablist{
+    border-bottom: 5px solid $one-color;
+    padding-bottom: gutter();
+  }
+}

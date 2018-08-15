@@ -101,7 +101,6 @@ main {
 }
 .tabs__item {
   display: inline-block;
-  padding: 10px 0;
 }
 .tabs__link {
   cursor: pointer;
@@ -154,8 +153,12 @@ main {
 /* 4.0 Section
 ======================= */
 .page-section {
-  margin-top: 80px;
-  margin-bottom: 80px;
+
+}
+.header-section {
+  h2 {
+    margin: 0;
+  }
 }
 
 /* Home page - header section with post */
@@ -291,6 +294,7 @@ main {
   .tabs__item {
     margin-left: 15px;
     margin-right: 15px;
+    padding-bottom: 10px;
     min-width: 50px;
     border-bottom: 1px solid $light-border;
   }
@@ -334,6 +338,8 @@ main {
 
   .tabs__item {
     margin: 0;
+    padding-bottom: 10px;
+
     a {
       margin-right: 10px;
       padding: 10px 25px;
@@ -382,11 +388,14 @@ main {
 
 
 #contact {
+  position: relative;
+  background-color: $one-color;
   .header-section {
     position: relative;
+
     > div {
-        z-index: 5;
-        position: relative;
+      z-index: 5;
+      position: relative;
     }
     h2 {
       display: inline-block;
@@ -394,21 +403,60 @@ main {
       background-color: $two-color;
     }
   }
- h3 {
-    @include font-size($size-base);
+  h3,h4 {
     letter-spacing: 0.1em;
-    text-transform: uppercase;   
- }
-
-
-}
-#contact__content,
-#contact__map {
-  background-color: $two-color;
-}
-
-#tabs-contact {
-  i {
-    @include font-size($size-xl-large);
+    text-transform: uppercase;
   }
+  h3 {
+    @include font-size($size-medium);
+  }
+  h4{
+    @include font-size($size-base);
+  }
+
+  .tabs__item {
+    margin: 0;
+    a {
+      margin-right: 5px;
+      padding: 15px 4px;
+    }
+    a[aria-selected=true] {
+      color: $one-color;
+      border-bottom: 1px solid $one-color;
+    }
+  }
+}
+#contact__content {
+  background-color: $two-color;
+
+  .contact-item {
+      margin-bottom: 20px;
+  }
+}
+.contact-item__icon {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  i {
+    display: inline-block;
+    width: 45px;
+    @include font-size($size-xl-large);
+    text-align: center;
+  }
+  h4 {
+    display: inline-block;
+    padding-left: 25px;
+  }
+}
+.contact-item__text {
+  padding-left: 70px;
+  margin-top: -20px;
+  .day {
+      width: 110px;
+  }
+}
+#contact__tabs,
+#contact__map {
+  width: 100%;
+  float: left;
 }

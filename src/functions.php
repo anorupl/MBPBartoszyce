@@ -171,6 +171,8 @@ require THEME_PATH . 'inc/fn_disabled.php';
 require THEME_PATH . 'inc/template-functions.php';
 require THEME_PATH . 'inc/template-tags.php';
 
+require THEME_PATH . 'inc/meta_box.php';
+
 /**
 * Include file with custom admin setting:
 * 1. fn_tinymce   - Add plugin [table]

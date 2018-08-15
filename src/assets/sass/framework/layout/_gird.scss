@@ -14,7 +14,9 @@
 .gutters {
     @include gutters();
 }
-
+.pad-all {
+  padding: gutters();
+}
 %col-styles {
     position: relative;
     @include span(12 no-gutters);

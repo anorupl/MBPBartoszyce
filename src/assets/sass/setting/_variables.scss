@@ -42,8 +42,8 @@ $size-xl-large  : 3.4;
 $phone          : #{pem(576)};
 $tablet         : #{pem(768)};
 $desktop        : #{pem(992)};
-$desktop-min    : #{pem(992)};
-$desktop-hd     : #{pem(1200)};
+$desktop-medium : #{pem(1024)};
+$desktop-hd     : #{pem(1280)};
 
 /*--------------------------------------------------------------
 >>> Color

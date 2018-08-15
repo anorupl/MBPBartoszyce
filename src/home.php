@@ -195,9 +195,8 @@ if (!empty($number_clubs)) {
   <header class="header-section text-center">
     <div><h2><?php echo esc_html(get_theme_mod('wpg_contact_title',__('let\'s stay in contact', 'wpg_theme'))); ?></h2></div>
   </header>
-  <div id="contact__content" class="text-color-two col-7">
 
-    <?php
+  <?php
     $days = [
       'mo' => __('Monday'),
       'tu' => __('Tuesday'),
@@ -205,16 +204,16 @@ if (!empty($number_clubs)) {
       'th' => __('Thursday'),
       'fr' => __('Friday'),
       'sa' => __('Saturday'),
-      'su' => __('Sunday'),
-    ];
-    ?>
-    <div id="tabs-contact" class="clear-both">
+      'su' => __('Sunday')];
+  ?>
+  <div id="contact__content" class="text-color-two clear-both">
+    <div id="contact__tabs" class="pad-all">
       <div class="js-tabs">
         <!-- Tabs Contact -->
         <ul class="js-tablist">
           <?php for ($i=1; $i <= 4; $i++) : ?>
-            <li class="class-h4 js-tablist__item">
-              <a href="#id_contact_tab_<?php echo $i; ?>" id="label_id_contact_tab_<?php echo $i; ?>" class="js-tablist__link"><?php echo esc_html(get_theme_mod("wpg_contact_place_$i",__('Tab ', 'wpg_theme'))); ?></a>
+            <li class="js-tablist__item">
+              <h3><a href="#id_contact_tab_<?php echo $i; ?>" id="label_id_contact_tab_<?php echo $i; ?>" class="js-tablist__link"><?php echo esc_html(get_theme_mod("wpg_contact_place_$i",__('Tab ', 'wpg_theme'))); ?></a></h3>
             </li>
           <?php endfor; ?>
         </ul>
@@ -228,40 +227,39 @@ if (!empty($number_clubs)) {
                 <!-- Address -->
                 <div class="contact-item address">
                   <div class="contact-item__icon">
-                  <i class="icon-map-marker"></i><h3><?php _e('Address', 'wpg_theme');?></h3>
+                    <i class="icon-map-marker"></i><h4><?php _e('Address', 'wpg_theme');?></h4>
                   </div>
-                  <div class="contact-item__text col-10">
+                  <div class="contact-item__text">
                     <?php echo esc_html(get_theme_mod("wpg_contact_adres_$i",'')); ?>
                   </div>
                 </div>
                 <!-- Email -->
                 <div class="contact-item email">
-                  <div class="contact-item__icon col-2">
-                    <i class="icon-envelope"></i>
+                  <div class="contact-item__icon">
+                    <i class="icon-envelope"></i><h4><?php _e('E-mail', 'wpg_theme');?></h4>
                   </div>
-                  <div class="contact-item__text col-10">
-                    <h3><?php _e('E-mail', 'wpg_theme');?></h3>
+                  <div class="contact-item__text">
                     <?php printf('<a href="mailto:%1s">%1$s</a>', antispambot(get_theme_mod("wpg_contact_email_$i"))); ?>
                   </div>
                 </div>
                 <!-- Phone -->
                 <div class="contact-item phone">
-                  <div class="contact-item__icon col-2">
-                    <i class="icon-phone_android"></i>
+                  <div class="contact-item__icon">
+                    <i class="icon-phone_android"></i><h4><?php _e('Telephone number', 'wpg_theme');?></h4>
                   </div>
-                  <div class="contact-item__text col-10">
-                    <h3><?php _e('Telephone number', 'wpg_theme');?></h3>
+                  <div class="contact-item__text">
                     <?php printf('<a href="tel:%1s">%1$s</a>', antispambot(get_theme_mod("wpg_contact_phone_$i"))); ?>
                   </div>
                 </div>
               </div>
               <!-- Right contact blok -->
               <div id="open-hours" class="col-6">
-                <div class="contact-item__icon col-2">
-                  <i class="icon-clock"></i>
+                <div class="contact-item__icon">
+                  <i class="icon-clock"></i><h4><?php _e('Opening Hours', 'wpg_theme');?></h4>
                 </div>
-                <div class="contact-item__text col-10">
-                  <h3><?php _e('Opening Hours', 'wpg_theme');?></h3>
+                <div class="contact-item__text">
+                  <table>
+                    <tbody>
                   <?php
                   $open_hours = get_theme_mod("wpg_contact_open_$i", '');
 
@@ -271,24 +269,65 @@ if (!empty($number_clubs)) {
 
                     foreach ($open_hours as $key => $value) :
                       ?>
-                      <div class="day col-6"><?php echo $days[$key]; ?></div>
-                      <div class="hours col-6"> <?php echo $value; ?></div>
-                    <?php endforeach ?>
-                  <?php endif ?>
-                </div><!-- contact-item__text -->
-              </div>
-            </div>
+                      <tr>
+                        <td class="day"><?php echo $days[$key]; ?></td>
+                        <td class="hours"><?php echo $value; ?></td>
+                      </tr>
+
+                    <?php endforeach; ?>
+                  <?php endif; ?>
+                  </tbody>
+                  </table>
+                </div><!-- .contact-item__text -->
+              </div><!-- #open-hours -->
+            </div><!-- #id_contact_tab_* -->
           <?php endfor; ?>
-        </div>
-      </div>
+        </div><!-- .js-tabs__contents -->
+      </div><!-- .js-tabs -->
+    </div><!-- #contact__tabs -->
+    <div id="contact__map">
+      <div id="map-canvas"></div>
     </div>
-  </div>
-  <div id="contact__map" class="col-5">
-    <div id="map-canvas"></div>
   </div>
 </section>
 
+<section id="partners" class="page-section clear-both">
+  <header class="header-section text-center">
+    <div><h2><?php echo esc_html(get_theme_mod('wpg_partners_title',__('Partners', 'wpg_theme'))); ?></h2></div>
+  </header>
+  <?php
 
+  // The Query
+  $partner_query = new WP_Query(array (
+              'post_type'		=> array( 'partner' ),
+              'post_status'	=> array( 'Publish' ),
+              'posts_per_page'=>-1,
+            ));
+
+
+  if ( $partner_query->have_posts() ) : ?>
+  <div id="partner-slider" class="partner-slider">
+    <?php
+    // The Loop
+    while($partner_query ->have_posts()) : $partner_query ->the_post(); ?>
+    <div>
+      <a href="<?php echo (get_post_meta( get_the_ID(), 'wpg_url_partner', true ) ? esc_url(get_post_meta( get_the_ID(), 'wpg_url_partner', true )) : '#'); ?>" target="_blank">
+        <figure>
+        <?php
+          if ( has_post_thumbnail() ) :
+            the_post_thumbnail( 'full', array( 'alt' => get_the_title() ) );
+          endif;
+        ?>
+        </figure>
+      </a>
+    </div>
+  <?php endwhile; ?>
+  </div>
+  <?php endif;
+  // Restore original Post Data
+  wp_reset_postdata();
+  ?>
+</section>
 
 
 

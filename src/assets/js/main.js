@@ -100,7 +100,23 @@ $.fn.slick_small_sllider = function(setting) {
     });
 
     $('#header-content').slick_small_sllider(settings = {});
-
+    $('#partner-slider').slick({
+         dots: false,
+         arrows: false,
+         centerMode: true,
+         slidesToShow: 5,
+         autoplay: true,
+         pauseOnHover: false,
+         responsive: [
+             {
+                 breakpoint: 480,
+                 settings: {
+                     centerPadding: '40px',
+                     slidesToShow: 1
+                 }
+             }
+         ]
+     });
 
   });
 })(jQuery);

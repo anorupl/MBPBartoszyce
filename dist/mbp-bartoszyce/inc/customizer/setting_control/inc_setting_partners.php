@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * File with setting and control link in section Social networks.
  *
@@ -8,12 +8,12 @@
 
  	// ==============================================
 	//  = Show/Hidde 							=
-	//  =============================================  
+	//  =============================================
 	$wp_customize->add_setting('wpg_partners_active', array(
 		'default'    => false,
 		'capability' => 'edit_theme_options',
 	));
-	
+
 	$wp_customize->add_control(
 		        new WPG_Customize_Control_Switch($wp_customize, 'wpg_partners_active', array(
 
@@ -24,12 +24,12 @@
 		            )
 		        )
     );
-    
+
  	// ==============================================
     //  = Section title						=
     //  =============================================
     $wp_customize->add_setting('wpg_partners_title', array(
-		'default'           => __('partners', 'wpg_theme'),
+		'default'           => __('Partners', 'wpg_theme'),
    		'capability' 		=> 'edit_theme_options',
         'sanitize_callback' => 'sanitize_text_field'
 

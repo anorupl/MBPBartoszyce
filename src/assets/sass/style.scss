@@ -223,7 +223,7 @@ sass/
 /*--------------------------------------------------------------
 -- Responsive breakpoint desktop min
 --------------------------------------------------------------*/
-@media (min-width: $desktop-min) {
+@media (min-width: $desktop) {
 
     .hide-desktop {
         display:none;
@@ -232,6 +232,12 @@ sass/
     @import "framework/layout/gird__rwd-desktop";
     @import "theme/theme__rwd-desktop";
     @import "theme/nav/nav_horizontal__rwd-desktop";
+}
+/*--------------------------------------------------------------
+-- Responsive breakpoint desktop old
+--------------------------------------------------------------*/
+@media (min-width: $desktop-medium) {
+  @import "theme/theme__rwd-desktop-medium";
 }
 /*--------------------------------------------------------------
 -- Responsive breakpoint desktop hd

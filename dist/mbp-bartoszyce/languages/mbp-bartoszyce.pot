@@ -130,7 +130,7 @@ msgstr ""
 msgid "Show older"
 msgstr ""
 
-#: src/home.php:339
+#: src/home.php:339, src/home.php:431
 msgid "Tab "
 msgstr ""
 
@@ -142,16 +142,32 @@ msgstr ""
 msgid "Go to the website"
 msgstr ""
 
-#: src/home.php:395, src/inc/customizer/setting_control/inc_setting_contact.php:63
+#: src/home.php:391, src/inc/customizer/setting_control/inc_setting_contact.php:63
 msgid "let's stay in contact"
+msgstr ""
+
+#: src/home.php:459, src/inc/customizer/setting_control/inc_setting_contact.php:211
+msgid "Address"
+msgstr ""
+
+#: src/home.php:477, src/inc/customizer/setting_control/inc_setting_contact.php:271
+msgid "E-mail"
+msgstr ""
+
+#: src/home.php:495, src/inc/customizer/setting_control/inc_setting_contact.php:241
+msgid "Telephone number"
+msgstr ""
+
+#: src/home.php:515, src/inc/customizer/custom_control_field/inc_field_open_hours.php:91, src/inc/customizer/setting_control/inc_setting_contact.php:305
+msgid "Opening Hours"
+msgstr ""
+
+#: src/home.php:591, src/inc/customizer/setting_control/inc_setting_partners.php:63, src/inc/customizer/wpg_customizer.php:385
+msgid "Partners"
 msgstr ""
 
 #: src/image.php:45
 msgid "Photo published in size <a href=\"%1$s\" title=\"Link to original file\">%2$s pixels <span class=\"screen-reader-text\">(Image Width)</span> to %3$s pixels <span class=\"screen-reader-text\">(Image Height)</span></a> in the article <a href=\"%4$s\" title=\"Back to %5$s\" rel=\"gallery\">%6$s</a>"
-msgstr ""
-
-#: src/inc/customizer/custom_control_field/inc_field_open_hours.php:91, src/inc/customizer/setting_control/inc_setting_contact.php:305
-msgid "Opening Hours"
 msgstr ""
 
 #: src/inc/customizer/helpers/inc_helpers.php:199, src/inc/customizer/setting_control/inc_setting_club.php:175, src/inc/customizer/setting_control/inc_setting_new.php:95, src/inc/template-tags.php:191, src/inc/template-tags.php:251
@@ -246,18 +262,6 @@ msgstr ""
 msgid "Tab #"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_contact.php:211
-msgid "Address"
-msgstr ""
-
-#: src/inc/customizer/setting_control/inc_setting_contact.php:241
-msgid "Telephone number"
-msgstr ""
-
-#: src/inc/customizer/setting_control/inc_setting_contact.php:271
-msgid "E-mail"
-msgstr ""
-
 #: src/inc/customizer/setting_control/inc_setting_contact.php:339
 msgid "Select a location on map"
 msgstr ""
@@ -342,10 +346,6 @@ msgstr ""
 msgid "Choose offers"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_partners.php:63
-msgid "partners"
-msgstr ""
-
 #: src/inc/customizer/setting_control/inc_setting_social.php:55
 msgid "Link to  %1$s"
 msgstr ""
@@ -378,8 +378,8 @@ msgstr ""
 msgid "Social networks"
 msgstr ""
 
-#: src/inc/customizer/wpg_customizer.php:385
-msgid "Partners"
+#: src/inc/meta_box.php:23, src/inc/meta_box.php:35
+msgid "Partner url"
 msgstr ""
 
 #: src/inc/template-tags.php:67

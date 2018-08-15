@@ -1184,7 +1184,6 @@ table {
   width: 100%;
   margin: 0 0 20px;
   border: 0;
-  border-bottom: 1px solid #cecbc7;
   border-collapse: collapse;
   border-spacing: 0;
   text-align: left;
@@ -1197,24 +1196,37 @@ table caption, td, th {
 
 table caption {
   font-weight: normal;
-  border-bottom: 1px dotted #cecbc7;
-  border-top: 1px dotted #cecbc7;
   margin-bottom: 10px;
 }
 
 th {
-  background: #a9b9c5;
-  color: #ffffff;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 td {
   border: 0;
+}
+
+.entry-content table {
   border-bottom: 1px solid #cecbc7;
 }
 
-td[scope=col] {
+.entry-content table caption {
+  border-bottom: 1px dotted #cecbc7;
+  border-top: 1px dotted #cecbc7;
+}
+
+.entry-content th {
+  background: #a9b9c5;
+  color: #2d3942;
+}
+
+.entry-content td {
+  border-bottom: 1px solid #cecbc7;
+}
+
+.entry-content td[scope=col] {
   border-right: 1px solid #cecbc7;
   width: 25%;
   font-weight: bold;
@@ -1222,11 +1234,11 @@ td[scope=col] {
   padding-right: 25px;
 }
 
-tr:nth-child(odd) {
+.entry-content tr:nth-child(odd) {
   background: #ffffff;
 }
 
-tr:nth-child(even) {
+.entry-content tr:nth-child(even) {
   background: #ededed;
 }
 
@@ -1590,6 +1602,10 @@ form select {
 .gutters {
   padding-left: 2.08333%;
   padding-right: 2.08333%;
+}
+
+.pad-all {
+  padding: 2.08333%;
 }
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
@@ -2213,7 +2229,6 @@ main {
 
 .tabs__item {
   display: inline-block;
-  padding: 10px 0;
 }
 
 .tabs__link {
@@ -2270,9 +2285,8 @@ main {
 
 /* 4.0 Section
 ======================= */
-.page-section {
-  margin-top: 80px;
-  margin-bottom: 80px;
+.header-section h2 {
+  margin: 0;
 }
 
 /* Home page - header section with post */
@@ -2424,6 +2438,7 @@ main {
 .newitems .tabs__item {
   margin-left: 15px;
   margin-right: 15px;
+  padding-bottom: 10px;
   min-width: 50px;
   border-bottom: 1px solid #f5f5f5;
 }
@@ -2467,6 +2482,7 @@ main {
 
 #catl .tabs__item {
   margin: 0;
+  padding-bottom: 10px;
 }
 
 #catl .tabs__item a {
@@ -2515,6 +2531,11 @@ main {
   min-height: 300px;
 }
 
+#contact {
+  position: relative;
+  background-color: #543d4f;
+}
+
 #contact .header-section {
   position: relative;
 }
@@ -2530,21 +2551,78 @@ main {
   background-color: #f25e44;
 }
 
-#contact h3 {
-  font-size: 16px;
-  font-size: 1.6rem;
+#contact h3, #contact h4 {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
-#contact__content,
-#contact__map {
+#contact h3 {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+#contact h4 {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+#contact .tabs__item {
+  margin: 0;
+}
+
+#contact .tabs__item a {
+  margin-right: 5px;
+  padding: 15px 4px;
+}
+
+#contact .tabs__item a[aria-selected=true] {
+  color: #543d4f;
+  border-bottom: 1px solid #543d4f;
+}
+
+#contact__content {
   background-color: #f25e44;
 }
 
-#tabs-contact i {
+#contact__content .contact-item {
+  margin-bottom: 20px;
+}
+
+.contact-item__icon {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-align: start;
+      align-items: start;
+}
+
+.contact-item__icon i {
+  display: inline-block;
+  width: 45px;
   font-size: 34px;
   font-size: 3.4rem;
+  text-align: center;
+}
+
+.contact-item__icon h4 {
+  display: inline-block;
+  padding-left: 25px;
+}
+
+.contact-item__text {
+  padding-left: 70px;
+  margin-top: -20px;
+}
+
+.contact-item__text .day {
+  width: 110px;
+}
+
+#contact__tabs,
+#contact__map {
+  width: 100%;
+  float: left;
 }
 
 /* Widget
@@ -2988,6 +3066,14 @@ a.skip-main:active {
     border-bottom: dashed 1px #f25e44;
     margin-bottom: 2.08333%;
   }
+  #catl .tabs__item,
+  #contact .tabs__item {
+    display: block;
+  }
+  #contact .js-tablist {
+    border-bottom: 5px solid #543d4f;
+    padding-bottom: 2.08333%;
+  }
   .h-nav--desc .menu {
     width: 90%;
     margin: 20px auto;
@@ -3070,9 +3156,9 @@ a.skip-main:active {
 7.0 Header
 4.0 Footer
 5.0 hentry
-    5.1 plural
-    5.5 singular
-    5.3 hentry elements
+5.1 plural
+5.5 singular
+5.3 hentry elements
 --------------------------------------------------------------*/
   /* 2.0 Layout
 ======================= */
@@ -3191,16 +3277,30 @@ a.skip-main:active {
     padding: 40px 0;
   }
   /* contact */
-  #contact .header-section::after {
+  #contact .js-tablist {
+    border-bottom: 1px solid #ffffff;
+  }
+  #contact .header-section::before {
     content: '';
     display: block;
-    width: 100%;
-    height: 100%;
-    background-color: #f25e44;
     position: absolute;
-    -ms-transform: skewY(4deg) translateY(60%);
-        transform: skewY(4deg) translateY(60%);
     bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 0px solid transparent;
+    border-right: 100vw solid transparent;
+    border-bottom: 105px solid #f25e44;
+  }
+  /* contact */
+  #contact__tabs {
+    width: 70%;
+  }
+  #contact__map {
+    width: 30%;
+  }
+  /* partners */
+  #partner-slider .slick-slide img {
+    max-width: 50%;
   }
   /*
  * All
@@ -3215,12 +3315,22 @@ a.skip-main:active {
 }
 
 /*--------------------------------------------------------------
+-- Responsive breakpoint desktop old
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
 -- Responsive breakpoint desktop hd
 --------------------------------------------------------------*/
-@media (min-width: 75em) {
+@media (min-width: 80em) {
   .catl-svg,
   .catl-content {
     width: 50%;
+  }
+  /* contact */
+  #contact__tabs {
+    width: 60%;
+  }
+  #contact__map {
+    width: 40%;
   }
 }
 
