@@ -480,3 +480,40 @@ main {
   margin: auto 5px;
   }
 }
+
+
+
+/* featured category */
+#featured-cat {
+  h2 {
+      display: inline-block;
+      padding: 20px 10%;
+      background-color: $three-color;
+      color: $four-bw;
+  }
+  h3 {
+    @include font-size($size-base);
+  }
+  .h-wrapper {
+        border-bottom: 5px solid $three-color;
+  }
+  .hentry {
+    position: relative;
+    padding: 7% 10%;
+    border-bottom: 5px solid $three-color;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 5px;
+      height: 50%;
+      background-color: $three-color;
+      position: absolute;
+      bottom: -5px;
+      right: 0;
+    }
+  }
+  a {
+    color:$three-color;
+  }
+}

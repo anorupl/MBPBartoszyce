@@ -162,6 +162,25 @@ function wpg_enqueue() {
 add_action( 'wp_enqueue_scripts', 'wpg_enqueue' );
 
 /**
+ * Register widget area.
+ *
+ * @link 	https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+ */
+function wpg_widgets_init() {
+	register_sidebar( array(
+		'name'          => esc_html__( 'Right Sidebar', 'wpg_theme' ),
+		'id'            => 'wpg-sidebar-right',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+}
+add_action( 'widgets_init', 'wpg_widgets_init' );
+
+
+/**
 * Include file with customizer.
 */
 require THEME_PATH . '/inc/customizer/wpg_customizer.php';

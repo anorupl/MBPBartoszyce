@@ -8,11 +8,11 @@
 function wpg_post_per_page( $query ) {
 	if ( $query->is_main_query() && $query->is_home() && !is_paged()) {
 		$query->set('posts_per_page', 4);
-	} else {
+	} elseif ($query->is_main_query() && $query->is_home() && is_paged()) {
 		$query->set('offset', 4);
 	}
 }
-add_action( 'pre_get_posts', 'wpg_post_per_page' );
+//add_action( 'pre_get_posts', 'wpg_post_per_page' );
 
 
 

@@ -34,7 +34,7 @@
         </div>
     </div>
     <header id="site-header">
-        <?php if (is_front_page()): ?>
+        <?php if (is_front_page() && !is_paged()): ?>
             <div class="title-area">
                 <h1 class="site-title">
                     <span class="screen-reader-text"><?php bloginfo('name');?></span>
