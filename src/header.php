@@ -69,7 +69,7 @@
                 'items_wrap'     => '<nav id="%1$s" class="h-nav h-nav--color h-nav--arrow hide-on-small wp-nav" data-class="h-nav h-nav--color h-nav--arrow hide-on-small wp-nav"><ul class="%2$s">%3$s</ul></nav>',
             ));
             ?>
-        <?php else : 
+        <?php else :
             // only if administrator
             if (current_user_can( 'administrator' )) : 	?>
                 <!-- Menu poziome -->
@@ -80,7 +80,7 @@
                         <li class="menu-item"><a href="<?php echo admin_url('nav-menus.php'); ?>"><?php _e('Add menu', 'wpg_theme'); ?></a></li>
                     </ul>
                 </nav>
-             <?php 
+             <?php
              endif;
         endif;
         ?>

@@ -22,6 +22,63 @@ if (!is_paged()) {
 }
 
 ?>
+<section id="featured-cat" class="page-section col-5">
+  <header class="header-section">
+      <div class="header-span">
+          <h2><?php echo esc_html(get_theme_mod('wpg_featuredcat_title',__('In the library', 'wpg_theme'))); ?></h2>
+      </div>
+  </header>
+  <?php
+
+  $featuredcat_id = get_theme_mod('wpg_featuredcat', 0);
+
+  //if ($featuredcat_id !== 0) :
+    $featured_posts = new WP_Query(array(
+      'posts_per_page' => 1,
+      'post_type'      => 'post',
+      'cat' => 13
+    ));
+
+    if($featured_posts->have_posts()) :
+      while($featured_posts ->have_posts()) : $featured_posts ->the_post();
+      ?>
+      <div id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
+        <a href="<?php the_permalink(); ?>" aria-hidden="true">
+          <?php the_post_thumbnail('medium', array('alt' => get_the_title())); ?>
+        </a>
+        <div class="entry-header">
+          <h2  class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php wpg_title_shorten(); ?></a></h2>
+        </div>
+      </div>
+
+      <?php
+
+    endwhile;
+  endif;
+  /* Restore original Post Data */
+  wp_reset_postdata(); ?>
+
+<?php //endif; ?>
+
+
+
+
+<div>
+
+</div>
+
+
+
+</section>
+
+<section id="wpg-evets" class="page-section col-7">
+  <header class="header-section">
+      <div class="header-span">
+          <h2><?php echo esc_html(get_theme_mod('wpg_events_title',__('Upcoming events', 'wpg_theme'))); ?></h2>
+      </div>
+  </header>
+</section>
+
 
 <section class="clubs white-a page-section clear-both">
     <div class="container">
@@ -208,7 +265,7 @@ if (!empty($number_clubs)) {
   ?>
   <div id="contact__content" class="text-color-two clear-both">
     <div id="contact__tabs" class="pad-all">
-      <div class="js-tabs">
+      <div class="js-tabs text-color-two">
         <!-- Tabs Contact -->
         <ul class="js-tablist">
           <?php for ($i=1; $i <= 4; $i++) : ?>
@@ -218,7 +275,7 @@ if (!empty($number_clubs)) {
           <?php endfor; ?>
         </ul>
         <!-- Tab content container -->
-        <div class="js-tabs__contents">
+        <div class="js-tabs__contents clear-both">
           <?php for ($i=1; $i <= 4; $i++) : ?>
             <!-- Tab content -->
             <div id="id_contact_tab_<?php echo $i; ?>" class="js-tabcontent">
@@ -284,6 +341,9 @@ if (!empty($number_clubs)) {
           <?php endfor; ?>
         </div><!-- .js-tabs__contents -->
       </div><!-- .js-tabs -->
+    <div id="contact-social" class="xl-icon dark-element-color text-center clear-both">
+      <?php social_net_link('<span class="screen-reader-text">%1$s</span>%2$s');?>
+    </div>
     </div><!-- #contact__tabs -->
     <div id="contact__map">
       <div id="map-canvas"></div>

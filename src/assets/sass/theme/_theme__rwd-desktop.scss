@@ -151,6 +151,9 @@
 
 #contact {
   .js-tablist {
+    display: flex;
+    justify-content: space-between;
+    max-width: 815px;
     border-bottom: 1px solid $four-bw;
   }
 

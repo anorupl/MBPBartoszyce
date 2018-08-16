@@ -20,11 +20,11 @@ Nadpisywane przez child:
 - get_stylesheet_directory_uri()
 
 ================================================== */
-define( 'THEME_NAME',    wp_get_theme()->get( 'Name' ) );
+define( 'THEME_NAME',wp_get_theme()->get( 'Name' ) );
 define( 'THEME_VERSION', wp_get_theme()->get( 'Version' ) );
-define( 'THEME_INC',     get_template_directory() . '/inc/' );
-define( 'THEME_URL',     get_stylesheet_directory_uri() . '/' );
-define( 'THEME_PATH',    get_stylesheet_directory() . '/' );
+define( 'THEME_INC', get_template_directory() . '/inc/' );
+define( 'THEME_URL', get_stylesheet_directory_uri() . '/' );
+define( 'THEME_PATH',get_stylesheet_directory() . '/' );
 
 
 
@@ -67,49 +67,51 @@ if ( ! function_exists( 'wpg_setup' ) ) :
 		/**
 		*  Add theme support for Custom Logo.
 		*/
-		add_theme_support( 'custom-logo', array(
-			'height'      => 287,
-			'width'       => 768,
+		add_theme_support( 'custom-logo',
+		array(
+			'height'  => 287,
+			'width'   => 768,
 			'flex-height' => true,
 			'flex-width'  => true
-		));
+		)
+	);
 
-		/**
-		* Enable support for Post Thumbnails on posts and pages.
-		*
-		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-		*/
-		add_theme_support( 'post-thumbnails' );
+	/**
+	* Enable support for Post Thumbnails on posts and pages.
+	*
+	* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+	*/
+	add_theme_support( 'post-thumbnails' );
 
-		/**
-		* Switch core markup to output valid HTML5.
-		*/
-		add_theme_support( 'html5', array('search-form','comment-form','comment-list','gallery','caption'));
+	/**
+	* Switch core markup to output valid HTML5.
+	*/
+	add_theme_support( 'html5', array('search-form','comment-form','comment-list','gallery','caption'));
 
-		/**
-		* This theme uses wp_nav_menu().
-		*/
-		register_nav_menus( array(
-			'header'        => esc_html__( 'Header Menu - Top', 'wpg_theme' ),
-			'header_bottom' => esc_html__( 'Header Menu - Bottom ', 'wpg_theme' )
-		));
+	/**
+	* This theme uses wp_nav_menu().
+	*/
+	register_nav_menus( array(
+		'header'=> esc_html__( 'Header Menu - Top', 'wpg_theme' ),
+		'header_bottom' => esc_html__( 'Header Menu - Bottom ', 'wpg_theme' )
+	));
 
-		/**
-		* Update image size;
-		*/
+	/**
+	* Update image size;
+	*/
 
-		//thumbnail
-		update_option( 'thumbnail_size_w', 320 );
-        update_option( 'thumbnail_size_h', 480 );
-		update_option( 'thumbnail_crop', false );
-		//medium
-        update_option( 'medium_size_w', 768);
-		update_option( 'medium_size_h', 512 );
-		//large
-        update_option( 'large_size_w', 1366);
-        update_option( 'large_size_h', 911 );
-	}
-	add_action( 'after_setup_theme', 'wpg_setup' );
+	//thumbnail
+	update_option( 'thumbnail_size_w', 320 );
+	update_option( 'thumbnail_size_h', 480 );
+	update_option( 'thumbnail_crop', false );
+	//medium
+	update_option( 'medium_size_w', 768);
+	update_option( 'medium_size_h', 512 );
+	//large
+	update_option( 'large_size_w', 1366);
+	update_option( 'large_size_h', 911 );
+}
+add_action( 'after_setup_theme', 'wpg_setup' );
 endif;
 
 /**
@@ -134,15 +136,15 @@ function wpg_enqueue() {
 	wp_enqueue_script( 'slick-js', THEME_URL . 'js/assets/slick.min.js',array('jquery'), THEME_VERSION, true );
 
 	// theme main js
-	wp_enqueue_script( 'wpg-main',	THEME_URL . 'js/main.min.js',array('jquery'), THEME_VERSION, true );
+	wp_enqueue_script( 'wpg-main',THEME_URL . 'js/main.min.js',array('jquery'), THEME_VERSION, true );
 
 	wp_localize_script('wpg-main', 'datalanuge', array(
-		'next'        => __('Previous Image (left arrow key)', 'wpg_theme'),
-		'prev'        => __('Next Image (right arrow key)', 'wpg_theme'),
-		'of'          => __('of', 'wpg_theme'),
-		'close'       => __('Close (Escape key)', 'wpg_theme'),
-		'load'        => __('Loading ...', 'wpg_theme'),
-		'image'       => __('Image', 'wpg_theme'),
+		'next'=> __('Previous Image (left arrow key)', 'wpg_theme'),
+		'prev'=> __('Next Image (right arrow key)', 'wpg_theme'),
+		'of'  => __('of', 'wpg_theme'),
+		'close'   => __('Close (Escape key)', 'wpg_theme'),
+		'load'=> __('Loading ...', 'wpg_theme'),
+		'image'   => __('Image', 'wpg_theme'),
 		'error_image' => __('it cannot be loaded.', 'wpg_theme')
 	));
 
@@ -168,7 +170,7 @@ require THEME_PATH . '/inc/customizer/wpg_customizer.php';
 * Include file with base setting:
 */
 require THEME_PATH . 'inc/fn_disabled.php';
-require THEME_PATH . 'inc/template-functions.php';
+require THEME_PATH . 'inc/theme-functions.php';
 require THEME_PATH . 'inc/template-tags.php';
 
 require THEME_PATH . 'inc/meta_box.php';

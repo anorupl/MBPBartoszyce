@@ -52,7 +52,7 @@
             </div>
         <?php if ($i == 3) {echo '</div>';}?>
         <?php endif; $i++; endwhile;?>
-        <a class="arrow-allpost-icon" href="#">
+        <a class="arrow-allpost-icon" href="<?php echo get_next_posts_page_link(); ?>">
             <?php _e('Show more ', 'wpg_theme');?>
             <i class="icon-angle-right"></i>
         </a>

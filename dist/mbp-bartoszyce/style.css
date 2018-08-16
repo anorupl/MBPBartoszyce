@@ -174,18 +174,14 @@ sass/
   color: inherit;
 }
 
-i.icon-l {
-  font-size: 150%;
-  margin: 3px;
-  position: relative;
-  top: 4px;
+.l-icon,
+i.l-icon {
+  font-size: 165%;
 }
 
-i.icon-xl {
-  font-size: 250%;
-  margin: 3px;
-  position: relative;
-  top: 8px;
+.xl-icon,
+i.xl-icon {
+  font-size: 265%;
 }
 
 .icon-info:before {
@@ -2198,6 +2194,18 @@ main {
   color: #543d4f;
 }
 
+.dark-element-color {
+  color: #543d4f;
+}
+
+.dark-element-color a {
+  color: #543d4f;
+}
+
+.dark-element-color a:hover {
+  color: #ffffff;
+}
+
 .size-h3 {
   font-size: 27px;
   font-size: 2.7rem;
@@ -2522,6 +2530,8 @@ main {
 
 .catl-svg img {
   width: 100%;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
 }
 
 .catl-svg,
@@ -2559,6 +2569,8 @@ main {
 #contact h3 {
   font-size: 14px;
   font-size: 1.4rem;
+  margin: 0;
+  line-height: 1;
 }
 
 #contact h4 {
@@ -2571,8 +2583,9 @@ main {
 }
 
 #contact .tabs__item a {
-  margin-right: 5px;
-  padding: 15px 4px;
+  display: block;
+  padding: 10px 4px;
+  margin-bottom: -1px;
 }
 
 #contact .tabs__item a[aria-selected=true] {
@@ -2623,6 +2636,14 @@ main {
 #contact__map {
   width: 100%;
   float: left;
+}
+
+#contact-social {
+  border-top: 1px solid #543d4f;
+}
+
+#contact-social a {
+  margin: auto 5px;
 }
 
 /* Widget
@@ -3278,6 +3299,11 @@ a.skip-main:active {
   }
   /* contact */
   #contact .js-tablist {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    max-width: 815px;
     border-bottom: 1px solid #ffffff;
   }
   #contact .header-section::before {

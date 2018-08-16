@@ -5,6 +5,22 @@
 * @package MBP Bartoszyce
 * @since 0.1.0
 */
+function wpg_post_per_page( $query ) {
+	if ( $query->is_main_query() && $query->is_home() && !is_paged()) {
+		$query->set('posts_per_page', 4);
+	} else {
+		$query->set('offset', 4);
+	}
+}
+add_action( 'pre_get_posts', 'wpg_post_per_page' );
+
+
+
+
+
+
+
+
 
 /**
 * Adds custom classes to the array of body classes.
@@ -32,6 +48,11 @@ function wpg_post_class($class) {
 	return $class;
 }
 add_filter( 'post_class', 'wpg_post_class' );
+
+
+
+
+
 
 /**
 * Handles JavaScript detection.
@@ -108,7 +129,7 @@ function wpg_nav_description( $item_output, $item, $depth, $args ) {
     if ( !empty( $item->description ) ) {
         $item_output = str_replace( $args->link_after . '</a>', '<span class="menu-item-description">' . $item->description . '</span>' . $args->link_after . '</a>', $item_output );
     }
- 
+
     return $item_output;
 }
 add_filter( 'walker_nav_menu_start_el', 'wpg_nav_description', 10, 4 );

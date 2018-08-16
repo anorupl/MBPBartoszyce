@@ -74,39 +74,39 @@ msgstr ""
 msgid "All Rights Reserved"
 msgstr ""
 
-#: src/functions.php:185
+#: src/functions.php:189
 msgid "Header Menu - Top"
 msgstr ""
 
-#: src/functions.php:187
+#: src/functions.php:191
 msgid "Header Menu - Bottom "
 msgstr ""
 
-#: src/functions.php:279
+#: src/functions.php:283
 msgid "Previous Image (left arrow key)"
 msgstr ""
 
-#: src/functions.php:281
+#: src/functions.php:285
 msgid "Next Image (right arrow key)"
 msgstr ""
 
-#: src/functions.php:283
+#: src/functions.php:287
 msgid "of"
 msgstr ""
 
-#: src/functions.php:285
+#: src/functions.php:289
 msgid "Close (Escape key)"
 msgstr ""
 
-#: src/functions.php:287
+#: src/functions.php:291
 msgid "Loading ..."
 msgstr ""
 
-#: src/functions.php:289
+#: src/functions.php:293
 msgid "Image"
 msgstr ""
 
-#: src/functions.php:291
+#: src/functions.php:295
 msgid "it cannot be loaded."
 msgstr ""
 
@@ -118,51 +118,59 @@ msgstr ""
 msgid "Add menu"
 msgstr ""
 
-#: src/home.php:59, src/inc/customizer/setting_control/inc_setting_club.php:63, src/inc/customizer/wpg_customizer.php:263
+#: src/home.php:55, src/inc/customizer/setting_control/inc_setting_featured_category.php:61
+msgid "In the library"
+msgstr ""
+
+#: src/home.php:153, src/inc/customizer/setting_control/inc_setting_events.php:61
+msgid "Upcoming events"
+msgstr ""
+
+#: src/home.php:173, src/inc/customizer/setting_control/inc_setting_club.php:63, src/inc/customizer/wpg_customizer.php:277
 msgid "Clubs in the library"
 msgstr ""
 
-#: src/home.php:267
+#: src/home.php:381
 msgid "Show"
 msgstr ""
 
-#: src/home.php:279
+#: src/home.php:393
 msgid "Show older"
 msgstr ""
 
-#: src/home.php:339, src/home.php:431
+#: src/home.php:453, src/home.php:545
 msgid "Tab "
 msgstr ""
 
-#: src/home.php:353
+#: src/home.php:467
 msgid "Tab content"
 msgstr ""
 
-#: src/home.php:369, src/inc/customizer/setting_control/inc_setting_catl.php:97
+#: src/home.php:483, src/inc/customizer/setting_control/inc_setting_catl.php:97
 msgid "Go to the website"
 msgstr ""
 
-#: src/home.php:391, src/inc/customizer/setting_control/inc_setting_contact.php:63
+#: src/home.php:505, src/inc/customizer/setting_control/inc_setting_contact.php:61
 msgid "let's stay in contact"
 msgstr ""
 
-#: src/home.php:459, src/inc/customizer/setting_control/inc_setting_contact.php:211
+#: src/home.php:573, src/inc/customizer/setting_control/inc_setting_contact.php:207
 msgid "Address"
 msgstr ""
 
-#: src/home.php:477, src/inc/customizer/setting_control/inc_setting_contact.php:271
+#: src/home.php:591, src/inc/customizer/setting_control/inc_setting_contact.php:267
 msgid "E-mail"
 msgstr ""
 
-#: src/home.php:495, src/inc/customizer/setting_control/inc_setting_contact.php:241
+#: src/home.php:609, src/inc/customizer/setting_control/inc_setting_contact.php:237
 msgid "Telephone number"
 msgstr ""
 
-#: src/home.php:515, src/inc/customizer/custom_control_field/inc_field_open_hours.php:91, src/inc/customizer/setting_control/inc_setting_contact.php:305
+#: src/home.php:629, src/inc/customizer/custom_control_field/inc_field_open_hours.php:91, src/inc/customizer/setting_control/inc_setting_contact.php:301
 msgid "Opening Hours"
 msgstr ""
 
-#: src/home.php:591, src/inc/customizer/setting_control/inc_setting_partners.php:63, src/inc/customizer/wpg_customizer.php:385
+#: src/home.php:711, src/inc/customizer/setting_control/inc_setting_partners.php:63, src/inc/customizer/wpg_customizer.php:417
 msgid "Partners"
 msgstr ""
 
@@ -170,7 +178,7 @@ msgstr ""
 msgid "Photo published in size <a href=\"%1$s\" title=\"Link to original file\">%2$s pixels <span class=\"screen-reader-text\">(Image Width)</span> to %3$s pixels <span class=\"screen-reader-text\">(Image Height)</span></a> in the article <a href=\"%4$s\" title=\"Back to %5$s\" rel=\"gallery\">%6$s</a>"
 msgstr ""
 
-#: src/inc/customizer/helpers/inc_helpers.php:199, src/inc/customizer/setting_control/inc_setting_club.php:175, src/inc/customizer/setting_control/inc_setting_new.php:95, src/inc/template-tags.php:191, src/inc/template-tags.php:251
+#: src/inc/customizer/helpers/inc_helpers.php:199, src/inc/customizer/setting_control/inc_setting_club.php:175, src/inc/customizer/setting_control/inc_setting_new.php:95, src/inc/template-tags.php:199, src/inc/template-tags.php:259
 msgid "Category"
 msgstr ""
 
@@ -186,15 +194,15 @@ msgstr ""
 msgid "Find us on"
 msgstr ""
 
-#: src/inc/customizer/helpers/inc_helpers.php:339, src/inc/customizer/setting_control/inc_setting_club.php:275
+#: src/inc/customizer/helpers/inc_helpers.php:339, src/inc/customizer/setting_control/inc_setting_club.php:275, src/inc/customizer/setting_control/inc_setting_featured_category.php:113
 msgid "Select Category"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_blog.php:25, src/inc/customizer/wpg_customizer.php:407
+#: src/inc/customizer/setting_control/inc_setting_blog.php:25, src/inc/customizer/wpg_customizer.php:443
 msgid "Last post"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_blog.php:41, src/inc/customizer/setting_control/inc_setting_catl.php:79, src/inc/customizer/setting_control/inc_setting_club.php:79, src/inc/customizer/setting_control/inc_setting_contact.php:79, src/inc/customizer/setting_control/inc_setting_new.php:77, src/inc/customizer/setting_control/inc_setting_partners.php:79
+#: src/inc/customizer/setting_control/inc_setting_blog.php:41, src/inc/customizer/setting_control/inc_setting_catl.php:79, src/inc/customizer/setting_control/inc_setting_club.php:79, src/inc/customizer/setting_control/inc_setting_contact.php:75, src/inc/customizer/setting_control/inc_setting_events.php:77, src/inc/customizer/setting_control/inc_setting_featured_category.php:77, src/inc/customizer/setting_control/inc_setting_new.php:77, src/inc/customizer/setting_control/inc_setting_partners.php:79
 msgid "Title section"
 msgstr ""
 
@@ -206,7 +214,7 @@ msgstr ""
 msgid "Enter number between %1s and %2s ."
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_catl.php:43, src/inc/customizer/setting_control/inc_setting_club.php:43, src/inc/customizer/setting_control/inc_setting_contact.php:43, src/inc/customizer/setting_control/inc_setting_new.php:41, src/inc/customizer/setting_control/inc_setting_partners.php:43
+#: src/inc/customizer/setting_control/inc_setting_catl.php:43, src/inc/customizer/setting_control/inc_setting_club.php:43, src/inc/customizer/setting_control/inc_setting_contact.php:43, src/inc/customizer/setting_control/inc_setting_events.php:41, src/inc/customizer/setting_control/inc_setting_featured_category.php:41, src/inc/customizer/setting_control/inc_setting_new.php:41, src/inc/customizer/setting_control/inc_setting_partners.php:43
 msgid "Show section"
 msgstr ""
 
@@ -226,7 +234,7 @@ msgstr ""
 msgid "Left image"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_catl.php:211, src/inc/customizer/setting_control/inc_setting_catl.php:227, src/inc/customizer/setting_control/inc_setting_contact.php:165
+#: src/inc/customizer/setting_control/inc_setting_catl.php:211, src/inc/customizer/setting_control/inc_setting_catl.php:227, src/inc/customizer/setting_control/inc_setting_contact.php:161
 msgid "Tab"
 msgstr ""
 
@@ -246,23 +254,23 @@ msgstr ""
 msgid "Club title"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_club.php:277
+#: src/inc/customizer/setting_control/inc_setting_club.php:277, src/inc/customizer/setting_control/inc_setting_featured_category.php:115
 msgid "Select category to show in Section."
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_contact.php:115
+#: src/inc/customizer/setting_control/inc_setting_contact.php:111
 msgid "API KEY"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_contact.php:145
+#: src/inc/customizer/setting_control/inc_setting_contact.php:141
 msgid "Show google map in contact"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_contact.php:181, src/inc/customizer/setting_control/inc_setting_contact.php:211, src/inc/customizer/setting_control/inc_setting_contact.php:241, src/inc/customizer/setting_control/inc_setting_contact.php:271, src/inc/customizer/setting_control/inc_setting_contact.php:305, src/inc/customizer/setting_control/inc_setting_contact.php:339
+#: src/inc/customizer/setting_control/inc_setting_contact.php:177, src/inc/customizer/setting_control/inc_setting_contact.php:207, src/inc/customizer/setting_control/inc_setting_contact.php:237, src/inc/customizer/setting_control/inc_setting_contact.php:267, src/inc/customizer/setting_control/inc_setting_contact.php:301, src/inc/customizer/setting_control/inc_setting_contact.php:333
 msgid "Tab #"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_contact.php:339
+#: src/inc/customizer/setting_control/inc_setting_contact.php:333
 msgid "Select a location on map"
 msgstr ""
 
@@ -350,31 +358,35 @@ msgstr ""
 msgid "Link to  %1$s"
 msgstr ""
 
-#: src/inc/customizer/wpg_customizer.php:167
+#: src/inc/customizer/wpg_customizer.php:149
 msgid "Theme Settings"
 msgstr ""
 
-#: src/inc/customizer/wpg_customizer.php:213
+#: src/inc/customizer/wpg_customizer.php:195
 msgid "Typography"
 msgstr ""
 
-#: src/inc/customizer/wpg_customizer.php:235
-msgid "News and event"
+#: src/inc/customizer/wpg_customizer.php:223
+msgid "Events"
 msgstr ""
 
-#: src/inc/customizer/wpg_customizer.php:291
+#: src/inc/customizer/wpg_customizer.php:249
+msgid "Featured category "
+msgstr ""
+
+#: src/inc/customizer/wpg_customizer.php:309
 msgid "New releases"
 msgstr ""
 
-#: src/inc/customizer/wpg_customizer.php:319
+#: src/inc/customizer/wpg_customizer.php:339
 msgid "Catl"
 msgstr ""
 
-#: src/inc/customizer/wpg_customizer.php:341
+#: src/inc/customizer/wpg_customizer.php:365
 msgid "Contact"
 msgstr ""
 
-#: src/inc/customizer/wpg_customizer.php:363
+#: src/inc/customizer/wpg_customizer.php:391
 msgid "Social networks"
 msgstr ""
 
@@ -382,39 +394,39 @@ msgstr ""
 msgid "Partner url"
 msgstr ""
 
-#: src/inc/template-tags.php:67
+#: src/inc/template-tags.php:75
 msgid "Share on Twitter!"
 msgstr ""
 
-#: src/inc/template-tags.php:69
+#: src/inc/template-tags.php:77
 msgid "Share on Google+"
 msgstr ""
 
-#: src/inc/template-tags.php:71
+#: src/inc/template-tags.php:79
 msgid "Share on Facebook"
 msgstr ""
 
-#: src/inc/template-tags.php:127
+#: src/inc/template-tags.php:135
 msgid "Author"
 msgstr ""
 
-#: src/inc/template-tags.php:149
+#: src/inc/template-tags.php:157
 msgid "Data"
 msgstr ""
 
-#: src/inc/template-tags.php:167
+#: src/inc/template-tags.php:175
 msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
-#: src/inc/template-tags.php:443
+#: src/inc/template-tags.php:451
 msgid "Comment navigation"
 msgstr ""
 
-#: src/inc/template-tags.php:449
+#: src/inc/template-tags.php:457
 msgid "Older Comments"
 msgstr ""
 
-#: src/inc/template-tags.php:457
+#: src/inc/template-tags.php:465
 msgid "Newer Comments"
 msgstr ""
 
