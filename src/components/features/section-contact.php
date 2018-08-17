@@ -9,7 +9,9 @@
  ?>
  <section id="contact" class="page-section clear-both">
    <header class="header-section text-center">
-     <div><h2><?php echo esc_html(get_theme_mod('wpg_contact_title',__('let\'s stay in contact', 'wpg_theme'))); ?></h2></div>
+     <div class="h-wrapper">
+       <h2 class="h--xxl"><?php echo esc_html(get_theme_mod('wpg_contact_title',__('let\'s stay in contact', 'wpg_theme'))); ?></h2>
+     </div>
    </header>
 
    <?php
@@ -29,7 +31,7 @@
          <ul class="js-tablist">
            <?php for ($i=1; $i <= 4; $i++) : ?>
              <li class="js-tablist__item">
-               <h3><a href="#id_contact_tab_<?php echo $i; ?>" id="label_id_contact_tab_<?php echo $i; ?>" class="js-tablist__link"><?php echo esc_html(get_theme_mod("wpg_contact_place_$i",__('Tab ', 'wpg_theme'))); ?></a></h3>
+               <a href="#id_contact_tab_<?php echo $i; ?>" id="label_id_contact_tab_<?php echo $i; ?>" class="js-tablist__link class-h3"><?php echo esc_html(get_theme_mod("wpg_contact_place_$i",__('Tab ', 'wpg_theme'))); ?></a>
              </li>
            <?php endfor; ?>
          </ul>

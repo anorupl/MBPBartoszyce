@@ -20,6 +20,11 @@
 
 /* 2.0 Layout
 ======================= */
+.h--xxl {
+   @include font-size((5.4),0,true);
+}
+
+
 // tabs
 .js-tablist {
   text-align: left;
@@ -180,5 +185,31 @@
 #partner-slider {
   .slick-slide img{
     max-width: 50%;
+  }
+}
+
+/* content */
+.header-content {
+  min-height: 260px;
+}
+
+
+.hentry-multi {
+  .hentry {
+    padding: gutter();
+  }
+  .post-thumbnail{
+  width: 40%;
+  float: left;
+  }
+  .entry-meta,
+  .entry-summary {
+    width: 60%;
+    float: left;
+  }
+
+  .entry-content,
+  .entry-summary {
+    padding: gutter();
   }
 }

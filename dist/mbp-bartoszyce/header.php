@@ -34,7 +34,6 @@
         </div>
     </div>
     <header id="site-header">
-        <?php if (is_front_page() && !is_paged()): ?>
             <div class="title-area">
                 <h1 class="site-title">
                     <span class="screen-reader-text"><?php bloginfo('name');?></span>
@@ -45,18 +44,6 @@
                     <?php endif;?>
                 </h1>
             </div>
-        <?php else: ?>
-            <div class="title-area">
-                <?php if (!has_custom_logo()): ?>
-                <span class="site-title class-h1">
-                    <a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name');?></a>
-                </span>
-                <?php else: ?>
-                    <?php the_custom_logo();?>
-                <?php endif;?>
-            </div>
-        <?php endif;?>
-
         <?php if (has_nav_menu('header')): ?>
             <button class="icon-button-small-menu hide-desktop right-button">
                 <?php _e('Menu', 'wpg_theme');?>

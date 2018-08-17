@@ -10,11 +10,7 @@
  <section class="newitems page-section clear-both">
    <div class="container">
        <header class="header-section">
-           <span class="header-span">
-               <h2>Nowości w Bibliotece</h2>
-               <span class="border"></span>
-           </span>
-           <p><?php echo esc_html(get_theme_mod('wpg_clubs_desc','')); ?></p>
+           <h2 class="h--xxl"><?php echo esc_html(get_theme_mod('wpg_new_title','')); ?></h2>
        </header>
    </div>
    <div class="container">

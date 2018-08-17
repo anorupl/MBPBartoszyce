@@ -46,7 +46,7 @@ msgstr ""
 msgid "Nothing Found"
 msgstr ""
 
-#: src/components/content_multi/content.php:45
+#: src/components/content_multi/content.php:47
 msgid "Continue reading"
 msgstr ""
 
@@ -58,7 +58,7 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
-#: src/components/content_single/content-page.php:71, src/components/content_single/content.php:69, src/home.php:183, src/index.php:85, src/search.php:71
+#: src/components/content_single/content-page.php:71, src/components/content_single/content.php:69, src/home.php:181, src/index.php:85, src/search.php:71
 msgid "Page"
 msgstr ""
 
@@ -66,15 +66,15 @@ msgstr ""
 msgid "Post published in category %1$s, on <time class=\"entry-date published updated\" datetime=\"%2$s\">%3$s</time>, by <span class=\"author vcard\"><span class=\"fn\">%4$s</span></span>"
 msgstr ""
 
-#: src/components/features/section-catl.php:55, src/components/features/section-contact.php:63
+#: src/components/features/section-catl.php:47, src/components/features/section-contact.php:67
 msgid "Tab "
 msgstr ""
 
-#: src/components/features/section-catl.php:69
+#: src/components/features/section-catl.php:61
 msgid "Tab content"
 msgstr ""
 
-#: src/components/features/section-catl.php:85, src/inc/customizer/setting_control/inc_setting_catl.php:97
+#: src/components/features/section-catl.php:77, src/inc/customizer/setting_control/inc_setting_catl.php:97
 msgid "Go to the website"
 msgstr ""
 
@@ -82,23 +82,23 @@ msgstr ""
 msgid "Clubs in the library"
 msgstr ""
 
-#: src/components/features/section-contact.php:23, src/inc/customizer/setting_control/inc_setting_contact.php:61
+#: src/components/features/section-contact.php:25, src/inc/customizer/setting_control/inc_setting_contact.php:61
 msgid "let's stay in contact"
 msgstr ""
 
-#: src/components/features/section-contact.php:91, src/inc/customizer/setting_control/inc_setting_contact.php:207
+#: src/components/features/section-contact.php:95, src/inc/customizer/setting_control/inc_setting_contact.php:207
 msgid "Address"
 msgstr ""
 
-#: src/components/features/section-contact.php:109, src/inc/customizer/setting_control/inc_setting_contact.php:267
+#: src/components/features/section-contact.php:113, src/inc/customizer/setting_control/inc_setting_contact.php:267
 msgid "E-mail"
 msgstr ""
 
-#: src/components/features/section-contact.php:127, src/inc/customizer/setting_control/inc_setting_contact.php:237
+#: src/components/features/section-contact.php:131, src/inc/customizer/setting_control/inc_setting_contact.php:237
 msgid "Telephone number"
 msgstr ""
 
-#: src/components/features/section-contact.php:147, src/inc/customizer/custom_control_field/inc_field_open_hours.php:91, src/inc/customizer/setting_control/inc_setting_contact.php:301
+#: src/components/features/section-contact.php:151, src/inc/customizer/custom_control_field/inc_field_open_hours.php:91, src/inc/customizer/setting_control/inc_setting_contact.php:301
 msgid "Opening Hours"
 msgstr ""
 
@@ -110,11 +110,11 @@ msgstr ""
 msgid "In the library"
 msgstr ""
 
-#: src/components/features/section-new.php:149
+#: src/components/features/section-new.php:141
 msgid "Show"
 msgstr ""
 
-#: src/components/features/section-new.php:161
+#: src/components/features/section-new.php:153
 msgid "Show older"
 msgstr ""
 
@@ -170,27 +170,31 @@ msgstr ""
 msgid "Right Sidebar"
 msgstr ""
 
-#: src/header.php:123, src/header.php:151
+#: src/header.php:97, src/header.php:125
 msgid "Menu"
 msgstr ""
 
-#: src/header.php:159
+#: src/header.php:133
 msgid "Add menu"
 msgstr ""
 
-#: src/home.php:125, src/inc/customizer/setting_control/inc_setting_blog.php:25, src/inc/customizer/wpg_customizer.php:443
+#: src/home.php:123, src/inc/customizer/setting_control/inc_setting_blog.php:25, src/inc/customizer/wpg_customizer.php:443
 msgid "Last post"
 msgstr ""
 
-#: src/home.php:127
+#: src/home.php:125
 msgid " - page: "
 msgstr ""
 
-#: src/home.php:179, src/index.php:81, src/search.php:67
+#: src/home.php:137
+msgid "You are here: &nbsp;"
+msgstr ""
+
+#: src/home.php:177, src/index.php:81, src/search.php:67
 msgid "Previous page"
 msgstr ""
 
-#: src/home.php:181, src/index.php:83, src/search.php:69
+#: src/home.php:179, src/index.php:83, src/search.php:69
 msgid "Next page"
 msgstr ""
 
@@ -444,6 +448,10 @@ msgstr ""
 
 #: src/inc/template-tags.php:465
 msgid "Newer Comments"
+msgstr ""
+
+#: src/inc/template-tags.php:987
+msgid "Home"
 msgstr ""
 
 #: src/search.php:33

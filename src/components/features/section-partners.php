@@ -8,8 +8,8 @@
  */
  ?>
  <section id="partners" class="page-section clear-both">
-   <header class="header-section text-center">
-     <div><h2><?php echo esc_html(get_theme_mod('wpg_partners_title',__('Partners', 'wpg_theme'))); ?></h2></div>
+   <header class="header-section">
+     <h2 class="h--xxl"><?php echo esc_html(get_theme_mod('wpg_partners_title',__('Partners', 'wpg_theme'))); ?></h2>
    </header>
    <?php
 

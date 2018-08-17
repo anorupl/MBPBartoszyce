@@ -169,11 +169,11 @@ sass/
   display: inline-block;
   padding: 5px 35px;
   line-height: 30px;
-  color: #ffffff;
-  border: 2px solid #ffffff; }
+  color: #f7f8fa;
+  border: 2px solid #f7f8fa; }
   .btn-slider:hover {
     color: #f25e44;
-    background-color: #ffffff;
+    background-color: #f7f8fa;
     border-color: #f25e44; }
 
 /* Icons */

@@ -482,3 +482,47 @@ function wpg_the_thumbnail( $size='thumbnail' ){
 	}
 
 }
+
+/**
+* Indicate the current page’s location within a navigational hierarchy that automatically adds separators via CSS
+*
+* @return string html
+*/
+function wpg_breadcrumbs() {
+  $showOnHome = 0; // 1 - show breadcrumbs on the homepage, 0 - don't show
+  $delimiter = '&raquo;'; // delimiter between crumbs
+  $home = __('Home','wpg_theme'); // text for the 'Home' link
+  $showCurrent = 1; // 1 - show current post/page title in breadcrumbs, 0 - don't show
+  $homeLink 	= get_bloginfo('url');
+  $post_type 	= get_post_type();
+  echo '<a href="' . $homeLink . '">' . $home . '</a> ' . $delimiter . ' ';
+      if ( $post_type == 'offer' ) {
+        $post_type = get_post_type_object(get_post_type());
+        $slug = $post_type->rewrite;
+        echo '<a href="' . $homeLink . '/' . $slug['slug'] . '/">' . $post_type->labels->singular_name . '</a>';
+        if ($showCurrent == 1) echo ' ' . $delimiter . ' ' . get_the_title();
+      } elseif($post_type == 'post_gallery' ){
+		global $post;
+		// Get post type taxonomies
+		$taxonomies = get_object_taxonomies( $post->post_type, 'objects' );
+		// Empty array for terms
+  		$out = array();
+		foreach ( $taxonomies as $taxonomy_slug => $taxonomy ){
+			// get the terms related to post
+			$terms = get_the_terms( $post->ID, $taxonomy_slug );
+			if ( !empty( $terms ) ) {
+				foreach ( $terms as $term ) {
+					$out[] = "<a href='".    get_term_link( $term->slug, $taxonomy_slug ) ."'>".$term->name."</a>&nbsp;";
+			 	}
+			}
+		}
+		printf('%1$s', implode('', $out ));
+      }
+      else {
+        $cat = get_the_category(); $cat = $cat[0];
+        $cats = get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
+        if ($showCurrent == 0) $cats = preg_replace("#^(.+)\s$delimiter\s$#", "$1", $cats);
+        echo $cats;
+        if ($showCurrent == 1) echo get_the_title();
+      }
+}

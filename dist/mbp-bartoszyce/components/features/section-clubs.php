@@ -10,10 +10,9 @@
  <section class="clubs white-a page-section clear-both">
      <div class="container">
          <header class="header-section">
-             <span class="header-span">
-                 <h2><?php echo esc_html(get_theme_mod('wpg_clubs_title',__('Clubs in the library', 'wpg_theme'))); ?></h2>
-                 <span class="border"></span>
-             </span>
+             <div class="h-wrapper">
+                 <h2 class="h--xxl"><?php echo esc_html(get_theme_mod('wpg_clubs_title',__('Clubs in the library', 'wpg_theme'))); ?></h2>
+             </div>
              <p><?php echo esc_html(get_theme_mod('wpg_clubs_desc','')); ?></p>
          </header>
      </div>

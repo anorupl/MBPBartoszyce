@@ -14,11 +14,7 @@
    </div>
      <div class="catl-content">
        <header class="header-section">
-           <span class="header-span">
-               <h2><?php echo esc_html(get_theme_mod('wpg_catl_title','Digital archive of local tradition')); ?></h2>
-               <span class="border"></span>
-           </span>
-           <p><?php echo esc_html(get_theme_mod('wpg_clubs_desc','')); ?></p>
+         <h2 class="h--xxl"><?php echo esc_html(get_theme_mod('wpg_catl_title','Digital archive of local tradition')); ?></h2>
        </header>
        <div class="tab-home">
          <div class="js-tabs">

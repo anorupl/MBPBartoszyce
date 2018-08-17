@@ -79,12 +79,16 @@ main {
   }
 }
 
-
-
-
-.size-h3 {
-  @include font-size(($size-base + 1.1),0,true);
+.gray-content {
+  color:$five-bw;
+  a {
+    color:$five-bw;
+  }
 }
+
+
+
+
 
 .btn {
     color: $four-bw;
@@ -96,6 +100,7 @@ main {
     text-align: center;
     border-radius: 25px;
     &:hover {
+      color: $four-bw;
       background-color: $one-color;
     }
 }
@@ -456,7 +461,7 @@ main {
     @include font-size($size-xl-large);
     text-align: center;
   }
-  h4 {
+  span {
     display: inline-block;
     padding-left: 25px;
   }
@@ -515,5 +520,40 @@ main {
   }
   a {
     color:$three-color;
+  }
+}
+
+
+
+/* content */
+.header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $one-color;
+}
+#breadcrumbs {
+  border-bottom: 1px solid $border-color;
+  span {
+    padding-right: 5px;
+  }
+}
+
+
+
+/* hentry-multi */
+
+.hentry-multi {
+  .hentry {
+    margin-bottom: 40px;
+    background-color: $white;
+    border-bottom: 5px solid $five-bw;
+  }
+  .post-thumbnail{
+
+  }
+  .entry-meta,
+  .entry-summary {
+
   }
 }

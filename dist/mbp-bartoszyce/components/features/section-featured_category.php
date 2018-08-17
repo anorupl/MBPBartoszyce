@@ -10,7 +10,7 @@
  <section id="featured-cat" class="page-section pad-all col-5">
  <header class="header-section">
    <div class="h-wrapper">
-     <h2><?php echo esc_html(get_theme_mod('wpg_featuredcat_title',__('In the library', 'wpg_theme'))); ?></h2>
+     <h2 class="h--xxl"><?php echo esc_html(get_theme_mod('wpg_featuredcat_title',__('In the library', 'wpg_theme'))); ?></h2>
    </div>
  </header>
  <?php

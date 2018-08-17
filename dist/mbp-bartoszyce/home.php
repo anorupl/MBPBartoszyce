@@ -54,23 +54,22 @@ if (is_front_page()) {
     }
   } else {
   ?>
-  <section id="content" class="site-content col-12">
-    <header class="header-index col-12">
-				<h1>
+  <section id="content" class="site-content">
+    <header class="header-content gutters white-a">
+				<h2 class="h--xxl">
 					<?php
-					if ( is_front_page() && is_home() ) {
 						// home page - paged
 						echo esc_html(get_theme_mod('wpg_blog_title',__('Last post', 'wpg_theme')));
 						_e(' - page: ', 'wpg_theme');
 						echo $paged;
-					} else {
-						//everything else
-						the_archive_title();
-					}
 					?>
-				</h1>
+				</h2>
 		</header>
-  	<div id="primary" class="content-area hentry-multi">
+    <div id="breadcrumbs" class="pad-all gray-content">
+      <span><?php _e('You are here: &nbsp;', 'wpg_theme'); ?></span>
+      <?php if (function_exists('wpg_breadcrumbs')) wpg_breadcrumbs(); ?>
+    </div>
+  	<div id="primary" class="content-area hentry-multi gutters col-8">
   		<main id="main" class="site-main ">
         <?php
     		if ( have_posts() ) :
