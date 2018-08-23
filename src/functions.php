@@ -130,6 +130,9 @@ function wpg_enqueue() {
 	// fallback for flexbox
 	wp_enqueue_script( 'wpg-modernizr-flexbox', THEME_URL . 'js/assets/modernizr-flexbox.min.js','', THEME_VERSION);
 
+	wp_enqueue_script( 'cookie', THEME_URL . 'js/assets/jquery.cookie.js','', THEME_VERSION);
+
+
 	wp_enqueue_script( 'wpg-image-popup-js', THEME_URL . 'js/assets/wpg-image.min.js',array('jquery'), THEME_VERSION, true );
 
 	wp_enqueue_style( 'slick-css', THEME_URL . "/css/slick.css");
@@ -139,6 +142,7 @@ function wpg_enqueue() {
 	wp_enqueue_script( 'wpg-main',THEME_URL . 'js/main.min.js',array('jquery'), THEME_VERSION, true );
 
 	wp_localize_script('wpg-main', 'datalanuge', array(
+		'url' 		    => get_bloginfo('template_directory'),
 		'next'=> __('Previous Image (left arrow key)', 'wpg_theme'),
 		'prev'=> __('Next Image (right arrow key)', 'wpg_theme'),
 		'of'  => __('of', 'wpg_theme'),
@@ -193,6 +197,8 @@ require THEME_PATH . 'inc/theme-functions.php';
 require THEME_PATH . 'inc/template-tags.php';
 
 require THEME_PATH . 'inc/meta_box.php';
+
+require THEME_PATH . 'inc/wcga_form.php';
 
 /**
 * Include file with custom admin setting:

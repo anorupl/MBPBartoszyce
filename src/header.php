@@ -30,15 +30,8 @@
           <?php wpg_the_adress();?>
       </div>
       <div class="inline-right">
-        <div class="form-wcga inline-left">
-          <form id="kontrast" action="http://gmina-bartoszyce.pl/" method="post">
-            <input role="button" id="contrast-button" type="submit" value="Włącz kontrast">
-          </form>
-          <form id="fontsize-form" action="http://gmina-bartoszyce.pl/" method="POST">
-                <input class="normal-font fontsize-button" role="button" title="Standartowy rozmiar czcionki" name="normal" id="fontsize-normal" type="submit" value="A">
-                <input class="medium-font fontsize-button" role="button" title="Powiększ czcionkę 150%" name="medium" id="fontsize-medium" type="submit" value="A">
-                <input class="big-font fontsize-button" role="button" title="Powiększ czcionkę 200%" name="big" id="fontsize-big" type="submit" value="A">
-          </form>
+        <div id="form-wcga" class="form-wcga inline-left">
+            <?php form_wcga(); ?>
         </div>
         <div id="top-bar__social" class="l-icon inline-left">
             <?php wpg_social_net_link('<span class="screen-reader-text">%1$s</span>%2$s');?>

@@ -22,17 +22,10 @@ get_header();
   <div id="primary" class="content-area col-primary hentry-multi gutters">
     <section>
     <?php
-
-    /**
-    * Code form function term_description();
-    *
-    * @link https://developer.wordpress.org/reference/functions/term_description/
-    */
-    $term_object = get_queried_object();
-    $description = get_term_field( 'description', $term_object->term_id, $term_object->taxonomy );
-?>
-      <?php if ( $paged == 0 ) : ?>
-
+    if (is_tax('clubs') && $paged == 0) :
+      $term_object = get_queried_object();
+      $description = get_term_field( 'description', $term_object->term_id, $term_object->taxonomy );
+    ?>
       <div id="term_description">
         <div class="desc_header pad-all white-a clear-both">
           <header class="col-9">
@@ -46,7 +39,7 @@ get_header();
           <?php echo is_wp_error( $description ) ? '' : $description; ?>
         </div>
       </div><!-- term_description -->
-      <?php endif; ?>
+    <?php endif; ?>
 
     <main id="main" class="site-main ">
 

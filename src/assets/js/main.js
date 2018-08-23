@@ -152,5 +152,52 @@ $.fn.slick_small_sllider = function(setting) {
          ]
      });
 
+
+     // Obsługa fomularza przycisku kontrastu i rozmiaru czcionek (formularz dziala bez js przez php)
+     	$("#form-wcga button").click(function(e){
+
+     		var button  = $(this),
+     		value   = button.val();
+
+     		e.preventDefault();
+
+     		if (value == 'contrast' || value == 'normal') {
+     			switch(value) {
+     				case 'contrast':
+     					$('head').append('<link id="contrast-style-css" rel="stylesheet" href="'+ datalanuge.url +'/css/kontrast.css" type="text/css" />');
+     					$.cookie("color", 'contrast', {expires: 365, path: '/'});
+     					button.val('normal');
+     					button.html(datalanuge.offcontrast);
+     					break;
+     				case 'normal':
+     					$("#contrast-style-css").remove();
+     					$.removeCookie('color', { path: '/' });
+     					button.val('contrast');
+     					button.html(datalanuge.oncontrast);
+     					break;
+     				default:
+     					break;
+     			}
+     		} else {
+
+     			if ($.cookie("font-size")) {
+     				$("#font-size-css").remove();
+     				$.removeCookie('font-size', { path: '/' });
+     			}
+
+     			switch(value) {
+     				case 'medium':
+     					$('head').append('<link id="font-size-css" rel="stylesheet" href="'+ datalanuge.url +'/css/medium.css" type="text/css" />');
+     					$.cookie("font-size",'medium', {expires: 365, path: '/'});
+     					break;
+     				case 'big':
+     					$('head').append('<link id="font-size-css" rel="stylesheet" href="'+ datalanuge.url +'/css/big.css" type="text/css" />');
+     					$.cookie("font-size",'big', {expires: 365, path: '/'});
+     					break;
+     				default:
+     					break;
+     			}
+     		}
+     	});
   });
 })(jQuery);

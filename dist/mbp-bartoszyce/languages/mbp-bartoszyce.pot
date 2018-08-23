@@ -62,7 +62,7 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
-#: src/components/content_single/content-club.php:65, src/components/content_single/content-collection.php:65, src/components/content_single/content-page.php:67, src/components/content_single/content.php:65, src/index.php:235, src/search.php:83, src/taxonomy.php:141
+#: src/components/content_single/content-club.php:65, src/components/content_single/content-collection.php:65, src/components/content_single/content-page.php:67, src/components/content_single/content.php:65, src/index.php:235, src/search.php:83, src/taxonomy.php:127
 msgid "Page"
 msgstr ""
 
@@ -158,43 +158,43 @@ msgstr ""
 msgid "Header Menu - Bottom "
 msgstr ""
 
-#: src/functions.php:283
+#: src/functions.php:291
 msgid "Previous Image (left arrow key)"
 msgstr ""
 
-#: src/functions.php:285
+#: src/functions.php:293
 msgid "Next Image (right arrow key)"
 msgstr ""
 
-#: src/functions.php:287
+#: src/functions.php:295
 msgid "of"
 msgstr ""
 
-#: src/functions.php:289
+#: src/functions.php:297
 msgid "Close (Escape key)"
 msgstr ""
 
-#: src/functions.php:291
+#: src/functions.php:299
 msgid "Loading ..."
 msgstr ""
 
-#: src/functions.php:293
+#: src/functions.php:301
 msgid "Image"
 msgstr ""
 
-#: src/functions.php:295
+#: src/functions.php:303
 msgid "it cannot be loaded."
 msgstr ""
 
-#: src/functions.php:341
+#: src/functions.php:349
 msgid "Right Sidebar"
 msgstr ""
 
-#: src/header.php:137, src/header.php:165
+#: src/header.php:123, src/header.php:151
 msgid "Menu"
 msgstr ""
 
-#: src/header.php:173
+#: src/header.php:159
 msgid "Add menu"
 msgstr ""
 
@@ -446,8 +446,36 @@ msgstr ""
 msgid "Newer Comments"
 msgstr ""
 
-#: src/inc/template-tags.php:987
+#: src/inc/template-tags.php:985
 msgid "Home"
+msgstr ""
+
+#: src/inc/template-tags.php:987
+msgid "Archive by Category \"%s\""
+msgstr ""
+
+#: src/inc/template-tags.php:989
+msgid "Search Results for \"%s\" Query"
+msgstr ""
+
+#: src/inc/template-tags.php:991
+msgid "Posts Tagged \"%s\""
+msgstr ""
+
+#: src/inc/template-tags.php:993
+msgid "Articles Posted by %s"
+msgstr ""
+
+#: src/inc/template-tags.php:995
+msgid "Error 404"
+msgstr ""
+
+#: src/inc/template-tags.php:997
+msgid "Page %s"
+msgstr ""
+
+#: src/inc/template-tags.php:999
+msgid "Comment Page %s"
 msgstr ""
 
 #: src/index.php:129, src/index.php:179
@@ -458,11 +486,11 @@ msgstr ""
 msgid "You are here: &nbsp;"
 msgstr ""
 
-#: src/index.php:231, src/search.php:79, src/taxonomy.php:137
+#: src/index.php:231, src/search.php:79, src/taxonomy.php:123
 msgid "Previous page"
 msgstr ""
 
-#: src/index.php:233, src/search.php:81, src/taxonomy.php:139
+#: src/index.php:233, src/search.php:81, src/taxonomy.php:125
 msgid "Next page"
 msgstr ""
 

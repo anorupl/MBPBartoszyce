@@ -125,46 +125,89 @@ function wpg_popup_image_class($class) {
 add_filter('get_image_tag_class', 'wpg_popup_image_class' );
 
 function wpg_nav_description( $item_output, $item, $depth, $args ) {
-    if ( !empty( $item->description ) ) {
-        $item_output = str_replace( $args->link_after . '</a>', '<span class="menu-item-description">' . $item->description . '</span>' . $args->link_after . '</a>', $item_output );
-    }
+	if ( !empty( $item->description ) ) {
+		$item_output = str_replace( $args->link_after . '</a>', '<span class="menu-item-description">' . $item->description . '</span>' . $args->link_after . '</a>', $item_output );
+	}
 
-    return $item_output;
+	return $item_output;
 }
 add_filter( 'walker_nav_menu_start_el', 'wpg_nav_description', 10, 4 );
 
 
 
-add_action('clubs_add_form_fields', 'add_form_fields_example', 10, 2);
-add_action('clubs_edit_form_fields', 'add_form_fields_example', 10, 2);
-add_action('categorycollection_add_form_fields', 'add_form_fields_example', 10, 2);
-add_action('categorycollection_edit_form_fields', 'add_form_fields_example', 10, 2);
 
 
-function add_form_fields_example($term, $taxonomy){
-
-		$settings = array(
-			'textarea_name' => 'description',
-			'textarea_rows' => 10,
-			'editor_class'  => 'i18n-multilingual',
-		);
-
-		?>
-		<tr class="form-field term-description-wrap">
-			<th scope="row"><label for="description"><?php _e( 'Description' ); ?></label></th>
-			<td>
-				<?php
-				wp_editor( htmlspecialchars_decode( $term->description ), 'html-tag-description', $settings );
-				?>
-				<p class="description"><?php _e( 'The description is not prominent by default; however, some themes may show it.' ); ?></p>
-			</td>
-			<script>
-				// Remove the non-html field
-				jQuery('textarea#description').closest('.form-field').remove();
-			</script>
-		</tr>
-		<?php
-	}
 
 
+/**
+* Add the visual editor to the edit tag screen
+*
+* HTML should match what is used in wp-admin/edit-tag-form.php
+*
+* @link https://github.com/sheabunge/visual-term-description-editor
+*
+* @param object $tag The tag currently being edited
+* @param string $taxonomy The taxonomy that the tag belongs to
+*/
+function render_field_edit($term, $taxonomy){
+
+	$settings = array(
+		'textarea_name' => 'description',
+		'textarea_rows' => 10,
+		'editor_class'  => 'i18n-multilingual',
+	);
+
+	?>
+	<tr class="form-field term-description-wrap">
+		<th scope="row"><label for="description"><?php _e( 'Description' ); ?></label></th>
+		<td>
+			<?php	wp_editor( htmlspecialchars_decode( $term->description ), 'html-tag-description', $settings ); ?>
+			<p class="description"><?php _e( 'The description is not prominent by default; however, some themes may show it.' ); ?></p>
+		</td>
+		<script>
+		// Remove the non-html field
+		jQuery('textarea#description').closest('.form-field').remove();
+		</script>
+	</tr>
+	<?php
+}
+add_action('clubs_edit_form_fields', 'render_field_edit', 10, 2);
+//add_action('categorycollection_edit_form_fields', 'render_field_edit', 10, 2);
+/**
+* Add the visual editor to the add new tag screen
+*
+* HTML should match what is used in wp-admin/edit-tags.php
+*
+* @link https://github.com/sheabunge/visual-term-description-editor
+* @param string $taxonomy The taxonomy that a new tag is being added to
+*/
+function render_field_add( $taxonomy ) {
+	$settings = array(
+		'textarea_name' => 'description',
+		'textarea_rows' => 10,
+		'editor_class'  => 'i18n-multilingual',
+	);
+	?>
+	<div class="form-field term-description-wrap">
+		<label for="tag-description"><?php _e( 'Description' ); ?></label>
+		<?php	wp_editor( '', 'html-tag-description', $settings );	?>
+		<p><?php _e( 'The description is not prominent by default; however, some themes may show it.' ); ?></p>
+		<script>
+		// Remove the non-html field
+		jQuery('textarea#tag-description').closest('.form-field').remove();
+		jQuery(function () {
+			jQuery('#addtag').on('mousedown', '#submit', function () {
+				tinyMCE.triggerSave();
+				jQuery(document).bind('ajaxSuccess.vtde_add_term', function () {
+					tinyMCE.activeEditor.setContent('');
+					jQuery(document).unbind('ajaxSuccess.vtde_add_term', false);
+				});
+			});
+		});
+		</script>
+	</div>
+	<?php
+}
+add_action('clubs_add_form_fields', 'render_field_add', 10, 2);
+//add_action('categorycollection_add_form_fields', 'render_field_add', 10, 2);
 ?>

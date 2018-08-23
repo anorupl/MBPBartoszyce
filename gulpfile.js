@@ -33,6 +33,7 @@ var project        = 'mbp-bartoszyce', // The directory name for your theme
 
 // Config assets_js
 var jquery         = node + 'jquery/dist/jquery.min.js',
+	cookies        = node + 'jquery.cookie/jquery.cookie.js',
 	html5shiv      = node + 'html5shiv/dist/*.min.js',
 	slider         = node + 'slick-carousel/slick/slick.min.js',
 	carousel       = node + 'owl.carousel/dist/owl.carousel.min.js',
@@ -111,7 +112,7 @@ gulp.task('copy-assets', function() {
 gulp.task('theme-js', function() {
 
 	//Copy Js assets: silder, html5shiv
-	gulp.src([slider, html5shiv]).pipe(changed(project_dir + dist_assets_js))
+	gulp.src([slider, html5shiv, cookies]).pipe(changed(project_dir + dist_assets_js))
 		.pipe(gulp.dest(project_dir + dist_assets_js));
 
 	//Copy Js for gallery and images
