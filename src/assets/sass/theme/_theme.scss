@@ -50,6 +50,33 @@ main {
 
 /* 2.0 Layout
 ======================= */
+.hide {
+    display: none;
+}
+
+.col-primary,
+.col-secondary {
+  float: left;
+  @include span(12 no-gutters);
+  margin: 5% 0 0;
+}
+
+.col-primary--12{
+  @include span(12 no-gutters);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .radius {
     border-radius: 5px;
 }
@@ -94,11 +121,11 @@ main {
     color: $four-bw;
     background-color: $two-color;
     border: 1px solid $two-color;
-    padding: 5px;
+    padding: 0.7em;
     min-width: 200px;
     display: inline-block;
     text-align: center;
-    border-radius: 25px;
+    border-radius: 0.7em;
     &:hover {
       color: $four-bw;
       background-color: $one-color;
@@ -114,6 +141,12 @@ main {
 }
 .tabs__item {
   display: inline-block;
+  @include font-size($size-big,0,false);
+  font-family: Roboto, Tahoma, Geneva, sans-serif;
+  a {
+    padding: 10px 5px;
+    margin-bottom: -2px;
+  }
 }
 .tabs__link {
   cursor: pointer;
@@ -133,18 +166,54 @@ main {
 ======================= */
 
 // Top bar Header
-.header-top {
-    .contact-item, i {
+#top-bar {
+    #top-bar__address i,
+    #top-bar__social i,
+    .contact-item {
         display: inline-block;
         padding: 0 10px;
     }
     padding: 20px gutter();
-    border-bottom: 1px solid $light-border;
-    @include font-size($size-medium,0,false);
+    border-bottom: 1px solid lighten($five-bw, 42%);
 }
-#h-adress {
-    margin-left: -20px;
+
+#top-bar__address {
+  @include font-size($size-medium,0,false);
 }
+
+.inline-right {
+  display: inline-block;
+  float: right;
+}
+.inline-left{
+  display: inline-block;
+  float: left;
+}
+
+#top-bar__address {
+  margin-left: -20px;
+  .contact-item {
+    margin-top: 10px;
+  }
+}
+.form-wcga {
+  form {
+    margin: 0;
+    display: inline;
+  }
+  input {
+    width: auto;
+    margin: 0 2px;
+  }
+}
+
+
+#top-bar__search{
+  position: relative;
+  overflow: hidden;
+  clear: both;
+}
+
 
 
 // Bottom bar Header
@@ -152,7 +221,7 @@ main {
     display: flex;
     flex-direction: column;
     position: relative;
-    border-bottom: 1px solid $light-border;
+    border-bottom: 1px solid lighten($five-bw, 42%);
     padding: 10px gutter();
 }
 .title-area {
@@ -267,6 +336,16 @@ main {
 /* Home page - section with clubs */
 .clubs {
     background-color: $two-color;
+    clear: both;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 70px;
+        background-color: $four-bw;
+        margin-top: -70px;
+    }
 }
 
 .club-item {
@@ -288,15 +367,6 @@ main {
     &:nth-child(4) {
         background-color: lighten($four-color, 5);
     }
-}
-
-.clubs-bottom::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 70px;
-    background-color: $four-bw;
-    margin-top: -70px;
 }
 
 
@@ -344,19 +414,11 @@ main {
 }
 
 
-
 /* section catl */
 #catl {
   background-color: $one-color;
 
   .tabs__item {
-    margin: 0;
-    padding-bottom: 10px;
-
-    a {
-      margin-right: 10px;
-      padding: 10px 25px;
-    }
     a[aria-selected=true] {
       color: $three-color;
       border-bottom: 2px solid $three-color;
@@ -400,10 +462,11 @@ main {
 }
 
 
+/* section contact */
 
 #contact {
   position: relative;
-  background-color: $one-color;
+  background-color: $four-bw;
   .header-section {
     position: relative;
 
@@ -417,33 +480,18 @@ main {
       background-color: $two-color;
     }
   }
-  h3,h4 {
-
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-  h3 {
-    @include font-size($size-medium);
-    margin: 0;
-    line-height: 1;
-  }
-  h4{
-    @include font-size($size-base);
-  }
-
   .tabs__item {
-    margin: 0;
-    a {
-      display: block;
-      padding: 10px 4px;
-      margin-bottom: -1px;
-    }
     a[aria-selected=true] {
       color: $one-color;
-      border-bottom: 1px solid $one-color;
+      border-bottom: 2px solid $one-color;
     }
   }
 }
+.home #contact {
+  background-color: $one-color;
+}
+
+
 #contact__content {
   background-color: $two-color;
 
@@ -486,6 +534,13 @@ main {
   }
 }
 
+/*section catl & contact */
+#catl .tabs__item a,
+#contact .tabs__item a {
+    display: inline-block;
+    padding: 10px 5px;
+    margin-bottom: -2px;
+}
 
 
 /* featured category */
@@ -523,6 +578,26 @@ main {
   }
 }
 
+/* section partners*/
+
+#partners {
+  background-color: $white;
+  padding-top: gutter();
+  padding-bottom: gutter();
+}
+
+/* section copyright */
+#copyright {
+  background-color: $white;
+}
+
+
+
+
+
+
+
+
 
 
 /* content */
@@ -531,14 +606,22 @@ main {
   flex-direction: column;
   justify-content: center;
   background-color: $one-color;
+  background-image: url(#{$svg-path}trianglify.svg);
+  background-size: cover;
 }
+
 #breadcrumbs {
-  border-bottom: 1px solid $border-color;
+  background: rgba(247, 248, 250, 0.1);
+  padding: 1%;
+  border-radius: 25px;
   span {
     padding-right: 5px;
   }
 }
-
+/* hentry */
+.entry-content {
+  clear: both;
+}
 
 
 /* hentry-multi */
@@ -547,13 +630,86 @@ main {
   .hentry {
     margin-bottom: 40px;
     background-color: $white;
-    border-bottom: 5px solid $five-bw;
+    border: 1px solid lighten($five-bw, 44%);
   }
   .post-thumbnail{
-
+    margin-bottom: 20px;
   }
-  .entry-meta,
-  .entry-summary {
+}
 
+.entry-meta {
+  border-bottom: 1px solid $border-color;
+}
+.entry-meta,
+.entry-summary {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.meta__item {
+  display: inline-block;
+  padding: 0 2%;
+  margin-bottom: 10px;
+  i {
+    padding-right: 5px;
   }
+}
+
+
+
+
+.widget {
+  border-bottom: 2px solid $border-color;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 25%;
+    background-color: $border-color;
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+  }
+}
+  .widget-title::after{
+    content: '';
+    display: block;
+    width: 40%;
+    height: 5px;
+    background-color: $two-color;
+  }
+
+
+
+
+/* taxonomy index */
+#term_description {
+  border-bottom: 5px solid $two-color;
+  margin-bottom: 40px;
+}
+.desc_header {
+  background-color: $two-color;
+}
+
+
+/* attachment */
+
+.attachment--other {
+    margin: 40px auto;
+    max-width: 800px;
+    background: $white;
+    padding: 2%;
+    border: 1px solid $border-color;
+}
+.attachment__header,
+.attachment__size {
+	border-bottom: dashed 1px $two-color;
+	padding: 10px 0;
+}
+.attachment__file {
+    padding: 25px 0;
+    img{
+      display: inline-block;
+    }
 }

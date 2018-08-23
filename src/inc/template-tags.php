@@ -501,7 +501,7 @@ function wpg_breadcrumbs() {
         $slug = $post_type->rewrite;
         echo '<a href="' . $homeLink . '/' . $slug['slug'] . '/">' . $post_type->labels->singular_name . '</a>';
         if ($showCurrent == 1) echo ' ' . $delimiter . ' ' . get_the_title();
-      } elseif($post_type == 'post_gallery' ){
+      } elseif($post_type == 'clubnews' ||  $post_type == 'post_collection'){
 		global $post;
 		// Get post type taxonomies
 		$taxonomies = get_object_taxonomies( $post->post_type, 'objects' );
@@ -525,4 +525,30 @@ function wpg_breadcrumbs() {
         echo $cats;
         if ($showCurrent == 1) echo get_the_title();
       }
+}
+
+
+
+function the_list_terms(){
+	global $post;
+
+	// Get post type taxonomies
+	$taxonomies = get_object_taxonomies( $post->post_type, 'objects' );
+
+	// Empty array for terms
+	$out = array();
+
+	foreach ( $taxonomies as $taxonomy_slug => $taxonomy ){
+
+		// get the terms related to post
+		$terms = get_the_terms( $post->ID, $taxonomy_slug );
+
+		if ( !empty( $terms ) ) {
+			foreach ( $terms as $term ) {
+				$out[] = '<a href="'.    get_term_link( $term->slug, $taxonomy_slug ) .'">'.$term->name."</a>";
+			}
+		}
+	}
+
+	echo implode('', $out );
 }

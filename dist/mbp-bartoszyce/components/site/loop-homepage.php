@@ -7,7 +7,7 @@
  * @since 0.1.0
  */
 ?>
-<section id="posts-header" class="clear-both">
+<div id="posts-header" class="clear-both">
     <main id="main" class="site-main clear-both white-a">
 
     <?php
@@ -57,7 +57,6 @@
             <i class="icon-angle-right"></i>
         </a>
         <?php endif; ?>
-        </div>
     </main>
     <div id="header-nav-bottom" class="col-11 gutters radius">
         <?php if (has_nav_menu('header_bottom')) {
@@ -70,4 +69,4 @@
         }
         ?>
     </div>
-</section>
+</div>

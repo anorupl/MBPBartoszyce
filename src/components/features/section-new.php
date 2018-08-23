@@ -10,7 +10,7 @@
  <section class="newitems page-section clear-both">
    <div class="container">
        <header class="header-section">
-           <h2 class="h--xxl"><?php echo esc_html(get_theme_mod('wpg_new_title','')); ?></h2>
+           <h2 class="h--xxl"><?php echo esc_html(get_theme_mod('wpg_new_title',__('New in the library', 'wpg_theme'))); ?></h2>
        </header>
    </div>
    <div class="container">
@@ -24,9 +24,9 @@
        if(taxonomy_exists($terms_tax)) :
          // get terms object
          $terms = get_terms( array(
-           'taxonomy' => $terms_tax,
-           'order' => 'ASC',
-           'include' => $id_terms,
+           'taxonomy'   => $terms_tax,
+           'order'      => 'ASC',
+           'include'    => $id_terms,
            'hide_empty' => false,
          ) );
          ?>

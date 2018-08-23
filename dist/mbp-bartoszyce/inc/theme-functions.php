@@ -7,19 +7,13 @@
 */
 function wpg_post_per_page( $query ) {
 	if ( $query->is_main_query() && $query->is_home() && !is_paged()) {
+		$query->set('ignore_sticky_posts', 1);
 		$query->set('posts_per_page', 4);
 	} elseif ($query->is_main_query() && $query->is_home() && is_paged()) {
-		$query->set('offset', 4);
+		//$query->set('offset', 4);
 	}
 }
-//add_action( 'pre_get_posts', 'wpg_post_per_page' );
-
-
-
-
-
-
-
+add_action( 'pre_get_posts', 'wpg_post_per_page' );
 
 
 /**
@@ -33,6 +27,11 @@ function wpg_post_per_page( $query ) {
 function wpg_body_class($class) {
 
 	$class[] = 'hfeed site';
+
+	// Active sidebar - 2 column (content)
+	if (is_active_sidebar( 'wpg-sidebar-right' ) ) {
+		$class[] = 'active-sidebar';
+	}
 
 	return $class;
 }
@@ -133,6 +132,39 @@ function wpg_nav_description( $item_output, $item, $depth, $args ) {
     return $item_output;
 }
 add_filter( 'walker_nav_menu_start_el', 'wpg_nav_description', 10, 4 );
+
+
+
+add_action('clubs_add_form_fields', 'add_form_fields_example', 10, 2);
+add_action('clubs_edit_form_fields', 'add_form_fields_example', 10, 2);
+add_action('categorycollection_add_form_fields', 'add_form_fields_example', 10, 2);
+add_action('categorycollection_edit_form_fields', 'add_form_fields_example', 10, 2);
+
+
+function add_form_fields_example($term, $taxonomy){
+
+		$settings = array(
+			'textarea_name' => 'description',
+			'textarea_rows' => 10,
+			'editor_class'  => 'i18n-multilingual',
+		);
+
+		?>
+		<tr class="form-field term-description-wrap">
+			<th scope="row"><label for="description"><?php _e( 'Description' ); ?></label></th>
+			<td>
+				<?php
+				wp_editor( htmlspecialchars_decode( $term->description ), 'html-tag-description', $settings );
+				?>
+				<p class="description"><?php _e( 'The description is not prominent by default; however, some themes may show it.' ); ?></p>
+			</td>
+			<script>
+				// Remove the non-html field
+				jQuery('textarea#description').closest('.form-field').remove();
+			</script>
+		</tr>
+		<?php
+	}
 
 
 ?>

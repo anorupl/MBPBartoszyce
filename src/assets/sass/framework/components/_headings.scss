@@ -25,11 +25,3 @@ h2,.class-h2        { @include font-size(($size-base + 1.6),0,true);}
 h3,.class-h3        { @include font-size(($size-base + 1.1),0,true);}
 h4,.class-h4        { @include font-size(($size-base + 0.6),0,true);}
 h5, h6, .class-h5   { @include font-size(($size-base + 0.3),0,true); letter-spacing: 0.1em; text-transform: uppercase;}
-
-.widget {
-	h1,.class-h1    { @include font-size(($size-base + 0.6),0,true);}
-	h2,.class-h2    { @include font-size(($size-base + 0.4),0,true);}
-	h3,.class-h3    { @include font-size(($size-base + 0.2),0,true);}
-	h4,.class-h4    { @include font-size(($size-base + 0.1),0,true);}
-	h5, h6          { @include font-size(($size-base),0,true);}
-}

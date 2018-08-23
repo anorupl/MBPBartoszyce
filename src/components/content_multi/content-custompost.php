@@ -24,7 +24,7 @@
           <span class="screen-reader"><?php _e('Author', 'wpg_theme'); ?></span>
           <?php the_author();?>
         </div>
-        <div class="meta__item"><i class="icon-folder-open"></i><?php echo get_the_term_list( $post->ID, 'category'); ?></div>
+        <div class="meta__item"><i class="icon-folder-open"></i><?php the_list_terms(); ?></div>
       </div><!-- .entry-meta -->
       <div class="entry-summary">
           <?php the_excerpt() ?>

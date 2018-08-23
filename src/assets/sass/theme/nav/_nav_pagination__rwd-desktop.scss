@@ -1,0 +1,17 @@
+/* ---------------------------------
+* Navigation archive
+------------------------------------- */
+.pagination {
+  .page-numbers {
+      display: inline-block;
+  }
+  a.prev,a.next {
+    position: absolute;
+    top: 0;
+    width: auto;
+    margin: 0;
+  }
+
+  a.prev 		{left: 0;}
+  a.next		{right: 0;}
+}

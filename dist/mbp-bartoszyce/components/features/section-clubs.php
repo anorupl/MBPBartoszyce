@@ -7,7 +7,7 @@
  *
  */
  ?>
- <section class="clubs white-a page-section clear-both">
+ <section class="clubs white-a page-section">
      <div class="container">
          <header class="header-section">
              <div class="h-wrapper">
@@ -15,18 +15,15 @@
              </div>
              <p><?php echo esc_html(get_theme_mod('wpg_clubs_desc','')); ?></p>
          </header>
-     </div>
-     <div class="clubs-bottom">
-         <div class="container">
-             <div class="wrap-continer clear-both">
+         <div class="wrap-continer clear-both">
 
 
- <?php
- $number_clubs = get_theme_mod( 'wpg_club_number','' );
+         <?php
+         $number_clubs = get_theme_mod( 'wpg_club_number','' );
 
- if (!empty($number_clubs)) {
+         if (!empty($number_clubs)) {
 
-     for ( $i = 1; $i <= $number_clubs; $i++ ) {
+         for ( $i = 1; $i <= $number_clubs; $i++ ) {
 
          $id_terms = get_theme_mod("wpg_club_terms_$i",'');
 
@@ -36,16 +33,15 @@
          $term = get_term_by('term_taxonomy_id', $id_terms, 'categorycollection');
 
 
-     ?>
+         ?>
          <div class="club-item col-4 gutters">
-             <?php echo the_term_thumbnail($term->term_id); ?>
-             <h3><a href="<?php echo esc_url( get_term_link( $term->term_id ) ); ?>" ><?php echo get_theme_mod("wpg_club_title_$i",''); ?></a></h3>
-             <p><?php echo get_theme_mod("wpg_club_desc_$i",''); ?></p>
+         <?php echo the_term_thumbnail($term->term_id); ?>
+         <h3><a href="<?php echo esc_url( get_term_link( $term->term_id ) ); ?>" ><?php echo get_theme_mod("wpg_club_title_$i",''); ?></a></h3>
+         <p><?php echo get_theme_mod("wpg_club_desc_$i",''); ?></p>
          </div>
- <?php }
- }
- ?>
-             </div>
+         <?php }
+         }
+         ?>
          </div>
      </div>
  </section>

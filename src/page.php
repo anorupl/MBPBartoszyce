@@ -13,24 +13,26 @@
 * @since 0.1.0
 */
 
-get_header();
-?>
-<div id="content" class="site-content">
-    <div id="primary" class="content-area hentry-single">
-        <main id="main" class="site-main ">
-            <?php
-            while (have_posts()) : the_post();
-
-            get_template_part('components/content_single/content', 'page');
-
-            // If comments are open or we have at least one comment, load up the comment template.
-            if (comments_open() || get_comments_number()) {
-                comments_template();
-            }
-
-        endwhile;// End of the loop.
-        ?>
-    </main>
-</div>
-</div>
-<?php get_footer(); ?>
+get_header(); ?>
+<div id="content" class="site-content clear-both">
+  <?php
+  /* Start the Loop */
+  while ( have_posts() ) :
+    the_post();
+  ?>
+  <div class="header-content gutters white-a text-center">
+        <div class="class-h1 h--xxl">
+            <?php the_title(); ?>
+        </div>
+  </div><!-- header-content -->
+  <div class="container clear-both">
+    <div id="primary" class="content-area col-primary gutters">
+      <main id="main" class="site-main ">
+        <?php get_template_part( 'components/content_single/content', 'page' ); ?>
+      </main>
+    </div><!-- #primary -->
+    <?php get_sidebar(); ?>
+  </div><!-- .container -->
+  <?php endwhile; ?>
+</div><!-- #content -->
+<?php get_footer();  ?>

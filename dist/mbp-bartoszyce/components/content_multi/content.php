@@ -19,28 +19,38 @@
           </a>
       </figure>
       <div class="entry-meta">
-        <div class="meta__icon"><i class="icon-clock"></i></div>
-        <div class="meta__text"><?php wpg_time() ?></div>
-
-        <div class="meta__icon"><i class="icon-user"></i></div>
-        <div class="meta__text"><?php ?></div>
-
-        <div class="meta__icon"><i class="icon-folder-open"></i></div>
-        <div class="meta__text"><?php echo get_the_term_list( $post->ID, 'category', $before, $sep, $after ); ?></php></div>
-
-
-
-
-      </div>
+        <div class="meta__item"><i class="icon-clock"></i><?php wpg_time() ?></div>
+        <div class="meta__item hide-on-small"><i class="icon-user"></i>
+          <span class="screen-reader"><?php _e('Author', 'wpg_theme'); ?></span>
+          <?php the_author();?>
+        </div>
+        <div class="meta__item"><i class="icon-folder-open"></i><?php echo get_the_term_list( $post->ID, 'category'); ?></div>
+      </div><!-- .entry-meta -->
       <div class="entry-summary">
           <?php the_excerpt() ?>
           <a class="btn continue_reading" href="<?php the_permalink() ?>"><?php _e('Continue reading', 'wpg_theme'); ?> <span class="screen-reader-text"><?php the_title(); ?></span></a>
-      </div>
+      </div><!-- .entry-summary -->
 
     <?php else: ?>
-      <div class="entry-meta"></div>
+
+      <div class="entry-meta">
+        <div class="meta__item"><i class="icon-clock"></i><?php wpg_time() ?></div>
+        <div class="meta__item hide-on-small"><i class="icon-user"></i>
+          <span class="screen-reader"><?php _e('Author', 'wpg_theme'); ?></span>
+          <?php the_author();?>
+        </div>
+        <div class="meta__item"><i class="icon-folder-open"></i><?php echo get_the_term_list( $post->ID, 'category'); ?></php></div>
+      </div><!-- .entry-meta -->
       <div class="entry-content">
-          <?php the_content('', true); ?>
-      </div>
+          <?php
+          /* translators: %s: Name of current post */
+      		the_content( sprintf(
+      			__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
+      			get_the_title()
+      		) );
+
+          ?>
+      </div><!-- .entry-content -->
+
     <?php endif; ?>
 </article>

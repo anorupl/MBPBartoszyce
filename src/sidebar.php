@@ -12,6 +12,6 @@ if ( ! is_active_sidebar( 'wpg-sidebar-right' ) ) {
 }
 ?>
 
-<aside id="secondary" class="widget-area gutters col-8" role="complementary">
+<aside id="secondary" class="widget-area col-secondary gutters" role="complementary">
 	<?php dynamic_sidebar( 'wpg-sidebar-right' ); ?>
 </aside>

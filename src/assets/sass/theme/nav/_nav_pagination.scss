@@ -1,3 +1,156 @@
 /* ---------------------------------
 * Navigation archive
 ------------------------------------- */
+.pagination 						{
+    clear: both;
+    text-align: center;
+    padding: 50px 5%;
+
+    .nav-links {
+        position: relative;
+    }
+	a, span	{
+		display: inline-block;
+		margin: 0px 0px 2px 0px;
+		padding: 11px 16px 10px 17px;
+		text-decoration: none;
+		border-radius: 25px;
+		border: 2px solid $nav-border;
+	}
+	a {
+		background: $nav-background;
+	}
+	span {
+		color: $nav-text;
+		background: $nav-background;
+	}
+
+	a > span {
+		color: $nav-text;
+		background: $nav-color;
+		padding: 0;
+		margin: 0;
+		border: none;
+	}
+
+	a:hover {
+		background: $nav-color;
+		color: $nav-text;
+	}
+
+	a:hover > span {
+		color: $nav-color;
+		background: $nav-background-active;
+		border: none;
+
+	}
+
+	 .current 				{
+		color: $nav-text;
+		background: $nav-color;
+	}
+	.dots {
+		background: none;
+		border-radius: 0;
+		border: none;
+		color: $nav-text;
+	}
+  .page-numbers {
+      display: none;
+  }
+	a.prev, a.next {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+	}
+}
+
+/* ---------------------------------
+* Navigation inside single post
+------------------------------------- */
+.pagination-inside {
+	clear: both;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	width: 98%;
+
+	a, span	{
+		display: inline-block;
+		margin: 0px 5px;
+		padding: 10px 16px 8px 17px;
+		text-decoration: none;
+		border-radius: 25px;
+		border: 2px solid $nav-border;
+	}
+	a {
+		color: $nav-color;
+		background: $nav-color;
+	}
+	span {
+		color: $nav-color;
+		background: $nav-background-active;
+	}
+
+	a > span {
+		color: $nav-text;
+		background: $nav-color;
+		padding: 0;
+		margin: 0;
+		border: none;
+	}
+
+	a:hover {
+		background: $nav-background-active;
+		color: $nav-color;
+	}
+
+	a:hover > span {
+		color: $nav-color;
+		background: $nav-background-active;
+		border: none;
+	}
+}
+/* ---------------------------------
+* Navigation single (next post)
+------------------------------------- */
+
+.post-navigation {
+clear: both;
+text-align: center;
+display: block;
+position: relative;
+padding-top: 50px;
+padding-bottom: 50px;
+
+	span 			{display: block;}
+	span.meta-nav 	{
+    color: $one-color;
+    font-weight: bold;
+  }
+	span.post-title {
+    @include font-size-procent($size-big);
+    font-family: Roboto, Tahoma, Geneva, sans-serif;
+    margin-top: 10px;
+  }
+	.nav-links {
+		position: relative;
+		width: span(10);
+		padding: 20px gutter() 20px gutter();
+		margin: 0 auto;
+		 div {
+			margin: 10px 0;
+			border: 2px solid $nav-border;
+			padding: 10px;
+			background: $nav-background;
+		}
+
+		div:hover {
+			background: $nav-color;
+			a {color: $nav-text;}
+		}
+	}
+}

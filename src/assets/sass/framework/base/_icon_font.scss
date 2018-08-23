@@ -19,9 +19,6 @@
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
-	@include font-size-procent(1.4);
-	line-height: 1.5em;
-
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -31,7 +28,7 @@
 
 .l-icon,
 i.l-icon  {
-	font-size: 165%;
+	font-size: 150%;
 }
 
 .xl-icon,

@@ -9,40 +9,40 @@
 */
 
 get_header(); ?>
-<div id="content" class="site-content">
-    <div id="primary" class="content-area hentry-single">
-        <main id="main" class="site-main ">
-            <?php
-            while (have_posts()) : the_post();
-
-            switch (get_post_type(get_the_ID())) {
-                case '':
-
-
-
-                break;
-                default:
-
-                get_template_part('components/content_single/content', get_post_format());
-
-                // Previous/next post navigation.
-                the_post_navigation(array(
-                    'next_text' => '<span class="meta-nav">' . __('Next', 'wpg_theme') . '</span> ' .
-                    '<span class="post-title">%title</span>',
-                    'prev_text' => '<span class="meta-nav">' . __('Previous', 'wpg_theme') . '</span> ' .
-                    '<span class="post-title">%title</span>',
-                ));
-                break;
-            }//switch
-
-            // If comments are open or we have at least one comment, load up the comment template.
-            if (comments_open() || get_comments_number()) {
-                comments_template();
-            }
-            ?>
-
-        <?php endwhile; // End of the loop.	 ?>
-    </main><!-- #main -->
-</div><!-- primary -->
+<div id="content" class="site-content clear-both">
+  <?php
+  /* Start the Loop */
+  while ( have_posts() ) :
+    the_post();
+  ?>
+  <div class="header-content gutters white-a text-center">
+        <div class="class-h1 h--xxl">
+            <?php the_title(); ?>
+        </div>
+        <div id="breadcrumbs">
+          <span><?php _e('You are here: &nbsp;', 'wpg_theme'); ?></span><?php if (function_exists('wpg_breadcrumbs')) wpg_breadcrumbs(); ?>
+        </div>
+  </div><!-- header-content -->
+  <div class="container clear-both">
+    <div id="primary" class="content-area col-primary gutters">
+      <main id="main" class="site-main ">
+        <?php
+        switch (get_post_type(get_the_ID())) {
+          case 'post_collection':
+          get_template_part( 'components/content_single/content', 'collection' );
+          break;
+          case 'clubnews':
+          get_template_part( 'components/content_single/content', 'club' );
+          break;
+          default:
+          get_template_part( 'components/content_single/content', get_post_format()  );
+          break;
+        }//switch
+        ?>
+      </main>
+    </div><!-- #primary -->
+    <?php get_sidebar(); ?>
+  </div><!-- .container -->
+  <?php endwhile; ?>
 </div><!-- #content -->
-<?php get_footer(); ?>
+<?php get_footer();  ?>

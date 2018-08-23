@@ -7,31 +7,24 @@
 * @package MBP Bartoszyce
 * @since 0.1.0
 */
-
-wp_footer();
-
 ?>
 <footer class="clear-both">
-<?php
+  <?php
   /* ====================
-   * Section - contact  *
-   * ===================*/
+  * Section - contact  *
+  * ===================*/
   get_template_part('components/features/section', 'contact' );
-
-  /* ====================
-   * Section - partners *
-   * ===================*/
-  if (get_theme_mod('wpg_partners_active', false) === true) {
-    get_template_part('components/features/section', 'partners' );
-  }
-?>
-<div class="container">
-    <div class="row">
-        <div class="col-4"></div>
-        <div class="col-4 text-center">&copy; <?php echo date("Y"); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>.<?php  _e('All Rights Reserved', 'wpg_theme'); ?></div>
-        <div class="col-4"></div>
-    </div>
-</div>
+  ?>
 </footer>
+<?php
+/* ====================
+* Section - partners *
+* ===================*/
+if (get_theme_mod('wpg_partners_active', false) === true) {
+  get_template_part('components/features/section', 'partners' );
+}
+?>
+<div id="copyright" class="col-12 pad-all text-center">&copy; <?php echo date("Y"); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>.<?php  _e('All Rights Reserved', 'wpg_theme'); ?></div>
+<?php wp_footer(); ?>
 </body>
 </html>

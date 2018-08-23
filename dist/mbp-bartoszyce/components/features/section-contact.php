@@ -7,12 +7,12 @@
  *
  */
  ?>
- <section id="contact" class="page-section clear-both">
-   <header class="header-section text-center">
+ <div id="contact" class="page-section clear-both">
+   <div class="header-section text-center">
      <div class="h-wrapper">
        <h2 class="h--xxl"><?php echo esc_html(get_theme_mod('wpg_contact_title',__('let\'s stay in contact', 'wpg_theme'))); ?></h2>
      </div>
-   </header>
+   </div>
 
    <?php
      $days = [
@@ -31,7 +31,7 @@
          <ul class="js-tablist">
            <?php for ($i=1; $i <= 4; $i++) : ?>
              <li class="js-tablist__item">
-               <a href="#id_contact_tab_<?php echo $i; ?>" id="label_id_contact_tab_<?php echo $i; ?>" class="js-tablist__link class-h3"><?php echo esc_html(get_theme_mod("wpg_contact_place_$i",__('Tab ', 'wpg_theme'))); ?></a>
+               <a href="#id_contact_tab_<?php echo $i; ?>" id="label_id_contact_tab_<?php echo $i; ?>" class="js-tablist__link"><?php echo esc_html(get_theme_mod("wpg_contact_place_$i",__('Tab ', 'wpg_theme'))); ?></a>
              </li>
            <?php endfor; ?>
          </ul>
@@ -41,7 +41,7 @@
              <!-- Tab content -->
              <div id="id_contact_tab_<?php echo $i; ?>" class="js-tabcontent">
                <!-- Left contact blok -->
-               <div id="contact-info" class="col-6">
+               <div id="contact-info_<?php echo $i; ?>" class="contact-info col-6">
                  <!-- Address -->
                  <div class="contact-item address">
                    <div class="contact-item__icon">
@@ -71,7 +71,7 @@
                  </div>
                </div>
                <!-- Right contact blok -->
-               <div id="open-hours" class="col-6">
+               <div id="open-hours_<?php echo $i; ?>" class="open-hours col-6">
                  <div class="contact-item__icon">
                    <i class="icon-clock"></i><span class="class-h4"><?php _e('Opening Hours', 'wpg_theme');?></span>
                  </div>
@@ -103,11 +103,11 @@
          </div><!-- .js-tabs__contents -->
        </div><!-- .js-tabs -->
      <div id="contact-social" class="xl-icon dark-element-color text-center clear-both">
-       <?php social_net_link('<span class="screen-reader-text">%1$s</span>%2$s');?>
+       <?php wpg_social_net_link('<span class="screen-reader-text">%1$s</span>%2$s');?>
      </div>
      </div><!-- #contact__tabs -->
      <div id="contact__map">
        <div id="map-canvas"></div>
      </div>
    </div>
- </section>
+ </div>

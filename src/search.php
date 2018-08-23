@@ -10,37 +10,45 @@
 */
 
 get_header(); ?>
-<section id="content" class="site-content">
-    <div id="primary" class="content-area hentry-multi">
-        <main id="main" class="site-main ">
-            <header class="section-title">
-                <h1><?php printf( __( 'Search Results for: %s', 'wpg_theme' ), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h1>
-                    <hr>
-                    <p><?php the_archive_description(); ?></p>
-                </header>
-                <?php
-                if (have_posts()) :
+<div id="content" class="site-content clear-both">
+  <div class="header-content gutters white-a text-center">
+    <div class="class-h2 h--xxl" aria-hidden="true">
+      <?php printf( __( 'Search Results for: %s', 'wpg_theme' ), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?>
+    </div>
+  </div><!-- .header-content -->
+  <div class="container">
+  <section class="content-area">
+    <div id="primary" class="col-primary hentry-multi gutters">
+      <header class="screen-reader">
+        <h2><?php printf( __( 'Search Results for: %s', 'wpg_theme' ), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h2>
+      </header>
+      <main id="main" class="site-main ">
+        <?php
+        if ( have_posts() ) :
+          /* Start the Loop */
+          while ( have_posts() ) : the_post();
+            /*
+             * Include the Post-Format-specific template for the content.
+             * If you want to override this in a child theme, then include a file
+             * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+             */
+            get_template_part( 'components/content_multi/content', get_post_format() );
+          endwhile;
 
-                    /* Start the Loop */
-                    while (have_posts()) : the_post();
+            // Previous/next page navigation.
+            the_posts_pagination( array(
+              'prev_text'          => __( 'Previous page', 'wpg_theme' ),
+              'next_text'          => __( 'Next page', 'wpg_theme' ),
+              'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'wpg_theme' ) . ' </span>',
+            ));
 
-                    get_template_part('components/content_multi/content', get_post_format());
-
-                endwhile;
-
-
-                // Previous/next page navigation.
-                the_posts_pagination(array(
-                    'prev_text' => __('Previous page', 'wpg_theme'),
-                    'next_text' => __('Next page', 'wpg_theme'),
-                    'before_page_number' => '<span class="meta-nav screen-reader-text">' . __('Page', 'wpg_theme') . ' </span>',
-                ));
-
-                else :
-                    get_template_part('components/content_multi/content', 'none');
-                endif;
-                ?>
-            </main>
-        </div>
-    </section><!-- end section -->
-    <?php get_footer(); ?>
+        else :
+          get_template_part( 'components/content_multi/content', 'none' );
+        endif; ?>
+      </main><!-- .site-main -->
+    </div><!-- #primary -->
+  </section>
+  <?php get_sidebar(); ?>
+  </div><!-- .container -->
+</div><!-- #content -->
+<?php get_footer(); ?>

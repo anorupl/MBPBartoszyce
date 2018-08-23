@@ -120,7 +120,7 @@ function get_all_terms( $only_tax = false, $one_tax = false, $taxonomies = array
 	foreach ($taxonomies  as $name => $value) {
 
 		$tax_terms = get_terms($name);
-			
+
 			$all_terms[$name][0] = __('All Categories','wpg_theme');
 
 		foreach($tax_terms as $term) {
@@ -139,7 +139,7 @@ function get_all_terms( $only_tax = false, $one_tax = false, $taxonomies = array
  *
  * @return string
  */
-function social_net_link($format_string) {
+function wpg_social_net_link($format_string) {
 
 	$social = array('facebook','google','twitter','youtube','vimeo','instagram');
 
@@ -196,14 +196,14 @@ function wpg_the_adress($index_tab = '1'){
 		<div class="contact-item adress-contact">
 			<i class="icon-envelope item-icon"></i><?php echo esc_html(get_theme_mod("wpg_contact_email_$index_tab",'')); ?>
 		</div>
-		
+
 	<?php endif; ?>
 	<?php if (get_theme_mod("wpg_contact_phone_$index_tab", '') !== '') : ?>
 
 		<div class="contact-item adress-contact">
 			<i class="icon-phone_android item-icon"></i><?php echo esc_html(get_theme_mod("wpg_contact_phone_$index_tab",'')); ?>
 		</div>
-		
-	<?php endif; 
+
+	<?php endif;
 }
 ?>

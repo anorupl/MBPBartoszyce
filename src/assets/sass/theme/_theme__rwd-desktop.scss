@@ -20,6 +20,20 @@
 
 /* 2.0 Layout
 ======================= */
+.active-sidebar {
+    .col-primary{
+        @include span(9 no-gutters);
+    }
+    .col-secondary{
+        @include span(3 no-gutters);
+    }
+}
+
+
+
+
+
+
 .h--xxl {
    @include font-size((5.4),0,true);
 }
@@ -159,7 +173,7 @@
     display: flex;
     justify-content: space-between;
     max-width: 815px;
-    border-bottom: 1px solid $four-bw;
+    border-bottom: 2px solid $four-bw;
   }
 
   .header-section::before {
@@ -198,18 +212,34 @@
   .hentry {
     padding: gutter();
   }
+  .meta__item {
+    display: inline-block;
+  }
   .post-thumbnail{
-  width: 40%;
-  float: left;
+    width: span(5);
+    float: left;
   }
   .entry-meta,
   .entry-summary {
-    width: 60%;
     float: left;
   }
-
-  .entry-content,
-  .entry-summary {
-    padding: gutter();
+  .entry-summary,
+  .has-post-thumbnail .entry-meta {
+      width: span(7 split);
+      margin-left: gutter();
+      margin-right: gutter();
   }
+}
+.entry-meta{
+  width: 100%;
+}
+.continue_reading {
+  float: right;
+}
+
+
+/* attachment */
+.attachment__btn {
+	padding: 15px 0;
+	border-left: dashed 1px $border-color;
 }

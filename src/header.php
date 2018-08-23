@@ -25,14 +25,34 @@
 </head>
 
 <body <?php body_class();?> >
-    <div class="header-top clear-both hide-on-small">
-        <div id="h-adress" class="col-8">
-            <?php wpg_the_adress('1');?>
+  <div id="top-bar" class="header-top clear-both hide-on-small">
+      <div id="top-bar__address" class="inline-left">
+          <?php wpg_the_adress();?>
+      </div>
+      <div class="inline-right">
+        <div class="form-wcga inline-left">
+          <form id="kontrast" action="http://gmina-bartoszyce.pl/" method="post">
+            <input role="button" id="contrast-button" type="submit" value="Włącz kontrast">
+          </form>
+          <form id="fontsize-form" action="http://gmina-bartoszyce.pl/" method="POST">
+                <input class="normal-font fontsize-button" role="button" title="Standartowy rozmiar czcionki" name="normal" id="fontsize-normal" type="submit" value="A">
+                <input class="medium-font fontsize-button" role="button" title="Powiększ czcionkę 150%" name="medium" id="fontsize-medium" type="submit" value="A">
+                <input class="big-font fontsize-button" role="button" title="Powiększ czcionkę 200%" name="big" id="fontsize-big" type="submit" value="A">
+          </form>
         </div>
-        <div id="h-social-link" class="col-4">
-            <?php social_net_link('<span class="screen-reader-text">%1$s</span>%2$s');?>
+        <div id="top-bar__social" class="l-icon inline-left">
+            <?php wpg_social_net_link('<span class="screen-reader-text">%1$s</span>%2$s');?>
         </div>
-    </div>
+        <div id="top-bar__btn-search" class="l-icon inline-left">
+          <a href="#top-bar__search" class="icon-search" aria-expanded="false" aria-controls="top-bar__search">
+            <span class="screen-reader-text"><?php _e( 'Search', 'twentyfourteen' ); ?></span>
+          </a>
+        </div>
+      </div>
+      <div id="top-bar__search" class="pad-all hide">
+          <?php get_search_form(); ?>
+      </div>
+  </div>
     <header id="site-header">
             <div class="title-area">
                 <h1 class="site-title">
@@ -71,10 +91,4 @@
              endif;
         endif;
         ?>
-
-
-
-
-
-
     </header>

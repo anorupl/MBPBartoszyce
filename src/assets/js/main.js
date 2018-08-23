@@ -94,10 +94,44 @@ $.fn.slick_small_sllider = function(setting) {
 
     // If Menu focus
     $( function() {
-        $( '.horizontal' ).find( 'a' ).on( 'focus blur', function() {
+        $( '.h-nav' ).find( 'a' ).on( 'focus blur', function() {
             $( this ).parents().toggleClass( 'focus' );
         });
     });
+
+    // Search toggle.
+		$( '#top-bar__btn-search' ).on( 'click', function( event ) {
+			var that    = $( this ),
+				  wrapper = $( '#top-bar__search' ),
+				  container = that.find( 'a' );
+
+			that.toggleClass( 'active' );
+			wrapper.toggleClass( 'hide' );
+
+			if ( that.hasClass( 'active' ) ) {
+				container.attr( 'aria-expanded', 'true' );
+			} else {
+				container.attr( 'aria-expanded', 'false' );
+			}
+
+			if ( that.is( '.active' )) {
+				wrapper.find( '.search-field' ).focus();
+			}
+		} );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     $('#header-content').slick_small_sllider(settings = {});
     $('#partner-slider').slick({

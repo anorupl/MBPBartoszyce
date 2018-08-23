@@ -20,7 +20,7 @@
          <div class="js-tabs">
            <ul class="js-tablist">
              <?php for ($i=1; $i <= 3; $i++) : ?>
-             <li class="class-h4 js-tablist__item">
+             <li class="js-tablist__item">
                <a href="#id_catl_tab_<?php echo $i; ?>" id="label_id_catl_tab_<?php echo $i; ?>" class="js-tablist__link"><?php echo esc_html(get_theme_mod("wpg_catl_tab_$i",__('Tab ', 'wpg_theme'))); ?></a>
              </li>
              <?php endfor; ?>
