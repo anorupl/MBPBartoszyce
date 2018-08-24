@@ -17,7 +17,7 @@
 *
 */
 function wpg_custom_customize_enqueue() {
-	
+
 	wp_enqueue_script( 'jquery');
 
 	// Register google map api
@@ -57,7 +57,7 @@ function google_font_url() {
 
 	if ( !empty( $fonts )) {
 		$query_args = array(
-			'family' => str_replace( " ", "+", implode( '|', array_values( $fonts ) ) ),
+			'family' => str_replace( " ", "+", implode( '%7C', array_values( $fonts ) ) ),
 			'subset' => implode( ',', get_theme_mod( 'google_subsets', array('latin-ext')))
 		);
 

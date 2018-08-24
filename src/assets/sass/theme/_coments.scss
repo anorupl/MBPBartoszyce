@@ -1,71 +1,28 @@
 /* Comments
 ========================================================================== */
 /*
- * Gird comments
- * */
-.comment-form-author,
-.comment-form-email,
-.comment-form-url,
-.form-submit {
-	@include span(4);
-	min-width: 210px;
-}
-
-.comment-notes,
-.comment-form-comment {
-	 @include span(full break);
-}
-
-.comments-area 	{
-		width: span(10);
-		padding-left:gutter();
-		padding-right:gutter();
-}
-
+* Gird comments
+* */
 .comments-area {
-   	clear: both;
-    margin: 2em auto;
-    padding: 0;
+	clear: both;
+	margin: 0 auto;
 
-	> ol {list-style: none; margin-top: 5px;}
-
-	>:last-child { margin-bottom: 0;}
+	>:last-child {
+		margin-bottom: 0;
+	}
 }
-.comment-respond {
-	border: 1px solid $border-color;
-    background: $three-bw;
-    color: $two-bw;
-    padding: gutter();
-    margin-bottom: gutter();
-
-}
-.comment-list+.comment-respond {
-	border-top: 1px solid $border-color;
-}
-
-.comment-list+.comment-respond,
-.comment-navigation+.comment-respond {
-	padding-top: 1.6em
-}
-
-
-
 .comments-title {
-    width: 100%;
-    display: block;
-    margin: 0;
-    font-weight: bold;
-    color: lighten($two-bw, 40%);
+	text-align: center;
+	padding: 20px 0;
+	color: $five-bw;
 	border-top: 1px solid $border-color;
-    border-bottom: 1px solid $border-color;
-    text-align: center;
-    padding: 20px 0;
+	border-bottom: 1px solid $border-color;
 }
-
 
 .comment-list {
-    list-style: none;
-    margin: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 
 	> :first-child article,
 	> .pingback:first-child,
@@ -76,103 +33,102 @@
 	article,
 	.pingback,
 	.trackback {
-	    border-top: 1px solid $border-color;
-	    padding: 1.6em 0.5em;;
-	}
-
-	.pingback,
-	.trackback {
-		@include font-size-procent(1.4);
+		border-top: 1px solid $border-color;
+		padding: 1.6em 0.5em;;
 	}
 
 	.children {
-	    list-style: none;
-	    margin: 0 0 1em 0;
-
-	    >li {
-	    	padding-left: 0.8em;
+		list-style: none;
+		margin: 0 0 1em 0;
+		article {
+			border-top-style: dashed;
 		}
 	}
+}
 
+.comment-list+.comment-respond,
+.comment-navigation+.comment-respond {
+	padding-top: 1.6em
+}
+
+/* comment body */
+.comment-list {
+	.comment-meta {
+		overflow: hidden;
+	}
 	.bypostauthor {
 		> .comment-body {
-		    background: $three-bw;
+			background: $three-bw;
 		}
 	}
 	.says {
 		@extend .screen-reader-text;
 	}
 	.reply {
-
 		a {
-		    border: 1px solid $border-color;
-		    color: $two-bw;
-		    display: inline-block;
-		    font-weight: 700;
-		    margin-top: 2em;
-		    padding: 0.4167em 0.8333em;
-		    text-transform: uppercase
+			border: 1px solid $two-color;
+			display: inline-block;
+			font-weight: 700;
+			margin-top: 2em;
+			padding: 0.4167em 0.8333em;
+			text-transform: uppercase
 		}
 	}
 
 	.comment-content,
 	.reply {
-	    padding-left: 67px;
-	    clear: both;
+		padding-left: 67px;
+		clear: both;
 	}
 	.comment-metadata a,
 	.pingback .edit-link a {
-		color: $two-bw;
 		margin-left: 1em;
 	}
 }
-
 .comment-author,
 .comment-metadata {
-    float: left;
-    padding-right: 10px;
-    margin-bottom: 1.6em;
-    line-height: 56px;
+	float: left;
+	padding-right: 10px;
+	margin-bottom: 1.6em;
+	line-height: 56px;
 }
 .comment-author .avatar {
-  float: left;
-    height: 56px;
-    margin-right: 0.8em;
-    width: 56px;
-    border-radius: 57px;
+	float: left;
+	height: 56px;
+	margin-right: 0.8em;
+	width: 56px;
+	border-radius: 57px;
 }
 .comment-metadata > a {
 	@extend .screen-reader-text;
 }
 .comment-body:hover .comment-metadata > a {
-    position: relative !important;
-    clip: auto !important;
-    clip: auto !important;
-    height: auto !important;
-    width: auto !important;
+	position: relative !important;
+	clip: auto !important;
+	clip: auto !important;
+	height: auto !important;
+	width: auto !important;
 }
-
-
-
-
-
 .comment-content {
 	ul, ol 						{ margin: 0 0 1.6em 1.3333em;}
 	li>ul, li>ol, >:last-child  { margin-bottom: 0;}
 }
 
 
-
-
-
+/* Form comment add */
+.comment-form,
+.comment-reply-title {
+	padding-left: gutter();
+	padding-right: gutter();
+}
 .comment-form {
 	overflow: hidden;
 
 	label {
 		@include font-size-procent($size-small);
-	    font-weight: 700;
-	    display: block;
-	    text-transform: uppercase
+		font-weight: 700;
+		display: block;
+		text-transform: uppercase
 	}
 
 	input[type="text"],
@@ -180,50 +136,57 @@
 	input[type="url"],
 	input[type="submit"],
 	textarea {
-		width: 100%
+		width: 100%;
+		max-width: 100%;
 	}
 }
+.comment-respond {
+	border: 1px solid $border-color;
+	background: $three-bw;
+	padding: gutter();
+	margin-bottom: gutter();
+}
 
+.comment-form-author,
+.comment-form-email,
+.comment-form-url,
+.form-submit {
+	min-width: 210px;
+}
 .comment-notes,
 .comment-awaiting-moderation,
 .logged-in-as,
 .form-allowed-tags {
 	@include font-size-procent($size-small);
-	margin: gutter();
 }
 
 .no-comments {
-    border: 1px solid $border-color;
-    background: $three-bw;
-    color: $two-bw;
-    font-weight: bold;
-    padding: gutter();
-    text-align: center;
+	border: 1px solid $border-color;
+	background: $three-bw;
+	color: $two-bw;
+	font-weight: bold;
+	padding: gutter();
+	text-align: center;
 }
 
 .form-allowed-tags code {
-    font-family: $font-code;
+	font-family: $font-code;
 }
 
-
-.comment-reply-title {
-	padding-left: gutter();
-	padding-right: gutter();
-}
 .comment-reply-title small {
-    font-size: 100%
+	font-size: 100%;
 
-    a {
-	    float: right;
-	    height: 32px;
-	    overflow: hidden;
-	    width: 26px
+	a {
+		float: right;
+		height: 40px;
+		overflow: hidden;
+		width: 40px;
+		font-size: 40px;
+		line-height: 1;
+		margin-top: -5px;
 	}
 	a:before {
 		@extend [class^="icon-"];
 		@extend .icon-close;
-		@include font-size-procent(3.2);
-		position: relative;
-		top: -3px;
 	}
 }

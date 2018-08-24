@@ -68,12 +68,12 @@
                    <div class="coletion-gallery__gallery clear-both">
                      <?php wpg_the_image_attachment('thumbnail', 3);?>
                    </div>
-                   <a class="btn show-coletion"href="<?php the_permalink() ?>"><?php _e('Show', 'wpg_theme'); ?></a>
+                   <a class="btn show-coletion" href="<?php the_permalink() ?>"><?php _e('Show', 'wpg_theme'); ?></a>
                  </div>
 
                  <?php endwhile; endif; wp_reset_query(); ?>
 
-                 <div id="coletions-link">
+                 <div class="coletions-link">
                    <a id="colection_<?php echo $term->slug;?>" class="btn" href="#"><?php _e('Show older', 'wpg_theme'); ?></a>
                  </div>
                </div>

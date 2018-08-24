@@ -114,7 +114,7 @@ msgstr ""
 msgid "Telephone number"
 msgstr ""
 
-#: src/components/features/section-contact.php:151, src/inc/customizer/custom_control_field/inc_field_open_hours.php:91, src/inc/customizer/setting_control/inc_setting_contact.php:301
+#: src/components/features/section-contact.php:157, src/inc/customizer/custom_control_field/inc_field_open_hours.php:91, src/inc/customizer/setting_control/inc_setting_contact.php:301
 msgid "Opening Hours"
 msgstr ""
 
@@ -158,35 +158,35 @@ msgstr ""
 msgid "Header Menu - Bottom "
 msgstr ""
 
-#: src/functions.php:291
+#: src/functions.php:301
 msgid "Previous Image (left arrow key)"
 msgstr ""
 
-#: src/functions.php:293
+#: src/functions.php:303
 msgid "Next Image (right arrow key)"
 msgstr ""
 
-#: src/functions.php:295
+#: src/functions.php:305
 msgid "of"
 msgstr ""
 
-#: src/functions.php:297
+#: src/functions.php:307
 msgid "Close (Escape key)"
 msgstr ""
 
-#: src/functions.php:299
+#: src/functions.php:309
 msgid "Loading ..."
 msgstr ""
 
-#: src/functions.php:301
+#: src/functions.php:311
 msgid "Image"
 msgstr ""
 
-#: src/functions.php:303
+#: src/functions.php:313
 msgid "it cannot be loaded."
 msgstr ""
 
-#: src/functions.php:349
+#: src/functions.php:385
 msgid "Right Sidebar"
 msgstr ""
 

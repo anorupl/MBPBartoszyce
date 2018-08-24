@@ -27,7 +27,7 @@
 
    if ( $query_featuredcat->have_posts()) : while ($query_featuredcat->have_posts()) : $query_featuredcat->the_post(); ?>
 
-   <div id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
+   <div <?php post_class(); ?> >
      <a href="<?php the_permalink(); ?>" aria-hidden="true">
        <?php the_post_thumbnail('medium', array('alt' => get_the_title())); ?>
      </a>

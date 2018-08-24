@@ -66,7 +66,10 @@
                      <i class="icon-phone_android"></i><span class="class-h4"><?php _e('Telephone number', 'wpg_theme');?></span>
                    </div>
                    <div class="contact-item__text">
-                     <?php printf('<a href="tel:%1s">%1$s</a>', antispambot(get_theme_mod("wpg_contact_phone_$i"))); ?>
+                   <?php
+                     $phone = get_theme_mod("wpg_contact_phone_$i");
+                     printf('<a href="tel:%1s">%2$s</a>', str_replace(' ','', $phone), antispambot($phone)); 
+                     ?>
                    </div>
                  </div>
                </div>

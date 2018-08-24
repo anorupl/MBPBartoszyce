@@ -100,9 +100,9 @@ function form_wcga(){
 	?>
 	<form action="<?php echo home_url(); ?>/" method='post'>
 		<?php printf('<button type="submit" value="%1$s" name="wcga" class="normal-font">%2$s</button>',$style,$button); ?>
-		<button type="submit" value="base" name="wcga" class="normal-font"><span aria-hidden="">A</span><span class="screen-reader-text"><?php _e('Standartowy rozmiar czcionki','gmina_theme'); ?></span></button>
-		<button type="submit" value="medium" name="wcga" class="medium-font"><span aria-hidden="">A</span><span class="screen-reader-text"><?php _e('Powiększ czcionkę 150%','gmina_theme'); ?></span></button>
-		<button type="submit" value="big" name="wcga" class="big-font"><span aria-hidden="">A</span><span class="screen-reader-text"><?php _e('Powiększ czcionkę 200%','gmina_theme'); ?></span></button>
+		<button type="submit" value="base" name="wcga" class="normal-font"><span aria-hidden="true">A</span><span class="screen-reader-text"><?php _e('Standartowy rozmiar czcionki','gmina_theme'); ?></span></button>
+		<button type="submit" value="medium" name="wcga" class="medium-font"><span aria-hidden="true">A</span><span class="screen-reader-text"><?php _e('Powiększ czcionkę 150%','gmina_theme'); ?></span></button>
+		<button type="submit" value="big" name="wcga" class="big-font"><span aria-hidden="true">A</span><span class="screen-reader-text"><?php _e('Powiększ czcionkę 200%','gmina_theme'); ?></span></button>
 	</form>
 	<?php
 }

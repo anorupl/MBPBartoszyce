@@ -64,7 +64,7 @@
                 'container' => false,
                 'theme_location' => 'header_bottom',
                 'menu_id' => 'header_bottom',
-                'items_wrap' => '<nav id="%1$s" class="h-nav h-nav--color h-nav--desc wp-nav"><ul class="%2$s"><h2 class="hide-desktop">Katalogi</h2> %3$s</ul></nav>',
+                'items_wrap' => '<nav id="%1$s" class="h-nav h-nav--color h-nav--desc wp-nav"><h2 class="hide-desktop">Katalogi</h2><ul class="%2$s">%3$s</ul></nav>',
             ));
         }
         ?>

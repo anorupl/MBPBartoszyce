@@ -407,7 +407,7 @@ main {
     margin: 40px;
   }
 }
-#coletions-link {
+.coletions-link {
   clear: both;
   padding: 40px;
   text-align: center;
@@ -466,7 +466,6 @@ main {
 
 #contact {
   position: relative;
-  background-color: $four-bw;
   .header-section {
     position: relative;
 
@@ -489,6 +488,9 @@ main {
 }
 .home #contact {
   background-color: $one-color;
+}
+.home.paged #contact {
+  background-color: $four-bw;
 }
 
 
@@ -543,6 +545,10 @@ main {
 }
 
 
+/* google map */
+#map-canvas {
+  height: 500px;
+}
 /* featured category */
 #featured-cat {
   h2 {
