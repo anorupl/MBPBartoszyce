@@ -194,6 +194,21 @@
 }
 #contact__map {
   width: 30%;
+  position: relative;
+  overflow: hidden;
+  &::before {
+      content: '';
+      display: block;
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      background-color: $two-color;
+      top: -100px;
+      left: -100px;
+      z-index: 500;
+      transform: rotate(45deg);
+  }
+
 }
 /* partners */
 #partner-slider {

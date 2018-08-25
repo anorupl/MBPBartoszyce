@@ -21,7 +21,8 @@ function wpg_custom_customize_enqueue() {
 	wp_enqueue_script( 'jquery');
 
 	// Register google map api
-	wp_enqueue_script( 'google_map_api', add_query_arg( 'key', get_theme_mod('wpg_map_apikey', ''), 'https://maps.googleapis.com/maps/api/js?'));
+	wp_enqueue_style( 'leaflet',"https://unpkg.com/leaflet@1.3.4/dist/leaflet.css");
+	wp_enqueue_script( 'leaflet-js', "https://unpkg.com/leaflet@1.3.4/dist/leaflet.js");
 
 	// Register the script
 	wp_enqueue_script( 'wpg_customizer_js', get_template_directory_uri() . '/inc/customizer/assets/js/theme-customize.js', '','', true);

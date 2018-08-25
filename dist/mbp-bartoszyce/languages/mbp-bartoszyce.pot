@@ -82,7 +82,7 @@ msgstr ""
 msgid "Previous post:"
 msgstr ""
 
-#: src/components/features/section-catl.php:47, src/components/features/section-contact.php:67
+#: src/components/features/section-catl.php:47, src/components/features/section-contact.php:69
 msgid "Tab "
 msgstr ""
 
@@ -98,23 +98,23 @@ msgstr ""
 msgid "Clubs in the library"
 msgstr ""
 
-#: src/components/features/section-contact.php:25, src/inc/customizer/setting_control/inc_setting_contact.php:61
+#: src/components/features/section-contact.php:25, src/inc/customizer/setting_control/inc_setting_contact.php:25
 msgid "let's stay in contact"
 msgstr ""
 
-#: src/components/features/section-contact.php:95, src/inc/customizer/setting_control/inc_setting_contact.php:207
+#: src/components/features/section-contact.php:101, src/inc/customizer/setting_control/inc_setting_contact.php:139
 msgid "Address"
 msgstr ""
 
-#: src/components/features/section-contact.php:113, src/inc/customizer/setting_control/inc_setting_contact.php:267
+#: src/components/features/section-contact.php:119, src/inc/customizer/setting_control/inc_setting_contact.php:199
 msgid "E-mail"
 msgstr ""
 
-#: src/components/features/section-contact.php:131, src/inc/customizer/setting_control/inc_setting_contact.php:237
+#: src/components/features/section-contact.php:137, src/inc/customizer/setting_control/inc_setting_contact.php:169
 msgid "Telephone number"
 msgstr ""
 
-#: src/components/features/section-contact.php:157, src/inc/customizer/custom_control_field/inc_field_open_hours.php:91, src/inc/customizer/setting_control/inc_setting_contact.php:301
+#: src/components/features/section-contact.php:163, src/inc/customizer/custom_control_field/inc_field_open_hours.php:91, src/inc/customizer/setting_control/inc_setting_contact.php:233
 msgid "Opening Hours"
 msgstr ""
 
@@ -158,35 +158,35 @@ msgstr ""
 msgid "Header Menu - Bottom "
 msgstr ""
 
-#: src/functions.php:301
+#: src/functions.php:303
 msgid "Previous Image (left arrow key)"
 msgstr ""
 
-#: src/functions.php:303
+#: src/functions.php:305
 msgid "Next Image (right arrow key)"
 msgstr ""
 
-#: src/functions.php:305
+#: src/functions.php:307
 msgid "of"
 msgstr ""
 
-#: src/functions.php:307
+#: src/functions.php:309
 msgid "Close (Escape key)"
 msgstr ""
 
-#: src/functions.php:309
+#: src/functions.php:311
 msgid "Loading ..."
 msgstr ""
 
-#: src/functions.php:311
+#: src/functions.php:313
 msgid "Image"
 msgstr ""
 
-#: src/functions.php:313
+#: src/functions.php:315
 msgid "it cannot be loaded."
 msgstr ""
 
-#: src/functions.php:385
+#: src/functions.php:351
 msgid "Right Sidebar"
 msgstr ""
 
@@ -226,7 +226,7 @@ msgstr ""
 msgid "Last post"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_blog.php:41, src/inc/customizer/setting_control/inc_setting_catl.php:79, src/inc/customizer/setting_control/inc_setting_club.php:79, src/inc/customizer/setting_control/inc_setting_contact.php:75, src/inc/customizer/setting_control/inc_setting_events.php:77, src/inc/customizer/setting_control/inc_setting_featured_category.php:77, src/inc/customizer/setting_control/inc_setting_new.php:77, src/inc/customizer/setting_control/inc_setting_partners.php:79
+#: src/inc/customizer/setting_control/inc_setting_blog.php:41, src/inc/customizer/setting_control/inc_setting_catl.php:79, src/inc/customizer/setting_control/inc_setting_club.php:79, src/inc/customizer/setting_control/inc_setting_contact.php:39, src/inc/customizer/setting_control/inc_setting_events.php:77, src/inc/customizer/setting_control/inc_setting_featured_category.php:77, src/inc/customizer/setting_control/inc_setting_new.php:77, src/inc/customizer/setting_control/inc_setting_partners.php:79
 msgid "Title section"
 msgstr ""
 
@@ -238,7 +238,7 @@ msgstr ""
 msgid "Enter number between %1s and %2s ."
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_catl.php:43, src/inc/customizer/setting_control/inc_setting_club.php:43, src/inc/customizer/setting_control/inc_setting_contact.php:43, src/inc/customizer/setting_control/inc_setting_events.php:41, src/inc/customizer/setting_control/inc_setting_featured_category.php:41, src/inc/customizer/setting_control/inc_setting_new.php:41, src/inc/customizer/setting_control/inc_setting_partners.php:43
+#: src/inc/customizer/setting_control/inc_setting_catl.php:43, src/inc/customizer/setting_control/inc_setting_club.php:43, src/inc/customizer/setting_control/inc_setting_events.php:41, src/inc/customizer/setting_control/inc_setting_featured_category.php:41, src/inc/customizer/setting_control/inc_setting_new.php:41, src/inc/customizer/setting_control/inc_setting_partners.php:43
 msgid "Show section"
 msgstr ""
 
@@ -258,7 +258,7 @@ msgstr ""
 msgid "Left image"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_catl.php:211, src/inc/customizer/setting_control/inc_setting_catl.php:227, src/inc/customizer/setting_control/inc_setting_contact.php:161
+#: src/inc/customizer/setting_control/inc_setting_catl.php:211, src/inc/customizer/setting_control/inc_setting_catl.php:227, src/inc/customizer/setting_control/inc_setting_contact.php:93
 msgid "Tab"
 msgstr ""
 
@@ -282,19 +282,15 @@ msgstr ""
 msgid "Select category to show in Section."
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_contact.php:111
-msgid "API KEY"
+#: src/inc/customizer/setting_control/inc_setting_contact.php:73
+msgid "Show map in contact"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_contact.php:141
-msgid "Show google map in contact"
-msgstr ""
-
-#: src/inc/customizer/setting_control/inc_setting_contact.php:177, src/inc/customizer/setting_control/inc_setting_contact.php:207, src/inc/customizer/setting_control/inc_setting_contact.php:237, src/inc/customizer/setting_control/inc_setting_contact.php:267, src/inc/customizer/setting_control/inc_setting_contact.php:301, src/inc/customizer/setting_control/inc_setting_contact.php:333
+#: src/inc/customizer/setting_control/inc_setting_contact.php:109, src/inc/customizer/setting_control/inc_setting_contact.php:139, src/inc/customizer/setting_control/inc_setting_contact.php:169, src/inc/customizer/setting_control/inc_setting_contact.php:199, src/inc/customizer/setting_control/inc_setting_contact.php:233, src/inc/customizer/setting_control/inc_setting_contact.php:265
 msgid "Tab #"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_contact.php:333
+#: src/inc/customizer/setting_control/inc_setting_contact.php:265
 msgid "Select a location on map"
 msgstr ""
 

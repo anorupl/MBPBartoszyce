@@ -41,7 +41,7 @@ if(isset($wp_customize)) {
 	// Class "WPG_Customize_Control_Checkbox_Multiple_Sort"
 	require get_template_directory() . '/inc/customizer/custom_control_field/inc_multisort_checbox.php';
 	// Class "WPG_Customize_Control_Google_MAP".
-	require get_template_directory() . '/inc/customizer/custom_control_field/inc_google_map.php';
+	require get_template_directory() . '/inc/customizer/custom_control_field/inc_leafletjs_map.php';
 	// Class "WPG_Custom_OpeningHours".
 	require get_template_directory() . '/inc/customizer/custom_control_field/inc_field_open_hours.php';
 

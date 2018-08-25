@@ -30,8 +30,11 @@
          <!-- Tabs Contact -->
          <ul class="js-tablist">
            <?php for ($i=1; $i <= 4; $i++) : ?>
-             <li class="js-tablist__item">
-               <a href="#id_contact_tab_<?php echo $i; ?>" id="label_id_contact_tab_<?php echo $i; ?>" class="js-tablist__link"><?php echo esc_html(get_theme_mod("wpg_contact_place_$i",__('Tab ', 'wpg_theme'))); ?></a>
+             <li class="js-tablist__item" >
+
+               <?php $place_name = esc_html(get_theme_mod("wpg_contact_place_$i",__('Tab ', 'wpg_theme'))); ?>
+
+               <a href="#id_contact_tab_<?php echo $i; ?>" data-pt_position="<?php echo get_theme_mod("wpg_contact_map_latlong_$i", '0, 0'); ?>" data-pt_name="<?php echo $place_name; ?>" id="label_id_contact_tab_<?php echo $i; ?>" class="js-tablist__link"><?php echo $place_name; ?></a>
              </li>
            <?php endfor; ?>
          </ul>
@@ -68,7 +71,7 @@
                    <div class="contact-item__text">
                    <?php
                      $phone = get_theme_mod("wpg_contact_phone_$i");
-                     printf('<a href="tel:%1s">%2$s</a>', str_replace(' ','', $phone), antispambot($phone)); 
+                     printf('<a href="tel:%1s">%2$s</a>', str_replace(' ','', $phone), antispambot($phone));
                      ?>
                    </div>
                  </div>

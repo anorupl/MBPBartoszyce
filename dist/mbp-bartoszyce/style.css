@@ -3876,6 +3876,21 @@ a.skip-main:active {
   }
   #contact__map {
     width: 30%;
+    position: relative;
+    overflow: hidden;
+  }
+  #contact__map::before {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-color: #f25e44;
+    top: -100px;
+    left: -100px;
+    z-index: 500;
+    -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
   }
   /* partners */
   #partner-slider .slick-slide img {

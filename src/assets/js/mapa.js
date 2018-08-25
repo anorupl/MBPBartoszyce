@@ -1,62 +1,70 @@
+var planes = [];
 
-var locations = [
-	['Bondi Beach', -33.890542, 151.274856, 4],
-	['Coogee Beach', -33.923036, 151.259052, 5],
-	['Cronulla Beach', -34.028249, 151.157507, 3],
-	['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
-	['Maroubra Beach', -33.950198, 151.259302, 1]
-];
+for (var i = 1; i < 5; i++) {
+	var item = document.getElementById('label_id_contact_tab_' + i);
+	var item_position = item.getAttribute('data-pt_position').split(",");
 
-var map;
 
-var infowindow = new google.maps.InfoWindow();
-
-var marker, i;
-
-for (i = 0; i < locations.length; i++) {
-	marker = new google.maps.Marker({
-		position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-		map: map
-	});
-
-	google.maps.event.addListener(marker, 'click', (function(marker, i) {
-		return function() {
-			infowindow.setContent(locations[i][0]);
-			infowindow.open(map, marker);
-		}
-	})(marker, i));
+var tabarray = [item.id,item.getAttribute('data-pt_name'),item_position[0],item_position[1]]
+		planes.push(tabarray);
 }
 
-//init map
-google.maps.event.addDomListener(window, 'load', initMap);
+//////////////////
 
-//resize map
-google.maps.event.addDomListener(window, "resize", function() {
-	var center = map.getCenter();
-	google.maps.event.trigger(map, "resize");
-	map.setCenter(center);
+var planes2 = [
+		["label_id_contact_tab_1","Główna",54.248997, 20.804780],
+		["label_id_contact_tab_2","Filia 1",54.308997, 20.804780],
+		["label_id_contact_tab_3","Filia 2",54.358997, 20.804780],
+		["label_id_contact_tab_4","Filia 3",54.408997, 20.804780]
+		];
+//console.log(planes);
+
+// initialize the map on the "map" div with a given center and zoom
+var map = L.map('map-canvas', {
+    center: [54.248997, 20.804780],
+		zoomControl: false,
+    zoom: 13,
+		layers: new L.TileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoia2FtaWx6ODciLCJhIjoiY2psOGZvNnN2MWQ5cTNrcWtiaTl2czJ3NCJ9.JPFsPnvYmq-fXFx5i5qmxw', {
+			maxZoom: 18,
+			attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+				'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+				'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+			id: 'mapbox.streets'
+		})
 });
 
-function initMap() {
+//add zoom
+var zoom = L.control.zoom({ position: 'topright' });   // Creating zoom control
+zoom.addTo(map);   // Adding zoom control to the map
 
-	var BWmap = new google.maps.StyledMapType( [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"administrative.country","elementType":"geometry.fill","stylers":[{"visibility":"on"}]},{"featureType":"administrative.province","elementType":"labels.icon","stylers":[{"hue":"#ff0000"},{"visibility":"on"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]}], {
-		name: 'BW Style'
+
+// Add a place to save markers
+var markers_places = {};
+
+// Loop through the data
+for (var i = 0; i < planes.length; i++) {
+
+
+
+markers_places[planes[i][0]] = L.marker({lat: planes[i][2], lng: planes[i][3]}, {
+	title: planes[i][1],
+	riseOnHover: true
+}).bindPopup(planes[i][1]).addTo(map);
+}
+
+for (var i = 1; i < 5; i++) {
+	var item = document.getElementById('label_id_contact_tab_' + i);
+
+
+
+	document.getElementById('label_id_contact_tab_' + i).addEventListener('click', function() {
+		var id = this.id,
+	      marker = markers_places[id],
+	      latLng = marker.getLatLng();
+
+				console.log(this.id);
+	  // Do something cool with that marker or it's coordinates
+	  map.panTo(latLng);
+		marker.openPopup(latLng);
 	});
-
-	var BWmapId = 'bw_map';
-
-	var mapOptions = {
-		zoom: 11,
-		scrollwheel: false,
-		center: new google.maps.LatLng(locations[1][1], locations[1][2]),
-		mapTypeControlOptions: {
-			mapTypeIds: [google.maps.MapTypeId.ROADMAP,google.maps.MapTypeId.HYBRID, BWmapId]
-		}
-
-	};
-
-	map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
-	map.mapTypes.set(BWmapId, BWmap);
-	map.setMapTypeId(BWmapId);
 }

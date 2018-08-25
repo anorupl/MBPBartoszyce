@@ -20,17 +20,17 @@
          /* === Fn. Checkbox Multiple Sort Control === */
          $('.customize-control-checkbox-multiple-sort').multiCheckboxesSort();
 
-         /* === Contact Google Map === */
-         googleMaps.init();
+         /* === Contact leafletjs === */
+         leafletjs.init();
 
          openingHours.init();
 
          /* === FIX - Upadte google map when display:none === */
          $('#accordion-section-wpg_contact_theme_section').bind('click', function () {
 
-             var center = map.getCenter();
-             google.maps.event.trigger(map, "resize");
-             map.setCenter(center);
+             //var center = map.getCenter();
+             //google.maps.event.trigger(map, "resize");
+             //map.setCenter(center);
          });
 
 
@@ -211,8 +211,41 @@
          }
 
      };
+     /* === Contact leafletjs map === */
+     var leafletjs = {
 
+       init: function () {
+         $(".customize-control-leafletjs_map").each(function (i, item) {
 
+           var curLocation = $(item.children[3]).val().split(",");
+
+           var map = L.map(item.children[2]).setView(curLocation, 10);
+
+           L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+             attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+           }).addTo(map);
+
+           map.attributionControl.setPrefix(false);
+
+           var marker = new L.marker(curLocation, {
+             draggable: 'true'
+           });
+
+           marker.on('dragend', function(event) {
+             var position = marker.getLatLng();
+             marker.setLatLng(position, {
+               draggable: 'true'
+             }).bindPopup(position).update();
+
+             $(item.children[3]).val(position.lat + ',' + position.lng).trigger('change');
+             $("#Latitude").val(position.lat);
+             $("#Longitude").val(position.lng).keyup();
+           });
+           map.addLayer(marker);
+
+         });
+       }
+     }
      /* === Contact google map === */
      var googleMaps = {
 
@@ -252,13 +285,13 @@
                 var data_open     = {mo: '',tu: '',we: '',th: '',fr: '', sa: '', su: ''},
                     obj_to_string = '';
 
-                // 2. pobieram z pola 
+                // 2. pobieram z pola
                 var input_hidden = $(this).next(),
                     string       = input_hidden.val();
 
                 //3. decode base64 and change string to object
                 data_open = JSON.parse(atob(string));
-                
+
                 //4. add value to input
                 for (var key in data_open) {
                     $(this).find('#' + key).val(data_open[key]);
@@ -266,22 +299,22 @@
 
                 // 5. On change input value
                 $(this).find('input').on('change', function () {
-                    
+
                     var input_el  = $(this);
                         objj      = input_el.attr('data-obj'),
                         input_val = input_el.val();
 
                     // 1. update object
                     data_open[objj] = input_val;
-                    
-                    // 2. change object to string 
+
+                    // 2. change object to string
                     obj_to_string = JSON.stringify(data_open);
-                    
+
                     // 3. set value to hidden input - base64
                     input_hidden.val(btoa(obj_to_string));
                     // 4. update customizer
                     input_hidden.trigger('change');
-                });  
+                });
             });
         }
     }
