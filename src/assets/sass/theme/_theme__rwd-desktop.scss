@@ -100,6 +100,64 @@
   min-height: 150px;
 }
 
+/* events section*/
+.ev-wrapper{
+  #calendar_events {
+    position: absolute;
+        top: 0;
+        right: 30px;
+        width: 300px;
+        height: 300px;
+  }
+}
+.green_bg {
+  background-color: transparent;
+  background-image: url(#{$img-path}ev-green.jpg);
+  background-size: 90% 100%;
+  background-repeat: no-repeat;
+  min-height: 360px;
+}
+.ev-wrapper::before {
+    content: '';
+    width: 400px;
+    height: 400px;
+    display: block;
+    border: 15px solid #f25e44;
+    position: absolute;
+    top: -25px;
+    right: -20px;
+    z-index: -1;
+}
+.green_bg::before {
+    content: '';
+    width: 400px;
+    height: 400px;
+    display: block;
+    border: 15px solid #0ad39d;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 0;
+    opacity: 0.6;
+}
+.ev-wrapper::after {
+    content: '';
+    width: 150px;
+    height: 150px;
+    display: block;
+    border: 20px solid #f25e44;
+    position: absolute;
+    bottom: -40px;
+    left: -40px;
+    z-index: -1;
+}
+
+
+
+
+
+
+
 /* Home page - section with New item */
 .newitems {
   .tabs__item {

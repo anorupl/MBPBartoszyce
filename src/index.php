@@ -28,6 +28,13 @@ if (is_home() && !is_paged()) {
 
     }
     /* ====================
+  	 * Section - featured category   *
+  	 * ===================*/
+  	if (get_theme_mod('wpg_featuredcat_active', false) === true) {
+      get_template_part('components/features/section', 'events' );
+
+    }
+    /* ====================
   	 * Section - events   *
   	 * ===================*/
   	if (get_theme_mod('wpg_events_active', false) === true) {

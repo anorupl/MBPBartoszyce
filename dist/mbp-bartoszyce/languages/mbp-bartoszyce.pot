@@ -62,7 +62,7 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
-#: src/components/content_single/content-club.php:65, src/components/content_single/content-collection.php:65, src/components/content_single/content-page.php:67, src/components/content_single/content.php:65, src/index.php:235, src/search.php:83, src/taxonomy.php:127
+#: src/components/content_single/content-club.php:65, src/components/content_single/content-collection.php:65, src/components/content_single/content-page.php:67, src/components/content_single/content.php:65, src/index.php:249, src/search.php:83, src/taxonomy.php:127
 msgid "Page"
 msgstr ""
 
@@ -118,7 +118,7 @@ msgstr ""
 msgid "Opening Hours"
 msgstr ""
 
-#: src/components/features/section-events.php:25, src/inc/customizer/setting_control/inc_setting_events.php:61
+#: src/components/features/section-events.php:27, src/inc/customizer/setting_control/inc_setting_events.php:61
 msgid "Upcoming events"
 msgstr ""
 
@@ -222,7 +222,7 @@ msgstr ""
 msgid "Select Category"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_blog.php:25, src/inc/customizer/wpg_customizer.php:443, src/index.php:123, src/index.php:173
+#: src/inc/customizer/setting_control/inc_setting_blog.php:25, src/inc/customizer/wpg_customizer.php:443, src/index.php:137, src/index.php:187
 msgid "Last post"
 msgstr ""
 
@@ -474,19 +474,19 @@ msgstr ""
 msgid "Comment Page %s"
 msgstr ""
 
-#: src/index.php:129, src/index.php:179
+#: src/index.php:143, src/index.php:193
 msgid " - page: "
 msgstr ""
 
-#: src/index.php:149, src/single.php:45, src/taxonomy.php:35
+#: src/index.php:163, src/single.php:45, src/taxonomy.php:35
 msgid "You are here: &nbsp;"
 msgstr ""
 
-#: src/index.php:231, src/search.php:79, src/taxonomy.php:123
+#: src/index.php:245, src/search.php:79, src/taxonomy.php:123
 msgid "Previous page"
 msgstr ""
 
-#: src/index.php:233, src/search.php:81, src/taxonomy.php:125
+#: src/index.php:247, src/search.php:81, src/taxonomy.php:125
 msgid "Next page"
 msgstr ""
 
