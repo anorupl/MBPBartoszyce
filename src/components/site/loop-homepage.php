@@ -58,7 +58,7 @@
         </a>
         <?php endif; ?>
     </main>
-    <div id="header-nav-bottom" class="col-11 gutters radius">
+    <div id="header-nav-bottom" class="col-11 gutters">
         <?php if (has_nav_menu('header_bottom')) {
             wp_nav_menu(array(
                 'container' => false,

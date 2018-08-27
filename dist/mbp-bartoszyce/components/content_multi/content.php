@@ -39,7 +39,17 @@
           <span class="screen-reader"><?php _e('Author', 'wpg_theme'); ?></span>
           <?php the_author();?>
         </div>
-        <div class="meta__item"><i class="icon-folder-open"></i><?php echo get_the_term_list( $post->ID, 'category'); ?></php></div>
+        <div class="meta__item">
+          <i class="icon-folder-open"></i>
+          <?php if (is_singular('post')) {
+            echo get_the_term_list( $post->ID, 'category');
+          } elseif (is_singular('page')) {
+
+          } else {
+             the_list_terms();
+          }
+          ?>
+        </div>
       </div><!-- .entry-meta -->
       <div class="entry-content">
           <?php

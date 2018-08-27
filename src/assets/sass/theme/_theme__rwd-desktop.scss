@@ -29,15 +29,9 @@
     }
 }
 
-
-
-
-
-
 .h--xxl {
    @include font-size((5.4),0,true);
 }
-
 
 // tabs
 .js-tablist {
@@ -98,6 +92,7 @@
   bottom: -75px;
   right: 3%;
   min-height: 150px;
+  border-radius: 5px;
 }
 
 /* events section*/
@@ -230,7 +225,6 @@
   .js-tablist {
     display: flex;
     justify-content: space-between;
-    max-width: 815px;
     border-bottom: 2px solid $four-bw;
   }
 

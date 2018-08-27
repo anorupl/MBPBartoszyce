@@ -142,9 +142,7 @@ gulp.task('sass', function() {
 		//Default:nestedValues:nested,expanded,compact,compressed
 		.pipe(sass({outputStyle: 'expanded' }).on('error', sass.logError))
 		//.pipe(sourcemap.write())
-		.pipe(prefixer({
-			browsers: ['> 1%', 'last 4 versions', 'Firefox ESR']
-		}))
+		.pipe(prefixer())
 		.pipe(gulp.dest(theme.css.dist));
 	//copy css
 	var css = gulp.src(theme.css.src_css + '*.css').pipe(changed(theme.css.dist_css))

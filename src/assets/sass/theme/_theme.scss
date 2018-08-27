@@ -66,20 +66,6 @@ main {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-.radius {
-    border-radius: 5px;
-}
 .white-a {
     color: $white;
     a, a:hover {
@@ -354,6 +340,9 @@ tr.days-names {
     color: darken($three-color, 8%);
     padding: 20px 0;
   }
+  h3 {
+    min-height: 2.4em
+  }
 }
 .ev-wrapper{
   position: relative;
@@ -373,15 +362,20 @@ tr.days-names {
 }
 .ev_block__icon {
     padding: 0 10px 2%;
-    min-width: 65px;
+    min-width: 100px;
     text-align: center;
-}
-.ev-title {
-  color:darken($three-color, 25%);
 }
 .ev_block__content {
     text-align: left;
 }
+.ev-title {
+  color:darken($three-color, 25%);
+}
+.ev-content {
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
 
 
 
@@ -548,6 +542,9 @@ tr.days-names {
 
 #contact__content {
   background-color: $two-color;
+  > div {
+    max-width: 815px;
+  }
 
   .contact-item {
       margin-bottom: 20px;
@@ -605,7 +602,7 @@ tr.days-names {
 #featured-cat {
   h2 {
       display: inline-block;
-      padding: 20px 10%;
+      padding: 20px 15%;
       background-color: darken($three-color, 8%);
       color: $four-bw;
   }
@@ -617,7 +614,7 @@ tr.days-names {
   }
   .hentry {
     position: relative;
-    padding: 7% 10%;
+    padding: 7% 24.5%;
     border-bottom: 5px solid darken($three-color, 8%);
 
     &:after {
