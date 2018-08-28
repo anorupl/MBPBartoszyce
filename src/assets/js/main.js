@@ -168,7 +168,7 @@ $.fn.slick_small_sllider = function(setting) {
      });
 
      // Single image
-     $('a.image-popup[href*=".jpg"], a.fancybox[href*=".jpeg"]').magnificPopup({
+     $('.wp-block-image a[href*=".jpg"]').magnificPopup({
          type:'image',
      });
 

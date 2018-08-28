@@ -247,6 +247,7 @@ main {
 
 }
 .header-section {
+  padding: 20px 0;
   h2 {
     margin: 0;
   }
@@ -362,7 +363,6 @@ tr.days-names {
 #wpg-evets {
   .header-section {
     color: darken($three-color, 8%);
-    padding: 20px 0;
   }
   h3 {
     min-height: 2.4em
@@ -386,7 +386,7 @@ tr.days-names {
 }
 .ev_block__icon {
     padding: 0 10px 2%;
-    min-width: 100px;
+    min-width: 80px;
     text-align: center;
 }
 .ev_block__content {
@@ -627,13 +627,13 @@ tr.days-names {
 
 /* google map */
 #map-canvas {
-  height: 500px;
+  height: 505px;
 }
 /* featured category */
 #featured-cat {
   h2 {
       display: inline-block;
-      padding: 20px 15%;
+      padding: 20px 10%;
       background-color: darken($three-color, 8%);
       color: $four-bw;
   }

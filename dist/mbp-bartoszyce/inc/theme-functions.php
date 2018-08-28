@@ -111,17 +111,7 @@ function wpg_add_video_wmode_transparent($html, $url, $attr) {
 }
 add_filter( 'embed_oembed_html', 'wpg_add_video_wmode_transparent', 10, 3);
 
-/**
-* Filtr add custom class to Popup image jquery plugin
-*
-* @see 	Filters the value of the attachment’s image tag class attribute.
-* @link	https://developer.wordpress.org/reference/hooks/get_image_tag_class/
-*/
-function wpg_popup_image_class($class) {
-	$class .= 'single-image';
-	return $class;
-}
-add_filter('get_image_tag_class', 'wpg_popup_image_class' );
+
 
 function wpg_nav_description( $item_output, $item, $depth, $args ) {
 	if ( !empty( $item->description ) ) {
@@ -172,6 +162,8 @@ function render_field_edit($term, $taxonomy){
 }
 add_action('clubs_edit_form_fields', 'render_field_edit', 10, 2);
 //add_action('categorycollection_edit_form_fields', 'render_field_edit', 10, 2);
+
+
 /**
 * Add the visual editor to the add new tag screen
 *

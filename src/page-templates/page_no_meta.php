@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Audiobooki - Katalog online
+ * Template Name: Bez Metadanych
  *
 * @package MBP Bartoszyce
 * @since 0.1.0
@@ -20,7 +20,23 @@ get_header(); ?>
   </div><!-- header-content -->
     <div id="primary" class="content-area col-primary--12">
       <main id="main" class="site-main ">
-        <iframe id="site-main__iframe" name="iframe" src="http://www.wbp.olsztyn.pl/cgi-bin/pow_bartoszycki/makwww?BM=2" width="100%" height="900px" scrolling="auto" align="top" frameborder="0" class="wrapper"><?php _e('This page is visible only in browsers that support frames.','wpg_theme'); ?></iframe>
+        <article>
+          <header class="entry-header screen-reader">
+              <h2 class="entry-title h--xxl">
+                  <?php the_title(); ?>
+              </h2>
+          </header>
+          <div class="entry-content">
+              <?php the_content(); ?>
+          </div><!-- .entry-content -->
+
+        </article>
+        <?php
+            // If comments are open or we have at least one comment, load up the comment template.
+            if ( comments_open() || get_comments_number() ) {
+              comments_template();
+            }
+        ?>
       </main>
     </div><!-- #primary -->
   <?php endwhile; ?>

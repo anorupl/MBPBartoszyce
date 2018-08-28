@@ -194,7 +194,7 @@ function wpg_the_adress($index_tab = '1'){
 	<?php if (get_theme_mod("wpg_contact_email_$index_tab", '') !== '') : ?>
 
 		<div class="contact-item adress-contact">
-			<i class="icon-envelope item-icon"></i><?php echo esc_html(get_theme_mod("wpg_contact_email_$index_tab",'')); ?>
+			<i class="icon-envelope item-icon"></i><?php printf('<a href="mailto:%1s">%1$s</a>', antispambot(get_theme_mod("wpg_contact_email_$index_tab",''))); ?>
 		</div>
 
 	<?php endif; ?>

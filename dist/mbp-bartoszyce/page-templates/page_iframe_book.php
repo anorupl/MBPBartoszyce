@@ -21,7 +21,6 @@ get_header(); ?>
     <div id="primary" class="content-area col-primary--12">
       <main id="main" class="site-main ">
         <iframe id="site-main__iframe" name="iframe" src="http://www.wbp.olsztyn.pl/fidkar/bartoszyce.html" width="100%" height="800px" scrolling="auto" align="top" frameborder="0" class="wrapper"><?php _e('This page is visible only in browsers that support frames.','wpg_theme'); ?></iframe>
-        </div>
       </main>
     </div><!-- #primary -->
   <?php endwhile; ?>
