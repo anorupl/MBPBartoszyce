@@ -32,7 +32,6 @@ function wpg_body_class($class) {
 	if (is_active_sidebar( 'wpg-sidebar-right' ) ) {
 		$class[] = 'active-sidebar';
 	}
-
 	return $class;
 }
 add_filter( 'body_class', 'wpg_body_class' );

@@ -46,7 +46,7 @@ msgstr[1] ""
 msgid "Comments are closed."
 msgstr ""
 
-#: src/components/content_multi/content-custompost.php:47, src/components/content_multi/content-custompost.php:77, src/components/content_multi/content.php:47, src/components/content_multi/content.php:77, src/components/content_single/content-club.php:37, src/components/content_single/content-collection.php:37, src/components/content_single/content-event.php:37, src/components/content_single/content-page.php:43, src/components/content_single/content.php:37, src/inc/template-tags.php:135
+#: src/components/content_multi/content-custompost.php:47, src/components/content_multi/content-custompost.php:77, src/components/content_multi/content.php:47, src/components/content_multi/content.php:77, src/components/content_single/content-club.php:37, src/components/content_single/content-collection.php:37, src/components/content_single/content-page.php:43, src/components/content_single/content.php:37, src/inc/template-tags.php:135
 msgid "Author"
 msgstr ""
 
@@ -58,27 +58,27 @@ msgstr ""
 msgid "Nothing Found"
 msgstr ""
 
-#: src/components/content_single/content-club.php:57, src/components/content_single/content-collection.php:57, src/components/content_single/content-event.php:57, src/components/content_single/content-page.php:59, src/components/content_single/content.php:57
+#: src/components/content_single/content-club.php:57, src/components/content_single/content-collection.php:57, src/components/content_single/content-event.php:41, src/components/content_single/content-page.php:59, src/components/content_single/content.php:57
 msgid "Pages:"
 msgstr ""
 
-#: src/components/content_single/content-club.php:65, src/components/content_single/content-collection.php:65, src/components/content_single/content-event.php:65, src/components/content_single/content-page.php:67, src/components/content_single/content.php:65, src/index.php:249, src/search.php:83, src/taxonomy.php:127
+#: src/components/content_single/content-club.php:65, src/components/content_single/content-collection.php:65, src/components/content_single/content-event.php:49, src/components/content_single/content-page.php:67, src/components/content_single/content.php:65, src/index.php:249, src/search.php:83, src/taxonomy.php:127
 msgid "Page"
 msgstr ""
 
-#: src/components/content_single/content-club.php:85, src/components/content_single/content-collection.php:85, src/components/content_single/content-event.php:85, src/components/content_single/content.php:85
+#: src/components/content_single/content-club.php:85, src/components/content_single/content-collection.php:85, src/components/content_single/content-event.php:69, src/components/content_single/content.php:85
 msgid "Next"
 msgstr ""
 
-#: src/components/content_single/content-club.php:87, src/components/content_single/content-collection.php:87, src/components/content_single/content-event.php:87, src/components/content_single/content.php:87
+#: src/components/content_single/content-club.php:87, src/components/content_single/content-collection.php:87, src/components/content_single/content-event.php:71, src/components/content_single/content.php:87
 msgid "Next post:"
 msgstr ""
 
-#: src/components/content_single/content-club.php:91, src/components/content_single/content-collection.php:91, src/components/content_single/content-event.php:91, src/components/content_single/content.php:91
+#: src/components/content_single/content-club.php:91, src/components/content_single/content-collection.php:91, src/components/content_single/content-event.php:75, src/components/content_single/content.php:91
 msgid "Previous"
 msgstr ""
 
-#: src/components/content_single/content-club.php:93, src/components/content_single/content-collection.php:93, src/components/content_single/content-event.php:93, src/components/content_single/content.php:93
+#: src/components/content_single/content-club.php:93, src/components/content_single/content-collection.php:93, src/components/content_single/content-event.php:77, src/components/content_single/content.php:93
 msgid "Previous post:"
 msgstr ""
 
@@ -86,11 +86,11 @@ msgstr ""
 msgid "Tab "
 msgstr ""
 
-#: src/components/features/section-catl.php:61
+#: src/components/features/section-catl.php:71
 msgid "Tab content"
 msgstr ""
 
-#: src/components/features/section-catl.php:77, src/inc/customizer/setting_control/inc_setting_catl.php:97
+#: src/components/features/section-catl.php:89, src/inc/customizer/setting_control/inc_setting_catl.php:97
 msgid "Go to the website"
 msgstr ""
 
@@ -146,7 +146,7 @@ msgstr ""
 msgid "Show more "
 msgstr ""
 
-#: src/footer.php:53
+#: src/footer-fidkar.php:53, src/footer-wfidkar.php:53, src/footer.php:53
 msgid "All Rights Reserved"
 msgstr ""
 
@@ -488,6 +488,10 @@ msgstr ""
 
 #: src/index.php:247, src/search.php:81, src/taxonomy.php:125
 msgid "Next page"
+msgstr ""
+
+#: src/page-templates/page_iframe_audiobook.php:45, src/page-templates/page_iframe_book.php:45, src/page-templates/page_iframe_regio.php:45
+msgid "This page is visible only in browsers that support frames."
 msgstr ""
 
 #: src/search.php:31, src/search.php:45

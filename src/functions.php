@@ -148,6 +148,9 @@ function wpg_enqueue() {
 	wp_enqueue_script( 'wpg-main',THEME_URL . 'js/main.min.js',array('jquery'), THEME_VERSION, true );
 
 	wp_localize_script('wpg-main', 'datalanuge', array(
+		'offcontrast' => __('Wyłącz kontrast', 'wpg_theme'),
+		'ooncontrast' => __('Włącz kontrast', 'wpg_theme'),
+		
 		'url' 		    => get_bloginfo('template_directory'),
 		'next'=> __('Previous Image (left arrow key)', 'wpg_theme'),
 		'prev'=> __('Next Image (right arrow key)', 'wpg_theme'),

@@ -170,6 +170,7 @@ sass/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: inherit;
+  line-height: 1;
 }
 
 .l-icon,
@@ -982,35 +983,35 @@ h6,
   font-family: Tahoma, Geneva, sans-serif;
 }
 
-h1, .class-h1 {
+h1, .class-h1, .f-size-h1 {
   font-size: 39px;
   font-size: 3.9rem;
   line-height: 44px;
   line-height: 4.4rem;
 }
 
-h2, .class-h2 {
+h2, .class-h2, .f-size-h2 {
   font-size: 32px;
   font-size: 3.2rem;
   line-height: 37px;
   line-height: 3.7rem;
 }
 
-h3, .class-h3 {
+h3, .class-h3, .f-size-h3 {
   font-size: 27px;
   font-size: 2.7rem;
   line-height: 32px;
   line-height: 3.2rem;
 }
 
-h4, .class-h4 {
+h4, .class-h4, .f-size-h4 {
   font-size: 22px;
   font-size: 2.2rem;
   line-height: 27px;
   line-height: 2.7rem;
 }
 
-h5, h6, .class-h5 {
+h5, h6, .class-h5, .f-size-h5 {
   font-size: 19px;
   font-size: 1.9rem;
   line-height: 24px;
@@ -1408,7 +1409,7 @@ input[type=submit],
 input[type=button],
 input[type="reset"] {
   display: inline-block;
-  padding: 7px 20px;
+  padding: 7px 15px;
   border: 1px solid #f25e44;
   cursor: pointer;
   white-space: normal;
@@ -2180,6 +2181,12 @@ main {
   display: block;
 }
 
+/* 1.0 Fonts class
+======================= */
+.h-font {
+  font-family: Roboto, "Open Sans", sans-serif;
+}
+
 /* 2.0 Layout
 ======================= */
 .hide {
@@ -2290,6 +2297,11 @@ main {
   display: none;
 }
 
+.tabs__content img {
+  float: left;
+  padding: 2.08333% 2.08333% 2.08333% 0;
+}
+
 /* 3.0 Header
 ======================= */
 #top-bar {
@@ -2302,6 +2314,10 @@ main {
 #top-bar .contact-item {
   display: inline-block;
   padding: 0 10px;
+}
+
+#top-bar a {
+  color: #543d4f;
 }
 
 #top-bar__address {
@@ -2339,6 +2355,11 @@ main {
   margin: 0 2px;
 }
 
+.form-wcga button {
+  background-color: #543d4f;
+  border-color: #543d4f;
+}
+
 #top-bar__search {
   position: relative;
   overflow: hidden;
@@ -2374,6 +2395,10 @@ main {
 
 .site-title {
   margin: 0;
+}
+
+#header-menu {
+  letter-spacing: 0.05em;
 }
 
 /* 4.0 Section
@@ -2751,11 +2776,19 @@ tr.days-names {
   background-color: #f7f8fa;
 }
 
+.fidkar-yellow #contact {
+  background-color: #FCE9A6;
+}
+
+.fidkar-white #contact {
+  background-color: #ffffff;
+}
+
 #contact__content {
   background-color: #f25e44;
 }
 
-#contact__content > div {
+#contact__content > div > div {
   max-width: 815px;
 }
 
@@ -2798,7 +2831,7 @@ tr.days-names {
 
 .contact-item__text {
   padding-left: 70px;
-  margin-top: -20px;
+  margin-top: -0.5em;
 }
 
 .contact-item__text .day {
@@ -3336,6 +3369,7 @@ a.skip-main:active {
  * All
  * */
 .h-nav {
+  font-family: Roboto, "Open Sans", sans-serif;
   /*
      *  li all
      * -----------*/
@@ -3393,6 +3427,7 @@ a.skip-main:active {
   position: absolute;
   left: -999em;
   margin-top: 10px;
+  font-family: Lato, Arial, Helvetica, sans-serif;
   z-index: 3;
 }
 
@@ -3502,7 +3537,7 @@ a.skip-main:active {
 }
 
 .h-nav--arrow .sub-menu li {
-  border-bottom: 1px solid #543d4f;
+  border-bottom: 1px solid #d5d4d9;
 }
 
 .h-nav--arrow .menu-item-has-children > a:after {
@@ -3521,12 +3556,10 @@ a.skip-main:active {
 }
 
 .h-nav--desc {
-  font-family: Roboto, "Open Sans", sans-serif;
   font-size: 18px;
   font-size: 1.8rem;
   line-height: 23px;
   line-height: 2.3rem;
-  font-weight: bold;
   text-transform: uppercase;
 }
 
@@ -4275,12 +4308,83 @@ a.skip-main:active {
 }
 
 /*--------------------------------------------------------------
+-- Responsive breakpoint desktop old 1024-1270
+--------------------------------------------------------------*/
+@media (min-width: 62em) and (max-width: 79.375em) {
+  body {
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 19px;
+    line-height: 1.9rem;
+  }
+  h1, .class-h1, .f-size-h1 {
+    font-size: 29px;
+    font-size: 2.9rem;
+    line-height: 34px;
+    line-height: 3.4rem;
+  }
+  h2, .class-h2, .f-size-h2 {
+    font-size: 26px;
+    font-size: 2.6rem;
+    line-height: 31px;
+    line-height: 3.1rem;
+  }
+  h3, .class-h3, .f-size-h3 {
+    font-size: 21px;
+    font-size: 2.1rem;
+    line-height: 26px;
+    line-height: 2.6rem;
+  }
+  h4, .class-h4, .f-size-h4 {
+    font-size: 17px;
+    font-size: 1.7rem;
+    line-height: 22px;
+    line-height: 2.2rem;
+  }
+  h5, h6, .class-h5, .f-size-h5 {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 21px;
+    line-height: 2.1rem;
+  }
+  .tabs__item {
+    font-size: 20px;
+    font-size: 2rem;
+    line-height: 25px;
+    line-height: 2.5rem;
+  }
+  #top-bar__social, #top-bar__btn-search {
+    margin-top: 6px;
+  }
+  .header-offslider {
+    max-width: 670px;
+  }
+  .header-offslider article {
+    width: 200px;
+    height: 400px;
+  }
+  .s-post-thumbnail,
+  .s-post-content {
+    width: 200px;
+    height: 200px;
+  }
+  #featured-cat.col-5,
+  #wpg-evets.col-7 {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    clear: both;
+  }
+}
+
+/*--------------------------------------------------------------
 -- Responsive breakpoint desktop old
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 -- Responsive breakpoint desktop hd
 --------------------------------------------------------------*/
-@media (min-width: 80em) {
+@media (min-width: 79.375em) {
   .catl-svg,
   .catl-content {
     width: 50%;

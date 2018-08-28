@@ -18,13 +18,13 @@ input[type=submit],
 input[type=button],
 input[type="reset"] {
     display: inline-block;
-    padding: 7px 20px;
+    padding: 7px 15px;
     border: 1px solid $button-border;
     cursor: pointer;
     white-space: normal;
     background: $fields-color;
     color: $fields-fff;
-
+    
     &:focus, &:active {
         color: $fields-fff;
         background: $fields-active;

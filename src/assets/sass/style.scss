@@ -237,6 +237,24 @@ sass/
 
 }
 /*--------------------------------------------------------------
+-- Responsive breakpoint desktop old 1024-1270
+--------------------------------------------------------------*/
+@media (min-width: $desktop) and (max-width: $desktop-hd) {
+
+    @import "theme/theme__rwd-desktop-old";
+    //@import "theme/nav/nav_horizontal__rwd-desktop-old";
+
+}
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
 -- Responsive breakpoint desktop old
 --------------------------------------------------------------*/
 @media (min-width: $desktop-medium) {

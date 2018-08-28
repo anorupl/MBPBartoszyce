@@ -23,7 +23,7 @@ $.fn.nav = function (nav) {
 
     $(window).on('resize orientationchange', function () {
 
-      var window_width = $(window).width();
+      var window_width = $(window)["0"].innerWidth;
 
       if (window_width > 992) {
 
@@ -45,12 +45,13 @@ $.fn.slick_small_sllider = function(setting) {
   return this.each(function () {
       var $this = $(this);
 
-        if ($(window).width() < 992) {
+        if ($(window)["0"].innerWidth < 992) {
              $this.slick(setting);
         };
 
       $(window).on('resize orientationchange', function () {
-           if ($(window).width() < 992) {
+
+           if ($(window)["0"].innerWidth < 992) {
 
               if (!$this.hasClass('slick-initialized')) {
                  $this.slick(setting);
@@ -99,40 +100,10 @@ $.fn.slick_small_sllider = function(setting) {
         });
     });
 
-    // Search toggle.
-		$( '#top-bar__btn-search' ).on( 'click', function( event ) {
-			var that    = $( this ),
-				  wrapper = $( '#top-bar__search' ),
-				  container = that.find( 'a' );
 
-			that.toggleClass( 'active' );
-			wrapper.toggleClass( 'hide' );
-
-			if ( that.hasClass( 'active' ) ) {
-				container.attr( 'aria-expanded', 'true' );
-			} else {
-				container.attr( 'aria-expanded', 'false' );
-			}
-
-			if ( that.is( '.active' )) {
-				wrapper.find( '.search-field' ).focus();
-			}
-		} );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    /**
+    * Slick slider active
+    */
     $('#header-content').slick_small_sllider(settings = {});
     $('#partner-slider').slick({
          dots: false,
@@ -153,7 +124,69 @@ $.fn.slick_small_sllider = function(setting) {
      });
 
 
-     // Obsługa fomularza przycisku kontrastu i rozmiaru czcionek (formularz dziala bez js przez php)
+    /**
+    * Search toggle
+    */
+		$( '#top-bar__btn-search' ).on( 'click', function( event ) {
+			var that    = $( this ),
+				  wrapper = $( '#top-bar__search' ),
+				  container = that.find( 'a' );
+
+			that.toggleClass( 'active' );
+			wrapper.toggleClass( 'hide' );
+
+			if ( that.hasClass( 'active' ) ) {
+				container.attr( 'aria-expanded', 'true' );
+			} else {
+				container.attr( 'aria-expanded', 'false' );
+			}
+
+			if ( that.is( '.active' )) {
+				wrapper.find( '.search-field' ).focus();
+			}
+		} );
+
+
+     /**
+     * Image Popup
+     */
+     //Translating magnificPopup
+     $.extend(true, $.magnificPopup.defaults, {
+         tClose: datalanuge.close, // Alt text on close button
+         tLoading: datalanuge.load, // Text that is displayed during loading. Can contain %curr% and %total% keys
+         gallery: {
+             tPrev: datalanuge.prev, // Alt text on left arrow
+             tNext: datalanuge.next, // Alt text on right arrow
+             tCounter: '%curr% '+ datalanuge.of + ' %total%' // Markup for "1 of 7" counter
+         },
+         image: {
+             tError: '<a href="%url%">'+ datalanuge.image +'</a>' + datalanuge.error_image // Error message when image could not be loaded
+         },
+         ajax: {
+             tError: '<a href="%url%">'+ datalanuge.image +'</a>' + datalanuge.error_image // Error message when ajax request failed
+         }
+     });
+
+     // Single image
+     $('a.image-popup[href*=".jpg"], a.fancybox[href*=".jpeg"]').magnificPopup({
+         type:'image',
+     });
+
+     //Gallery image
+     $('.wp-block-gallery').each(function () {
+         $(this).magnificPopup({
+             delegate: 'a[href*=".jpg"], a[href*=".jpeg"], a[href*=".png"], a[href*=".gif"]',
+             type: 'image',
+             gallery: {
+                 enabled: true,
+             }
+         });
+     });
+
+
+     /**
+     * Obsługa fomularza przycisku kontrastu i rozmiaru czcionek (formularz dziala bez js przez php)
+     */
      	$("#form-wcga button").click(function(e){
 
      		var button  = $(this),

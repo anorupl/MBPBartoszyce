@@ -42,13 +42,13 @@
          <div class="js-tabs__contents clear-both">
            <?php for ($i=1; $i <= 4; $i++) : ?>
              <!-- Tab content -->
-             <div id="id_contact_tab_<?php echo $i; ?>" class="js-tabcontent">
+             <div id="id_contact_tab_<?php echo $i; ?>" class="js-tabcontent pad-all clear-both">
                <!-- Left contact blok -->
                <div id="contact-info_<?php echo $i; ?>" class="contact-info col-6">
                  <!-- Address -->
                  <div class="contact-item address">
                    <div class="contact-item__icon">
-                     <i class="icon-map-marker"></i><span class="class-h4"><?php _e('Address', 'wpg_theme');?></span>
+                     <i class="icon-map-marker"></i><span class="f-size-h4 h-font"><?php _e('Address', 'wpg_theme');?></span>
                    </div>
                    <div class="contact-item__text">
                      <?php echo esc_html(get_theme_mod("wpg_contact_adres_$i",'')); ?>
@@ -57,7 +57,7 @@
                  <!-- Email -->
                  <div class="contact-item email">
                    <div class="contact-item__icon">
-                     <i class="icon-envelope"></i><span class="class-h4"><?php _e('E-mail', 'wpg_theme');?></span>
+                     <i class="icon-envelope"></i><span class="f-size-h4 h-font"><?php _e('E-mail', 'wpg_theme');?></span>
                    </div>
                    <div class="contact-item__text">
                      <?php printf('<a href="mailto:%1s">%1$s</a>', antispambot(get_theme_mod("wpg_contact_email_$i"))); ?>
@@ -66,7 +66,7 @@
                  <!-- Phone -->
                  <div class="contact-item phone">
                    <div class="contact-item__icon">
-                     <i class="icon-phone_android"></i><span class="class-h4"><?php _e('Telephone number', 'wpg_theme');?></span>
+                     <i class="icon-phone_android"></i><span class="f-size-h4 h-font"><?php _e('Telephone number', 'wpg_theme');?></span>
                    </div>
                    <div class="contact-item__text">
                    <?php
@@ -79,7 +79,7 @@
                <!-- Right contact blok -->
                <div id="open-hours_<?php echo $i; ?>" class="open-hours col-6">
                  <div class="contact-item__icon">
-                   <i class="icon-clock"></i><span class="class-h4"><?php _e('Opening Hours', 'wpg_theme');?></span>
+                   <i class="icon-clock"></i><span class="f-size-h4 h-font"><?php _e('Opening Hours', 'wpg_theme');?></span>
                  </div>
                  <div class="contact-item__text">
                    <table>

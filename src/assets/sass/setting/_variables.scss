@@ -43,7 +43,7 @@ $phone          : #{pem(576)};
 $tablet         : #{pem(768)};
 $desktop        : #{pem(992)};
 $desktop-medium : #{pem(1024)};
-$desktop-hd     : #{pem(1280)};
+$desktop-hd     : #{pem(1270)};
 
 /*--------------------------------------------------------------
 >>> Color
@@ -52,6 +52,8 @@ $one-color      : #543d4f;
 $two-color      : #f25e44;
 $three-color    : #0bd69f;
 $four-color     : #ecb842;
+$five-color     : #FCE9A6;
+
 
 $one-bw         : #2d3942;  // text
 $two-bw         : #192e43;  // icon
@@ -93,7 +95,7 @@ $hv-ahover:         $two-color;
 $hv-aa:             $one-color;
 $hv-aahover:        $two-color;
 
-$hv-border:         $one-color;
+$hv-border:         $border-color;
 $hv-plus:           $two-color;
 
 /* over */

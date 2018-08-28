@@ -48,6 +48,14 @@ main {
     display: block;
 }
 
+
+/* 1.0 Fonts class
+======================= */
+.h-font {
+  font-family: $font-second;
+}
+
+
 /* 2.0 Layout
 ======================= */
 .hide {
@@ -143,7 +151,12 @@ main {
 .js-tabcontent[aria-hidden=true]{
     display: none;
 }
-
+.tabs__content {
+  img {
+    float: left;
+    padding: gutter() gutter() gutter() 0;
+  }
+}
 
 
 
@@ -161,8 +174,10 @@ main {
     }
     padding: 20px gutter();
     border-bottom: 1px solid lighten($five-bw, 42%);
+  a {
+    color: $one-color;
+  }
 }
-
 #top-bar__address {
   @include font-size($size-medium,0,false);
 }
@@ -191,6 +206,10 @@ main {
     width: auto;
     margin: 0 2px;
   }
+  button {
+    background-color: $one-color;
+    border-color: $one-color;
+  }
 }
 
 
@@ -209,6 +228,8 @@ main {
     position: relative;
     border-bottom: 1px solid lighten($five-bw, 42%);
     padding: 10px gutter();
+
+
 }
 .title-area {
     max-width: 275px;
@@ -217,7 +238,9 @@ main {
 .site-title {
     margin: 0;
 }
-
+#header-menu {
+  letter-spacing: 0.05em;
+}
 /* 4.0 Section
 ======================= */
 .page-section {
@@ -248,6 +271,7 @@ main {
     background-size: cover;
     background-position: center;
     height: 320px;
+
 }
 .f-post-content {
     display: flex;
@@ -538,11 +562,18 @@ tr.days-names {
 .home.paged #contact {
   background-color: $four-bw;
 }
+.fidkar-yellow #contact {
+  background-color: $five-color;
+}
+.fidkar-white #contact {
+  background-color: $white;
+}
+
 
 
 #contact__content {
   background-color: $two-color;
-  > div {
+  > div > div {
     max-width: 815px;
   }
 
@@ -567,7 +598,7 @@ tr.days-names {
 }
 .contact-item__text {
   padding-left: 70px;
-  margin-top: -20px;
+  margin-top: -0.5em;
   .day {
       width: 110px;
   }

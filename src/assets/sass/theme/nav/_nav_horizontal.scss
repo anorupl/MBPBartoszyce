@@ -2,7 +2,7 @@
  * All
  * */
  .h-nav	{
-
+   font-family: $font-second;
     /*
      *  li all
      * -----------*/
@@ -18,7 +18,7 @@
     /*
      *  ul ul
      * -----------*/
-    .sub-menu                       {display: block; position: absolute; left: -999em; margin-top: 10px; z-index: 3;}
+    .sub-menu                       {display: block; position: absolute; left: -999em; margin-top: 10px; font-family: $font-base; z-index: 3;}
     .sub-menu li                    {clear: both; padding: 0 10px; min-width: 210px; text-align: center;}
     .sub-menu li a                  {padding: 10px 15px;}
 
@@ -52,11 +52,11 @@
 
     .menu li > a                {color: $hv-a;}
     .menu li > a:hover          {color: $hv-ahover;}
-    
+
     .sub-menu li                {background: $hv-lili;}
     .sub-menu li a              {color: $hv-aa;}
     .sub-menu li > a:hover      {color: $hv-aahover; background: $hv-lilihover; }
-    .sub-menu li li  > a:hover  {color: $hv-aahover; background: $hv-lilihover; }    
+    .sub-menu li li  > a:hover  {color: $hv-aahover; background: $hv-lilihover; }
 }
 
 .h-nav--arrow {
@@ -83,16 +83,13 @@
 	.sub-menu .menu-item-has-children > a:after 	{
 	    @extend [class^="icon-"];
 	    content: "\f105";
-	}    
+	}
 }
 
-
 .h-nav--desc {
-    font-family: $font-second;
     @include font-size(($size-base+0.2),0,false);
-    font-weight: bold;
     text-transform: uppercase;
-      
+
     .menu-item-description {
         display: block;
         clear: both;
@@ -100,5 +97,5 @@
         font-size: 14px;
         color: $five-bw;
         margin-top: 10px;
-    }    
+    }
 }

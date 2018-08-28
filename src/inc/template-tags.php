@@ -491,17 +491,17 @@ function wpg_the_thumbnail( $size='thumbnail' ){
 function wpg_breadcrumbs() {
 	/* === OPTIONS === */
 	$text['home']     = __('Home','wpg_theme'); // text for the 'Home' link
-	$text['category'] = __('Archive by Category "%s"','wpg_theme'); // text for a category page
-	$text['search']   = __('Search Results for "%s" Query','wpg_theme'); // text for a search results page
-	$text['tag']      = __('Posts Tagged "%s"','wpg_theme'); // text for a tag page
-	$text['author']   = __('Articles Posted by %s','wpg_theme'); // text for an author page
-	$text['404']      = __('Error 404','wpg_theme'); // text for the 404 page
-	$text['page']     = __('Page %s','wpg_theme'); // text 'Page N'
-	$text['cpage']    = __('Comment Page %s','wpg_theme'); // text 'Comment Page N'
+	$text['category'] = __('<span class="screen-reader-text">Archive by Category</span> %s','wpg_theme'); // text for a category page
+	$text['search']   = __('<span class="screen-reader-text">Search Results for</span> %s','wpg_theme'); // text for a search results page
+	$text['tag']      = __('<span class="screen-reader-text">Posts Tagged</span> %s','wpg_theme'); // text for a tag page
+	$text['author']   = __('<span class="screen-reader-text">Articles Posted by</span> %s','wpg_theme'); // text for an author page
+	$text['404']      = __('<span class="screen-reader-text">Error 404</span>','wpg_theme'); // text for the 404 page
+	$text['page']     = __('<span class="screen-reader-text">Page</span> %s','wpg_theme'); // text 'Page N'
+	$text['cpage']    = __('<span class="screen-reader-text">Comment Pag</span>e %s','wpg_theme'); // text 'Comment Page N'
 
 
-	$wrap_before    = '<div class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">'; // the opening wrapper tag
-		$wrap_after     = '</div><!-- .breadcrumbs -->'; // the closing wrapper tag
+	$wrap_before    = '<span class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">'; // the opening wrapper tag
+		$wrap_after     = '</span><!-- .breadcrumbs -->'; // the closing wrapper tag
 		$sep            = '›'; // separator between crumbs
 		$sep_before     = '<span class="sep">'; // tag before separator
 		$sep_after      = '</span>'; // tag after separator
