@@ -232,7 +232,7 @@ main {
 
 }
 .title-area {
-    max-width: 275px;
+    max-width: 150px;
     flex: 1 1 auto;
 }
 .site-title {
@@ -405,6 +405,9 @@ tr.days-names {
 
 /* Home page - section with clubs */
 .clubs {
+  margin-top: 55px;
+padding-top: 25px;
+margin-bottom: 55px;
     background-color: $two-color;
     clear: both;
 
@@ -450,7 +453,15 @@ tr.days-names {
     padding-bottom: 10px;
     min-width: 50px;
     border-bottom: 1px solid $light-border;
+
+    a[aria-selected=true] {
+      color: $one-color;
   }
+}
+
+
+
+
   .tabs-home__contents {
     img {
       box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.5);
@@ -486,6 +497,9 @@ tr.days-names {
 
 /* section catl */
 #catl {
+  margin-top: 100px;
+  padding-top: 55px;
+  padding-bottom: 55px;
   background-color: $one-color;
 
   .tabs__item {
@@ -538,6 +552,7 @@ tr.days-names {
   position: relative;
   .header-section {
     position: relative;
+    padding-bottom: 0;
 
     > div {
       z-index: 5;
@@ -627,7 +642,7 @@ tr.days-names {
 
 /* google map */
 #map-canvas {
-  height: 505px;
+  height: 520px;
 }
 /* featured category */
 #featured-cat {
@@ -798,4 +813,42 @@ tr.days-names {
     img{
       display: inline-block;
     }
+}
+
+
+
+/* Event list */
+.ev-item {
+  position: relative;
+  margin-bottom: 5em;
+  background: $three-bw;
+}
+
+.ev-item__date {
+    background-color: $two-color;
+    padding: 15px 30px;
+    position: absolute;
+    top: -15px;
+    right: -20px;
+    z-index: 5;
+}
+.ec-item__img   img {
+    max-width: 150px;
+margin: 5px auto 25px;
+  }
+
+.ev-item__content {
+  width: 100%;
+  float: left;
+  margin-top: 20px;
+}
+
+.ev-item__hour,
+.ev-item__location {
+    padding: 10px 0;
+    border-bottom: 1px solid $border-color;
+}
+
+.ev-item__summary {
+    padding: 10px 0;
 }

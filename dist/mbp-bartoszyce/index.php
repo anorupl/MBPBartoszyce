@@ -33,6 +33,7 @@ if (is_home() && !is_paged()) {
   	if (get_theme_mod('wpg_events_active', false) === true) {
       get_template_part('components/features/section', 'events' );
     }
+    echo '<div class="clear"></div>';
     /* ====================
   	 * Section - clubs    *
   	 * ===================*/
@@ -51,7 +52,7 @@ if (is_home() && !is_paged()) {
     if (get_theme_mod('wpg_catl_active', false) === true) {
       get_template_part('components/features/section', 'catl' );
     }
-    
+
 } else {
 ?>
   <div id="content" class="site-content clear-both">

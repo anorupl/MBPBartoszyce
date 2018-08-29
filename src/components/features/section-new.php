@@ -74,7 +74,7 @@
                  <?php endwhile; endif; wp_reset_query(); ?>
 
                  <div class="coletions-link">
-                   <a id="colection_<?php echo $term->slug;?>" class="btn" href="#"><?php _e('Show older', 'wpg_theme'); ?></a>
+                   <a id="colection_<?php echo $term->slug;?>" class="btn" href="<?php echo get_term_link($term, $terms_tax) ?>"><?php _e('Show older', 'wpg_theme'); ?></a>
                  </div>
                </div>
              <?php endforeach; // tabs content ?>

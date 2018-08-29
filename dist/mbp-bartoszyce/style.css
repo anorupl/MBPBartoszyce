@@ -1564,7 +1564,7 @@ form select {
 ========================================================================== */
 .container {
   position: relative;
-  max-width: 1600px;
+  max-width: 1440px;
   margin: auto;
   clear: both;
 }
@@ -2385,7 +2385,7 @@ main {
 }
 
 .title-area {
-  max-width: 275px;
+  max-width: 150px;
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 auto;
      -moz-box-flex: 1;
@@ -2604,6 +2604,9 @@ tr.days-names {
 
 /* Home page - section with clubs */
 .clubs {
+  margin-top: 55px;
+  padding-top: 25px;
+  margin-bottom: 55px;
   background-color: #f25e44;
   clear: both;
 }
@@ -2650,6 +2653,10 @@ tr.days-names {
   border-bottom: 1px solid #e9e9e9;
 }
 
+.newitems .tabs__item a[aria-selected=true] {
+  color: #543d4f;
+}
+
 .newitems .tabs-home__contents img {
   -webkit-box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.5);
      -moz-box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.5);
@@ -2686,6 +2693,9 @@ tr.days-names {
 
 /* section catl */
 #catl {
+  margin-top: 100px;
+  padding-top: 55px;
+  padding-bottom: 55px;
   background-color: #543d4f;
 }
 
@@ -2753,6 +2763,7 @@ tr.days-names {
 
 #contact .header-section {
   position: relative;
+  padding-bottom: 0;
 }
 
 #contact .header-section > div {
@@ -2865,7 +2876,7 @@ tr.days-names {
 
 /* google map */
 #map-canvas {
-  height: 505px;
+  height: 520px;
 }
 
 /* featured category */
@@ -3045,6 +3056,43 @@ tr.days-names {
 
 .attachment__file img {
   display: inline-block;
+}
+
+/* Event list */
+.ev-item {
+  position: relative;
+  margin-bottom: 5em;
+  background: #ededed;
+}
+
+.ev-item__date {
+  background-color: #f25e44;
+  padding: 15px 30px;
+  position: absolute;
+  top: -15px;
+  right: -20px;
+  z-index: 5;
+}
+
+.ec-item__img img {
+  max-width: 150px;
+  margin: 5px auto 25px;
+}
+
+.ev-item__content {
+  width: 100%;
+  float: left;
+  margin-top: 20px;
+}
+
+.ev-item__hour,
+.ev-item__location {
+  padding: 10px 0;
+  border-bottom: 1px solid #d5d4d9;
+}
+
+.ev-item__summary {
+  padding: 10px 0;
 }
 
 /* Widget
@@ -3402,7 +3450,7 @@ a.skip-main:active {
 .h-nav li a {
   display: block;
   position: relative;
-  padding: 10px 20px;
+  padding: 10px 15px;
 }
 
 .h-nav .menu {
@@ -4018,13 +4066,14 @@ a.skip-main:active {
             justify-content: space-between;
   }
   .title-area {
-    -webkit-flex-basis: 264px;
-        -ms-flex-preferred-size: 264px;
-            flex-basis: 264px;
+    max-width: 275px;
+    -webkit-flex-basis: 275px;
+        -ms-flex-preferred-size: 275px;
+            flex-basis: 275px;
   }
   /* section header post */
   #posts-header {
-    margin-bottom: 150px;
+    margin-bottom: 100px;
   }
   .f-post-content,
   .f-post-thumbnail {
@@ -4274,6 +4323,17 @@ a.skip-main:active {
   .attachment__btn {
     padding: 15px 0;
     border-left: dashed 1px #d5d4d9;
+  }
+  /* Event list */
+  .ev-item {
+    border-left: 15px solid #543d4f;
+  }
+  .ev-item__content {
+    width: 75%;
+    margin-top: 0px;
+  }
+  .ec-item__img {
+    padding-top: 60px;
   }
   /*
  * All

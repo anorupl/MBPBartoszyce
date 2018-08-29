@@ -18,7 +18,8 @@ get_header(); ?>
             <h2 class="h--xxl"><?php the_title(); ?></h2>
         </div>
   </div><!-- header-content -->
-    <div id="primary" class="content-area col-primary--12">
+  <div class="container">
+    <div id="primary" class="content-area col-primary gutters">
       <main id="main" class="site-main ">
         <article>
           <header class="entry-header screen-reader">
@@ -39,6 +40,8 @@ get_header(); ?>
         ?>
       </main>
     </div><!-- #primary -->
+    <?php get_sidebar(); ?>
+  </div><!-- .container -->    
   <?php endwhile; ?>
 </div><!-- #content -->
 <?php get_footer('wfidkar');  ?>
