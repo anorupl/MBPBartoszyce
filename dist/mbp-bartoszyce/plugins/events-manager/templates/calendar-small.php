@@ -15,8 +15,10 @@
 		<tr>
 			<td colspan="2"><a class="em-calnav em-calnav-prev" href="<?php echo esc_url($calendar['links']['previous_url']); ?>" rel="nofollow">&lt;&lt;</a></td>
 			<td class="month_name" colspan="3">
-				<span class="class-h1"><?php echo date("j"); ?></span>
-				<?php the_date('F'); ?>
+				<span class="class-h2"><?php echo esc_html(date_i18n('F', $calendar['month_start'])); ?></span>
+				<?php echo esc_html(date_i18n('Y', $calendar['month_start'])); ?>
+
+
 			</td>
 			<td colspan="2"><a class="em-calnav em-calnav-next" href="<?php echo esc_url($calendar['links']['next_url']); ?>" rel="nofollow">&gt;&gt;</a></td>
 		</tr>

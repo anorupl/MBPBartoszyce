@@ -54,17 +54,18 @@
 #posts-header {
   margin-bottom: 100px;
 }
-.f-post-content,
-.f-post-thumbnail {
-  height: 660px;
+.f-post-content {
+    height: 600px;
+    background-color: $one-color;
+
 }
 .f-post {
+  &::before {
+    opacity: 0.5;
+  }
   .entry-summary {
     flex-basis: 60%;
   }
-}
-.col-8.f-post-thumbnail {
-  float: right;
 }
 // samll post header
 .header-offslider {

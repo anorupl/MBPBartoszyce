@@ -22,8 +22,7 @@
             }
 
             if ($i == 0): ?>
-            <article id="post-<?php the_ID();?>" <?php post_class('f-post col-8');?> >
-                <div class="f-post-thumbnail col-8" style="background-image:url('<?php echo esc_url($url_thumb); ?>');"></div>
+            <article id="post-<?php the_ID();?>" <?php post_class('f-post col-8');?> style="background-image:url('<?php echo esc_url($url_thumb); ?>');">
                 <div class="f-post-content col-4 gutters">
                     <header class="entry-header">
                         <h2 class="entry-title"><a href="<?php the_permalink();?>" rel="bookmark"><?php the_title();?></a></h2>
@@ -37,7 +36,6 @@
             <?php else: ?>
 
         <?php if ($i == 1) {echo '<div id="header-content" class="slider-header arrows-tr header-offslider hentry-header">';}?>
-            <div>
                 <article id="post-<?php the_ID();?>" <?php post_class();?>>
                     <div class="s-post-thumbnail" style="background-image:url('<?php echo esc_url($url_thumb); ?>');"></div>
                     <div class="s-post-content gutters">
@@ -49,7 +47,6 @@
                         </a>
                     </div>
                 </article>
-            </div>
         <?php if ($i == 3) {echo '</div>';}?>
         <?php endif; $i++; endwhile;?>
         <a class="arrow-allpost-icon" href="<?php echo get_next_posts_page_link(); ?>">

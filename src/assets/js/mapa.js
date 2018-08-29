@@ -23,7 +23,15 @@ var planes2 = [
 var map = L.map('map-canvas', {
     center: [54.248997, 20.804780],
 		zoomControl: false,
-		tap: false,
+
+		keyboard: true,
+    dragging: false,
+    boxZoom: false,
+    doubleClickZoom: true,
+    scrollWheelZoom: true,
+    tap: false,
+    touchZoom: true,
+
     zoom: 13,
 		layers: new L.TileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoia2FtaWx6ODciLCJhIjoiY2psOGZvNnN2MWQ5cTNrcWtiaTl2czJ3NCJ9.JPFsPnvYmq-fXFx5i5qmxw', {
 			maxZoom: 18,

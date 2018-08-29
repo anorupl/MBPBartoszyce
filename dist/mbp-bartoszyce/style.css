@@ -171,6 +171,10 @@ sass/
   -moz-osx-font-smoothing: grayscale;
   color: inherit;
   line-height: 1;
+  display: inline-block;
+  padding: 0 10px;
+  min-width: 40px;
+  text-align: center;
 }
 
 .l-icon,
@@ -2381,11 +2385,11 @@ main {
           flex-direction: column;
   position: relative;
   border-bottom: 1px solid #e9e9e9;
-  padding: 10px 2.08333%;
 }
 
 .title-area {
   max-width: 150px;
+  padding: 10px 2.08333%;
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 auto;
      -moz-box-flex: 1;
@@ -2417,7 +2421,19 @@ main {
 }
 
 .f-post {
+  background: center no-repeat;
+  -moz-background-size: cover;
+       background-size: cover;
   background-color: #543d4f;
+}
+
+.f-post::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #543d4f;
+  opacity: 0.8;
 }
 
 .f-post .entry-header {
@@ -2434,18 +2450,6 @@ main {
      -moz-box-flex: 0;
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
-}
-
-.f-post-thumbnail {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-     -moz-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  -moz-background-size: cover;
-       background-size: cover;
-  background-position: center;
-  height: 320px;
 }
 
 .f-post-content {
@@ -2831,11 +2835,9 @@ tr.days-names {
 }
 
 .contact-item__icon i {
-  display: inline-block;
-  width: 45px;
+  width: 60px;
   font-size: 34px;
   font-size: 3.4rem;
-  text-align: center;
 }
 
 .contact-item__icon span {
@@ -2844,7 +2846,7 @@ tr.days-names {
 }
 
 .contact-item__text {
-  padding-left: 70px;
+  padding-left: 85px;
   margin-top: -0.5em;
 }
 
@@ -2999,7 +3001,7 @@ tr.days-names {
 }
 
 .meta__item i {
-  padding-right: 5px;
+  padding-left: 0;
 }
 
 .widget {
@@ -3058,6 +3060,12 @@ tr.days-names {
   display: inline-block;
 }
 
+/* Event calander */
+table.em-calendar td.eventless-today, table.em-calendar td.eventful-today {
+  background-color: #f25e44;
+  color: #f7f8fa;
+}
+
 /* Event list */
 .ev-item {
   position: relative;
@@ -3099,7 +3107,7 @@ tr.days-names {
 ========================================================================== */
 .widget {
   position: relative;
-  padding: 5px 15px 15px;
+  padding: 0 15px 15px;
   margin: 0 4.16667% 8.33333% 0;
   font-size: 12px;
   font-size: 1.2rem;
@@ -3136,6 +3144,7 @@ tr.days-names {
 
 .widget-title {
   text-transform: uppercase;
+  margin-top: 0;
 }
 
 .widget_archive li,
@@ -4075,17 +4084,17 @@ a.skip-main:active {
   #posts-header {
     margin-bottom: 100px;
   }
-  .f-post-content,
-  .f-post-thumbnail {
-    height: 660px;
+  .f-post-content {
+    height: 600px;
+    background-color: #543d4f;
+  }
+  .f-post::before {
+    opacity: 0.5;
   }
   .f-post .entry-summary {
     -webkit-flex-basis: 60%;
         -ms-flex-preferred-size: 60%;
             flex-basis: 60%;
-  }
-  .col-8.f-post-thumbnail {
-    float: right;
   }
   .header-offslider {
     position: absolute;

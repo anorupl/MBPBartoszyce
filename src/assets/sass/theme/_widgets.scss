@@ -3,7 +3,7 @@
 .widget {
 
     position: relative;
-    padding: 5px 15px 15px;
+    padding: 0 15px 15px;
     margin: 0 gutter(of 6) gutter(of 3) 0;
     @include font-size($size-small);
     background: $four-bw;
@@ -39,6 +39,7 @@
 
 .widget-title {
     text-transform: uppercase;
+    margin-top: 0;
 }
 
 .widget_archive,

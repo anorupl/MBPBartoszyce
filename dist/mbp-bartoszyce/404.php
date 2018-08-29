@@ -13,6 +13,7 @@ get_header(); ?>
         </div>
   </div><!-- header-content -->
   <div class="container clear-both">
+    <section>
     <div id="primary" class="content-area col-primary--12 gutters">
       <main id="main" class="site-main ">
         <div class="error-404 not-found">
@@ -27,6 +28,7 @@ get_header(); ?>
         </div>
       </main>
     </div><!-- #primary -->
+  </section>    
   </div><!-- .container -->
 </div><!-- #content -->
 <?php get_footer();  ?>
