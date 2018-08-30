@@ -15,7 +15,7 @@ get_header(); ?>
   while ( have_posts() ) :
     the_post();
   ?>
-  <div class="header-content gutters white-a text-center">
+  <div class="header-content pad-all white-two text-center">
         <div class="class-h1 h--xxl">
             <?php the_title(); ?>
         </div>

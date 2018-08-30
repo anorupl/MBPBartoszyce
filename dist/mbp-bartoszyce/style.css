@@ -175,6 +175,8 @@ sass/
   padding: 0 10px;
   min-width: 40px;
   text-align: center;
+  bottom: -2px;
+  position: relative;
 }
 
 .l-icon,
@@ -903,7 +905,6 @@ code {
   display: inline-block;
   text-align: center;
   vertical-align: top;
-  padding: 10px;
   margin: 10px 2.08333%;
 }
 
@@ -2210,35 +2211,51 @@ main {
   float: left;
 }
 
-.white-a {
+.white-one {
   color: #ffffff;
 }
 
-.white-a a, .white-a a:hover {
+.white-one a {
   color: #ffffff;
 }
 
-.text-color-two {
-  color: #f7f8fa;
-}
-
-.text-color-two a {
-  color: #f7f8fa;
-}
-
-.text-color-two a:hover {
+.white-one a:hover {
   color: #543d4f;
 }
 
-.dark-element-color {
+.white-two {
+  color: #ffffff;
+}
+
+.white-two a {
+  color: #ffffff;
+}
+
+.white-two a:hover {
+  color: #f25e44;
+}
+
+.white-three {
+  color: #ffffff;
+}
+
+.white-three a {
+  color: #ffffff;
+}
+
+.white-three a:hover {
+  color: #0bd69f;
+}
+
+.dark-four {
   color: #543d4f;
 }
 
-.dark-element-color a {
+.dark-four a {
   color: #543d4f;
 }
 
-.dark-element-color a:hover {
+.dark-four a:hover {
   color: #f7f8fa;
 }
 
@@ -2304,6 +2321,14 @@ main {
 .tabs__content img {
   float: left;
   padding: 2.08333% 2.08333% 2.08333% 0;
+}
+
+.fidkar-white {
+  background-color: #ffffff;
+}
+
+.fidkar-yellow {
+  background-color: #FCE9A6;
 }
 
 /* 3.0 Header
@@ -2384,6 +2409,9 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
+}
+
+.header-wrapper {
   border-bottom: 1px solid #e9e9e9;
 }
 
@@ -2523,14 +2551,18 @@ main {
 }
 
 .arrow-allpost-icon {
-  position: relative;
   display: block;
-  width: 100px;
-  height: 100px;
-  margin: auto;
+  width: 120px;
+  height: 70px;
   padding: 10px;
+  color: #f7f8fa;
+  background-color: #543d4f;
+  border: 2px solid #f7f8fa;
+  margin: 10px auto;
+}
+
+.arrow-allpost-icon:hover {
   background-color: #f25e44;
-  border: 5px solid #543d4f;
 }
 
 .arrow-allpost-icon > i {
@@ -2700,7 +2732,16 @@ tr.days-names {
   margin-top: 100px;
   padding-top: 55px;
   padding-bottom: 55px;
+  color: #ffffff;
   background-color: #543d4f;
+}
+
+#catl .tabs__item a {
+  color: #ffffff;
+}
+
+#catl .tabs__item a:hover {
+  color: #0bd69f;
 }
 
 #catl .tabs__item a[aria-selected=true] {
@@ -2794,14 +2835,6 @@ tr.days-names {
   background-color: #f7f8fa;
 }
 
-.fidkar-yellow #contact {
-  background-color: #FCE9A6;
-}
-
-.fidkar-white #contact {
-  background-color: #ffffff;
-}
-
 #contact__content {
   background-color: #f25e44;
 }
@@ -2857,7 +2890,14 @@ tr.days-names {
 #contact__tabs,
 #contact__map {
   width: 100%;
+}
+
+#contact__tabs {
   float: left;
+}
+
+#contact__map {
+  float: right;
 }
 
 #contact-social {
@@ -4036,6 +4076,11 @@ a.skip-main:active {
 5.5 singular
 5.3 hentry elements
 --------------------------------------------------------------*/
+  .wrapper {
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   /* 2.0 Layout
 ======================= */
   .active-sidebar .col-primary {
@@ -4114,7 +4159,6 @@ a.skip-main:active {
     position: absolute;
     right: 1%;
     top: 355px;
-    background-color: #543d4f;
   }
   #header-nav-bottom {
     position: absolute;

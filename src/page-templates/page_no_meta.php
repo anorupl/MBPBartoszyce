@@ -13,7 +13,7 @@ get_header(); ?>
   while ( have_posts() ) :
     the_post();
   ?>
-  <div class="header-content gutters white-a text-center">
+  <div class="header-content pad-all white-two text-center">
         <div>
             <h2 class="h--xxl"><?php the_title(); ?></h2>
         </div>
@@ -41,7 +41,7 @@ get_header(); ?>
       </main>
     </div><!-- #primary -->
     <?php get_sidebar(); ?>
-  </div><!-- .container -->    
+  </div><!-- .container -->
   <?php endwhile; ?>
 </div><!-- #content -->
 <?php get_footer('wfidkar');  ?>

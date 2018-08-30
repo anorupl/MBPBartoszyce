@@ -7,7 +7,7 @@
  *
  */
  ?>
- <section id="catl" class="catl white-a page-section clear-both">
+ <section id="catl" class="catl page-section clear-both">
    <div class="container clear-both">
    <div class="catl-svg hide-on-small">
      <?php echo wp_get_attachment_image( absint( get_theme_mod('wpg_catl_image')), 'full'); ?>

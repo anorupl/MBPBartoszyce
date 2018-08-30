@@ -20,11 +20,14 @@
       </figure>
       <div class="entry-meta">
         <div class="meta__item"><i class="icon-clock"></i><?php wpg_time() ?></div>
-        <div class="meta__item hide-on-small"><i class="icon-user"></i>
-          <span class="screen-reader"><?php _e('Author', 'wpg_theme'); ?></span>
+        <div class="meta__item screen-reader-text"><i class="icon-user"></i>
+          <?php _e('Author', 'wpg_theme'); ?>
           <?php the_author();?>
         </div>
-        <div class="meta__item"><i class="icon-folder-open"></i><?php the_list_terms(); ?></div>
+        <?php if (!is_page()) : ?>
+            <div class="meta__item"><i class="icon-folder-open"></i><?php the_list_terms(); ?></div>
+        <?php endif; ?>
+
       </div><!-- .entry-meta -->
       <div class="entry-summary">
           <?php the_excerpt() ?>
@@ -39,13 +42,16 @@
           <span class="screen-reader"><?php _e('Author', 'wpg_theme'); ?></span>
           <?php the_author();?>
         </div>
-        <div class="meta__item"><i class="icon-folder-open"></i><?php echo get_the_term_list( $post->ID, 'category'); ?></php></div>
+        <div class="meta__item">
+          <i class="icon-folder-open"></i>
+          <?php the_list_terms(); ?>
+        </div>
       </div><!-- .entry-meta -->
       <div class="entry-content">
           <?php
           /* translators: %s: Name of current post */
       		the_content( sprintf(
-      			__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
+      			__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'wpg_theme' ),
       			get_the_title()
       		) );
 

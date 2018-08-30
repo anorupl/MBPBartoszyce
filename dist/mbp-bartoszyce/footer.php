@@ -9,12 +9,14 @@
 */
 ?>
 <footer class="clear-both">
+
   <?php
   /* ====================
   * Section - contact  *
   * ===================*/
   get_template_part('components/features/section', 'contact' );
   ?>
+
 </footer>
 <?php
 /* ====================

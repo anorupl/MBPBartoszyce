@@ -42,7 +42,7 @@ if ( ! function_exists( 'wpg_setup' ) ) :
 	function wpg_setup() {
 
 		if ( ! isset( $content_width ) ) {
-			$content_width = 1600;
+			$content_width = 1440;
 		}
 
 		load_theme_textdomain( 'wpg_theme', THEME_PATH . 'languages' );
@@ -67,8 +67,7 @@ if ( ! function_exists( 'wpg_setup' ) ) :
 		/**
 		*  Add theme support for Custom Logo.
 		*/
-		add_theme_support( 'custom-logo',
-		array(
+		add_theme_support( 'custom-logo', array(
 			'height'  => 287,
 			'width'   => 768,
 			'flex-height' => true,
@@ -92,22 +91,18 @@ if ( ! function_exists( 'wpg_setup' ) ) :
 	* This theme uses wp_nav_menu().
 	*/
 	register_nav_menus( array(
-		'header'=> esc_html__( 'Header Menu - Top', 'wpg_theme' ),
+		'header'        => esc_html__( 'Header Menu - Top', 'wpg_theme' ),
 		'header_bottom' => esc_html__( 'Header Menu - Bottom ', 'wpg_theme' )
 	));
 
 	/**
 	* Update image size;
 	*/
-
-	//thumbnail
 	update_option( 'thumbnail_size_w', 320 );
 	update_option( 'thumbnail_size_h', 480 );
 	update_option( 'thumbnail_crop', false );
-	//medium
 	update_option( 'medium_size_w', 768);
 	update_option( 'medium_size_h', 512 );
-	//large
 	update_option( 'large_size_w', 1366);
 	update_option( 'large_size_h', 911 );
 }
@@ -163,8 +158,11 @@ function wpg_enqueue() {
 
 	// theme leafletjs maps
 	wp_enqueue_script( 'leaflet-js', "https://unpkg.com/leaflet@1.3.4/dist/leaflet.js");
-	wp_enqueue_script('google-map', get_template_directory_uri() . '/js/mapa.min.js','', '1.0.1', true);
+	wp_enqueue_script('leaflet-map', get_template_directory_uri() . '/js/mapa.min.js','', '1.0.1', true);
 
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
 
 }
 add_action( 'wp_enqueue_scripts', 'wpg_enqueue' );

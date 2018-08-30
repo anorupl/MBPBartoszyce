@@ -15,11 +15,11 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/404.php:23, src/404.php:39
+#: src/404.php:23, src/404.php:41
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: src/404.php:45, src/components/content_multi/content-none.php:29
+#: src/404.php:47, src/components/content_multi/content-none.php:29
 msgid "It looks like nothing was found at this location."
 msgstr ""
 
@@ -46,12 +46,16 @@ msgstr[1] ""
 msgid "Comments are closed."
 msgstr ""
 
-#: src/components/content_multi/content-custompost.php:47, src/components/content_multi/content-custompost.php:77, src/components/content_multi/content.php:47, src/components/content_multi/content.php:83, src/components/content_single/content-club.php:37, src/components/content_single/content-collection.php:37, src/components/content_single/content-page.php:43, src/components/content_single/content.php:37, src/inc/template-tags.php:135
+#: src/components/content_multi/content-club.php:47, src/components/content_multi/content-club.php:83, src/components/content_multi/content-collection.php:47, src/components/content_multi/content-collection.php:83, src/components/content_multi/content.php:45, src/components/content_multi/content.php:73, src/components/content_single/content-club.php:37, src/components/content_single/content-collection.php:37, src/components/content_single/content-page.php:43, src/components/content_single/content.php:37, src/inc/template-tags.php:135
 msgid "Author"
 msgstr ""
 
-#: src/components/content_multi/content-custompost.php:61, src/components/content_multi/content.php:67
+#: src/components/content_multi/content-club.php:67, src/components/content_multi/content-collection.php:67, src/components/content_multi/content.php:61
 msgid "Continue reading"
+msgstr ""
+
+#: src/components/content_multi/content-club.php:107, src/components/content_multi/content-collection.php:107, src/components/content_multi/content.php:99, src/components/site/loop-homepage.php:65
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
 #: src/components/content_multi/content-none.php:23
@@ -62,7 +66,7 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
-#: src/components/content_single/content-club.php:65, src/components/content_single/content-collection.php:65, src/components/content_single/content-event.php:49, src/components/content_single/content-page.php:67, src/components/content_single/content.php:65, src/index.php:237, src/search.php:83, src/taxonomy.php:127
+#: src/components/content_single/content-club.php:65, src/components/content_single/content-collection.php:65, src/components/content_single/content-event.php:49, src/components/content_single/content-page.php:67, src/components/content_single/content.php:65, src/index.php:241, src/search.php:83, src/taxonomy.php:127
 msgid "Page"
 msgstr ""
 
@@ -82,7 +86,7 @@ msgstr ""
 msgid "Previous post:"
 msgstr ""
 
-#: src/components/features/section-catl.php:47, src/components/features/section-contact.php:69
+#: src/components/features/section-catl.php:47, src/components/features/section-contact.php:71
 msgid "Tab "
 msgstr ""
 
@@ -98,27 +102,27 @@ msgstr ""
 msgid "Clubs in the library"
 msgstr ""
 
-#: src/components/features/section-contact.php:25, src/inc/customizer/setting_control/inc_setting_contact.php:25
-msgid "let's stay in contact"
+#: src/components/features/section-contact.php:25
+msgid "Let's stay in contact"
 msgstr ""
 
-#: src/components/features/section-contact.php:101, src/inc/customizer/setting_control/inc_setting_contact.php:139
+#: src/components/features/section-contact.php:103, src/inc/customizer/setting_control/inc_setting_contact.php:103
 msgid "Address"
 msgstr ""
 
-#: src/components/features/section-contact.php:119, src/inc/customizer/setting_control/inc_setting_contact.php:199
+#: src/components/features/section-contact.php:121, src/inc/customizer/setting_control/inc_setting_contact.php:163
 msgid "E-mail"
 msgstr ""
 
-#: src/components/features/section-contact.php:137, src/inc/customizer/setting_control/inc_setting_contact.php:169
+#: src/components/features/section-contact.php:139, src/inc/customizer/setting_control/inc_setting_contact.php:133
 msgid "Telephone number"
 msgstr ""
 
-#: src/components/features/section-contact.php:163, src/inc/customizer/custom_control_field/inc_field_open_hours.php:91, src/inc/customizer/setting_control/inc_setting_contact.php:233
+#: src/components/features/section-contact.php:165, src/inc/customizer/custom_control_field/inc_field_open_hours.php:91, src/inc/customizer/setting_control/inc_setting_contact.php:197
 msgid "Opening Hours"
 msgstr ""
 
-#: src/components/features/section-events.php:27, src/inc/customizer/setting_control/inc_setting_events.php:61
+#: src/components/features/section-events.php:27
 msgid "Upcoming events"
 msgstr ""
 
@@ -135,74 +139,74 @@ msgid "Show"
 msgstr ""
 
 #: src/components/features/section-new.php:153
-msgid "Show older"
+msgid "Older collections of new products"
 msgstr ""
 
 #: src/components/features/section-partners.php:23, src/inc/customizer/setting_control/inc_setting_partners.php:63, src/inc/customizer/wpg_customizer.php:417
 msgid "Partners"
 msgstr ""
 
-#: src/components/site/loop-homepage.php:111
+#: src/components/site/loop-homepage.php:109
 msgid "Show more "
 msgstr ""
 
-#: src/footer-fidkar.php:53, src/footer-wfidkar.php:53, src/footer.php:53
+#: src/footer-fidkar.php:53, src/footer-wfidkar.php:53, src/footer.php:57
 msgid "All Rights Reserved"
 msgstr ""
 
-#: src/functions.php:189
+#: src/functions.php:187
 msgid "Header Menu - Top"
 msgstr ""
 
-#: src/functions.php:191
+#: src/functions.php:189
 msgid "Header Menu - Bottom "
 msgstr ""
 
-#: src/functions.php:301
+#: src/functions.php:291, src/inc/wcga_form.php:157, src/inc/wcga_form.php:175, src/inc/wcga_form.php:189
 msgid "Wyłącz kontrast"
 msgstr ""
 
-#: src/functions.php:303
+#: src/functions.php:293, src/inc/wcga_form.php:145, src/inc/wcga_form.php:165
 msgid "Włącz kontrast"
 msgstr ""
 
-#: src/functions.php:309
+#: src/functions.php:299
 msgid "Previous Image (left arrow key)"
 msgstr ""
 
-#: src/functions.php:311
+#: src/functions.php:301
 msgid "Next Image (right arrow key)"
 msgstr ""
 
-#: src/functions.php:313
+#: src/functions.php:303
 msgid "of"
 msgstr ""
 
-#: src/functions.php:315
+#: src/functions.php:305
 msgid "Close (Escape key)"
 msgstr ""
 
-#: src/functions.php:317
+#: src/functions.php:307
 msgid "Loading ..."
 msgstr ""
 
-#: src/functions.php:319
+#: src/functions.php:309
 msgid "Image"
 msgstr ""
 
-#: src/functions.php:321
+#: src/functions.php:311
 msgid "it cannot be loaded."
 msgstr ""
 
-#: src/functions.php:357
+#: src/functions.php:353
 msgid "Right Sidebar"
 msgstr ""
 
-#: src/header.php:123, src/header.php:151
+#: src/header.php:133, src/header.php:161
 msgid "Menu"
 msgstr ""
 
-#: src/header.php:159
+#: src/header.php:169
 msgid "Add menu"
 msgstr ""
 
@@ -230,11 +234,11 @@ msgstr ""
 msgid "Select Category"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_blog.php:25, src/inc/customizer/wpg_customizer.php:443, src/index.php:125, src/index.php:175
+#: src/inc/customizer/setting_control/inc_setting_blog.php:25, src/inc/customizer/wpg_customizer.php:443, src/index.php:129, src/index.php:179
 msgid "Last post"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_blog.php:41, src/inc/customizer/setting_control/inc_setting_catl.php:79, src/inc/customizer/setting_control/inc_setting_club.php:79, src/inc/customizer/setting_control/inc_setting_contact.php:39, src/inc/customizer/setting_control/inc_setting_events.php:77, src/inc/customizer/setting_control/inc_setting_featured_category.php:77, src/inc/customizer/setting_control/inc_setting_new.php:77, src/inc/customizer/setting_control/inc_setting_partners.php:79
+#: src/inc/customizer/setting_control/inc_setting_blog.php:41, src/inc/customizer/setting_control/inc_setting_catl.php:79, src/inc/customizer/setting_control/inc_setting_club.php:79, src/inc/customizer/setting_control/inc_setting_featured_category.php:77, src/inc/customizer/setting_control/inc_setting_new.php:77, src/inc/customizer/setting_control/inc_setting_partners.php:79
 msgid "Title section"
 msgstr ""
 
@@ -266,7 +270,7 @@ msgstr ""
 msgid "Left image"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_catl.php:211, src/inc/customizer/setting_control/inc_setting_catl.php:227, src/inc/customizer/setting_control/inc_setting_contact.php:93
+#: src/inc/customizer/setting_control/inc_setting_catl.php:211, src/inc/customizer/setting_control/inc_setting_catl.php:227, src/inc/customizer/setting_control/inc_setting_contact.php:57
 msgid "Tab"
 msgstr ""
 
@@ -290,15 +294,15 @@ msgstr ""
 msgid "Select category to show in Section."
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_contact.php:73
+#: src/inc/customizer/setting_control/inc_setting_contact.php:37
 msgid "Show map in contact"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_contact.php:109, src/inc/customizer/setting_control/inc_setting_contact.php:139, src/inc/customizer/setting_control/inc_setting_contact.php:169, src/inc/customizer/setting_control/inc_setting_contact.php:199, src/inc/customizer/setting_control/inc_setting_contact.php:233, src/inc/customizer/setting_control/inc_setting_contact.php:265
+#: src/inc/customizer/setting_control/inc_setting_contact.php:73, src/inc/customizer/setting_control/inc_setting_contact.php:103, src/inc/customizer/setting_control/inc_setting_contact.php:133, src/inc/customizer/setting_control/inc_setting_contact.php:163, src/inc/customizer/setting_control/inc_setting_contact.php:197, src/inc/customizer/setting_control/inc_setting_contact.php:229
 msgid "Tab #"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_contact.php:265
+#: src/inc/customizer/setting_control/inc_setting_contact.php:229
 msgid "Select a location on map"
 msgstr ""
 
@@ -482,23 +486,35 @@ msgstr ""
 msgid "<span class=\"screen-reader-text\">Comment Pag</span>e %s"
 msgstr ""
 
-#: src/index.php:131, src/index.php:181
+#: src/inc/wcga_form.php:205
+msgid "Standard font size"
+msgstr ""
+
+#: src/inc/wcga_form.php:207
+msgid "Increase font size 150%"
+msgstr ""
+
+#: src/inc/wcga_form.php:209
+msgid "Increase font size 200%"
+msgstr ""
+
+#: src/index.php:135, src/index.php:185
 msgid " - page: "
 msgstr ""
 
-#: src/index.php:151, src/single-event.php:45, src/single.php:45, src/taxonomy.php:35
+#: src/index.php:155, src/single-event.php:45, src/single.php:45, src/taxonomy.php:35
 msgid "You are here: &nbsp;"
 msgstr ""
 
-#: src/index.php:233, src/search.php:79, src/taxonomy.php:123
+#: src/index.php:237, src/search.php:79, src/taxonomy.php:123
 msgid "Previous page"
 msgstr ""
 
-#: src/index.php:235, src/search.php:81, src/taxonomy.php:125
+#: src/index.php:239, src/search.php:81, src/taxonomy.php:125
 msgid "Next page"
 msgstr ""
 
-#: src/page-templates/page_iframe_audiobook.php:45, src/page-templates/page_iframe_book.php:45, src/page-templates/page_iframe_regio.php:45
+#: src/page-templates/page_iframe_audiobook.php:47, src/page-templates/page_iframe_book.php:47, src/page-templates/page_iframe_regio.php:47
 msgid "This page is visible only in browsers that support frames."
 msgstr ""
 

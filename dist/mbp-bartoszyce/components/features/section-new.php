@@ -42,7 +42,7 @@
              <?php endforeach; //tabs?>
            </ul>
 
-           <div class="white-a col-9">
+           <div class="col-9">
              <?php foreach ( $terms as $term ) : ?>
                <div id="id_<?php echo $term->slug;?>" class="js-tabcontent col-12">
                  <?php
@@ -57,14 +57,14 @@
 
                  if ( $query_colletion->have_posts()) : while ($query_colletion->have_posts()) : $query_colletion->the_post(); ?>
 
-                 <div class="coletion-image col-4">
+                 <div class="coletion-image white-one col-4">
                    <a tabindex="-1" href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php wpg_the_thumbnail(); ?></a>
                  </div>
-                 <div class="coletion-content col-4">
+                 <div class="coletion-content white-one col-4">
                    <h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
                    <?php the_excerpt() ?>
                  </div>
-                 <div class="coletion-gallery col-4">
+                 <div class="coletion-gallery white-two col-4">
                    <div class="coletion-gallery__gallery clear-both">
                      <?php wpg_the_image_attachment('thumbnail', 3);?>
                    </div>
@@ -74,7 +74,7 @@
                  <?php endwhile; endif; wp_reset_query(); ?>
 
                  <div class="coletions-link">
-                   <a id="colection_<?php echo $term->slug;?>" class="btn" href="<?php echo get_term_link($term, $terms_tax) ?>"><?php _e('Show older', 'wpg_theme'); ?></a>
+                   <a id="colection_<?php echo $term->slug;?>" class="btn" href="<?php echo get_term_link($term, $terms_tax) ?>"><?php _e('Older collections of new products', 'wpg_theme'); ?></a>
                  </div>
                </div>
              <?php endforeach; // tabs content ?>

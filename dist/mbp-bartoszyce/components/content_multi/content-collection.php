@@ -12,6 +12,7 @@
         <?php the_title(sprintf('<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h3>'); ?>
     </header>
     <?php if (has_post_thumbnail()) : ?>
+
       <figure class="post-thumbnail">
           <a href="<?php the_permalink(); ?>" aria-hidden="true">
               <?php the_post_thumbnail('full', array('alt' => get_the_title())); ?>
@@ -19,28 +20,31 @@
       </figure>
       <div class="entry-meta">
         <div class="meta__item"><i class="icon-clock"></i><?php wpg_time() ?></div>
-        <div class="meta__item screen-reader-text">
-          <i class="icon-user"></i><?php _e('Author', 'wpg_theme'); ?><?php the_author();?>
+        <div class="meta__item screen-reader-text"><i class="icon-user"></i>
+          <?php _e('Author', 'wpg_theme'); ?>
+          <?php the_author();?>
         </div>
         <?php if (!is_page()) : ?>
             <div class="meta__item"><i class="icon-folder-open"></i><?php the_list_terms(); ?></div>
         <?php endif; ?>
+
       </div><!-- .entry-meta -->
       <div class="entry-summary">
           <?php the_excerpt() ?>
           <a class="btn continue_reading" href="<?php the_permalink() ?>"><?php _e('Continue reading', 'wpg_theme'); ?> <span class="screen-reader-text"><?php the_title(); ?></span></a>
       </div><!-- .entry-summary -->
+
     <?php else: ?>
+
       <div class="entry-meta">
         <div class="meta__item"><i class="icon-clock"></i><?php wpg_time() ?></div>
-        <div class="meta__item hide-on-small screen-reader-text">
-          <i class="icon-user"></i><?php _e('Author', 'wpg_theme'); ?><?php the_author();?>
+        <div class="meta__item hide-on-small"><i class="icon-user"></i>
+          <span class="screen-reader"><?php _e('Author', 'wpg_theme'); ?></span>
+          <?php the_author();?>
         </div>
         <div class="meta__item">
           <i class="icon-folder-open"></i>
-          <?php if (!is_page()) : ?>
-              <div class="meta__item"><i class="icon-folder-open"></i><?php the_list_terms(); ?></div>
-          <?php endif; ?>
+          <?php the_list_terms(); ?>
         </div>
       </div><!-- .entry-meta -->
       <div class="entry-content">
@@ -53,5 +57,6 @@
 
           ?>
       </div><!-- .entry-content -->
+
     <?php endif; ?>
 </article>

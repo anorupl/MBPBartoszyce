@@ -25,7 +25,9 @@
 </head>
 
 <body <?php body_class();?> >
+
   <div id="top-bar" class="header-top clear-both hide-on-small">
+    <div class="wrapper">
       <div id="top-bar__address" class="inline-left">
           <?php wpg_the_adress();?>
       </div>
@@ -45,9 +47,12 @@
       <div id="top-bar__search" class="pad-all hide">
           <?php get_search_form(); ?>
       </div>
+    </div>
   </div>
-    <header id="site-header">
-            <div class="title-area">
+    <header class="header-wrapper" >
+      <div class="wrapper">
+        <div id="site-header">
+          <div class="title-area">
                 <h1 class="site-title">
                     <span class="screen-reader-text"><?php bloginfo('name');?></span>
                     <?php if (!has_custom_logo()): ?>
@@ -84,4 +89,7 @@
              endif;
         endif;
         ?>
+
+        </div>
+                </div>
     </header>

@@ -70,29 +70,29 @@ function cookie_font_size($cookie_name){
 
 function form_wcga(){
 
-	$button = 'Włącz kontrast';
+	$button = __('Włącz kontrast', 'wpg_theme');
 	$style  = 'contrast';
 
 	if(isset($_POST['wcga'])) {
 		switch ($_POST['wcga']) {
 			case 'contrast':
-					$button = 'Wyłącz kontrast';
+					$button = __('Wyłącz kontrast', 'wpg_theme');
 					$style  = 'normal';
 					break;
 			case 'normal':
-					$button = 'Włącz kontrast';
+					$button = __('Włącz kontrast', 'wpg_theme');
 					$style  = 'contrast';
 					break;
 			default:
 				if (isset( $_COOKIE['color']) && $_COOKIE['color'] == 'contrast') {
-					$button = 'Wyłącz kontrast';
+					$button = __('Wyłącz kontrast', 'wpg_theme');
 					$style  = 'normal';
 				}
 				break;
 		}
 	} else {
 		if (isset( $_COOKIE['color']) && $_COOKIE['color'] == 'contrast') {
-			$button = 'Wyłącz kontrast';
+			$button = __('Wyłącz kontrast', 'wpg_theme');
 			$style  = 'normal';
 		}
 	}
@@ -100,9 +100,9 @@ function form_wcga(){
 	?>
 	<form action="<?php echo home_url(); ?>/" method='post'>
 		<?php printf('<button type="submit" value="%1$s" name="wcga" class="normal-font">%2$s</button>',$style,$button); ?>
-		<button type="submit" value="base" name="wcga" class="normal-font"><span aria-hidden="true">A</span><span class="screen-reader-text"><?php _e('Standartowy rozmiar czcionki','gmina_theme'); ?></span></button>
-		<button type="submit" value="medium" name="wcga" class="medium-font"><span aria-hidden="true">A</span><span class="screen-reader-text"><?php _e('Powiększ czcionkę 150%','gmina_theme'); ?></span></button>
-		<button type="submit" value="big" name="wcga" class="big-font"><span aria-hidden="true">A</span><span class="screen-reader-text"><?php _e('Powiększ czcionkę 200%','gmina_theme'); ?></span></button>
+		<button type="submit" value="base" name="wcga" class="normal-font"><span aria-hidden="true">A</span><span class="screen-reader-text"><?php _e('Standard font size','wpg_theme'); ?></span></button>
+		<button type="submit" value="medium" name="wcga" class="medium-font"><span aria-hidden="true">A</span><span class="screen-reader-text"><?php _e('Increase font size 150%','wpg_theme'); ?></span></button>
+		<button type="submit" value="big" name="wcga" class="big-font"><span aria-hidden="true">A</span><span class="screen-reader-text"><?php _e('Increase font size 200%','wpg_theme'); ?></span></button>
 	</form>
 	<?php
 }

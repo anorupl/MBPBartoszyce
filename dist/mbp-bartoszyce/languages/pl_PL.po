@@ -1,0 +1,637 @@
+# Copyright (C) 2017 wpg-photo
+# This file is distributed under the same license as the wpg-photo package.
+msgid ""
+msgstr ""
+"Project-Id-Version: wpg-bezcieniowapl\n"
+"Report-Msgid-Bugs-To: http://biblioteka.bartoszyce.pl\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2018-08-30 12:15+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 2.1.1\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: src/404.php:23, src/404.php:41
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Ups! To strona  nie została znaleziona."
+
+#: src/404.php:47, src/components/content_multi/content-none.php:29
+msgid "It looks like nothing was found at this location."
+msgstr "Wygląda na to że, nic nie zostało znalezione pod tym adresem."
+
+#: src/attachment.php:59
+msgid "File name: "
+msgstr "Nazwa pliku: "
+
+#: src/attachment.php:73
+msgid "File size: "
+msgstr "Rozmiar pliku: "
+
+#: src/attachment.php:89
+msgid "Click to download"
+msgstr "Kliknij, aby pobrać"
+
+#: src/comments.php:55
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Komentarz w &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s komentarze w &ldquo;%2$s&rdquo;"
+msgstr[2] "%1$s komentarzy w &ldquo;%2$s&rdquo;"
+
+#: src/comments.php:93
+msgid "Comments are closed."
+msgstr "Komentarze są wyłączone."
+
+#: src/components/content_multi/content-club.php:47,
+#: src/components/content_multi/content-club.php:83,
+#: src/components/content_multi/content-collection.php:47,
+#: src/components/content_multi/content-collection.php:83,
+#: src/components/content_multi/content.php:47,
+#: src/components/content_multi/content.php:83,
+#: src/components/content_single/content-club.php:37,
+#: src/components/content_single/content-collection.php:37,
+#: src/components/content_single/content-page.php:43,
+#: src/components/content_single/content.php:37, src/inc/template-tags.php:135
+msgid "Author"
+msgstr "Autor"
+
+#: src/components/content_multi/content-club.php:67,
+#: src/components/content_multi/content-collection.php:67,
+#: src/components/content_multi/content.php:67
+msgid "Continue reading"
+msgstr "Czytaj dalej"
+
+#: src/components/content_multi/content-club.php:107,
+#: src/components/content_multi/content-collection.php:107,
+#: src/components/content_multi/content.php:113
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Czytaj dalej<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#: src/components/content_multi/content-none.php:23
+msgid "Nothing Found"
+msgstr "Nie znaleziono"
+
+#: src/components/content_single/content-club.php:57,
+#: src/components/content_single/content-collection.php:57,
+#: src/components/content_single/content-event.php:41,
+#: src/components/content_single/content-page.php:59,
+#: src/components/content_single/content.php:57
+msgid "Pages:"
+msgstr "Strony:"
+
+#: src/components/content_single/content-club.php:65,
+#: src/components/content_single/content-collection.php:65,
+#: src/components/content_single/content-event.php:49,
+#: src/components/content_single/content-page.php:67,
+#: src/components/content_single/content.php:65, src/index.php:241,
+#: src/search.php:83, src/taxonomy.php:127
+msgid "Page"
+msgstr "Strona"
+
+#: src/components/content_single/content-club.php:85,
+#: src/components/content_single/content-collection.php:85,
+#: src/components/content_single/content-event.php:69,
+#: src/components/content_single/content.php:85
+msgid "Next"
+msgstr "Następny"
+
+#: src/components/content_single/content-club.php:87,
+#: src/components/content_single/content-collection.php:87,
+#: src/components/content_single/content-event.php:71,
+#: src/components/content_single/content.php:87
+msgid "Next post:"
+msgstr "Następny wpis:"
+
+#: src/components/content_single/content-club.php:91,
+#: src/components/content_single/content-collection.php:91,
+#: src/components/content_single/content-event.php:75,
+#: src/components/content_single/content.php:91
+msgid "Previous"
+msgstr "Poprzedni"
+
+#: src/components/content_single/content-club.php:93,
+#: src/components/content_single/content-collection.php:93,
+#: src/components/content_single/content-event.php:77,
+#: src/components/content_single/content.php:93
+msgid "Previous post:"
+msgstr "Poprzedni wpis:"
+
+#: src/components/features/section-catl.php:47,
+#: src/components/features/section-contact.php:71
+msgid "Tab "
+msgstr "Zakładka "
+
+#: src/components/features/section-catl.php:71
+msgid "Tab content"
+msgstr "Zawartość zakładki"
+
+#: src/components/features/section-catl.php:89,
+#: src/inc/customizer/setting_control/inc_setting_catl.php:97
+msgid "Go to the website"
+msgstr "Przejdź do witryny"
+
+#: src/components/features/section-clubs.php:27,
+#: src/inc/customizer/setting_control/inc_setting_club.php:63,
+#: src/inc/customizer/wpg_customizer.php:277
+msgid "Clubs in the library"
+msgstr "Kluby w bibliotece"
+
+#: src/components/features/section-contact.php:25
+msgid "Let's stay in contact"
+msgstr "Bądźmy w kontakcie"
+
+#: src/components/features/section-contact.php:103,
+#: src/inc/customizer/setting_control/inc_setting_contact.php:103
+msgid "Address"
+msgstr "Adres"
+
+#: src/components/features/section-contact.php:121,
+#: src/inc/customizer/setting_control/inc_setting_contact.php:163
+msgid "E-mail"
+msgstr "E-mail"
+
+#: src/components/features/section-contact.php:139,
+#: src/inc/customizer/setting_control/inc_setting_contact.php:133
+msgid "Telephone number"
+msgstr "Numer telefonu"
+
+#: src/components/features/section-contact.php:165,
+#: src/inc/customizer/custom_control_field/inc_field_open_hours.php:91,
+#: src/inc/customizer/setting_control/inc_setting_contact.php:197
+msgid "Opening Hours"
+msgstr "Godziny otwarcia"
+
+#: src/components/features/section-events.php:27
+msgid "Upcoming events"
+msgstr "Nadchodzące wydarzenia"
+
+#: src/components/features/section-featured_category.php:25,
+#: src/inc/customizer/setting_control/inc_setting_featured_category.php:61
+msgid "In the library"
+msgstr "W bibliotece"
+
+#: src/components/features/section-new.php:25,
+#: src/inc/customizer/setting_control/inc_setting_new.php:61
+msgid "New in the library"
+msgstr "Nowość w bibliotece"
+
+#: src/components/features/section-new.php:141
+msgid "Show"
+msgstr "Pokaż"
+
+#: src/components/features/section-new.php:153
+msgid "Older collections of new products"
+msgstr "Starsze kolekcje nowości"
+
+#: src/components/features/section-partners.php:23,
+#: src/inc/customizer/setting_control/inc_setting_partners.php:63,
+#: src/inc/customizer/wpg_customizer.php:417
+msgid "Partners"
+msgstr "Partnerzy"
+
+#: src/components/site/loop-homepage.php:107
+msgid "Show more "
+msgstr "Pokaż więcej "
+
+#: src/footer-fidkar.php:53, src/footer-wfidkar.php:53, src/footer.php:57
+msgid "All Rights Reserved"
+msgstr "Wszelkie Prawa Zastrzeżone"
+
+#: src/functions.php:187
+msgid "Header Menu - Top"
+msgstr "Menu nagłówka - Górne"
+
+#: src/functions.php:189
+msgid "Header Menu - Bottom "
+msgstr "Menu nagłówka - Dolne "
+
+#: src/functions.php:291, src/inc/wcga_form.php:157, src/inc/wcga_form.php:175,
+#: src/inc/wcga_form.php:189
+msgid "Wyłącz kontrast"
+msgstr "Wyłącz kontrast"
+
+#: src/functions.php:293, src/inc/wcga_form.php:145, src/inc/wcga_form.php:165
+msgid "Włącz kontrast"
+msgstr "Włącz kontrast"
+
+#: src/functions.php:299
+msgid "Previous Image (left arrow key)"
+msgstr "Poprzednie zdjęcie"
+
+#: src/functions.php:301
+msgid "Next Image (right arrow key)"
+msgstr "Następne zdjęcie"
+
+#: src/functions.php:303
+msgid "of"
+msgstr "z"
+
+#: src/functions.php:305
+msgid "Close (Escape key)"
+msgstr "Zamknij"
+
+#: src/functions.php:307
+msgid "Loading ..."
+msgstr "Ładowanie ... "
+
+#: src/functions.php:309
+msgid "Image"
+msgstr "Zdjęcie"
+
+#: src/functions.php:311
+msgid "it cannot be loaded."
+msgstr "nie zostało załadowane."
+
+#: src/functions.php:347
+msgid "Right Sidebar"
+msgstr "Boczny pasek po prawej"
+
+#: src/header.php:133, src/header.php:161
+msgid "Menu"
+msgstr "Menu"
+
+#: src/header.php:169
+msgid "Add menu"
+msgstr "Dodaj menu"
+
+#: src/image.php:57
+msgid ""
+"Photo published in size <a href=\"%1$s\" title=\"Link to original file\">"
+"%2$s pixels <span class=\"screen-reader-text\">(Image Width)</span> to %3$s "
+"pixels <span class=\"screen-reader-text\">(Image Height)</span></a> in the "
+"article <a href=\"%4$s\" title=\"Back to %5$s\" rel=\"gallery\">%6$s</a>"
+msgstr ""
+"Opublikowano w rozmiarze <a href=\"%1$s\" title=\"Link do pliku\">%2$s "
+"pikseli <span class=\"screen-reader-text\">(szerokość obrazu)</span> na %3$s "
+"pikseli <span class=\"screen-reader-text\">(wysokość obrazu)</span></a> w "
+"artykule <a href=\"%4$s\" title=\"Powrót do %5$s\">%6$s</a>"
+
+#: src/inc/customizer/helpers/inc_helpers.php:199,
+#: src/inc/customizer/setting_control/inc_setting_club.php:175,
+#: src/inc/customizer/setting_control/inc_setting_new.php:95,
+#: src/inc/template-tags.php:199, src/inc/template-tags.php:259
+msgid "Category"
+msgstr "Kategoria"
+
+#: src/inc/customizer/helpers/inc_helpers.php:247,
+#: src/inc/customizer/helpers/inc_helpers.php:341
+msgid "All Categories"
+msgstr "Wszystkie kategorie"
+
+#: src/inc/customizer/helpers/inc_helpers.php:305
+msgid "Profile on the site "
+msgstr "Profile na stronie "
+
+#: src/inc/customizer/helpers/inc_helpers.php:313
+msgid "Find us on"
+msgstr "Odwiedź nas na"
+
+#: src/inc/customizer/helpers/inc_helpers.php:339,
+#: src/inc/customizer/setting_control/inc_setting_club.php:275,
+#: src/inc/customizer/setting_control/inc_setting_featured_category.php:113
+msgid "Select Category"
+msgstr "Wybierz kategorię"
+
+#: src/inc/customizer/setting_control/inc_setting_blog.php:25,
+#: src/inc/customizer/wpg_customizer.php:443, src/index.php:129,
+#: src/index.php:179
+msgid "Last post"
+msgstr "Ostanie wpisy"
+
+#: src/inc/customizer/setting_control/inc_setting_blog.php:41,
+#: src/inc/customizer/setting_control/inc_setting_catl.php:79,
+#: src/inc/customizer/setting_control/inc_setting_club.php:79,
+#: src/inc/customizer/setting_control/inc_setting_featured_category.php:77,
+#: src/inc/customizer/setting_control/inc_setting_new.php:77,
+#: src/inc/customizer/setting_control/inc_setting_partners.php:79
+msgid "Title section"
+msgstr "Tytuł sekcji"
+
+#: src/inc/customizer/setting_control/inc_setting_blog.php:73,
+#: src/inc/customizer/setting_control/inc_setting_club.php:143
+msgid "No of items"
+msgstr "Liczba elementów"
+
+#: src/inc/customizer/setting_control/inc_setting_blog.php:75
+msgid "Enter number between %1s and %2s ."
+msgstr "Wybierz liczbę między %1s a %2s ."
+
+#: src/inc/customizer/setting_control/inc_setting_catl.php:43,
+#: src/inc/customizer/setting_control/inc_setting_club.php:43,
+#: src/inc/customizer/setting_control/inc_setting_events.php:41,
+#: src/inc/customizer/setting_control/inc_setting_featured_category.php:41,
+#: src/inc/customizer/setting_control/inc_setting_new.php:41,
+#: src/inc/customizer/setting_control/inc_setting_partners.php:43
+msgid "Show section"
+msgstr "Pokaż sekcję"
+
+#: src/inc/customizer/setting_control/inc_setting_catl.php:63
+msgid "Digital archive of local tradition"
+msgstr "Cyfrowe Archiwum Tradycji Lokalnej "
+
+#: src/inc/customizer/setting_control/inc_setting_catl.php:113
+msgid "Button title"
+msgstr "Tytuł przycisku"
+
+#: src/inc/customizer/setting_control/inc_setting_catl.php:141
+msgid "Button url"
+msgstr "Adres strony do której prowdzi przycisk"
+
+#: src/inc/customizer/setting_control/inc_setting_catl.php:169
+msgid "Left image"
+msgstr "Ilustracja po lewej stronie"
+
+#: src/inc/customizer/setting_control/inc_setting_catl.php:211,
+#: src/inc/customizer/setting_control/inc_setting_catl.php:227,
+#: src/inc/customizer/setting_control/inc_setting_contact.php:57
+msgid "Tab"
+msgstr "Zakładka"
+
+#: src/inc/customizer/setting_control/inc_setting_catl.php:259
+msgid "Tab Description"
+msgstr "Opis zakładki"
+
+#: src/inc/customizer/setting_control/inc_setting_club.php:109,
+#: src/inc/customizer/setting_control/inc_setting_club.php:237
+msgid "Description"
+msgstr "Opis"
+
+#: src/inc/customizer/setting_control/inc_setting_club.php:145
+msgid ""
+"Enter number between %1s and %2s .Save and refresh the page then number of "
+"Blocks is changed."
+msgstr ""
+"Wybierz liczbę między %1s a %2s . Zapisz i odśwież stronę aby zobaczyć nowe "
+"pola."
+
+#: src/inc/customizer/setting_control/inc_setting_club.php:207
+msgid "Club title"
+msgstr "Nazwa Klubu"
+
+#: src/inc/customizer/setting_control/inc_setting_club.php:277,
+#: src/inc/customizer/setting_control/inc_setting_featured_category.php:115
+msgid "Select category to show in Section."
+msgstr "Wybierz kategorię do pokazania w sekcji."
+
+#: src/inc/customizer/setting_control/inc_setting_contact.php:37
+msgid "Show map in contact"
+msgstr "Pokaż mapę w kontaktach"
+
+#: src/inc/customizer/setting_control/inc_setting_contact.php:73,
+#: src/inc/customizer/setting_control/inc_setting_contact.php:103,
+#: src/inc/customizer/setting_control/inc_setting_contact.php:133,
+#: src/inc/customizer/setting_control/inc_setting_contact.php:163,
+#: src/inc/customizer/setting_control/inc_setting_contact.php:197,
+#: src/inc/customizer/setting_control/inc_setting_contact.php:229
+msgid "Tab #"
+msgstr "Zakładka #"
+
+#: src/inc/customizer/setting_control/inc_setting_contact.php:229
+msgid "Select a location on map"
+msgstr "Zaznacz swoją lokalizację"
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:71
+msgid "Body Font Family"
+msgstr "Czcionka główna dla strony"
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:73,
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:195
+msgid "Select font or option Google Font to see advanced options google fonts."
+msgstr ""
+"Wybierz czcionkę lub opcję Google Font żeby zobaczyć zawansowane opcje "
+"czcionek google."
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:107
+msgid "Google Font Family"
+msgstr "Czcionka Google"
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:143,
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:265
+msgid "Font Variant"
+msgstr "Styl Czcionki"
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:145,
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:267
+msgid ""
+"Different variants of the font, provides control over font-weight and italics"
+msgstr "Różne style czcionki, zapewnia kontrolę nad pogrubieniem i kursywą"
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:193
+msgid "Heading Font Family"
+msgstr "Czcionka Nagłówków"
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:229
+msgid "Heading - Google Font Family"
+msgstr "Nagłówek - Czcionka Google"
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:301
+msgid "Latin"
+msgstr "Latin"
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:303
+msgid "Latin Extended"
+msgstr "Latin Extended"
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:305
+msgid "Greek"
+msgstr "Greek"
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:307
+msgid "Greek Extended"
+msgstr "Greek Extended"
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:309
+msgid "Cyrillic"
+msgstr "Cyrillic"
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:311
+msgid "Cyrillic Extended"
+msgstr "Cyrillic Extended"
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:313
+msgid "Vietnamese"
+msgstr "Vietnamese"
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:315
+msgid "Arabic"
+msgstr "Arabic"
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:317
+msgid "Khmer"
+msgstr "Khmer"
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:319
+msgid "Devanagari"
+msgstr "Devanagari"
+
+#: src/inc/customizer/setting_control/inc_setting_fonts.php:347
+msgid "Choose Google Font Subsets"
+msgstr "Wybierz podzbiory czcionek Google"
+
+#: src/inc/customizer/setting_control/inc_setting_new.php:119
+msgid "Choose offers"
+msgstr "Wybierz oferty"
+
+#: src/inc/customizer/setting_control/inc_setting_social.php:55
+msgid "Link to  %1$s"
+msgstr "Link do %1$s"
+
+#: src/inc/customizer/wpg_customizer.php:149
+msgid "Theme Settings"
+msgstr "Ustawienia Szablonu"
+
+#: src/inc/customizer/wpg_customizer.php:195
+msgid "Typography"
+msgstr "Typografia"
+
+#: src/inc/customizer/wpg_customizer.php:223
+msgid "Events"
+msgstr "Wydarzenia"
+
+#: src/inc/customizer/wpg_customizer.php:249
+msgid "Featured category "
+msgstr "Wyróżniona kategoria "
+
+#: src/inc/customizer/wpg_customizer.php:309
+msgid "New releases"
+msgstr "Nowości w bibliotece"
+
+#: src/inc/customizer/wpg_customizer.php:339
+msgid "Catl"
+msgstr "Catl"
+
+#: src/inc/customizer/wpg_customizer.php:365
+msgid "Contact"
+msgstr "Kontakt"
+
+#: src/inc/customizer/wpg_customizer.php:391
+msgid "Social networks"
+msgstr "Serwisy społecznościowe"
+
+#: src/inc/meta_box.php:23, src/inc/meta_box.php:35
+msgid "Partner url"
+msgstr "Adres strony www partnera"
+
+#: src/inc/template-tags.php:75
+msgid "Share on Twitter!"
+msgstr "Udostępnij na Twiterze!"
+
+#: src/inc/template-tags.php:77
+msgid "Share on Google+"
+msgstr "Udostępnij na Google+"
+
+#: src/inc/template-tags.php:79
+msgid "Share on Facebook"
+msgstr "Udostępnij na Facebooku"
+
+#: src/inc/template-tags.php:157
+msgid "Data"
+msgstr "Data"
+
+#: src/inc/template-tags.php:175
+msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr "Pozostaw komentarz <span class=\"screen-reader-text\"> w %s</span>"
+
+#: src/inc/template-tags.php:451
+msgid "Comment navigation"
+msgstr "Nawigacja komentarzy"
+
+#: src/inc/template-tags.php:457
+msgid "Older Comments"
+msgstr "Starsze Komentarze"
+
+#: src/inc/template-tags.php:465
+msgid "Newer Comments"
+msgstr "Nowesze Komentarze"
+
+#: src/inc/template-tags.php:985
+msgid "Home"
+msgstr "Strona Główna"
+
+#: src/inc/template-tags.php:987
+msgid "<span class=\"screen-reader-text\">Archive by Category</span> %s"
+msgstr "<span class=\"screen-reader-text\">Kategoria</span> %s"
+
+#: src/inc/template-tags.php:989
+msgid "<span class=\"screen-reader-text\">Search Results for</span> %s"
+msgstr "<span class=\"screen-reader-text\">Wynik wyszukiwania dla:</span> %s"
+
+#: src/inc/template-tags.php:991
+msgid "<span class=\"screen-reader-text\">Posts Tagged</span> %s"
+msgstr "<span class=\"screen-reader-text\">Tag</span> %s"
+
+#: src/inc/template-tags.php:993
+msgid "<span class=\"screen-reader-text\">Articles Posted by</span> %s"
+msgstr ""
+"<span class=\"screen-reader-text\">Artykuł opublikowany przez</span> %s"
+
+#: src/inc/template-tags.php:995
+msgid "<span class=\"screen-reader-text\">Error 404</span>"
+msgstr "<span class=\"screen-reader-text\">Błąd 404</span>"
+
+#: src/inc/template-tags.php:997
+msgid "<span class=\"screen-reader-text\">Page</span> %s"
+msgstr "<span class=\"screen-reader-text\">Strona</span> %s"
+
+#: src/inc/template-tags.php:999
+msgid "<span class=\"screen-reader-text\">Comment Pag</span>e %s"
+msgstr "<span class=\"screen-reader-text\">Strona komentarza</span>e %s"
+
+#: src/inc/wcga_form.php:205
+msgid "Standard font size"
+msgstr "Standardowy rozmiar czcionki"
+
+#: src/inc/wcga_form.php:207
+msgid "Increase font size 150%"
+msgstr "Zwiększ rozmiar czcionki 150%"
+
+#: src/inc/wcga_form.php:209
+msgid "Increase font size 200%"
+msgstr "Zwiększ rozmiar czcionki 200%"
+
+#: src/index.php:135, src/index.php:185
+msgid " - page: "
+msgstr " - strona: "
+
+#: src/index.php:155, src/single-event.php:45, src/single.php:45,
+#: src/taxonomy.php:35
+msgid "You are here: &nbsp;"
+msgstr "Jesteś tutaj: &nbsp;"
+
+#: src/index.php:237, src/search.php:79, src/taxonomy.php:123
+msgid "Previous page"
+msgstr "Poprzednia strona"
+
+#: src/index.php:239, src/search.php:81, src/taxonomy.php:125
+msgid "Next page"
+msgstr "Następna strona"
+
+#: src/page-templates/page_iframe_audiobook.php:47,
+#: src/page-templates/page_iframe_book.php:47,
+#: src/page-templates/page_iframe_regio.php:47
+msgid "This page is visible only in browsers that support frames."
+msgstr "Ta strona widoczna jest tylko dla przeglądarek obsługujących ramki."
+
+#: src/search.php:31, src/search.php:45
+msgid "Search Results for: %s"
+msgstr "Wyniki wyszukiwania dla: %s"
+
+#: src/searchform.php:25, src/searchform.php:27, src/searchform.php:29
+msgid "Search"
+msgstr "Szukaj"
+
+#~ msgid "Show older"
+#~ msgstr "Pokaż starsze"

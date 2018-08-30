@@ -7,24 +7,6 @@
 */
 
 // ==============================================
-//  = Section title						=
-//  =============================================
-$wp_customize->add_setting('wpg_contact_title', array(
-	'default'           => __('let\'s stay in contact', 'wpg_theme'),
-	'capability' 		=> 'edit_theme_options',
-	'sanitize_callback' => 'sanitize_text_field'
-));
-
-$wp_customize->add_control( 'wpg_contact_title', array(
-	'settings' => 'wpg_contact_title',
-	'label'   => __('Title section', 'wpg_theme'),
-	'section'  => $contact_section_id,
-	'type'    => 'text'
-));
-
-
-
-// ==============================================
 //  = Show map=
 //  =============================================
 $wp_customize->add_setting('wpg_contact_maps', array(

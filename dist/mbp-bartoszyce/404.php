@@ -7,7 +7,7 @@
 */
 get_header(); ?>
 <div id="content" class="site-content clear-both">
-  <div class="header-content gutters white-a text-center">
+  <div class="header-content pad-all white-two text-center">
         <div class="class-h1 h--xxl">
             <?php _e('Oops! That page can&rsquo;t be found.', 'wpg_theme'); ?>
         </div>
@@ -28,7 +28,7 @@ get_header(); ?>
         </div>
       </main>
     </div><!-- #primary -->
-  </section>    
+  </section>
   </div><!-- .container -->
 </div><!-- #content -->
 <?php get_footer();  ?>

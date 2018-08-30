@@ -7,8 +7,9 @@
  * @since 0.1.0
  */
 ?>
+<div class="wrapper">
 <div id="posts-header" class="clear-both">
-    <main id="main" class="site-main clear-both white-a">
+    <main id="main" class="site-main clear-both">
 
     <?php
     if (have_posts()):
@@ -22,20 +23,21 @@
             }
 
             if ($i == 0): ?>
-            <article id="post-<?php the_ID();?>" <?php post_class('f-post col-8');?> style="background-image:url('<?php echo esc_url($url_thumb); ?>');">
+            <article id="post-<?php the_ID();?>" <?php post_class('f-post col-8 white-two');?> style="background-image:url('<?php echo esc_url($url_thumb); ?>');">
                 <div class="f-post-content col-4 gutters">
                     <header class="entry-header">
                         <h2 class="entry-title"><a href="<?php the_permalink();?>" rel="bookmark"><?php the_title();?></a></h2>
                     </header>
                     <div class="entry-summary">
                     <?php the_excerpt();?>
+                    <a href="<?php the_permalink();?>" class="btn"><? printf(__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'wpg_theme' ), get_the_title()); ?> <i class="icon-angle-right"></i></a>
                     </div>
                 </div>
             </article>
 
             <?php else: ?>
 
-        <?php if ($i == 1) {echo '<div id="header-content" class="slider-header arrows-tr header-offslider hentry-header">';}?>
+        <?php if ($i == 1) {echo '<div id="header-content" class="slider-header arrows-tr header-offslider hentry-header white-one">';}?>
                 <article id="post-<?php the_ID();?>" <?php post_class();?>>
                     <div class="s-post-thumbnail" style="background-image:url('<?php echo esc_url($url_thumb); ?>');"></div>
                     <div class="s-post-content gutters">
@@ -66,4 +68,5 @@
         }
         ?>
     </div>
+</div>
 </div>

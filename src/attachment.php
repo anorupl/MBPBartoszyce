@@ -15,7 +15,7 @@ get_header(); ?>
   $attachment_data = wp_prepare_attachment_for_js($post->ID);
 
   ?>
-  <div class="header-content gutters white-a text-center">
+  <div class="header-content pad-all white-two text-center">
     <div class="class-h1 h--xxl" aria-hidden="true">
       <?php the_title(); ?>
     </div>

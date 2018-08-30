@@ -10,7 +10,7 @@ get_header(); ?>
   <?php
   /* Start the Loop */
   while (have_posts()) : the_post(); ?>
-  <div class="header-content gutters white-a text-center">
+  <div class="header-content pad-all white-two text-center">
     <div class="class-h1 h--xxl" aria-hidden="true">
       <?php the_title(); ?>
     </div>
