@@ -2318,7 +2318,7 @@ main {
   display: none;
 }
 
-.tabs__content img {
+.tabs__content > img {
   float: left;
   padding: 2.08333% 2.08333% 2.08333% 0;
 }
@@ -2839,10 +2839,6 @@ tr.days-names {
   background-color: #f25e44;
 }
 
-#contact__content > div > div {
-  max-width: 815px;
-}
-
 #contact__content .contact-item {
   margin-bottom: 20px;
 }
@@ -2898,6 +2894,8 @@ tr.days-names {
 
 #contact__map {
   float: right;
+  position: relative;
+  overflow: hidden;
 }
 
 #contact-social {
@@ -4225,18 +4223,28 @@ a.skip-main:active {
     text-align: left;
   }
   .coletion-image,
-  .coletion-content {
+  .coletion-content,
+  .coletion-gallery {
     height: 370px;
   }
-  .coletion-image img,
-  .coletion-content img {
-    margin-top: 20px;
+  .coletion-image {
+    margin-left: 8.33333%;
+  }
+  .coletion-image img {
+    width: 85%;
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    -webkit-transform: translateY(-50%);
+       -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+         -o-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
   .coletion-content {
     overflow: hidden;
   }
   .coletion-gallery {
-    height: 370px;
     padding: 2.08333% 0 2.08333% 2.08333%;
     text-align: right;
   }
@@ -4276,17 +4284,12 @@ a.skip-main:active {
   #catl .js-tablist {
     border-bottom: 2px solid #f7f8fa;
   }
-  .catl-svg {
-    width: 35%;
-  }
+  .catl-svg,
   .catl-content {
-    width: 65%;
+    width: 50%;
   }
   .catl-links {
     text-align: right;
-  }
-  .catl-content {
-    padding: 40px 0;
   }
   /* contact */
   #contact .js-tablist {
@@ -4319,8 +4322,6 @@ a.skip-main:active {
   }
   #contact__map {
     width: 30%;
-    position: relative;
-    overflow: hidden;
   }
   #contact__map::before {
     content: '';
@@ -4501,10 +4502,6 @@ a.skip-main:active {
 -- Responsive breakpoint desktop hd
 --------------------------------------------------------------*/
 @media (min-width: 79.375em) {
-  .catl-svg,
-  .catl-content {
-    width: 50%;
-  }
   /* contact */
   #contact__tabs {
     width: 60%;

@@ -148,7 +148,7 @@ main {
     display: none;
 }
 .tabs__content {
-  img {
+  > img {
     float: left;
     padding: gutter() gutter() gutter() 0;
   }
@@ -597,9 +597,6 @@ margin-bottom: 55px;
 
 #contact__content {
   background-color: $two-color;
-  > div > div {
-    max-width: 815px;
-  }
 
   .contact-item {
       margin-bottom: 20px;
@@ -634,6 +631,8 @@ margin-bottom: 55px;
 }
 #contact__map {
   float: right;
+  position: relative;
+  overflow: hidden;
 }
 
 #contact-social {

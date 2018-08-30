@@ -57,7 +57,7 @@
 
                  if ( $query_colletion->have_posts()) : while ($query_colletion->have_posts()) : $query_colletion->the_post(); ?>
 
-                 <div class="coletion-image white-one col-4">
+                 <div class="coletion-image white-one col-3">
                    <a tabindex="-1" href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php wpg_the_thumbnail(); ?></a>
                  </div>
                  <div class="coletion-content white-one col-4">
