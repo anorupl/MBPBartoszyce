@@ -2412,7 +2412,10 @@ main {
 }
 
 .header-wrapper {
+  width: 100%;
+  background-color: #f7f8fa;
   border-bottom: 1px solid #e9e9e9;
+  z-index: 700;
 }
 
 .title-area {
@@ -2916,7 +2919,7 @@ tr.days-names {
 
 /* google map */
 #map-canvas {
-  height: 520px;
+  height: 540px;
 }
 
 /* featured category */
@@ -4088,6 +4091,13 @@ a.skip-main:active {
   .active-sidebar .col-secondary {
     width: 25%;
     float: left;
+  }
+  .fixed-header {
+    padding-top: 94px;
+  }
+  .fixed-header .header-wrapper {
+    position: fixed;
+    top: 0;
   }
   .h--xxl {
     font-size: 54px;

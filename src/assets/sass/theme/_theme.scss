@@ -228,9 +228,13 @@ main {
     display: flex;
     flex-direction: column;
     position: relative;
+
 }
 .header-wrapper {
+  width: 100%;
+  background-color: $four-bw;
   border-bottom: 1px solid lighten($five-bw, 42%);
+  z-index: 700;
 }
 
 .title-area {
@@ -653,7 +657,7 @@ margin-bottom: 55px;
 
 /* google map */
 #map-canvas {
-  height: 520px;
+  height: 540px;
 }
 /* featured category */
 #featured-cat {

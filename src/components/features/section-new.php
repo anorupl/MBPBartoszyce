@@ -7,7 +7,7 @@
  *
  */
  ?>
- <section class="newitems page-section clear-both">
+ <section id="new_colections" class="newitems page-section clear-both">
    <div class="container">
        <header class="header-section">
            <h2 class="h--xxl"><?php echo esc_html(get_theme_mod('wpg_new_title',__('New in the library', 'wpg_theme'))); ?></h2>

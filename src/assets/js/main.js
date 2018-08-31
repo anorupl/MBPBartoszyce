@@ -72,6 +72,23 @@ $.fn.slick_small_sllider = function(setting) {
    * Fire on document ready.
    *********************************************************/
   $(document).ready(function () {
+
+    var $offset_header = $('#site-header').offset();
+
+    /**
+    *  Scroll
+    */
+     $(window).scroll(function() {
+
+        if ( $(window).scrollTop() > ($offset_header.top)){
+            $('body').addClass('fixed-header');
+        } else {
+            $('body').removeClass('fixed-header');
+        }
+    });
+
+
+
     //Test inline SVGs are supported.
     if (true === supportsInlineSVG()) {
       document.documentElement.className = document.documentElement.className.replace(/(\s*)no-svg(\s*)/, '$1svg$2');

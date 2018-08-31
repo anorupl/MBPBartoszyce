@@ -33,6 +33,17 @@
     }
 }
 
+.fixed-header{
+
+    padding-top: 94px;
+
+    .header-wrapper {
+      position: fixed;
+      top: 0;
+
+    }
+}
+
 .h--xxl {
    @include font-size((5.4),0,true);
 }
