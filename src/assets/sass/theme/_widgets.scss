@@ -5,7 +5,7 @@
     position: relative;
     padding: 0 15px 15px;
     margin: 0 gutter(of 6) gutter(of 3) 0;
-    @include font-size($size-small);
+    @include font-size($font-size-s);
     background: $four-bw;
 
     ul {
@@ -30,7 +30,7 @@
         display: block;
         padding: 0.4583em 0;
         opacity: 0.8;
-        @include font-size($size-small);
+        @include font-size($font-size-s);
         text-transform: uppercase;
 
     }

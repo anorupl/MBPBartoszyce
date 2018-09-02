@@ -1,0 +1,379 @@
+/* Theme style
+========================================================================== */
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS
+----------------------------------------------------------------
+1.0 Normalize
+2.0 Universal styles
+3.0 Layout
+3.1 Header
+3.2  Regular Content
+3.3  Posts - multi loop
+3.4  Posts & Page
+3.5  Taxonomy
+3.6  Attachment
+4 Sections
+4.1 Loop in header with post
+4.2 Featured category
+4.3 Events
+4.4 Clubs
+4.5 New colections
+4.6 Catl
+4.7 Contact
+4.8 Contact & Catl
+4.9 Partners (slick slider css)
+4.10 Copyright
+5.0  Widgets
+6.0  Event calander - plugin Events Manager by Marcus Sykes
+--------------------------------------------------------------*/
+
+
+
+
+
+/*--------------------------------------------------------------
+2.0 Universal styles
+--------------------------------------------------------------*/
+.h--xxl {
+  @include font-size(($font-size-xxl + 2),0,true);
+}
+// tabs
+.js-tablist {
+  text-align: left;
+}
+
+
+
+/*--------------------------------------------------------------
+3.0 Layout
+--------------------------------------------------------------*/
+.wrapper {
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.active-sidebar {
+  .col-primary{
+    @include span(9 no-gutters);
+  }
+  .col-secondary{
+    @include span(3 no-gutters);
+  }
+}
+
+/*--------------------------------------------------------------
+3.1 Header
+--------------------------------------------------------------*/
+#site-header {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.title-area {
+  max-width: 275px;
+  flex-basis: 275px;
+}
+.fixed-header{
+
+  padding-top: 94px;
+
+  .header-wrapper {
+    position: fixed;
+    top: 0;
+  }
+}
+#top-bar__social,
+#top-bar__btn-search {
+    margin-top: 6px;
+}
+/*--------------------------------------------------------------
+3.2  Regular Content
+--------------------------------------------------------------*/
+.header-content {
+  min-height: 260px;
+}
+
+/*--------------------------------------------------------------
+3.3  Posts - multi loop
+--------------------------------------------------------------*/
+.hentry-multi {
+  .hentry {
+    padding: gutter();
+  }
+  .meta__item {
+    display: inline-block;
+  }
+  .post-thumbnail{
+    width: span(5);
+    float: left;
+  }
+  .entry-meta,
+  .entry-summary {
+    float: left;
+  }
+  .entry-summary,
+  .has-post-thumbnail .entry-meta {
+    width: span(7 split);
+    margin-left: gutter();
+    margin-right: gutter();
+  }
+}
+.continue_reading {
+  float: right;
+}
+
+/*--------------------------------------------------------------
+3.4  Posts & Page
+--------------------------------------------------------------*/
+.entry-meta{
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
+3.6  Attachment
+--------------------------------------------------------------*/
+.attachment__btn {
+  padding: 15px 0;
+  border-left: dashed 1px $border-color;
+}
+
+/*--------------------------------------------------------------
+4.1 Loop in header with post
+--------------------------------------------------------------*/
+#posts-header {
+  margin-bottom: 100px;
+}
+.f-post-content {
+  height: 600px;
+  background-color: $one-color;
+}
+.f-post {
+  &::before {
+    opacity: 0.5;
+  }
+  .entry-summary {
+    flex-basis: 60%;
+  }
+}
+// samll post header
+.header-offslider {
+  position: absolute;
+  top: 30px;
+  right: -3%;
+}
+.header-offslider article {
+  width: 200px;
+  height: 400px;
+}
+.s-post-thumbnail,
+.s-post-content {
+  width: 200px;
+}
+.arrow-allpost-icon {
+  position: absolute;
+  right: 1%;
+  top: 355px;
+}
+
+#header-nav-bottom {
+  position: absolute;
+  bottom: -75px;
+  right: 3%;
+  min-height: 150px;
+  border-radius: 5px;
+  box-shadow: 0px 3px 10px 0px rgba($one-color, 0.3);
+}
+
+
+
+
+
+
+/*--------------------------------------------------------------
+4.3 Events
+--------------------------------------------------------------*/
+.green_bg {
+  background-color: transparent;
+  background-image: url(#{$img-path}ev-green.jpg);
+  background-size: 90% 100%;
+  background-repeat: no-repeat;
+  min-height: 360px;
+}
+.ev-wrapper::before {
+  content: '';
+  width: 400px;
+  height: 400px;
+  display: block;
+  border: 15px solid #f25e44;
+  position: absolute;
+  top: -25px;
+  right: -20px;
+  z-index: -1;
+}
+.green_bg::before {
+  content: '';
+  width: 400px;
+  height: 400px;
+  display: block;
+  border: 15px solid #0ad39d;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 0;
+  opacity: 0.6;
+}
+.ev-wrapper::after {
+  content: '';
+  width: 150px;
+  height: 150px;
+  display: block;
+  border: 20px solid #f25e44;
+  position: absolute;
+  bottom: -40px;
+  left: -40px;
+  z-index: -1;
+}
+
+/* calander in section */
+.ev-wrapper{
+  #calendar_events {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 300px;
+    height: 300px;
+  }
+}
+
+
+
+
+/*--------------------------------------------------------------
+4.5  New colections
+--------------------------------------------------------------*/
+.newitems {
+  .tabs__item {
+    display: block;
+    text-align: left;
+  }
+}
+.coletion-image,
+.coletion-content,
+.coletion-gallery  {
+  height: 370px;
+}
+.coletion-image {
+  margin-left: 8.33333%;
+  img {
+    width: 85%;
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+  }
+}
+.coletion-gallery {
+  padding: gutter() 0 gutter() gutter();
+  text-align: right;
+
+  .gallery {
+    margin-right: -40px;
+  }
+  .btn {
+    margin: auto 30px;
+  }
+}
+.coletion-gallery__gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 280px;
+}
+.coletions-link {
+  position: absolute;
+  left: -280px;
+  bottom: 0px;
+  z-index: 5;
+}
+
+/*--------------------------------------------------------------
+4.6  Catl
+--------------------------------------------------------------*/
+#catl {
+  .js-tablist {
+    border-bottom: 2px solid $four-bw;
+  }
+}
+.catl-svg,
+.catl-content  {
+  width: 50%;
+}
+.catl-links {
+  text-align: right;
+}
+
+/*--------------------------------------------------------------
+4.7  Contact
+--------------------------------------------------------------*/
+#contact {
+  .js-tablist {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid $four-bw;
+  }
+
+  .header-section::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 0px solid transparent;
+    border-right: 100vw solid transparent;
+    border-bottom: 105px solid $two-color;
+  }
+}
+#contact__tabs {
+  width: 60%;
+}
+#contact__map {
+  width: 40%;
+  &::before {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-color: $two-color;
+    top: -100px;
+    left: -100px;
+    z-index: 500;
+    transform: rotate(45deg);
+  }
+
+}
+/*--------------------------------------------------------------
+4.9  Partners (slick slider css)
+--------------------------------------------------------------*/
+#partner-slider {
+  .slick-slide img{
+    max-width: 50%;
+    margin: auto;
+  }
+}
+/*--------------------------------------------------------------
+6.0  Event calander - plugin Events Manager by Marcus Sykes
+--------------------------------------------------------------*/
+/* event list */
+.ev-item {
+  border-left: 15px solid $one-color;
+}
+.ev-item__content {
+  width: 75%;
+  margin-top: 0px;
+}
+.ec-item__img {
+  padding-top: 60px;
+}

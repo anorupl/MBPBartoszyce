@@ -134,4 +134,6 @@ if (is_home() && !is_paged()) {
 <?php
 }
 get_footer();
+
+
 ?>

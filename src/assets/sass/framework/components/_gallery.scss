@@ -68,7 +68,7 @@
 .gallery-caption,
 .wp-caption-text  {
     padding: gutter();
-    @include font-size-procent($size-small);
+    @include font-size-procent($font-size-s);
     border-bottom: 1px solid scale-lightness($three-bw, 40%);
     border-left: 1px solid scale-lightness($three-bw, 40%);
     border-right: 1px solid scale-lightness($three-bw, 40%);

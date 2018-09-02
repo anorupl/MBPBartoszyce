@@ -7,11 +7,11 @@
 	ul li {
 		padding-left: 15px;
 		margin: 7px 0;
-		@include font-size-procent($size-big);
+		@include font-size-procent($font-size-xl);
 	}
 
 	[class^="icon-"], [class*="icon-"] {
-		@include font-size-procent($size-big);
+		@include font-size-procent($font-size-xl);
 		color: $one-bw;
 	}
 }

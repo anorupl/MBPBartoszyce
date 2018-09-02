@@ -125,7 +125,7 @@
 	overflow: hidden;
 
 	label {
-		@include font-size-procent($size-small);
+		@include font-size-procent($font-size-s);
 		font-weight: 700;
 		display: block;
 		text-transform: uppercase
@@ -157,7 +157,7 @@
 .comment-awaiting-moderation,
 .logged-in-as,
 .form-allowed-tags {
-	@include font-size-procent($size-small);
+	@include font-size-procent($font-size-s);
 }
 
 .no-comments {

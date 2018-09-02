@@ -7,7 +7,9 @@
 */
 
 
-
+function wpg_get_excerpt($limit) {
+    return wp_trim_words(get_the_excerpt(), $limit);
+}
 
 
 /**

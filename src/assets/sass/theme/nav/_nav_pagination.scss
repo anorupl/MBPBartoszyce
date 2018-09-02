@@ -132,7 +132,7 @@ padding-bottom: 50px;
     font-weight: bold;
   }
 	span.post-title {
-    @include font-size-procent($size-big);
+    @include font-size-procent($font-size-xl);
     font-family: Roboto, Tahoma, Geneva, sans-serif;
     margin-top: 10px;
   }

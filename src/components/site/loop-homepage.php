@@ -29,15 +29,15 @@
                         <h2 class="entry-title"><a href="<?php the_permalink();?>" rel="bookmark"><?php the_title();?></a></h2>
                     </header>
                     <div class="entry-summary">
-                    <?php the_excerpt();?>
-                    <a href="<?php the_permalink();?>" class="btn"><? printf(__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'wpg_theme' ), get_the_title()); ?> <i class="icon-angle-right"></i></a>
+                      <p><?php echo wpg_get_excerpt(50); ?></p>
+                      <a href="<?php the_permalink();?>" class="btn"><? printf(__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'wpg_theme' ), get_the_title()); ?> <i class="icon-angle-right"></i></a>
                     </div>
                 </div>
             </article>
 
             <?php else: ?>
 
-        <?php if ($i == 1) {echo '<div id="header-content" class="slider-header arrows-tr header-offslider hentry-header white-one">';}?>
+        <?php if ($i == 1) {echo '<div id="posts-header__min" class="slider-header arrows-tr header-offslider hentry-header white-one">';}?>
                 <article id="post-<?php the_ID();?>" <?php post_class();?>>
                     <div class="s-post-thumbnail" style="background-image:url('<?php echo esc_url($url_thumb); ?>');"></div>
                     <div class="s-post-content gutters">

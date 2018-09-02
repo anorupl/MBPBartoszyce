@@ -36,7 +36,7 @@ Text Domain: wpg_theme
 >>> Font
 ---------------------------------------------------------------*/
 /*--------------------------------------------------------------
->>> Breakpoint (continer max-width 1300px)
+>>> Breakpoint
 ---------------------------------------------------------------*/
 /*--------------------------------------------------------------
 >>> Color
@@ -787,7 +787,7 @@ blockquote {
   padding: 10px 10px 10px 100px;
   margin: 0.5em 0 1.6667em 0;
   min-width: 35vw;
-  font-size: 150%;
+  font-size: 128.57143%;
   font-style: italic;
   border-top: 1px solid #f25e44;
   border-bottom: 1px solid #f25e44;
@@ -816,7 +816,7 @@ blockquote > p:last-child {
 }
 
 blockquote q, blockquote cite, blockquote small {
-  font-size: 75%;
+  font-size: 78.57143%;
 }
 
 abbr[title],
@@ -850,7 +850,7 @@ var,
 samp,
 pre {
   font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
-  font-size: 87.5%;
+  font-size: 92.85714%;
   -webkit-hyphens: none;
   -moz-hyphens: none;
   -ms-hyphens: none;
@@ -959,7 +959,7 @@ code {
 .gallery-caption,
 .wp-caption-text {
   padding: 2.08333%;
-  font-size: 75%;
+  font-size: 78.57143%;
   border-bottom: 1px solid #f4f4f4;
   border-left: 1px solid #f4f4f4;
   border-right: 1px solid #f4f4f4;
@@ -989,38 +989,38 @@ h6,
 }
 
 h1, .class-h1, .f-size-h1 {
-  font-size: 39px;
-  font-size: 3.9rem;
-  line-height: 44px;
-  line-height: 4.4rem;
-}
-
-h2, .class-h2, .f-size-h2 {
-  font-size: 32px;
-  font-size: 3.2rem;
-  line-height: 37px;
-  line-height: 3.7rem;
-}
-
-h3, .class-h3, .f-size-h3 {
   font-size: 27px;
   font-size: 2.7rem;
   line-height: 32px;
   line-height: 3.2rem;
 }
 
+h2, .class-h2, .f-size-h2 {
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 29px;
+  line-height: 2.9rem;
+}
+
+h3, .class-h3, .f-size-h3 {
+  font-size: 21px;
+  font-size: 2.1rem;
+  line-height: 26px;
+  line-height: 2.6rem;
+}
+
 h4, .class-h4, .f-size-h4 {
-  font-size: 22px;
-  font-size: 2.2rem;
-  line-height: 27px;
-  line-height: 2.7rem;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 23px;
+  line-height: 2.3rem;
 }
 
 h5, h6, .class-h5, .f-size-h5 {
-  font-size: 19px;
-  font-size: 1.9rem;
-  line-height: 24px;
-  line-height: 2.4rem;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 21px;
+  line-height: 2.1rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -1403,7 +1403,7 @@ fieldset {
 
 legend {
   font-weight: bold;
-  font-size: 150%;
+  font-size: 128.57143%;
   color: #2d3942;
   border: 1px solid #d5d4d9;
   padding: 19px 30px;
@@ -1551,7 +1551,7 @@ form select {
 
 .searchform button i {
   color: #2d3942;
-  font-size: 156.25%;
+  font-size: 178.57143%;
   line-height: 1;
 }
 
@@ -2136,19 +2136,33 @@ img.mfp-img {
 /* Theme style
 ========================================================================== */
 /*--------------------------------------------------------------
->>> TABLE OF CONTENTS - hentry for tablet:
+>>> TABLE OF CONTENTS
 ----------------------------------------------------------------
-1.0 Base
-2.0 Layout
-4.2 Section
-5.3 Header slider
-6.4 Other elements
-7.0 Header
-4.0 Footer
-5.0 hentry
-    5.1 plural
-    5.5 singular
-    5.3 hentry elements
+1.0 Normalize
+2.0 Universal styles
+3.0 Layout
+  3.1 Header
+  3.2  Regular Content
+  3.3  Posts - multi loop
+  3.4  Posts & Page
+  3.5  Taxonomy
+  3.6  Attachment
+4 Sections
+  4.1 Loop in header with post
+  4.2 Featured category
+  4.3 Events
+  4.4 Clubs
+  4.5 New colections
+  4.6 Catl
+  4.7 Contact
+  4.8 Contact & Catl
+  4.9 Partners (slick slider css)
+  4.10 Copyright
+5.0  Widgets
+6.0  Event calander - plugin Events Manager by Marcus Sykes
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.0 Normalize
 --------------------------------------------------------------*/
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
@@ -2171,8 +2185,8 @@ html {
 body {
   overflow: hidden;
   font-family: Lato, Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 1.5;
   background: #f7f8fa;
   color: #2d3942;
@@ -2186,31 +2200,36 @@ main {
   display: block;
 }
 
-/* 1.0 Fonts class
-======================= */
-.h-font {
-  font-family: Roboto, "Open Sans", sans-serif;
-}
-
-/* 2.0 Layout
-======================= */
+/*--------------------------------------------------------------
+2.0 Universal styles
+--------------------------------------------------------------*/
 .hide {
   display: none;
 }
 
-.col-primary,
-.col-secondary {
-  float: left;
-  width: 100%;
-  float: left;
-  margin: 5% 0 0;
+.h-font {
+  font-family: Roboto, "Open Sans", sans-serif;
 }
 
-.col-primary--12 {
-  width: 100%;
-  float: left;
+.btn {
+  color: #f7f8fa;
+  background-color: #f25e44;
+  border: 1px solid #f25e44;
+  padding: 0.7em;
+  min-width: 200px;
+  display: inline-block;
+  text-align: center;
+  -webkit-border-radius: 0.7em;
+     -moz-border-radius: 0.7em;
+          border-radius: 0.7em;
 }
 
+.btn:hover {
+  color: #f7f8fa;
+  background-color: #543d4f;
+}
+
+/* color schemes */
 .white-one {
   color: #ffffff;
 }
@@ -2259,6 +2278,18 @@ main {
   color: #f7f8fa;
 }
 
+.dark-two {
+  color: #543d4f;
+}
+
+.dark-two a {
+  color: #543d4f;
+}
+
+.dark-two a:hover {
+  color: #f25e44;
+}
+
 .gray-content {
   color: #7e7e7e;
 }
@@ -2267,24 +2298,15 @@ main {
   color: #7e7e7e;
 }
 
-.btn {
-  color: #f7f8fa;
-  background-color: #f25e44;
-  border: 1px solid #f25e44;
-  padding: 0.7em;
-  min-width: 200px;
-  display: inline-block;
-  text-align: center;
-  -webkit-border-radius: 0.7em;
-     -moz-border-radius: 0.7em;
-          border-radius: 0.7em;
+.fidkar-white {
+  background-color: #ffffff;
 }
 
-.btn:hover {
-  color: #f7f8fa;
-  background-color: #543d4f;
+.fidkar-yellow {
+  background-color: #FCE9A6;
 }
 
+/* tabs */
 .js-tablist {
   list-style-type: none;
   padding-left: 0;
@@ -2294,10 +2316,10 @@ main {
 
 .tabs__item {
   display: inline-block;
-  font-size: 24px;
-  font-size: 2.4rem;
-  line-height: 29px;
-  line-height: 2.9rem;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 23px;
+  line-height: 2.3rem;
   font-family: Roboto, Tahoma, Geneva, sans-serif;
 }
 
@@ -2323,37 +2345,20 @@ main {
   padding: 2.08333% 2.08333% 2.08333% 0;
 }
 
-.fidkar-white {
-  background-color: #ffffff;
+/*--------------------------------------------------------------
+3.0 Layout
+--------------------------------------------------------------*/
+.col-primary,
+.col-secondary {
+  float: left;
+  width: 100%;
+  float: left;
+  margin: 5% 0 0;
 }
 
-.fidkar-yellow {
-  background-color: #FCE9A6;
-}
-
-/* 3.0 Header
-======================= */
-#top-bar {
-  padding: 20px 2.08333%;
-  border-bottom: 1px solid #e9e9e9;
-}
-
-#top-bar #top-bar__address i,
-#top-bar #top-bar__social i,
-#top-bar .contact-item {
-  display: inline-block;
-  padding: 0 10px;
-}
-
-#top-bar a {
-  color: #543d4f;
-}
-
-#top-bar__address {
-  font-size: 14px;
-  font-size: 1.4rem;
-  line-height: 19px;
-  line-height: 1.9rem;
+.col-primary--12 {
+  width: 100%;
+  float: left;
 }
 
 .inline-right {
@@ -2366,12 +2371,27 @@ main {
   float: left;
 }
 
-#top-bar__address {
-  margin-left: -20px;
+/*--------------------------------------------------------------
+3.1 Header
+--------------------------------------------------------------*/
+/* Top bar - Header */
+#top-bar {
+  padding: 20px 2.08333%;
+  border-bottom: 1px solid #e9e9e9;
 }
 
-#top-bar__address .contact-item {
+#top-bar .contact-item {
+  display: inline-block;
   margin-top: 10px;
+  padding: 0 10px;
+  font-size: 13px;
+  font-size: 1.3rem;
+  line-height: 18px;
+  line-height: 1.8rem;
+}
+
+#top-bar__address {
+  margin-left: -20px;
 }
 
 .form-wcga form {
@@ -2395,6 +2415,14 @@ main {
   clear: both;
 }
 
+/* Site branding - Header */
+.header-wrapper {
+  width: 100%;
+  background-color: #f7f8fa;
+  border-bottom: 1px solid #e9e9e9;
+  z-index: 700;
+}
+
 #site-header {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2409,13 +2437,6 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-}
-
-.header-wrapper {
-  width: 100%;
-  background-color: #f7f8fa;
-  border-bottom: 1px solid #e9e9e9;
-  z-index: 700;
 }
 
 .title-area {
@@ -2436,8 +2457,125 @@ main {
   letter-spacing: 0.05em;
 }
 
-/* 4.0 Section
-======================= */
+/*--------------------------------------------------------------
+3.2  Regular Content
+--------------------------------------------------------------*/
+.header-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #543d4f;
+  background-image: url(img/svg/trianglify.svg);
+  -moz-background-size: cover;
+       background-size: cover;
+}
+
+#breadcrumbs {
+  background: rgba(247, 248, 250, 0.1);
+  padding: 1%;
+  -webkit-border-radius: 25px;
+     -moz-border-radius: 25px;
+          border-radius: 25px;
+}
+
+#breadcrumbs span {
+  padding-right: 5px;
+}
+
+/*--------------------------------------------------------------
+3.3  Posts - multi loop
+--------------------------------------------------------------*/
+.hentry-multi .hentry {
+  margin-bottom: 40px;
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+}
+
+.hentry-multi .post-thumbnail {
+  margin-bottom: 20px;
+}
+
+/*--------------------------------------------------------------
+3.4  Posts & Page
+--------------------------------------------------------------*/
+.entry-meta {
+  border-bottom: 1px solid #d5d4d9;
+}
+
+.entry-meta,
+.entry-summary {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.meta__item {
+  display: inline-block;
+  padding: 0 2%;
+  margin-bottom: 10px;
+}
+
+.meta__item i {
+  padding-left: 0;
+}
+
+.entry-content {
+  clear: both;
+}
+
+/*--------------------------------------------------------------
+3.5  Taxonomy
+--------------------------------------------------------------*/
+#term_description {
+  border-bottom: 5px solid #f25e44;
+  margin-bottom: 40px;
+}
+
+.desc_header {
+  background-color: #f25e44;
+}
+
+/*--------------------------------------------------------------
+3.6  Attachment
+--------------------------------------------------------------*/
+.attachment--other {
+  margin: 40px auto;
+  max-width: 800px;
+  background: #ffffff;
+  padding: 2%;
+  border: 1px solid #d5d4d9;
+}
+
+.attachment__header,
+.attachment__size {
+  border-bottom: dashed 1px #f25e44;
+  padding: 10px 0;
+}
+
+.attachment__file {
+  padding: 25px 0;
+}
+
+.attachment__file img {
+  display: inline-block;
+}
+
+/*--------------------------------------------------------------
+4 Sections
+--------------------------------------------------------------*/
 .header-section {
   padding: 20px 0;
 }
@@ -2446,7 +2584,9 @@ main {
   margin: 0;
 }
 
-/* Home page - header section with post */
+/*--------------------------------------------------------------
+4.1 Loop in header with post
+--------------------------------------------------------------*/
 #posts-header {
   position: relative;
 }
@@ -2505,7 +2645,7 @@ main {
 
 .header-offslider {
   width: 100%;
-  max-width: 768px;
+  max-width: 670px;
   margin: auto;
   overflow: hidden;
 }
@@ -2518,14 +2658,14 @@ main {
 }
 
 .header-offslider h2 {
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 21px;
-  line-height: 2.1rem;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 19px;
+  line-height: 1.9rem;
 }
 
 .s-post-thumbnail {
-  height: 220px;
+  height: 200px;
   background-position: center;
   -moz-background-size: cover;
        background-size: cover;
@@ -2533,7 +2673,7 @@ main {
 
 .s-post-content {
   position: relative;
-  height: 110px;
+  min-height: 110px;
   overflow: hidden;
 }
 
@@ -2576,26 +2716,51 @@ main {
 
 #header-nav-bottom {
   background-color: #f7f8fa;
-  -webkit-box-shadow: 0px 3px 10px 0px rgba(84, 61, 79, 0.3);
-     -moz-box-shadow: 0px 3px 10px 0px rgba(84, 61, 79, 0.3);
-          box-shadow: 0px 3px 10px 0px rgba(84, 61, 79, 0.3);
 }
 
-/* events section*/
-.em-calendar thead {
-  background-color: #f25e44;
+/*--------------------------------------------------------------
+4.2 Featured category
+--------------------------------------------------------------*/
+#featured-cat h2 {
+  display: inline-block;
+  padding: 20px 10%;
+  background-color: #09af82;
   color: #f7f8fa;
 }
 
-.em-calendar thead a {
-  color: #f7f8fa;
+#featured-cat h3 {
+  font-size: 14px;
+  font-size: 1.4rem;
 }
 
-tr.days-names {
-  font-weight: bold;
-  color: #f25e44;
+#featured-cat .h-wrapper {
+  border-bottom: 5px solid #09af82;
 }
 
+#featured-cat .hentry {
+  position: relative;
+  padding: 7% 24.5%;
+  border-bottom: 5px solid #09af82;
+}
+
+#featured-cat .hentry:after {
+  content: '';
+  display: block;
+  width: 5px;
+  height: 50%;
+  background-color: #09af82;
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+}
+
+#featured-cat a {
+  color: #09af82;
+}
+
+/*--------------------------------------------------------------
+4.3 Events
+--------------------------------------------------------------*/
 #wpg-evets .header-section {
   color: #09af82;
 }
@@ -2608,15 +2773,11 @@ tr.days-names {
   position: relative;
 }
 
-.ev-wrapper #calendar_events {
-  background-color: #f7f8fa;
-  margin-top: 20px;
-}
-
 .green_bg {
   background-color: #09af82;
 }
 
+/* upcoming events */
 .ev_block > div {
   display: inline-block;
   vertical-align: top;
@@ -2641,7 +2802,29 @@ tr.days-names {
   letter-spacing: 0.1em;
 }
 
-/* Home page - section with clubs */
+/* calander in section */
+#calendar_events {
+  background-color: #f7f8fa;
+  margin-top: 20px;
+}
+
+.em-calendar thead {
+  background-color: #f25e44;
+  color: #f7f8fa;
+}
+
+.em-calendar thead a {
+  color: #f7f8fa;
+}
+
+tr.days-names {
+  font-weight: bold;
+  color: #f25e44;
+}
+
+/*--------------------------------------------------------------
+4.4 Clubs
+--------------------------------------------------------------*/
 .clubs {
   margin-top: 55px;
   padding-top: 25px;
@@ -2657,10 +2840,6 @@ tr.days-names {
   height: 70px;
   background-color: #f7f8fa;
   margin-top: -70px;
-}
-
-.club-item {
-  padding: 2.08333%;
 }
 
 .club-item img {
@@ -2683,7 +2862,9 @@ tr.days-names {
   background-color: #eec159;
 }
 
-/* Home page - section with New item */
+/*--------------------------------------------------------------
+4.5  New colections
+--------------------------------------------------------------*/
 .newitems .tabs__item {
   margin-left: 15px;
   margin-right: 15px;
@@ -2694,12 +2875,6 @@ tr.days-names {
 
 .newitems .tabs__item a[aria-selected=true] {
   color: #543d4f;
-}
-
-.newitems .tabs-home__contents img {
-  -webkit-box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.5);
-     -moz-box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.5);
 }
 
 .coletion-image,
@@ -2730,7 +2905,9 @@ tr.days-names {
   text-align: center;
 }
 
-/* section catl */
+/*--------------------------------------------------------------
+4.6  Catl
+--------------------------------------------------------------*/
 #catl {
   margin-top: 100px;
   padding-top: 55px;
@@ -2763,9 +2940,11 @@ tr.days-names {
   background-color: #0bd69f;
 }
 
-.catl-links {
-  text-align: center;
-  padding: 40px;
+.catl-svg,
+.catl-content {
+  width: 100%;
+  float: left;
+  min-height: 300px;
 }
 
 .catl-svg {
@@ -2797,14 +2976,14 @@ tr.days-names {
           flex: 0 0 auto;
 }
 
-.catl-svg,
-.catl-content {
-  width: 100%;
-  float: left;
-  min-height: 300px;
+.catl-links {
+  text-align: center;
+  padding: 40px;
 }
 
-/* section contact */
+/*--------------------------------------------------------------
+4.7  Contact
+--------------------------------------------------------------*/
 #contact {
   position: relative;
 }
@@ -2838,6 +3017,22 @@ tr.days-names {
   background-color: #f7f8fa;
 }
 
+#contact__tabs,
+#contact__map {
+  width: 100%;
+}
+
+#contact__tabs {
+  float: left;
+}
+
+#contact__map {
+  float: right;
+  position: relative;
+  overflow: hidden;
+}
+
+/* contact tabs */
 #contact__content {
   background-color: #f25e44;
 }
@@ -2868,8 +3063,8 @@ tr.days-names {
 
 .contact-item__icon i {
   width: 60px;
-  font-size: 34px;
-  font-size: 3.4rem;
+  font-size: 26px;
+  font-size: 2.6rem;
 }
 
 .contact-item__icon span {
@@ -2886,21 +3081,7 @@ tr.days-names {
   width: 110px;
 }
 
-#contact__tabs,
-#contact__map {
-  width: 100%;
-}
-
-#contact__tabs {
-  float: left;
-}
-
-#contact__map {
-  float: right;
-  position: relative;
-  overflow: hidden;
-}
-
+/* contact social portal links */
 #contact-social {
   border-top: 1px solid #543d4f;
 }
@@ -2909,7 +3090,14 @@ tr.days-names {
   margin: auto 5px;
 }
 
-/*section catl & contact */
+/* map */
+#map-canvas {
+  height: 540px;
+}
+
+/*--------------------------------------------------------------
+4.8  Contact & Catl
+--------------------------------------------------------------*/
 #catl .tabs__item a,
 #contact .tabs__item a {
   display: inline-block;
@@ -2917,134 +3105,25 @@ tr.days-names {
   margin-bottom: -2px;
 }
 
-/* google map */
-#map-canvas {
-  height: 540px;
-}
-
-/* featured category */
-#featured-cat h2 {
-  display: inline-block;
-  padding: 20px 10%;
-  background-color: #09af82;
-  color: #f7f8fa;
-}
-
-#featured-cat h3 {
-  font-size: 16px;
-  font-size: 1.6rem;
-}
-
-#featured-cat .h-wrapper {
-  border-bottom: 5px solid #09af82;
-}
-
-#featured-cat .hentry {
-  position: relative;
-  padding: 7% 24.5%;
-  border-bottom: 5px solid #09af82;
-}
-
-#featured-cat .hentry:after {
-  content: '';
-  display: block;
-  width: 5px;
-  height: 50%;
-  background-color: #09af82;
-  position: absolute;
-  bottom: -5px;
-  right: 0;
-}
-
-#featured-cat a {
-  color: #09af82;
-}
-
-/* section partners*/
+/*--------------------------------------------------------------
+4.9  Partners (slick slider css)
+--------------------------------------------------------------*/
 #partners {
   background-color: #ffffff;
   padding-top: 2.08333%;
   padding-bottom: 2.08333%;
 }
 
-/* section copyright */
+/*--------------------------------------------------------------
+4.10  Copyright
+--------------------------------------------------------------*/
 #copyright {
   background-color: #ffffff;
 }
 
-/* content */
-.header-content {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-     -moz-box-orient: vertical;
-     -moz-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-     -moz-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #543d4f;
-  background-image: url(img/svg/trianglify.svg);
-  -moz-background-size: cover;
-       background-size: cover;
-}
-
-#breadcrumbs {
-  background: rgba(247, 248, 250, 0.1);
-  padding: 1%;
-  -webkit-border-radius: 25px;
-     -moz-border-radius: 25px;
-          border-radius: 25px;
-}
-
-#breadcrumbs span {
-  padding-right: 5px;
-}
-
-/* hentry */
-.entry-content {
-  clear: both;
-}
-
-/* hentry-multi */
-.hentry-multi .hentry {
-  margin-bottom: 40px;
-  background-color: #ffffff;
-  border: 1px solid #eeeeee;
-}
-
-.hentry-multi .post-thumbnail {
-  margin-bottom: 20px;
-}
-
-.entry-meta {
-  border-bottom: 1px solid #d5d4d9;
-}
-
-.entry-meta,
-.entry-summary {
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-}
-
-.meta__item {
-  display: inline-block;
-  padding: 0 2%;
-  margin-bottom: 10px;
-}
-
-.meta__item i {
-  padding-left: 0;
-}
-
+/*--------------------------------------------------------------
+5.0  Widgets
+--------------------------------------------------------------*/
 .widget {
   border-bottom: 2px solid #d5d4d9;
 }
@@ -3068,41 +3147,11 @@ tr.days-names {
   background-color: #f25e44;
 }
 
-/* taxonomy index */
-#term_description {
-  border-bottom: 5px solid #f25e44;
-  margin-bottom: 40px;
-}
-
-.desc_header {
-  background-color: #f25e44;
-}
-
-/* attachment */
-.attachment--other {
-  margin: 40px auto;
-  max-width: 800px;
-  background: #ffffff;
-  padding: 2%;
-  border: 1px solid #d5d4d9;
-}
-
-.attachment__header,
-.attachment__size {
-  border-bottom: dashed 1px #f25e44;
-  padding: 10px 0;
-}
-
-.attachment__file {
-  padding: 25px 0;
-}
-
-.attachment__file img {
-  display: inline-block;
-}
-
-/* Event calander */
-table.em-calendar td.eventless-today, table.em-calendar td.eventful-today {
+/*--------------------------------------------------------------
+6.0  Event calander - plugin Events Manager by Marcus Sykes
+--------------------------------------------------------------*/
+table.em-calendar td.eventless-today,
+table.em-calendar td.eventful-today {
   background-color: #f25e44;
   color: #f7f8fa;
 }
@@ -3150,8 +3199,8 @@ table.em-calendar td.eventless-today, table.em-calendar td.eventful-today {
   position: relative;
   padding: 0 15px 15px;
   margin: 0 4.16667% 8.33333% 0;
-  font-size: 12px;
-  font-size: 1.2rem;
+  font-size: 11px;
+  font-size: 1.1rem;
   background: #f7f8fa;
 }
 
@@ -3178,8 +3227,8 @@ table.em-calendar td.eventless-today, table.em-calendar td.eventful-today {
   display: block;
   padding: 0.4583em 0;
   opacity: 0.8;
-  font-size: 12px;
-  font-size: 1.2rem;
+  font-size: 11px;
+  font-size: 1.1rem;
   text-transform: uppercase;
 }
 
@@ -3350,7 +3399,7 @@ table.em-calendar td.eventless-today, table.em-calendar td.eventful-today {
 }
 
 .comment-form label {
-  font-size: 75%;
+  font-size: 78.57143%;
   font-weight: 700;
   display: block;
   text-transform: uppercase;
@@ -3383,7 +3432,7 @@ table.em-calendar td.eventless-today, table.em-calendar td.eventful-today {
 .comment-awaiting-moderation,
 .logged-in-as,
 .form-allowed-tags {
-  font-size: 75%;
+  font-size: 78.57143%;
 }
 
 .no-comments {
@@ -3657,10 +3706,10 @@ a.skip-main:active {
 }
 
 .h-nav--desc {
-  font-size: 18px;
-  font-size: 1.8rem;
-  line-height: 23px;
-  line-height: 2.3rem;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 21px;
+  line-height: 2.1rem;
   text-transform: uppercase;
 }
 
@@ -3825,7 +3874,7 @@ a.skip-main:active {
 }
 
 .post-navigation span.post-title {
-  font-size: 150%;
+  font-size: 128.57143%;
   font-family: Roboto, Tahoma, Geneva, sans-serif;
   margin-top: 10px;
 }
@@ -3956,19 +4005,41 @@ a.skip-main:active {
 *  Base RWD
 * ---------------------------------*/
 /*--------------------------------------------------------------
--- Responsive breakpoint phone
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
--- Responsive breakpoint tablet
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
--- Responsive breakpoint desktop
+-- Responsive breakpoint
 --------------------------------------------------------------*/
 @media (max-width: 62em) {
   .hide-on-small {
     display: none;
   }
-  /* section header post */
+  /*--------------------------------------------------------------
+>>> TABLE OF CONTENTS
+----------------------------------------------------------------
+1.0 Normalize
+2.0 Universal styles
+3.0 Layout
+  3.1 Header
+  3.2  Regular Content
+  3.3  Posts - multi loop
+  3.4  Posts & Page
+  3.5  Taxonomy
+  3.6  Attachment
+4 Sections
+  4.1 Loop in header with post
+  4.2 Featured category
+  4.3 Events
+  4.4 Clubs
+  4.5 New colections
+  4.6 Catl
+  4.7 Contact
+  4.8 Contact & Catl
+  4.9 Partners (slick slider css)
+  4.10 Copyright
+5.0  Widgets
+6.0  Event calander - plugin Events Manager by Marcus Sykes
+--------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+3.1 Header
+--------------------------------------------------------------*/
   #posts-header {
     background-color: #543d4f;
   }
@@ -3976,19 +4047,29 @@ a.skip-main:active {
     border-bottom: dashed 1px #f25e44;
     margin-bottom: 2.08333%;
   }
-  #catl .tabs__item,
-  #contact .tabs__item {
-    display: block;
+  /*--------------------------------------------------------------
+3.3  Posts - multi loop
+--------------------------------------------------------------*/
+  .hentry-multi .entry-meta {
+    text-align: center;
   }
+  /*--------------------------------------------------------------
+4.7 Contact
+--------------------------------------------------------------*/
   #contact .js-tablist {
     border-bottom: 5px solid #543d4f;
     padding-bottom: 2.08333%;
   }
-  /* hentry-multi */
-  .hentry-multi .entry-meta {
-    text-align: center;
+  /*--------------------------------------------------------------
+4.8 Contact & Catl
+--------------------------------------------------------------*/
+  #catl .tabs__item,
+  #contact .tabs__item {
+    display: block;
   }
-  /* events section*/
+  /*--------------------------------------------------------------
+4.3 Events
+--------------------------------------------------------------*/
   #upcoming_event {
     text-align: center;
   }
@@ -4000,7 +4081,7 @@ a.skip-main:active {
 }
 
 /*--------------------------------------------------------------
--- Responsive breakpoint desktop min
+-- Responsive breakpoint
 --------------------------------------------------------------*/
 @media (min-width: 62em) {
   .hide-desktop {
@@ -4063,27 +4144,51 @@ a.skip-main:active {
   /* Theme style
 ========================================================================== */
   /*--------------------------------------------------------------
->>> TABLE OF CONTENTS - hentry for tablet:
+>>> TABLE OF CONTENTS
 ----------------------------------------------------------------
-1.0 Base
-2.0 Layout
-4.2 Section
-5.3 Header slider
-6.4 Other elements
-7.0 Header
-4.0 Footer
-5.0 hentry
-5.1 plural
-5.5 singular
-5.3 hentry elements
+1.0 Normalize
+2.0 Universal styles
+3.0 Layout
+3.1 Header
+3.2  Regular Content
+3.3  Posts - multi loop
+3.4  Posts & Page
+3.5  Taxonomy
+3.6  Attachment
+4 Sections
+4.1 Loop in header with post
+4.2 Featured category
+4.3 Events
+4.4 Clubs
+4.5 New colections
+4.6 Catl
+4.7 Contact
+4.8 Contact & Catl
+4.9 Partners (slick slider css)
+4.10 Copyright
+5.0  Widgets
+6.0  Event calander - plugin Events Manager by Marcus Sykes
+--------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+2.0 Universal styles
+--------------------------------------------------------------*/
+  .h--xxl {
+    font-size: 42px;
+    font-size: 4.2rem;
+    line-height: 47px;
+    line-height: 4.7rem;
+  }
+  .js-tablist {
+    text-align: left;
+  }
+  /*--------------------------------------------------------------
+3.0 Layout
 --------------------------------------------------------------*/
   .wrapper {
     max-width: 1920px;
     margin-left: auto;
     margin-right: auto;
   }
-  /* 2.0 Layout
-======================= */
   .active-sidebar .col-primary {
     width: 75%;
     float: left;
@@ -4092,22 +4197,9 @@ a.skip-main:active {
     width: 25%;
     float: left;
   }
-  .fixed-header {
-    padding-top: 94px;
-  }
-  .fixed-header .header-wrapper {
-    position: fixed;
-    top: 0;
-  }
-  .h--xxl {
-    font-size: 54px;
-    font-size: 5.4rem;
-    line-height: 59px;
-    line-height: 5.9rem;
-  }
-  .js-tablist {
-    text-align: left;
-  }
+  /*--------------------------------------------------------------
+3.1 Header
+--------------------------------------------------------------*/
   #site-header {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -4133,7 +4225,65 @@ a.skip-main:active {
         -ms-flex-preferred-size: 275px;
             flex-basis: 275px;
   }
-  /* section header post */
+  .fixed-header {
+    padding-top: 94px;
+  }
+  .fixed-header .header-wrapper {
+    position: fixed;
+    top: 0;
+  }
+  #top-bar__social,
+  #top-bar__btn-search {
+    margin-top: 6px;
+  }
+  /*--------------------------------------------------------------
+3.2  Regular Content
+--------------------------------------------------------------*/
+  .header-content {
+    min-height: 260px;
+  }
+  /*--------------------------------------------------------------
+3.3  Posts - multi loop
+--------------------------------------------------------------*/
+  .hentry-multi .hentry {
+    padding: 2.08333%;
+  }
+  .hentry-multi .meta__item {
+    display: inline-block;
+  }
+  .hentry-multi .post-thumbnail {
+    width: 41.66667%;
+    float: left;
+  }
+  .hentry-multi .entry-meta,
+  .hentry-multi .entry-summary {
+    float: left;
+  }
+  .hentry-multi .entry-summary,
+  .hentry-multi .has-post-thumbnail .entry-meta {
+    width: 54.16667%;
+    margin-left: 2.08333%;
+    margin-right: 2.08333%;
+  }
+  .continue_reading {
+    float: right;
+  }
+  /*--------------------------------------------------------------
+3.4  Posts & Page
+--------------------------------------------------------------*/
+  .entry-meta {
+    width: 100%;
+  }
+  /*--------------------------------------------------------------
+3.6  Attachment
+--------------------------------------------------------------*/
+  .attachment__btn {
+    padding: 15px 0;
+    border-left: dashed 1px #d5d4d9;
+  }
+  /*--------------------------------------------------------------
+4.1 Loop in header with post
+--------------------------------------------------------------*/
   #posts-header {
     margin-bottom: 100px;
   }
@@ -4155,13 +4305,12 @@ a.skip-main:active {
     right: -3%;
   }
   .header-offslider article {
-    width: 220px;
-    height: 440px;
+    width: 200px;
+    height: 400px;
   }
   .s-post-thumbnail,
   .s-post-content {
-    width: 220px;
-    height: 220px;
+    width: 200px;
   }
   .arrow-allpost-icon {
     position: absolute;
@@ -4176,15 +4325,13 @@ a.skip-main:active {
     -webkit-border-radius: 5px;
        -moz-border-radius: 5px;
             border-radius: 5px;
+    -webkit-box-shadow: 0px 3px 10px 0px rgba(84, 61, 79, 0.3);
+       -moz-box-shadow: 0px 3px 10px 0px rgba(84, 61, 79, 0.3);
+            box-shadow: 0px 3px 10px 0px rgba(84, 61, 79, 0.3);
   }
-  /* events section*/
-  .ev-wrapper #calendar_events {
-    position: absolute;
-    top: 0;
-    right: 30px;
-    width: 300px;
-    height: 300px;
-  }
+  /*--------------------------------------------------------------
+4.3 Events
+--------------------------------------------------------------*/
   .green_bg {
     background-color: transparent;
     background-image: url(img/ev-green.jpg);
@@ -4227,7 +4374,17 @@ a.skip-main:active {
     left: -40px;
     z-index: -1;
   }
-  /* Home page - section with New item */
+  /* calander in section */
+  .ev-wrapper #calendar_events {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 300px;
+    height: 300px;
+  }
+  /*--------------------------------------------------------------
+4.5  New colections
+--------------------------------------------------------------*/
   .newitems .tabs__item {
     display: block;
     text-align: left;
@@ -4250,9 +4407,6 @@ a.skip-main:active {
         -ms-transform: translateY(-50%);
          -o-transform: translateY(-50%);
             transform: translateY(-50%);
-  }
-  .coletion-content {
-    overflow: hidden;
   }
   .coletion-gallery {
     padding: 2.08333% 0 2.08333% 2.08333%;
@@ -4290,7 +4444,9 @@ a.skip-main:active {
     bottom: 0px;
     z-index: 5;
   }
-  /* section catl */
+  /*--------------------------------------------------------------
+4.6  Catl
+--------------------------------------------------------------*/
   #catl .js-tablist {
     border-bottom: 2px solid #f7f8fa;
   }
@@ -4301,7 +4457,9 @@ a.skip-main:active {
   .catl-links {
     text-align: right;
   }
-  /* contact */
+  /*--------------------------------------------------------------
+4.7  Contact
+--------------------------------------------------------------*/
   #contact .js-tablist {
     display: -webkit-box;
     display: -webkit-flex;
@@ -4326,12 +4484,11 @@ a.skip-main:active {
     border-right: 100vw solid transparent;
     border-bottom: 105px solid #f25e44;
   }
-  /* contact */
   #contact__tabs {
-    width: 70%;
+    width: 60%;
   }
   #contact__map {
-    width: 30%;
+    width: 40%;
   }
   #contact__map::before {
     content: '';
@@ -4349,46 +4506,17 @@ a.skip-main:active {
          -o-transform: rotate(45deg);
             transform: rotate(45deg);
   }
-  /* partners */
+  /*--------------------------------------------------------------
+4.9  Partners (slick slider css)
+--------------------------------------------------------------*/
   #partner-slider .slick-slide img {
     max-width: 50%;
+    margin: auto;
   }
-  /* content */
-  .header-content {
-    min-height: 260px;
-  }
-  .hentry-multi .hentry {
-    padding: 2.08333%;
-  }
-  .hentry-multi .meta__item {
-    display: inline-block;
-  }
-  .hentry-multi .post-thumbnail {
-    width: 41.66667%;
-    float: left;
-  }
-  .hentry-multi .entry-meta,
-  .hentry-multi .entry-summary {
-    float: left;
-  }
-  .hentry-multi .entry-summary,
-  .hentry-multi .has-post-thumbnail .entry-meta {
-    width: 54.16667%;
-    margin-left: 2.08333%;
-    margin-right: 2.08333%;
-  }
-  .entry-meta {
-    width: 100%;
-  }
-  .continue_reading {
-    float: right;
-  }
-  /* attachment */
-  .attachment__btn {
-    padding: 15px 0;
-    border-left: dashed 1px #d5d4d9;
-  }
-  /* Event list */
+  /*--------------------------------------------------------------
+6.0  Event calander - plugin Events Manager by Marcus Sykes
+--------------------------------------------------------------*/
+  /* event list */
   .ev-item {
     border-left: 15px solid #543d4f;
   }
@@ -4435,66 +4563,154 @@ a.skip-main:active {
 }
 
 /*--------------------------------------------------------------
--- Responsive breakpoint desktop old 1024-1270
+-- Responsive breakpoint
 --------------------------------------------------------------*/
-@media (min-width: 62em) and (max-width: 79.375em) {
+@media (min-width: 62em) and (max-width: 90em) {
+  /* Theme style
+========================================================================== */
+  /*--------------------------------------------------------------
+>>> TABLE OF CONTENTS
+----------------------------------------------------------------
+1.0 Normalize
+2.0 Universal styles
+3.0 Layout
+3.1 Header
+3.2  Regular Content
+3.3  Posts - multi loop
+3.4  Posts & Page
+3.5  Taxonomy
+3.6  Attachment
+4 Sections
+4.1 Loop in header with post
+4.2 Featured category
+4.3 Events
+4.4 Clubs
+4.5 New colections
+4.6 Catl
+4.7 Contact
+4.8 Contact & Catl
+4.9 Partners (slick slider css)
+4.10 Copyright
+5.0  Widgets
+6.0  Event calander - plugin Events Manager by Marcus Sykes
+--------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+2.0 Universal styles
+--------------------------------------------------------------*/
+  .tabs__item {
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 23px;
+    line-height: 2.3rem;
+  }
+}
+
+/*--------------------------------------------------------------
+-- Responsive breakpoint
+--------------------------------------------------------------*/
+@media (min-width: 100em) {
+  /*--------------------------------------------------------------
+>>> TABLE OF CONTENTS
+----------------------------------------------------------------
+1.0 Normalize
+2.0 Universal styles
+3.0 Layout
+  3.1 Header
+  3.2  Regular Content
+  3.3  Posts - multi loop
+  3.4  Posts & Page
+  3.5  Taxonomy
+  3.6  Attachment
+4 Sections
+  4.1 Loop in header with post
+  4.2 Featured category
+  4.3 Events
+  4.4 Clubs
+  4.5 New colections
+  4.6 Catl
+  4.7 Contact
+  4.8 Contact & Catl
+  4.9 Partners (slick slider css)
+  4.10 Copyright
+5.0  Widgets
+6.0  Event calander - plugin Events Manager by Marcus Sykes
+--------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+1.0 Normalize
+--------------------------------------------------------------*/
   body {
-    font-size: 14px;
-    font-size: 1.4rem;
-    line-height: 19px;
-    line-height: 1.9rem;
-  }
-  h1, .class-h1, .f-size-h1 {
-    font-size: 29px;
-    font-size: 2.9rem;
-    line-height: 34px;
-    line-height: 3.4rem;
-  }
-  h2, .class-h2, .f-size-h2 {
-    font-size: 26px;
-    font-size: 2.6rem;
-    line-height: 31px;
-    line-height: 3.1rem;
-  }
-  h3, .class-h3, .f-size-h3 {
-    font-size: 21px;
-    font-size: 2.1rem;
-    line-height: 26px;
-    line-height: 2.6rem;
-  }
-  h4, .class-h4, .f-size-h4 {
-    font-size: 17px;
-    font-size: 1.7rem;
-    line-height: 22px;
-    line-height: 2.2rem;
-  }
-  h5, h6, .class-h5, .f-size-h5 {
     font-size: 16px;
     font-size: 1.6rem;
     line-height: 21px;
     line-height: 2.1rem;
   }
-  .tabs__item {
-    font-size: 20px;
-    font-size: 2rem;
-    line-height: 25px;
-    line-height: 2.5rem;
+  h1, .class-h1, .f-size-h1 {
+    font-size: 39px;
+    font-size: 3.9rem;
+    line-height: 44px;
+    line-height: 4.4rem;
   }
-  #top-bar__social, #top-bar__btn-search {
-    margin-top: 6px;
+  h2, .class-h2, .f-size-h2 {
+    font-size: 32px;
+    font-size: 3.2rem;
+    line-height: 37px;
+    line-height: 3.7rem;
   }
+  h3, .class-h3, .f-size-h3 {
+    font-size: 27px;
+    font-size: 2.7rem;
+    line-height: 32px;
+    line-height: 3.2rem;
+  }
+  h4, .class-h4, .f-size-h4 {
+    font-size: 22px;
+    font-size: 2.2rem;
+    line-height: 27px;
+    line-height: 2.7rem;
+  }
+  h5, h6, .class-h5, .f-size-h5 {
+    font-size: 19px;
+    font-size: 1.9rem;
+    line-height: 24px;
+    line-height: 2.4rem;
+  }
+  /*--------------------------------------------------------------
+2.0 Universal styles
+--------------------------------------------------------------*/
+  .h--xxl {
+    font-size: 52px;
+    font-size: 5.2rem;
+    line-height: 57px;
+    line-height: 5.7rem;
+  }
+  /*--------------------------------------------------------------
+4.7 Contact
+--------------------------------------------------------------*/
+  #contact__tabs,
+  #contact__map {
+    width: 50%;
+  }
+  /*--------------------------------------------------------------
+4.1 Loop in header with post
+--------------------------------------------------------------*/
   .header-offslider {
-    max-width: 670px;
+    max-width: 768px;
   }
   .header-offslider article {
-    width: 200px;
-    height: 400px;
+    width: 220px;
+    height: 440px;
   }
   .s-post-thumbnail,
   .s-post-content {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
   }
+}
+
+/*----------------------------------
+*  Special Breakpoint old desktop 1024
+* ---------------------------------*/
+@media (min-width: 62em) and (max-width: 75em) {
   #featured-cat.col-5,
   #wpg-evets.col-7 {
     width: 80%;
@@ -4505,32 +4721,16 @@ a.skip-main:active {
   }
 }
 
-/*--------------------------------------------------------------
--- Responsive breakpoint desktop old
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
--- Responsive breakpoint desktop hd
---------------------------------------------------------------*/
-@media (min-width: 79.375em) {
-  /* contact */
-  #contact__tabs {
-    width: 60%;
-  }
-  #contact__map {
-    width: 40%;
-  }
-}
-
 /*----------------------------------
 *  Special Breakpoint Tables
 * ---------------------------------*/
-@media (max-width: max-width 360px) {
+@media (max-width: 360px) {
   table tbody td {
     word-break: break-all;
   }
 }
 
-@media (max-width: max-width 600px) {
+@media (max-width: 600px) {
   .hentry table caption {
     background-image: none;
   }

@@ -8,7 +8,7 @@ fieldset {
 
 legend {
     font-weight: bold;
-    @include font-size-procent($size-big);
+    @include font-size-procent($font-size-xl);
     color: $fields-text;
     border: 1px solid $fields-border;
     padding: 19px 30px;

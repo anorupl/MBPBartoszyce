@@ -182,7 +182,7 @@ blockquote {
     margin: 0.5em 0 1.6667em 0;
     min-width: 35vw;
 
-    @include font-size-procent($size-big);
+    @include font-size-procent($font-size-xl);
 
     font-style: italic;
     border-top: 1px solid $two-color;
@@ -209,7 +209,7 @@ blockquote {
     }
 
     q, cite, small {
-        @include font-size-procent($size-small);
+        @include font-size-procent($font-size-s);
     }
 }
 
@@ -247,7 +247,7 @@ var,
 samp,
 pre {
     font-family: $font-code;
-    @include font-size-procent(($size-medium));
+    @include font-size-procent(($font-size-m));
     -webkit-hyphens: none;
     -moz-hyphens: none;
     -ms-hyphens: none;

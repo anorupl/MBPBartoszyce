@@ -29,23 +29,24 @@ $font-second: Roboto, 'Open Sans', sans-serif;
 $font-bold	: Tahoma, Geneva, sans-serif;
 $font-code	: Monaco, Menlo, Consolas, "Courier New", monospace;
 
-$size-min	    : 1;
-$size-small	    : 1.2;
-$size-medium	: 1.4;
-$size-base      : 1.6;
-$size-big       : 2.4;
-$size-x-large	: 2.9;
-$size-xl-large  : 3.4;
+$font-size-s   : 1.1;
+$font-size-m   : 1.3;
+$size-base     : 1.4;
+$font-size-xl  : 1.8;
+$font-size-xxl : 2.2;
+$font-size-xxxl: 2.6;
+
+
 /*--------------------------------------------------------------
->>> Breakpoint (continer max-width 1300px)
+>>> Breakpoint
 ---------------------------------------------------------------*/
 $phone          : #{pem(576)};
 $tablet         : #{pem(768)};
-$desktop        : #{pem(992)};
-$desktop-medium : #{pem(1024)};
-$desktop-hd     : #{pem(1270)};
 
-$dektop-hidpi : #{pem(1441)};
+$desktop        : #{pem(992)};
+$desktop-ldpi   : #{pem(1280)};
+$desktop-mdpi   : #{pem(1440)};
+$desktop-hdpi   : #{pem(1600)};
 
 /*--------------------------------------------------------------
 >>> Color

@@ -10,7 +10,7 @@
     background-repeat: no-repeat;
 }
 #section-attachments .attachment-info {
-    @include font-size-procent($size-small);
+    @include font-size-procent($font-size-s);
 }
 
 .post-attachment {

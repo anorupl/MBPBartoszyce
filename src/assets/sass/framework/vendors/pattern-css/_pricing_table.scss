@@ -27,7 +27,7 @@
 	}
 
 	h3 {
-		@include font-size-procent($size-big);
+		@include font-size-procent($font-size-xl);
 
 		margin: 0;
 		padding: 20px 0 120px 0;
@@ -51,7 +51,7 @@
 	span {
 		display: block;
 		font-weight: bold;
-		@include font-size-procent($size-big);
+		@include font-size-procent($font-size-xl);
 		max-width: 60%;
 		margin: -50px auto 0 auto;
 		padding: 15% 0;
@@ -71,7 +71,7 @@
 	li {
 		border-top: 1px solid $border-color;
 		padding: 10px 0;
-		@include font-size-procent($size-small);
+		@include font-size-procent($font-size-s);
 	}
 
 	.signup a {

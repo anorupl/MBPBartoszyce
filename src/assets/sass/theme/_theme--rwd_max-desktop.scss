@@ -1,0 +1,69 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS
+----------------------------------------------------------------
+1.0 Normalize
+2.0 Universal styles
+3.0 Layout
+  3.1 Header
+  3.2  Regular Content
+  3.3  Posts - multi loop
+  3.4  Posts & Page
+  3.5  Taxonomy
+  3.6  Attachment
+4 Sections
+  4.1 Loop in header with post
+  4.2 Featured category
+  4.3 Events
+  4.4 Clubs
+  4.5 New colections
+  4.6 Catl
+  4.7 Contact
+  4.8 Contact & Catl
+  4.9 Partners (slick slider css)
+  4.10 Copyright
+5.0  Widgets
+6.0  Event calander - plugin Events Manager by Marcus Sykes
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+3.1 Header
+--------------------------------------------------------------*/
+#posts-header {
+  background-color: $one-color;
+}
+.f-post {
+  border-bottom: dashed 1px $two-color;
+  margin-bottom: gutter();
+}
+/*--------------------------------------------------------------
+3.3  Posts - multi loop
+--------------------------------------------------------------*/
+.hentry-multi {
+  .entry-meta {
+    text-align: center;
+  }
+}
+/*--------------------------------------------------------------
+4.7 Contact
+--------------------------------------------------------------*/
+#contact {
+  .js-tablist{
+    border-bottom: 5px solid $one-color;
+    padding-bottom: gutter();
+  }
+}
+
+/*--------------------------------------------------------------
+4.8 Contact & Catl
+--------------------------------------------------------------*/
+#catl .tabs__item,
+#contact .tabs__item {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+4.3 Events
+--------------------------------------------------------------*/
+#upcoming_event {
+    text-align: center;
+}

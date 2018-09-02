@@ -1,0 +1,69 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS
+----------------------------------------------------------------
+1.0 Normalize
+2.0 Universal styles
+3.0 Layout
+  3.1 Header
+  3.2  Regular Content
+  3.3  Posts - multi loop
+  3.4  Posts & Page
+  3.5  Taxonomy
+  3.6  Attachment
+4 Sections
+  4.1 Loop in header with post
+  4.2 Featured category
+  4.3 Events
+  4.4 Clubs
+  4.5 New colections
+  4.6 Catl
+  4.7 Contact
+  4.8 Contact & Catl
+  4.9 Partners (slick slider css)
+  4.10 Copyright
+5.0  Widgets
+6.0  Event calander - plugin Events Manager by Marcus Sykes
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 Normalize
+--------------------------------------------------------------*/
+body {
+     @include font-size(($size-base + 0.2),0,false);
+}
+
+h1,.class-h1,.f-size-h1     { @include font-size(($size-base + 2.5),0,true);}
+h2,.class-h2,.f-size-h2     { @include font-size(($size-base + 1.8),0,true);}
+h3,.class-h3,.f-size-h3     { @include font-size(($size-base + 1.3),0,true);}
+h4,.class-h4,.f-size-h4     { @include font-size(($size-base + 0.8),0,true);}
+h5, h6,.class-h5,.f-size-h5 { @include font-size(($size-base + 0.5),0,true);}
+
+/*--------------------------------------------------------------
+2.0 Universal styles
+--------------------------------------------------------------*/
+.h--xxl {
+  @include font-size(($font-size-xxl + 3),0,true);
+}
+/*--------------------------------------------------------------
+4.7 Contact
+--------------------------------------------------------------*/
+#contact__tabs,
+#contact__map {
+  width: 50%;
+}
+
+/*--------------------------------------------------------------
+4.1 Loop in header with post
+--------------------------------------------------------------*/
+.header-offslider {
+  max-width: 768px;
+}
+.header-offslider article {
+  width: 220px;
+  height: 440px;
+}
+.s-post-thumbnail,
+.s-post-content {
+    width: 220px;
+    height: 220px;
+}

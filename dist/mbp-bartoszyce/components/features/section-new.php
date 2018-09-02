@@ -53,6 +53,7 @@
                    'tax_query' => [['taxonomy' => $terms_tax,'field' => 'slug','terms' => $term->slug]]
                  ];
 
+
                  $query_colletion = new WP_Query($args_colletion);
 
                  if ( $query_colletion->have_posts()) : while ($query_colletion->have_posts()) : $query_colletion->the_post(); ?>
@@ -61,8 +62,8 @@
                    <a tabindex="-1" href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php wpg_the_thumbnail(); ?></a>
                  </div>
                  <div class="coletion-content white-one col-4">
-                   <h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-                   <?php the_excerpt() ?>
+                   <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                   <?php echo wpg_get_excerpt(40); ?>
                  </div>
                  <div class="coletion-gallery white-two col-4">
                    <div class="coletion-gallery__gallery clear-both">

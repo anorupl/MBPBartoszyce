@@ -2,78 +2,94 @@
 ========================================================================== */
 
 /*--------------------------------------------------------------
->>> TABLE OF CONTENTS - hentry for tablet:
+>>> TABLE OF CONTENTS
 ----------------------------------------------------------------
-1.0 Base
-2.0 Layout
-4.2 Section
-5.3 Header slider
-6.4 Other elements
-7.0 Header
-4.0 Footer
-5.0 hentry
-    5.1 plural
-    5.5 singular
-    5.3 hentry elements
+1.0 Normalize
+2.0 Universal styles
+3.0 Layout
+  3.1 Header
+  3.2  Regular Content
+  3.3  Posts - multi loop
+  3.4  Posts & Page
+  3.5  Taxonomy
+  3.6  Attachment
+4 Sections
+  4.1 Loop in header with post
+  4.2 Featured category
+  4.3 Events
+  4.4 Clubs
+  4.5 New colections
+  4.6 Catl
+  4.7 Contact
+  4.8 Contact & Catl
+  4.9 Partners (slick slider css)
+  4.10 Copyright
+5.0  Widgets
+6.0  Event calander - plugin Events Manager by Marcus Sykes
 --------------------------------------------------------------*/
 
+/*--------------------------------------------------------------
+1.0 Normalize
+--------------------------------------------------------------*/
 
 *, *:before, *:after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 html {
-    font-size: 62.5%;
-    overflow-x: auto
+  font-size: 62.5%;
+  overflow-x: auto
 }
 body,
 html {
-    padding: 0;
-    margin: 0;
-    width: 100%;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
 body {
-    overflow: hidden;
-    font-family: $font-base;
-    @include font-size($size-base);
-    line-height: 1.5;
-    background: $four-bw;
-    color: $one-bw;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    -ms-word-wrap: break-word;
-    word-wrap: break-word;
+  overflow: hidden;
+  font-family: $font-base;
+  @include font-size($size-base);
+  line-height: 1.5;
+  background: $four-bw;
+  color: $one-bw;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
 }
 
 main {
-    display: block;
+  display: block;
 }
 
+/*--------------------------------------------------------------
+2.0 Universal styles
+--------------------------------------------------------------*/
+.hide {
+  display: none;
+}
 
-/* 1.0 Fonts class
-======================= */
 .h-font {
   font-family: $font-second;
 }
 
-
-/* 2.0 Layout
-======================= */
-.hide {
-    display: none;
-}
-
-.col-primary,
-.col-secondary {
-  float: left;
-  @include span(12 no-gutters);
-  margin: 5% 0 0;
-}
-
-.col-primary--12{
-  @include span(12 no-gutters);
+.btn {
+  color: $four-bw;
+  background-color: $two-color;
+  border: 1px solid $two-color;
+  padding: 0.7em;
+  min-width: 200px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 0.7em;
+  &:hover {
+    color: $four-bw;
+    background-color: $one-color;
+  }
 }
 
 
+/* color schemes */
 .white-one {
   color: $white;
   a {color: $white; }
@@ -95,34 +111,26 @@ main {
   a {color: $one-color;}
   a:hover {color: $four-bw;}
 }
-
+.dark-two {
+  color: $one-color;
+  a {color: $one-color;}
+  a:hover {color: $two-color;}
+}
 .gray-content {
   color:$five-bw;
   a {
     color:$five-bw;
   }
 }
-
-
-
-
-
-.btn {
-    color: $four-bw;
-    background-color: $two-color;
-    border: 1px solid $two-color;
-    padding: 0.7em;
-    min-width: 200px;
-    display: inline-block;
-    text-align: center;
-    border-radius: 0.7em;
-    &:hover {
-      color: $four-bw;
-      background-color: $one-color;
-    }
+.fidkar-white {
+  background-color: $white;
 }
 
-// tabs
+.fidkar-yellow {
+  background-color: $five-color;
+}
+
+/* tabs */
 .js-tablist {
   list-style-type: none;
   padding-left: 0;
@@ -131,7 +139,7 @@ main {
 }
 .tabs__item {
   display: inline-block;
-  @include font-size($size-big,0,false);
+  @include font-size($font-size-xl,0,false);
   font-family: Roboto, Tahoma, Geneva, sans-serif;
   a {
     padding: 10px 5px;
@@ -141,11 +149,11 @@ main {
 .tabs__link {
   cursor: pointer;
   span {
-      margin-left: 5%;
+    margin-left: 5%;
   }
 }
 .js-tabcontent[aria-hidden=true]{
-    display: none;
+  display: none;
 }
 .tabs__content {
   > img {
@@ -153,37 +161,18 @@ main {
     padding: gutter() gutter() gutter() 0;
   }
 }
-
-.fidkar-white {
-  background-color: $white;
+/*--------------------------------------------------------------
+3.0 Layout
+--------------------------------------------------------------*/
+.col-primary,
+.col-secondary {
+  float: left;
+  @include span(12 no-gutters);
+  margin: 5% 0 0;
 }
-
-.fidkar-yellow {
-  background-color: $five-color;
+.col-primary--12{
+  @include span(12 no-gutters);
 }
-
-
-/* 3.0 Header
-======================= */
-
-// Top bar Header
-#top-bar {
-    #top-bar__address i,
-    #top-bar__social i,
-    .contact-item {
-        display: inline-block;
-        padding: 0 10px;
-    }
-    padding: 20px gutter();
-    border-bottom: 1px solid lighten($five-bw, 42%);
-  a {
-    color: $one-color;
-  }
-}
-#top-bar__address {
-  @include font-size($size-medium,0,false);
-}
-
 .inline-right {
   display: inline-block;
   float: right;
@@ -193,12 +182,24 @@ main {
   float: left;
 }
 
-#top-bar__address {
-  margin-left: -20px;
+/*--------------------------------------------------------------
+3.1 Header
+--------------------------------------------------------------*/
+/* Top bar - Header */
+#top-bar {
+  padding: 20px gutter();
+  border-bottom: 1px solid lighten($five-bw, 42%);
   .contact-item {
+    display: inline-block;
     margin-top: 10px;
+    padding: 0 10px;
+    @include font-size($font-size-m,0,false);
   }
 }
+#top-bar__address {
+  margin-left: -20px;
+}
+
 .form-wcga {
   form {
     margin: 0;
@@ -213,56 +214,136 @@ main {
     border-color: $one-color;
   }
 }
-
-
 #top-bar__search{
   position: relative;
   overflow: hidden;
   clear: both;
 }
 
-
-
-// Bottom bar Header
-#site-header {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-
-}
+/* Site branding - Header */
 .header-wrapper {
   width: 100%;
   background-color: $four-bw;
   border-bottom: 1px solid lighten($five-bw, 42%);
   z-index: 700;
 }
-
+#site-header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
 .title-area {
-    max-width: 150px;
-    padding: 10px gutter();
-    flex: 1 1 auto;
+  max-width: 150px;
+  padding: 10px gutter();
+  flex: 1 1 auto;
 }
 .site-title {
-    margin: 0;
+  margin: 0;
 }
 #header-menu {
   letter-spacing: 0.05em;
 }
-/* 4.0 Section
-======================= */
-.page-section {
-
+/*--------------------------------------------------------------
+3.2  Regular Content
+--------------------------------------------------------------*/
+.header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $one-color;
+  background-image: url(#{$svg-path}trianglify.svg);
+  background-size: cover;
 }
+#breadcrumbs {
+  background: rgba(247, 248, 250, 0.1);
+  padding: 1%;
+  border-radius: 25px;
+  span {
+    padding-right: 5px;
+  }
+}
+/*--------------------------------------------------------------
+3.3  Posts - multi loop
+--------------------------------------------------------------*/
+.hentry-multi {
+  .hentry {
+    margin-bottom: 40px;
+    background-color: $white;
+    border: 1px solid lighten($five-bw, 44%);
+  }
+  .post-thumbnail{
+    margin-bottom: 20px;
+  }
+}
+
+/*--------------------------------------------------------------
+3.4  Posts & Page
+--------------------------------------------------------------*/
+.entry-meta {
+  border-bottom: 1px solid $border-color;
+}
+.entry-meta,
+.entry-summary {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+.meta__item {
+  display: inline-block;
+  padding: 0 2%;
+  margin-bottom: 10px;
+  i {
+    padding-left: 0;
+  }
+}
+.entry-content {
+  clear: both;
+}
+/*--------------------------------------------------------------
+3.5  Taxonomy
+--------------------------------------------------------------*/
+#term_description {
+  border-bottom: 5px solid $two-color;
+  margin-bottom: 40px;
+}
+.desc_header {
+  background-color: $two-color;
+}
+/*--------------------------------------------------------------
+3.6  Attachment
+--------------------------------------------------------------*/
+.attachment--other {
+  margin: 40px auto;
+  max-width: 800px;
+  background: $white;
+  padding: 2%;
+  border: 1px solid $border-color;
+}
+.attachment__header,
+.attachment__size {
+  border-bottom: dashed 1px $two-color;
+  padding: 10px 0;
+}
+.attachment__file {
+  padding: 25px 0;
+  img{
+    display: inline-block;
+  }
+}
+
+/*--------------------------------------------------------------
+4 Sections
+--------------------------------------------------------------*/
 .header-section {
   padding: 20px 0;
   h2 {
     margin: 0;
   }
 }
-
-/* Home page - header section with post */
+/*--------------------------------------------------------------
+4.1 Loop in header with post
+--------------------------------------------------------------*/
 #posts-header {
-    position: relative;
+  position: relative;
 }
 // First post
 .f-post {
@@ -270,68 +351,67 @@ main {
   background-size: cover;
   background-color: $one-color;
 
-    &::before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: $one-color;
-        opacity: 0.8;
-    }
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $one-color;
+    opacity: 0.8;
+  }
 
-    .entry-header {
-        flex: 0 1 auto;
-    }
-    .entry-summary {
-        flex: 0 1 auto;
-    }
+  .entry-header {
+    flex: 0 1 auto;
+  }
+  .entry-summary {
+    flex: 0 1 auto;
+  }
 }
 .f-post-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 // Block w other post - small
 .header-offslider {
+  width: 100%;
+  max-width: 670px;
+  margin: auto;
+  overflow: hidden;
+
+  article {
+    float: left;
     width: 100%;
-    max-width: 768px;
-    margin: auto;
-    overflow: hidden;
-
-    article {
-        float: left;
-        width: 100%;
-        background: $two-color;
-        margin-bottom: 10px;
-    }
-
-    h2 {
-        @include font-size($size-base,0,false);
-    }
+    background: $two-color;
+    margin-bottom: 10px;
+  }
+  h2 {
+    @include font-size($size-base,0,false);
+  }
 }
 .s-post-thumbnail {
-    height: 220px;
-    background-position: center;
-    background-size: cover;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
 }
 .s-post-content {
-    position: relative;
-    height: 110px;
-    overflow: hidden;
+  position: relative;
+  min-height: 110px;
+  overflow: hidden;
 
 }
 .arrow-more-icon {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 20px;
-    border: none;
-    overflow:hidden;
-    height: 44px;
-    width: 44px;
-    padding: 0;
-    @include font-size(4.2,0.1,true);
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  border: none;
+  overflow:hidden;
+  height: 44px;
+  width: 44px;
+  padding: 0;
+  @include font-size(4.2,0.1,true);
 }
 .arrow-allpost-icon {
   display: block;
@@ -342,38 +422,61 @@ main {
   background-color: $one-color;
   border: 2px solid $four-bw;
   margin: 10px auto;
-    &:hover {
+  &:hover {
     background-color: $two-color
-    }
-    > i {
-        clear: both;
-        display: block;
-        text-align: right;
-    }
+  }
+  > i {
+    clear: both;
+    display: block;
+    text-align: right;
+  }
 }
 
 // Continer for menu
 #header-nav-bottom {
-    background-color: $four-bw;
-    box-shadow: 0px 3px 10px 0px rgba($one-color, 0.3);
+  background-color: $four-bw;
 }
 
-
-/* events section*/
-.em-calendar thead {
-    background-color: $two-color;
+/*--------------------------------------------------------------
+4.2 Featured category
+--------------------------------------------------------------*/
+#featured-cat {
+  h2 {
+    display: inline-block;
+    padding: 20px 10%;
+    background-color: darken($three-color, 8%);
     color: $four-bw;
+  }
+  h3 {
+    @include font-size($size-base);
+  }
+  .h-wrapper {
+    border-bottom: 5px solid darken($three-color, 8%);
+  }
+  .hentry {
+    position: relative;
+    padding: 7% 24.5%;
+    border-bottom: 5px solid darken($three-color, 8%);
 
-    a {
-      color: $four-bw;
+    &:after {
+      content: '';
+      display: block;
+      width: 5px;
+      height: 50%;
+      background-color: darken($three-color, 8%);
+      position: absolute;
+      bottom: -5px;
+      right: 0;
     }
-}
-tr.days-names {
-    font-weight: bold;
-    color: $two-color;
+  }
+  a {
+    color:darken($three-color, 8%);
+  }
 }
 
-
+/*--------------------------------------------------------------
+4.3 Events
+--------------------------------------------------------------*/
 #wpg-evets {
   .header-section {
     color: darken($three-color, 8%);
@@ -384,82 +487,90 @@ tr.days-names {
 }
 .ev-wrapper{
   position: relative;
-
-
-  #calendar_events {
-    background-color: $four-bw;
-        margin-top: 20px;
-  }
 }
 .green_bg {
-    background-color: darken($three-color, 8%);
+  background-color: darken($three-color, 8%);
 }
+
+/* upcoming events */
 .ev_block > div {
-    display: inline-block;
-    vertical-align: top;
+  display: inline-block;
+  vertical-align: top;
 }
 .ev_block__icon {
-    padding: 0 10px 2%;
-    min-width: 80px;
-    text-align: center;
+  padding: 0 10px 2%;
+  min-width: 80px;
+  text-align: center;
 }
 .ev_block__content {
-    text-align: left;
+  text-align: left;
 }
 .ev-title {
   color:darken($three-color, 25%);
 }
 .ev-content {
-    font-weight: bold;
-    letter-spacing: 0.1em;
+  font-weight: bold;
+  letter-spacing: 0.1em;
 }
 
+/* calander in section */
+#calendar_events {
+  background-color: $four-bw;
+  margin-top: 20px;
+}
+.em-calendar thead {
+  background-color: $two-color;
+  color: $four-bw;
 
+  a {
+    color: $four-bw;
+  }
+}
+tr.days-names {
+  font-weight: bold;
+  color: $two-color;
+}
 
-
-/* Home page - section with clubs */
+/*--------------------------------------------------------------
+4.4 Clubs
+--------------------------------------------------------------*/
 .clubs {
   margin-top: 55px;
-padding-top: 25px;
-margin-bottom: 55px;
-    background-color: $two-color;
-    clear: both;
+  padding-top: 25px;
+  margin-bottom: 55px;
+  background-color: $two-color;
+  clear: both;
 
-    &::after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 70px;
-        background-color: $four-bw;
-        margin-top: -70px;
-    }
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 70px;
+    background-color: $four-bw;
+    margin-top: -70px;
+  }
 }
-
 .club-item {
-
-    padding: gutters();
-
-    img {
-        width: 50%;
-    }
-    &:first-child {
-        background-color: $four-color;
-    }
-    &:nth-child(2) {
-        background-color: lighten($two-color, 5);
-    }
-    &:nth-child(3) {
-        background-color: $three-color;
-    }
-    &:nth-child(4) {
-        background-color: lighten($four-color, 5);
-    }
+  img {
+    width: 50%;
+  }
+  &:first-child {
+    background-color: $four-color;
+  }
+  &:nth-child(2) {
+    background-color: lighten($two-color, 5);
+  }
+  &:nth-child(3) {
+    background-color: $three-color;
+  }
+  &:nth-child(4) {
+    background-color: lighten($four-color, 5);
+  }
 }
 
-
-
-
-/* Home page - section with New item */
+/*--------------------------------------------------------------
+4.5  New colections
+--------------------------------------------------------------*/
 .newitems {
   .tabs__item {
     margin-left: 15px;
@@ -470,24 +581,13 @@ margin-bottom: 55px;
 
     a[aria-selected=true] {
       color: $one-color;
-  }
-}
-
-
-
-
-  .tabs-home__contents {
-    img {
-      box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.5);
     }
   }
 }
-
 .coletion-image,
 .coletion-content {
   padding: 2.08333% 2.08333% 0 2.08333%;
   background-color: $two-color;
-
   img {
     width: auto;
     max-height: 370px;
@@ -497,7 +597,6 @@ margin-bottom: 55px;
 .coletion-gallery {
   background-color: $one-color;
   text-align: center;
-
   .btn {
     margin: 40px;
   }
@@ -508,8 +607,9 @@ margin-bottom: 55px;
   text-align: center;
 }
 
-
-/* section catl */
+/*--------------------------------------------------------------
+4.6  Catl
+--------------------------------------------------------------*/
 #catl {
   margin-top: 100px;
   padding-top: 55px;
@@ -538,17 +638,15 @@ margin-bottom: 55px;
     &:hover {
       color: $one-color;
       background-color: $three-color;
-
     }
   }
-
-
 }
-.catl-links {
-  text-align: center;
-  padding: 40px;
+.catl-svg,
+.catl-content {
+  width: 100%;
+  float: left;
+  min-height: 300px;
 }
-
 .catl-svg {
   display: flex;
   flex-direction: column;
@@ -559,16 +657,14 @@ margin-bottom: 55px;
     flex: 0 0 auto; // fix for ie11
   }
 }
-.catl-svg,
-.catl-content {
-  width: 100%;
-  float: left;
-  min-height: 300px;
+.catl-links {
+  text-align: center;
+  padding: 40px;
 }
 
-
-/* section contact */
-
+/*--------------------------------------------------------------
+4.7  Contact
+--------------------------------------------------------------*/
 #contact {
   position: relative;
   .header-section {
@@ -598,34 +694,6 @@ margin-bottom: 55px;
 .home.paged #contact {
   background-color: $four-bw;
 }
-
-#contact__content {
-  background-color: $two-color;
-
-  .contact-item {
-      margin-bottom: 20px;
-  }
-}
-.contact-item__icon {
-  display: flex;
-  flex-direction: row;
-  align-items: start;
-  i {
-    width: 60px;
-    @include font-size($size-xl-large);
-  }
-  span {
-    display: inline-block;
-    padding-left: 25px;
-  }
-}
-.contact-item__text {
-  padding-left: 85px;
-  margin-top: -0.5em;
-  .day {
-      width: 110px;
-  }
-}
 #contact__tabs,
 #contact__map {
   width: 100%;
@@ -639,130 +707,77 @@ margin-bottom: 55px;
   overflow: hidden;
 }
 
+/* contact tabs */
+#contact__content {
+  background-color: $two-color;
+
+  .contact-item {
+    margin-bottom: 20px;
+  }
+}
+.contact-item__icon {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  i {
+    width: 60px;
+    @include font-size($font-size-xxxl);
+  }
+  span {
+    display: inline-block;
+    padding-left: 25px;
+  }
+}
+.contact-item__text {
+  padding-left: 85px;
+  margin-top: -0.5em;
+  .day {
+    width: 110px;
+  }
+}
+
+/* contact social portal links */
 #contact-social {
   border-top: 1px solid $one-color;
   a {
-  margin: auto 5px;
+    margin: auto 5px;
   }
 }
 
-/*section catl & contact */
-#catl .tabs__item a,
-#contact .tabs__item a {
-    display: inline-block;
-    padding: 10px 5px;
-    margin-bottom: -2px;
-}
-
-
-/* google map */
+/* map */
 #map-canvas {
   height: 540px;
 }
-/* featured category */
-#featured-cat {
-  h2 {
-      display: inline-block;
-      padding: 20px 10%;
-      background-color: darken($three-color, 8%);
-      color: $four-bw;
-  }
-  h3 {
-    @include font-size($size-base);
-  }
-  .h-wrapper {
-        border-bottom: 5px solid darken($three-color, 8%);
-  }
-  .hentry {
-    position: relative;
-    padding: 7% 24.5%;
-    border-bottom: 5px solid darken($three-color, 8%);
 
-    &:after {
-      content: '';
-      display: block;
-      width: 5px;
-      height: 50%;
-      background-color: darken($three-color, 8%);
-      position: absolute;
-      bottom: -5px;
-      right: 0;
-    }
-  }
-  a {
-    color:darken($three-color, 8%);
-  }
+/*--------------------------------------------------------------
+4.8  Contact & Catl
+--------------------------------------------------------------*/
+#catl .tabs__item a,
+#contact .tabs__item a {
+  display: inline-block;
+  padding: 10px 5px;
+  margin-bottom: -2px;
 }
 
-/* section partners*/
-
+/*--------------------------------------------------------------
+4.9  Partners (slick slider css)
+--------------------------------------------------------------*/
 #partners {
   background-color: $white;
   padding-top: gutter();
   padding-bottom: gutter();
 }
 
-/* section copyright */
+/*--------------------------------------------------------------
+4.10  Copyright
+--------------------------------------------------------------*/
 #copyright {
   background-color: $white;
 }
 
-/* content */
-.header-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: $one-color;
-  background-image: url(#{$svg-path}trianglify.svg);
-  background-size: cover;
-}
-
-#breadcrumbs {
-  background: rgba(247, 248, 250, 0.1);
-  padding: 1%;
-  border-radius: 25px;
-  span {
-    padding-right: 5px;
-  }
-}
-/* hentry */
-.entry-content {
-  clear: both;
-}
-
-
-/* hentry-multi */
-
-.hentry-multi {
-  .hentry {
-    margin-bottom: 40px;
-    background-color: $white;
-    border: 1px solid lighten($five-bw, 44%);
-  }
-  .post-thumbnail{
-    margin-bottom: 20px;
-  }
-}
-
-.entry-meta {
-  border-bottom: 1px solid $border-color;
-}
-.entry-meta,
-.entry-summary {
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-}
-
-.meta__item {
-  display: inline-block;
-  padding: 0 2%;
-  margin-bottom: 10px;
-  i {
-    padding-left: 0;
-  }
-}
-
-
+/*--------------------------------------------------------------
+5.0  Widgets
+--------------------------------------------------------------*/
 .widget {
   border-bottom: 2px solid $border-color;
 
@@ -777,50 +792,19 @@ margin-bottom: 55px;
     right: 0;
   }
 }
-  .widget-title::after{
-    content: '';
-    display: block;
-    width: 40%;
-    height: 5px;
-    background-color: $two-color;
-  }
-
-
-
-
-/* taxonomy index */
-#term_description {
-  border-bottom: 5px solid $two-color;
-  margin-bottom: 40px;
-}
-.desc_header {
+.widget-title::after {
+  content: '';
+  display: block;
+  width: 40%;
+  height: 5px;
   background-color: $two-color;
 }
 
-
-/* attachment */
-
-.attachment--other {
-    margin: 40px auto;
-    max-width: 800px;
-    background: $white;
-    padding: 2%;
-    border: 1px solid $border-color;
-}
-.attachment__header,
-.attachment__size {
-	border-bottom: dashed 1px $two-color;
-	padding: 10px 0;
-}
-.attachment__file {
-    padding: 25px 0;
-    img{
-      display: inline-block;
-    }
-}
-
-/* Event calander */
-table.em-calendar td.eventless-today, table.em-calendar td.eventful-today {
+/*--------------------------------------------------------------
+6.0  Event calander - plugin Events Manager by Marcus Sykes
+--------------------------------------------------------------*/
+table.em-calendar td.eventless-today,
+table.em-calendar td.eventful-today {
   background-color: $two-color;
   color: $four-bw;
 }
@@ -831,32 +815,28 @@ table.em-calendar td.eventless-today, table.em-calendar td.eventful-today {
   margin-bottom: 5em;
   background: $three-bw;
 }
-
 .ev-item__date {
-    background-color: $two-color;
-    padding: 15px 30px;
-    position: absolute;
-    top: -15px;
-    right: -20px;
-    z-index: 5;
+  background-color: $two-color;
+  padding: 15px 30px;
+  position: absolute;
+  top: -15px;
+  right: -20px;
+  z-index: 5;
 }
 .ec-item__img   img {
-    max-width: 150px;
-margin: 5px auto 25px;
-  }
-
+  max-width: 150px;
+  margin: 5px auto 25px;
+}
 .ev-item__content {
   width: 100%;
   float: left;
   margin-top: 20px;
 }
-
 .ev-item__hour,
 .ev-item__location {
-    padding: 10px 0;
-    border-bottom: 1px solid $border-color;
+  padding: 10px 0;
+  border-bottom: 1px solid $border-color;
 }
-
 .ev-item__summary {
-    padding: 10px 0;
+  padding: 10px 0;
 }

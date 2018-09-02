@@ -6,47 +6,45 @@
     margin: auto;
     clear: both;
 }
-
 .row {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 .gutters {
-    @include gutters();
+  @include gutters();
 }
 .pad-all {
   padding: gutters();
 }
+
 %col-styles {
-    position: relative;
-    @include span(12 no-gutters);
-    margin-left:0;
-    margin-right:0;
+  position: relative;
+  @include span(12 no-gutters);
+  margin-left:0;
+  margin-right:0;
 }
 
 @for $i from 1 through 12 {
-    .col-#{$i} { @extend %col-styles; }
-
+  .col-#{$i} { @extend %col-styles; }
 }
-
 
 
 /* clear */
 .clear {
-    display: block;
-    clear: both;
-    width: 100%;
-    height: 1px;
+  display: block;
+  clear: both;
+  width: 100%;
+  height: 1px;
 }
 .clear-both {
+  clear: both;
+  width: 100%;
+  &:after {
+    content: ".";
+    display: block;
     clear: both;
-    width: 100%;
-    &:after {
-        content: ".";
-        display: block;
-        clear: both;
-        visibility: hidden;
-        line-height: 0;
-        height: 0;
-    }
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+  }
 }

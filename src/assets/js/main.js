@@ -121,7 +121,7 @@ $.fn.slick_small_sllider = function(setting) {
     /**
     * Slick slider active
     */
-    $('#header-content').slick_small_sllider(settings = {});
+    $('#posts-header__min').slick_small_sllider(settings = {});
     $('#partner-slider').slick({
          dots: false,
          arrows: false,

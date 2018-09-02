@@ -46,7 +46,7 @@ msgstr[1] ""
 msgid "Comments are closed."
 msgstr ""
 
-#: src/components/content_multi/content-club.php:47, src/components/content_multi/content-club.php:83, src/components/content_multi/content-collection.php:47, src/components/content_multi/content-collection.php:83, src/components/content_multi/content.php:45, src/components/content_multi/content.php:73, src/components/content_single/content-club.php:37, src/components/content_single/content-collection.php:37, src/components/content_single/content-page.php:43, src/components/content_single/content.php:37, src/inc/template-tags.php:135
+#: src/components/content_multi/content-club.php:47, src/components/content_multi/content-club.php:83, src/components/content_multi/content-collection.php:47, src/components/content_multi/content-collection.php:83, src/components/content_multi/content.php:45, src/components/content_multi/content.php:73, src/components/content_single/content-club.php:37, src/components/content_single/content-collection.php:37, src/components/content_single/content-page.php:43, src/components/content_single/content.php:37, src/inc/template-tags.php:139
 msgid "Author"
 msgstr ""
 
@@ -134,11 +134,11 @@ msgstr ""
 msgid "New in the library"
 msgstr ""
 
-#: src/components/features/section-new.php:141
+#: src/components/features/section-new.php:143
 msgid "Show"
 msgstr ""
 
-#: src/components/features/section-new.php:153
+#: src/components/features/section-new.php:155
 msgid "Older collections of new products"
 msgstr ""
 
@@ -214,7 +214,7 @@ msgstr ""
 msgid "Photo published in size <a href=\"%1$s\" title=\"Link to original file\">%2$s pixels <span class=\"screen-reader-text\">(Image Width)</span> to %3$s pixels <span class=\"screen-reader-text\">(Image Height)</span></a> in the article <a href=\"%4$s\" title=\"Back to %5$s\" rel=\"gallery\">%6$s</a>"
 msgstr ""
 
-#: src/inc/customizer/helpers/inc_helpers.php:199, src/inc/customizer/setting_control/inc_setting_club.php:175, src/inc/customizer/setting_control/inc_setting_new.php:95, src/inc/template-tags.php:199, src/inc/template-tags.php:259
+#: src/inc/customizer/helpers/inc_helpers.php:199, src/inc/customizer/setting_control/inc_setting_club.php:175, src/inc/customizer/setting_control/inc_setting_new.php:95, src/inc/template-tags.php:203, src/inc/template-tags.php:263
 msgid "Category"
 msgstr ""
 
@@ -422,67 +422,67 @@ msgstr ""
 msgid "Partner url"
 msgstr ""
 
-#: src/inc/template-tags.php:75
+#: src/inc/template-tags.php:79
 msgid "Share on Twitter!"
 msgstr ""
 
-#: src/inc/template-tags.php:77
+#: src/inc/template-tags.php:81
 msgid "Share on Google+"
 msgstr ""
 
-#: src/inc/template-tags.php:79
+#: src/inc/template-tags.php:83
 msgid "Share on Facebook"
 msgstr ""
 
-#: src/inc/template-tags.php:157
+#: src/inc/template-tags.php:161
 msgid "Data"
 msgstr ""
 
-#: src/inc/template-tags.php:175
+#: src/inc/template-tags.php:179
 msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
-#: src/inc/template-tags.php:451
+#: src/inc/template-tags.php:455
 msgid "Comment navigation"
 msgstr ""
 
-#: src/inc/template-tags.php:457
+#: src/inc/template-tags.php:461
 msgid "Older Comments"
 msgstr ""
 
-#: src/inc/template-tags.php:465
+#: src/inc/template-tags.php:469
 msgid "Newer Comments"
 msgstr ""
 
-#: src/inc/template-tags.php:985
+#: src/inc/template-tags.php:989
 msgid "Home"
 msgstr ""
 
-#: src/inc/template-tags.php:987
+#: src/inc/template-tags.php:991
 msgid "<span class=\"screen-reader-text\">Archive by Category</span> %s"
 msgstr ""
 
-#: src/inc/template-tags.php:989
+#: src/inc/template-tags.php:993
 msgid "<span class=\"screen-reader-text\">Search Results for</span> %s"
 msgstr ""
 
-#: src/inc/template-tags.php:991
+#: src/inc/template-tags.php:995
 msgid "<span class=\"screen-reader-text\">Posts Tagged</span> %s"
 msgstr ""
 
-#: src/inc/template-tags.php:993
+#: src/inc/template-tags.php:997
 msgid "<span class=\"screen-reader-text\">Articles Posted by</span> %s"
 msgstr ""
 
-#: src/inc/template-tags.php:995
+#: src/inc/template-tags.php:999
 msgid "<span class=\"screen-reader-text\">Error 404</span>"
 msgstr ""
 
-#: src/inc/template-tags.php:997
+#: src/inc/template-tags.php:1001
 msgid "<span class=\"screen-reader-text\">Page</span> %s"
 msgstr ""
 
-#: src/inc/template-tags.php:999
+#: src/inc/template-tags.php:1003
 msgid "<span class=\"screen-reader-text\">Comment Pag</span>e %s"
 msgstr ""
 

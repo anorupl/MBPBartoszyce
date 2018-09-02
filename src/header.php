@@ -26,7 +26,7 @@
 
 <body <?php body_class();?> >
 
-  <div id="top-bar" class="header-top clear-both hide-on-small">
+  <div id="top-bar" class="header-top dark-two clear-both hide-on-small">
     <div class="wrapper">
       <div id="top-bar__address" class="inline-left">
           <?php wpg_the_adress();?>
