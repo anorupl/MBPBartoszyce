@@ -92,7 +92,8 @@ if ( ! function_exists( 'wpg_setup' ) ) :
 	*/
 	register_nav_menus( array(
 		'header'        => esc_html__( 'Header Menu - Top', 'wpg_theme' ),
-		'header_bottom' => esc_html__( 'Header Menu - Bottom ', 'wpg_theme' )
+		'header_bottom' => esc_html__( 'Header Menu - Bottom ', 'wpg_theme' ),
+		'left_sidebar'  => esc_html__( 'Sidebar Menu - Left ', 'wpg_theme' )
 	));
 
 	/**
@@ -176,6 +177,15 @@ function wpg_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Right Sidebar', 'wpg_theme' ),
 		'id'            => 'wpg-sidebar-right',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Left Sidebar', 'wpg_theme' ),
+		'id'            => 'wpg-sidebar-left',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',

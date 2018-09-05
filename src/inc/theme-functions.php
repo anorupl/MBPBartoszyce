@@ -123,15 +123,30 @@ function wpg_nav_description( $item_output, $item, $depth, $args ) {
 add_filter( 'walker_nav_menu_start_el', 'wpg_nav_description', 10, 4 );
 
 
+/**
+* Add class when image is added to the editor.
+*
+* Image added before doesn't have class. To work popup with old image must use filter the_content.
+*/
+function wpg_add_linked_images_class($html, $id, $caption, $title, $align, $url, $size, $alt = '' ){
+  $classes = 'image-popup'; // separated by spaces, e.g. 'img image-link'
 
-
-
+  // check if there are already classes assigned to the anchor
+  if ( preg_match('/<a.*? class=".*?">/', $html) ) {
+    $html = preg_replace('/(<a.*? class=".*?)(".*?>)/', '$1 ' . $classes . '$2', $html);
+  } else {
+    $html = preg_replace('/(<a.*?)>/', '$1 class="' . $classes . '" >', $html);
+  }
+  return $html;
+}
+add_filter('image_send_to_editor','wpg_add_linked_images_class',10,8);
 
 
 /**
 * Add the visual editor to the edit tag screen
 *
 * HTML should match what is used in wp-admin/edit-tag-form.php
+*
 *
 * @link https://github.com/sheabunge/visual-term-description-editor
 *

@@ -10,96 +10,6 @@
 @import "setting/susy";
 @import "setting/variables";
 
-/*
-sass/
-|-- setting/
-|   |-- _function.scss +
-|   |-- _mixin.scss  +
-|   |-- _susy.scss +
-|   `-- _variables.scss +
-|
-|-- framework/
-|   |-- base/
-|   |   `-- _icon_font.scss +
-|   |
-|   |-- components/
-|   |   |-- _alignments.scss +
-|   |   |-- _alignments__rwd--tablet.scss +
-|   |   |-- _base_html_tags.scss +
-|   |   |-- _gallery.scss +
-|   |   |-- _gallery__rwd--phone.scss +
-|   |   |-- _headings.scss +
-|   |   |-- _links.scss +
-|   |   |-- _list.scss +
-|   |   |-- _list__rwd--tablet.scss +
-|   |   |-- _media.scss +
-|   |   |-- _tables.scss +
-|   |   |
-|   |   `-- forms/
-|   |       |-- _forms.scss+
-|   |       |-- _forms__normalize.scss +
-|   |       |-- _pretty_checkbox.scss +
-|   |       |-- _pretty_select.scss +
-|   |       `-- _swip_checkbox.scss +
-|   |
-|   |-- layout/
-|   |   |-- _gird.scss
-|   |   `-- _gird__rwd__tablet.scss
-|   |
-|   |-- vendors/
-|       |
-|       `-- pluginy_js/
-|       |   |-- _justifiedGallery.scss
-|       |   |-- _magnificPopup.scss
-|       |   `-- _ui-tabs.scss
-|       |
-|       |
-|       `-- pluginy_wp/
-|       |   |-- _tribe_event.scss
-|       |
-|       `-- pattern-css/
-|           |-- _attachment.scss
-|           |-- _block_post.scss
-|           |-- _boxes_porto.scss
-|           |-- _client_reviews.scss
-|           |-- _feturad_fr.scss
-|           |-- _hexagons.scss
-|           |-- _pricing_table.scss
-|           |-- _related.scss
-|           |-- _stage.scss
-|           |-- _stage__rwd--tablet.scss
-|           |-- _feturad_box.scss
-|           `-- fatured/
-|               |-- _feturad_box_icon
-|               |-- _feturad_box_icon_double
-|               |-- _feturad_box_image
-|               |-- _feturad_box_text
-|               `-- _feturad_image
-|
-|-- theme/
-|   |-- _accessibility.scss
-|   |-- _coments.scss
-|   |-- _coments__rwd--tablet.scss
-|   |-- _post_format.scss
-|   |-- _shortcode.scss
-|   |-- _theme.scss
-|   |-- _theme__rwd--tablet.scss
-|   |-- _widgets.scss
-|   |-- _widgets__rwd--tablet.scss
-|   |
-|    `-- nav/
-|       |-- _nav_horizontal.scss
-|       |-- _nav_horizontal__rwd.scss
-|       |-- _nav_pagination.scss
-|       |-- _nav_pagination__rwd--tablet.scss
-|       |-- _nav_small.scss
-|       |-- _nav_small__rwd--tablet.scss
-|       |-- _nav_verticall.scss
-|       |-- _nav_verticall__rwd.scss
-|
-|
-`-- style.scss
-*/
 /*--------------------------------------------------------------
 -- framework/base/
 --------------------------------------------------------------*/
@@ -122,9 +32,6 @@ sass/
 --------------------------------------------------------------*/
 @import "framework/components/forms/forms__normalize";
 @import "framework/components/forms/forms";
-//@import "framework/components/forms/pretty_checkbox";
-//@import "framework/components/forms/pretty_select";
-//@import "framework/components/forms/swip_checkbox";
 
 /*--------------------------------------------------------------
 -- framework/layout/
@@ -132,41 +39,13 @@ sass/
 @import "framework/layout/gird";
 
 /*--------------------------------------------------------------
--- framework/vendors/pattern-css/
---------------------------------------------------------------*/
-//@import "framework/vendors/pattern-css/attachment";
-//@import "framework/vendors/pattern-css/block_post";
-//@import "framework/vendors/pattern-css/boxes_porto";
-//@import "framework/vendors/pattern-css/client_reviews";
-//@import "framework/vendors/pattern-css/feturad_fr";
-//@import "framework/vendors/pattern-css/hexagons";
-//@import "framework/vendors/pattern-css/pricing_table";
-//@import "framework/vendors/pattern-css/related";
-//@import "framework/vendors/pattern-css/stage";
-//@import "framework/vendors/pattern-css/feturad_box";
-//-- framework/vendors/pattern-css/fatured/
-//@import "framework/vendors/pattern-css/fatured/feturad_box_icon";
-//@import "framework/vendors/pattern-css/fatured/feturad_box_icon_double";
-//@import "framework/vendors/pattern-css/fatured/feturad_box_image";
-//@import "framework/vendors/pattern-css/fatured/feturad_box_text";
-//@import "framework/vendors/pattern-css/fatured/feturad_image";
-
-/*--------------------------------------------------------------
 -- framework/vendors/pluginy_js/
 --------------------------------------------------------------*/
-//@import "framework/vendors/pluginy_js/_justifiedGallery";
 @import "framework/vendors/pluginy_js/_magnificPopup";
-//@import "framework/vendors/pluginy_js/_ui_tabs";
-
-/*--------------------------------------------------------------
-//-- framework/vendors/pluginy_wp/
---------------------------------------------------------------*/
-//@import "framework/vendors/pluginy_wp/tribe_event";
 
 /*--------------------------------------------------------------
 //-- theme/
 --------------------------------------------------------------*/
-
 @import "theme/theme";
 @import "theme/widgets";
 @import "theme/coments";
@@ -183,9 +62,6 @@ sass/
 
 ////////////////////////////////////////////////////////////////
 
-/*----------------------------------
-*  Base RWD
-* ---------------------------------*/
 /*--------------------------------------------------------------
 -- Responsive breakpoint
 --------------------------------------------------------------*/
@@ -233,11 +109,6 @@ sass/
   @import "theme/theme--rwd_min-hdpi";
 
 }
-
-
-
-
-
 
 /*----------------------------------
 *  Special Breakpoint old desktop 1024

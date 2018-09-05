@@ -55,96 +55,6 @@ Text Domain: wpg_theme
 /*--------------------------------------------------------------
 >>> Color Menu Pagination
 ---------------------------------------------------------------*/
-/*
-sass/
-|-- setting/
-|   |-- _function.scss +
-|   |-- _mixin.scss  +
-|   |-- _susy.scss +
-|   `-- _variables.scss +
-|
-|-- framework/
-|   |-- base/
-|   |   `-- _icon_font.scss +
-|   |
-|   |-- components/
-|   |   |-- _alignments.scss +
-|   |   |-- _alignments__rwd--tablet.scss +
-|   |   |-- _base_html_tags.scss +
-|   |   |-- _gallery.scss +
-|   |   |-- _gallery__rwd--phone.scss +
-|   |   |-- _headings.scss +
-|   |   |-- _links.scss +
-|   |   |-- _list.scss +
-|   |   |-- _list__rwd--tablet.scss +
-|   |   |-- _media.scss +
-|   |   |-- _tables.scss +
-|   |   |
-|   |   `-- forms/
-|   |       |-- _forms.scss+
-|   |       |-- _forms__normalize.scss +
-|   |       |-- _pretty_checkbox.scss +
-|   |       |-- _pretty_select.scss +
-|   |       `-- _swip_checkbox.scss +
-|   |
-|   |-- layout/
-|   |   |-- _gird.scss
-|   |   `-- _gird__rwd__tablet.scss
-|   |
-|   |-- vendors/
-|       |
-|       `-- pluginy_js/
-|       |   |-- _justifiedGallery.scss
-|       |   |-- _magnificPopup.scss
-|       |   `-- _ui-tabs.scss
-|       |
-|       |
-|       `-- pluginy_wp/
-|       |   |-- _tribe_event.scss
-|       |
-|       `-- pattern-css/
-|           |-- _attachment.scss
-|           |-- _block_post.scss
-|           |-- _boxes_porto.scss
-|           |-- _client_reviews.scss
-|           |-- _feturad_fr.scss
-|           |-- _hexagons.scss
-|           |-- _pricing_table.scss
-|           |-- _related.scss
-|           |-- _stage.scss
-|           |-- _stage__rwd--tablet.scss
-|           |-- _feturad_box.scss
-|           `-- fatured/
-|               |-- _feturad_box_icon
-|               |-- _feturad_box_icon_double
-|               |-- _feturad_box_image
-|               |-- _feturad_box_text
-|               `-- _feturad_image
-|
-|-- theme/
-|   |-- _accessibility.scss
-|   |-- _coments.scss
-|   |-- _coments__rwd--tablet.scss
-|   |-- _post_format.scss
-|   |-- _shortcode.scss
-|   |-- _theme.scss
-|   |-- _theme__rwd--tablet.scss
-|   |-- _widgets.scss
-|   |-- _widgets__rwd--tablet.scss
-|   |
-|    `-- nav/
-|       |-- _nav_horizontal.scss
-|       |-- _nav_horizontal__rwd.scss
-|       |-- _nav_pagination.scss
-|       |-- _nav_pagination__rwd--tablet.scss
-|       |-- _nav_small.scss
-|       |-- _nav_small__rwd--tablet.scss
-|       |-- _nav_verticall.scss
-|       |-- _nav_verticall__rwd.scss
-|
-|
-`-- style.scss
-*/
 /*--------------------------------------------------------------
 -- framework/base/
 --------------------------------------------------------------*/
@@ -1625,9 +1535,6 @@ form select {
 }
 
 /*--------------------------------------------------------------
--- framework/vendors/pattern-css/
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
 -- framework/vendors/pluginy_js/
 --------------------------------------------------------------*/
 /* Magnific Popup CSS 
@@ -2127,9 +2034,6 @@ img.mfp-img {
   padding-top: 0;
 }
 
-/*--------------------------------------------------------------
-//-- framework/vendors/pluginy_wp/
---------------------------------------------------------------*/
 /*--------------------------------------------------------------
 //-- theme/
 --------------------------------------------------------------*/
@@ -3150,6 +3054,21 @@ tr.days-names {
 /*--------------------------------------------------------------
 6.0  Event calander - plugin Events Manager by Marcus Sykes
 --------------------------------------------------------------*/
+.ev-front-noevents {
+  visibility: hidden;
+  display: none;
+}
+
+.home .ev-front-events {
+  color: #f7f8fa;
+}
+
+.home .ev-front-noevents {
+  color: #f7f8fa;
+  visibility: visible;
+  display: block;
+}
+
 table.em-calendar td.eventless-today,
 table.em-calendar td.eventful-today {
   background-color: #f25e44;
@@ -4001,9 +3920,6 @@ a.skip-main:active {
 /*
 * All
 * */
-/*----------------------------------
-*  Base RWD
-* ---------------------------------*/
 /*--------------------------------------------------------------
 -- Responsive breakpoint
 --------------------------------------------------------------*/

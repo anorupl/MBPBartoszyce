@@ -182,6 +182,7 @@ main {
   float: left;
 }
 
+
 /*--------------------------------------------------------------
 3.1 Header
 --------------------------------------------------------------*/
@@ -803,6 +804,21 @@ tr.days-names {
 /*--------------------------------------------------------------
 6.0  Event calander - plugin Events Manager by Marcus Sykes
 --------------------------------------------------------------*/
+.ev-front-noevents {
+  visibility: hidden;
+  display: none;
+}
+.home .ev-front-events {
+  color: $four-bw;
+}
+
+.home .ev-front-noevents {
+  color: $four-bw;
+  visibility: visible;
+  display: block;
+}
+
+
 table.em-calendar td.eventless-today,
 table.em-calendar td.eventful-today {
   background-color: $two-color;

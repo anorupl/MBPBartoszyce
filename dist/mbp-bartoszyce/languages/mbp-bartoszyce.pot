@@ -46,15 +46,15 @@ msgstr[1] ""
 msgid "Comments are closed."
 msgstr ""
 
-#: src/components/content_multi/content-club.php:47, src/components/content_multi/content-club.php:83, src/components/content_multi/content-collection.php:47, src/components/content_multi/content-collection.php:83, src/components/content_multi/content.php:45, src/components/content_multi/content.php:73, src/components/content_single/content-club.php:37, src/components/content_single/content-collection.php:37, src/components/content_single/content-page.php:43, src/components/content_single/content.php:37, src/inc/template-tags.php:139
+#: src/components/content_multi/content-club.php:47, src/components/content_multi/content-club.php:83, src/components/content_multi/content-collection.php:47, src/components/content_multi/content-collection.php:83, src/components/content_multi/content.php:49, src/components/content_multi/content.php:81, src/components/content_single/content-club.php:37, src/components/content_single/content-collection.php:37, src/components/content_single/content-page.php:43, src/components/content_single/content.php:37, src/inc/template-tags.php:139
 msgid "Author"
 msgstr ""
 
-#: src/components/content_multi/content-club.php:67, src/components/content_multi/content-collection.php:67, src/components/content_multi/content.php:61
+#: src/components/content_multi/content-club.php:67, src/components/content_multi/content-collection.php:67, src/components/content_multi/content.php:65
 msgid "Continue reading"
 msgstr ""
 
-#: src/components/content_multi/content-club.php:107, src/components/content_multi/content-collection.php:107, src/components/content_multi/content.php:99, src/components/site/loop-homepage.php:65
+#: src/components/content_multi/content-club.php:107, src/components/content_multi/content-collection.php:107, src/components/content_multi/content.php:101, src/components/site/loop-homepage.php:65
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
@@ -200,6 +200,10 @@ msgstr ""
 
 #: src/functions.php:353
 msgid "Right Sidebar"
+msgstr ""
+
+#: src/functions.php:371
+msgid "Left Sidebar"
 msgstr ""
 
 #: src/header.php:133, src/header.php:161

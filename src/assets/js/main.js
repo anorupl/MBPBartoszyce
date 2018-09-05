@@ -1,76 +1,12 @@
 /*!
- *  MBP Bartoszyce 0.1.0
- *  Main javascript for Theme.
- */
+*  MBP Bartoszyce 0.1.0
+*  Main javascript for Theme.
+*/
 (function ($) {
-  /*
-   * Function Test if inline SVGs are supported.
-   * @link https://github.com/Modernizr/Modernizr/
-   */
-  function supportsInlineSVG() {
-    var div = document.createElement('div');
-    div.innerHTML = '<svg/>';
-    return 'http://www.w3.org/2000/svg' === ('undefined' !== typeof SVGRect && div.firstChild && div.firstChild.namespaceURI);
-  }
-
-/**
- * Function rwd nav.
- */
-$.fn.nav = function (nav) {
-  return this.each(function () {
-
-    var $this = $(this);
-
-    $(window).on('resize orientationchange', function () {
-
-      var window_width = $(window)["0"].innerWidth;
-
-      if (window_width > 992) {
-
-        $classes = $this.data("class");
-
-        // Usuwanie classy z menu
-        if ($this.hasClass("small-menu")) {
-          $('#site-header').removeClass("menu-active");
-          $this.removeClass();
-          $this.addClass($classes);
-        }
-      }
-    }).resize();
-  });
-};
-
-$.fn.slick_small_sllider = function(setting) {
-
-  return this.each(function () {
-      var $this = $(this);
-
-        if ($(window)["0"].innerWidth < 992) {
-             $this.slick(setting);
-        };
-
-      $(window).on('resize orientationchange', function () {
-
-           if ($(window)["0"].innerWidth < 992) {
-
-              if (!$this.hasClass('slick-initialized')) {
-                 $this.slick(setting);
-              }
-              return;
-           };
-           if ($this.hasClass('slick-initialized')) {
-              return $this.slick('unslick');
-          };
-      });
-  });
-};
-
-
-
   /*********************************************************
-   * Document ready (jQuery)
-   * Fire on document ready.
-   *********************************************************/
+  * Document ready (jQuery)
+  * Fire on document ready.
+  *********************************************************/
   $(document).ready(function () {
 
     var $offset_header = $('#site-header').offset();
@@ -78,16 +14,14 @@ $.fn.slick_small_sllider = function(setting) {
     /**
     *  Scroll
     */
-     $(window).scroll(function() {
+    $(window).scroll(function() {
 
-        if ( $(window).scrollTop() > ($offset_header.top)){
-            $('body').addClass('fixed-header');
-        } else {
-            $('body').removeClass('fixed-header');
-        }
+      if ( $(window).scrollTop() > ($offset_header.top)){
+        $('body').addClass('fixed-header');
+      } else {
+        $('body').removeClass('fixed-header');
+      }
     });
-
-
 
     //Test inline SVGs are supported.
     if (true === supportsInlineSVG()) {
@@ -103,18 +37,18 @@ $.fn.slick_small_sllider = function(setting) {
     // if click button menu
     $('button.icon-button-small-menu').on('click', function(e){
 
-        var item = $(this).next();
+      var item = $(this).next();
 
-        item.toggleClass( item.data("class") + " small-menu" );
-        $( '#site-header' ).toggleClass( "menu-active" );
-        e.preventDefault();
+      item.toggleClass( item.data("class") + " small-menu" );
+      $( '#site-header' ).toggleClass( "menu-active" );
+      e.preventDefault();
     });
 
     // If Menu focus
     $( function() {
-        $( '.h-nav' ).find( 'a' ).on( 'focus blur', function() {
-            $( this ).parents().toggleClass( 'focus' );
-        });
+      $( '.h-nav' ).find( 'a' ).on( 'focus blur', function() {
+        $( this ).parents().toggleClass( 'focus' );
+      });
     });
 
 
@@ -123,131 +57,192 @@ $.fn.slick_small_sllider = function(setting) {
     */
     $('#posts-header__min').slick_small_sllider(settings = {});
     $('#partner-slider').slick({
-         dots: false,
-         arrows: false,
-         centerMode: true,
-         slidesToShow: 5,
-         autoplay: true,
-         pauseOnHover: false,
-         responsive: [
-             {
-                 breakpoint: 480,
-                 settings: {
-                     centerPadding: '40px',
-                     slidesToShow: 1
-                 }
-             }
-         ]
-     });
+      dots: false,
+      arrows: false,
+      centerMode: true,
+      slidesToShow: 5,
+      autoplay: true,
+      pauseOnHover: false,
+      responsive: [
+        {
+          breakpoint: 480,
+          settings: {
+            centerPadding: '40px',
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
 
 
     /**
     * Search toggle
     */
-		$( '#top-bar__btn-search' ).on( 'click', function( event ) {
-			var that    = $( this ),
-				  wrapper = $( '#top-bar__search' ),
-				  container = that.find( 'a' );
+    $( '#top-bar__btn-search' ).on( 'click', function( event ) {
+      var that    = $( this ),
+      wrapper = $( '#top-bar__search' ),
+      container = that.find( 'a' );
 
-			that.toggleClass( 'active' );
-			wrapper.toggleClass( 'hide' );
+      that.toggleClass( 'active' );
+      wrapper.toggleClass( 'hide' );
 
-			if ( that.hasClass( 'active' ) ) {
-				container.attr( 'aria-expanded', 'true' );
-			} else {
-				container.attr( 'aria-expanded', 'false' );
-			}
+      if ( that.hasClass( 'active' ) ) {
+        container.attr( 'aria-expanded', 'true' );
+      } else {
+        container.attr( 'aria-expanded', 'false' );
+      }
 
-			if ( that.is( '.active' )) {
-				wrapper.find( '.search-field' ).focus();
-			}
-		} );
-
-
-     /**
-     * Image Popup
-     */
-     //Translating magnificPopup
-     $.extend(true, $.magnificPopup.defaults, {
-         tClose: datalanuge.close, // Alt text on close button
-         tLoading: datalanuge.load, // Text that is displayed during loading. Can contain %curr% and %total% keys
-         gallery: {
-             tPrev: datalanuge.prev, // Alt text on left arrow
-             tNext: datalanuge.next, // Alt text on right arrow
-             tCounter: '%curr% '+ datalanuge.of + ' %total%' // Markup for "1 of 7" counter
-         },
-         image: {
-             tError: '<a href="%url%">'+ datalanuge.image +'</a>' + datalanuge.error_image // Error message when image could not be loaded
-         },
-         ajax: {
-             tError: '<a href="%url%">'+ datalanuge.image +'</a>' + datalanuge.error_image // Error message when ajax request failed
-         }
-     });
-
-     // Single image
-     $('.wp-block-image a[href*=".jpg"]').magnificPopup({
-         type:'image',
-     });
-
-     //Gallery image
-     $('.wp-block-gallery').each(function () {
-         $(this).magnificPopup({
-             delegate: 'a[href*=".jpg"], a[href*=".jpeg"], a[href*=".png"], a[href*=".gif"]',
-             type: 'image',
-             gallery: {
-                 enabled: true,
-             }
-         });
-     });
+      if ( that.is( '.active' )) {
+        wrapper.find( '.search-field' ).focus();
+      }
+    } );
 
 
-     /**
-     * Obsługa fomularza przycisku kontrastu i rozmiaru czcionek (formularz dziala bez js przez php)
-     */
-     	$("#form-wcga button").click(function(e){
+    /**
+    * Image Popup
+    */
+    //Translating magnificPopup
+    $.extend(true, $.magnificPopup.defaults, {
+      tClose: datalanuge.close, // Alt text on close button
+      tLoading: datalanuge.load, // Text that is displayed during loading. Can contain %curr% and %total% keys
+      gallery: {
+        tPrev: datalanuge.prev, // Alt text on left arrow
+        tNext: datalanuge.next, // Alt text on right arrow
+        tCounter: '%curr% '+ datalanuge.of + ' %total%' // Markup for "1 of 7" counter
+      },
+      image: {
+        tError: '<a href="%url%">'+ datalanuge.image +'</a>' + datalanuge.error_image // Error message when image could not be loaded
+      },
+      ajax: {
+        tError: '<a href="%url%">'+ datalanuge.image +'</a>' + datalanuge.error_image // Error message when ajax request failed
+      }
+    });
 
-     		var button  = $(this),
-     		value   = button.val();
+    // Single image
+    $('.wp-block-image a[href*=".jpg"]').magnificPopup({
+      type:'image',
+    });
 
-     		e.preventDefault();
+    //Gallery image
+    $('.gallery').each(function () {
+      $(this).magnificPopup({
+        delegate: 'a[href*=".jpg"], a[href*=".jpeg"], a[href*=".png"], a[href*=".gif"]',
+        type: 'image',
+        gallery: {
+          enabled: true,
+        }
+      });
+    });
 
-     		if (value == 'contrast' || value == 'normal') {
-     			switch(value) {
-     				case 'contrast':
-     					$('head').append('<link id="contrast-style-css" rel="stylesheet" href="'+ datalanuge.url +'/css/kontrast.css" type="text/css" />');
-     					$.cookie("color", 'contrast', {expires: 365, path: '/'});
-     					button.val('normal');
-     					button.html(datalanuge.offcontrast);
-     					break;
-     				case 'normal':
-     					$("#contrast-style-css").remove();
-     					$.removeCookie('color', { path: '/' });
-     					button.val('contrast');
-     					button.html(datalanuge.oncontrast);
-     					break;
-     				default:
-     					break;
-     			}
-     		} else {
 
-     			if ($.cookie("font-size")) {
-     				$("#font-size-css").remove();
-     				$.removeCookie('font-size', { path: '/' });
-     			}
+    /**
+    * Obsługa fomularza przycisku kontrastu i rozmiaru czcionek (formularz dziala bez js przez php)
+    */
+    $("#form-wcga button").click(function(e){
 
-     			switch(value) {
-     				case 'medium':
-     					$('head').append('<link id="font-size-css" rel="stylesheet" href="'+ datalanuge.url +'/css/medium.css" type="text/css" />');
-     					$.cookie("font-size",'medium', {expires: 365, path: '/'});
-     					break;
-     				case 'big':
-     					$('head').append('<link id="font-size-css" rel="stylesheet" href="'+ datalanuge.url +'/css/big.css" type="text/css" />');
-     					$.cookie("font-size",'big', {expires: 365, path: '/'});
-     					break;
-     				default:
-     					break;
-     			}
-     		}
-     	});
+      var button  = $(this),
+      value   = button.val();
+
+      e.preventDefault();
+
+      if (value == 'contrast' || value == 'normal') {
+        switch(value) {
+          case 'contrast':
+          $('head').append('<link id="contrast-style-css" rel="stylesheet" href="'+ datalanuge.url +'/css/kontrast.css" type="text/css" />');
+          $.cookie("color", 'contrast', {expires: 365, path: '/'});
+          button.val('normal');
+          button.html(datalanuge.offcontrast);
+          break;
+          case 'normal':
+          $("#contrast-style-css").remove();
+          $.removeCookie('color', { path: '/' });
+          button.val('contrast');
+          button.html(datalanuge.oncontrast);
+          break;
+          default:
+          break;
+        }
+      } else {
+
+        if ($.cookie("font-size")) {
+          $("#font-size-css").remove();
+          $.removeCookie('font-size', { path: '/' });
+        }
+
+        switch(value) {
+          case 'medium':
+          $('head').append('<link id="font-size-css" rel="stylesheet" href="'+ datalanuge.url +'/css/medium.css" type="text/css" />');
+          $.cookie("font-size",'medium', {expires: 365, path: '/'});
+          break;
+          case 'big':
+          $('head').append('<link id="font-size-css" rel="stylesheet" href="'+ datalanuge.url +'/css/big.css" type="text/css" />');
+          $.cookie("font-size",'big', {expires: 365, path: '/'});
+          break;
+          default:
+          break;
+        }
+      }
+    });
   });
+  /*
+  * Function Test if inline SVGs are supported.
+  * @link https://github.com/Modernizr/Modernizr/
+  */
+  function supportsInlineSVG() {
+    var div = document.createElement('div');
+    div.innerHTML = '<svg/>';
+    return 'http://www.w3.org/2000/svg' === ('undefined' !== typeof SVGRect && div.firstChild && div.firstChild.namespaceURI);
+  }
+
+  /**
+  * Function rwd nav.
+  */
+  $.fn.nav = function (nav) {
+    return this.each(function () {
+
+      var $this = $(this);
+
+      $(window).on('resize orientationchange', function () {
+
+        var window_width = $(window)["0"].innerWidth;
+
+        if (window_width > 992) {
+
+          $classes = $this.data("class");
+
+          // Usuwanie classy z menu
+          if ($this.hasClass("small-menu")) {
+            $('#site-header').removeClass("menu-active");
+            $this.removeClass();
+            $this.addClass($classes);
+          }
+        }
+      }).resize();
+    });
+  };
+
+  $.fn.slick_small_sllider = function(setting) {
+
+    return this.each(function () {
+      var $this = $(this);
+
+      if ($(window)["0"].innerWidth < 992) {
+        $this.slick(setting);
+      };
+
+      $(window).on('resize orientationchange', function () {
+
+        if ($(window)["0"].innerWidth < 992) {
+
+          if (!$this.hasClass('slick-initialized')) {
+            $this.slick(setting);
+          }
+          return;
+        };
+        if ($this.hasClass('slick-initialized')) {
+          return $this.slick('unslick');
+        };
+      });
+    });
+  };
 })(jQuery);
