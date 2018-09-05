@@ -72,6 +72,9 @@ main {
 .h-font {
   font-family: $font-second;
 }
+.two-line {
+  min-height: 2.3704em;
+}
 
 .btn {
   color: $four-bw;
@@ -482,9 +485,6 @@ main {
   .header-section {
     color: darken($three-color, 8%);
   }
-  h3 {
-    min-height: 2.4em
-  }
 }
 .ev-wrapper{
   position: relative;
@@ -731,7 +731,6 @@ tr.days-names {
 }
 .contact-item__text {
   padding-left: 85px;
-  margin-top: -0.5em;
   .day {
     width: 110px;
   }

@@ -158,9 +158,10 @@ function wpg_enqueue() {
 	));
 
 	// theme leafletjs maps
-	wp_enqueue_script( 'leaflet-js', "https://unpkg.com/leaflet@1.3.4/dist/leaflet.js");
-	wp_enqueue_script('leaflet-map', get_template_directory_uri() . '/js/mapa.min.js','', '1.0.1', true);
-
+	if( true == get_theme_mod('wpg_contact_maps')){
+		wp_enqueue_script( 'leaflet-js', "https://unpkg.com/leaflet@1.3.4/dist/leaflet.js");
+		wp_enqueue_script('leaflet-map', get_template_directory_uri() . '/js/mapa.min.js','', '1.0.1', true);
+	}
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

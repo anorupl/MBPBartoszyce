@@ -113,9 +113,11 @@
        <?php wpg_social_net_link('<span class="screen-reader-text">%1$s</span>%2$s');?>
      </div>
      </div><!-- #contact__tabs -->
+     <?php if( true == get_theme_mod('wpg_contact_maps')) : ?>
      <div id="contact__map">
        <div id="map-canvas"></div>
      </div>
+    <?php endif; ?>
    </div>
    </div>
  </div>

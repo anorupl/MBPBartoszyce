@@ -119,7 +119,7 @@ function get_all_terms( $only_tax = false, $one_tax = false, $taxonomies = array
 
 	foreach ($taxonomies  as $name => $value) {
 
-		$tax_terms = get_terms($name);
+		$tax_terms = get_terms(array('taxonomy' => $name,'hide_empty' => false));
 
 			$all_terms[$name][0] = __('All Categories','wpg_theme');
 

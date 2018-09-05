@@ -2115,6 +2115,10 @@ main {
   font-family: Roboto, "Open Sans", sans-serif;
 }
 
+.two-line {
+  min-height: 2.3704em;
+}
+
 .btn {
   color: #f7f8fa;
   background-color: #f25e44;
@@ -2669,10 +2673,6 @@ main {
   color: #09af82;
 }
 
-#wpg-evets h3 {
-  min-height: 2.4em;
-}
-
 .ev-wrapper {
   position: relative;
 }
@@ -2978,7 +2978,6 @@ tr.days-names {
 
 .contact-item__text {
   padding-left: 85px;
-  margin-top: -0.5em;
 }
 
 .contact-item__text .day {

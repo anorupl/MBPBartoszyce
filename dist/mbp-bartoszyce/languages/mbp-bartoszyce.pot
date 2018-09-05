@@ -162,47 +162,51 @@ msgstr ""
 msgid "Header Menu - Bottom "
 msgstr ""
 
-#: src/functions.php:291, src/inc/wcga_form.php:157, src/inc/wcga_form.php:175, src/inc/wcga_form.php:189
+#: src/functions.php:191
+msgid "Sidebar Menu - Left "
+msgstr ""
+
+#: src/functions.php:293, src/inc/wcga_form.php:157, src/inc/wcga_form.php:175, src/inc/wcga_form.php:189
 msgid "Wyłącz kontrast"
 msgstr ""
 
-#: src/functions.php:293, src/inc/wcga_form.php:145, src/inc/wcga_form.php:165
+#: src/functions.php:295, src/inc/wcga_form.php:145, src/inc/wcga_form.php:165
 msgid "Włącz kontrast"
 msgstr ""
 
-#: src/functions.php:299
+#: src/functions.php:301
 msgid "Previous Image (left arrow key)"
 msgstr ""
 
-#: src/functions.php:301
+#: src/functions.php:303
 msgid "Next Image (right arrow key)"
 msgstr ""
 
-#: src/functions.php:303
+#: src/functions.php:305
 msgid "of"
 msgstr ""
 
-#: src/functions.php:305
+#: src/functions.php:307
 msgid "Close (Escape key)"
 msgstr ""
 
-#: src/functions.php:307
+#: src/functions.php:309
 msgid "Loading ..."
 msgstr ""
 
-#: src/functions.php:309
+#: src/functions.php:311
 msgid "Image"
 msgstr ""
 
-#: src/functions.php:311
+#: src/functions.php:313
 msgid "it cannot be loaded."
 msgstr ""
 
-#: src/functions.php:353
+#: src/functions.php:357
 msgid "Right Sidebar"
 msgstr ""
 
-#: src/functions.php:371
+#: src/functions.php:375
 msgid "Left Sidebar"
 msgstr ""
 
