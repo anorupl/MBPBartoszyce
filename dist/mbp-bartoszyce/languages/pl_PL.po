@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: wpg-bezcieniowapl\n"
 "Report-Msgid-Bugs-To: http://biblioteka.bartoszyce.pl\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2018-08-30 12:15+0200\n"
+"PO-Revision-Date: 2018-09-06 13:51+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pl_PL\n"
@@ -59,24 +59,25 @@ msgstr "Komentarze są wyłączone."
 #: src/components/content_multi/content-club.php:83,
 #: src/components/content_multi/content-collection.php:47,
 #: src/components/content_multi/content-collection.php:83,
-#: src/components/content_multi/content.php:47,
-#: src/components/content_multi/content.php:83,
+#: src/components/content_multi/content.php:49,
+#: src/components/content_multi/content.php:81,
 #: src/components/content_single/content-club.php:37,
 #: src/components/content_single/content-collection.php:37,
 #: src/components/content_single/content-page.php:43,
-#: src/components/content_single/content.php:37, src/inc/template-tags.php:135
+#: src/components/content_single/content.php:37, src/inc/template-tags.php:139
 msgid "Author"
 msgstr "Autor"
 
 #: src/components/content_multi/content-club.php:67,
 #: src/components/content_multi/content-collection.php:67,
-#: src/components/content_multi/content.php:67
+#: src/components/content_multi/content.php:65
 msgid "Continue reading"
 msgstr "Czytaj dalej"
 
 #: src/components/content_multi/content-club.php:107,
 #: src/components/content_multi/content-collection.php:107,
-#: src/components/content_multi/content.php:113
+#: src/components/content_multi/content.php:101,
+#: src/components/site/loop-homepage.php:65
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "Czytaj dalej<span class=\"screen-reader-text\"> \"%s\"</span>"
 
@@ -188,11 +189,11 @@ msgstr "W bibliotece"
 msgid "New in the library"
 msgstr "Nowość w bibliotece"
 
-#: src/components/features/section-new.php:141
+#: src/components/features/section-new.php:143
 msgid "Show"
 msgstr "Pokaż"
 
-#: src/components/features/section-new.php:153
+#: src/components/features/section-new.php:155
 msgid "Older collections of new products"
 msgstr "Starsze kolekcje nowości"
 
@@ -202,7 +203,7 @@ msgstr "Starsze kolekcje nowości"
 msgid "Partners"
 msgstr "Partnerzy"
 
-#: src/components/site/loop-homepage.php:107
+#: src/components/site/loop-homepage.php:109
 msgid "Show more "
 msgstr "Pokaż więcej "
 
@@ -218,46 +219,54 @@ msgstr "Menu nagłówka - Górne"
 msgid "Header Menu - Bottom "
 msgstr "Menu nagłówka - Dolne "
 
-#: src/functions.php:291, src/inc/wcga_form.php:157, src/inc/wcga_form.php:175,
+#: src/functions.php:191
+msgid "Sidebar Menu - Left "
+msgstr "Menu bocznego paska - Lewe"
+
+#: src/functions.php:293, src/inc/wcga_form.php:157, src/inc/wcga_form.php:175,
 #: src/inc/wcga_form.php:189
 msgid "Wyłącz kontrast"
 msgstr "Wyłącz kontrast"
 
-#: src/functions.php:293, src/inc/wcga_form.php:145, src/inc/wcga_form.php:165
+#: src/functions.php:295, src/inc/wcga_form.php:145, src/inc/wcga_form.php:165
 msgid "Włącz kontrast"
 msgstr "Włącz kontrast"
 
-#: src/functions.php:299
+#: src/functions.php:301
 msgid "Previous Image (left arrow key)"
 msgstr "Poprzednie zdjęcie"
 
-#: src/functions.php:301
+#: src/functions.php:303
 msgid "Next Image (right arrow key)"
 msgstr "Następne zdjęcie"
 
-#: src/functions.php:303
+#: src/functions.php:305
 msgid "of"
 msgstr "z"
 
-#: src/functions.php:305
+#: src/functions.php:307
 msgid "Close (Escape key)"
 msgstr "Zamknij"
 
-#: src/functions.php:307
+#: src/functions.php:309
 msgid "Loading ..."
 msgstr "Ładowanie ... "
 
-#: src/functions.php:309
+#: src/functions.php:311
 msgid "Image"
 msgstr "Zdjęcie"
 
-#: src/functions.php:311
+#: src/functions.php:313
 msgid "it cannot be loaded."
 msgstr "nie zostało załadowane."
 
-#: src/functions.php:347
+#: src/functions.php:357
 msgid "Right Sidebar"
 msgstr "Boczny pasek po prawej"
+
+#: src/functions.php:375
+msgid "Left Sidebar"
+msgstr "Boczny pasek - Lewa"
 
 #: src/header.php:133, src/header.php:161
 msgid "Menu"
@@ -282,7 +291,7 @@ msgstr ""
 #: src/inc/customizer/helpers/inc_helpers.php:199,
 #: src/inc/customizer/setting_control/inc_setting_club.php:175,
 #: src/inc/customizer/setting_control/inc_setting_new.php:95,
-#: src/inc/template-tags.php:199, src/inc/template-tags.php:259
+#: src/inc/template-tags.php:203, src/inc/template-tags.php:263
 msgid "Category"
 msgstr "Kategoria"
 
@@ -525,68 +534,68 @@ msgstr "Serwisy społecznościowe"
 msgid "Partner url"
 msgstr "Adres strony www partnera"
 
-#: src/inc/template-tags.php:75
+#: src/inc/template-tags.php:79
 msgid "Share on Twitter!"
 msgstr "Udostępnij na Twiterze!"
 
-#: src/inc/template-tags.php:77
+#: src/inc/template-tags.php:81
 msgid "Share on Google+"
 msgstr "Udostępnij na Google+"
 
-#: src/inc/template-tags.php:79
+#: src/inc/template-tags.php:83
 msgid "Share on Facebook"
 msgstr "Udostępnij na Facebooku"
 
-#: src/inc/template-tags.php:157
+#: src/inc/template-tags.php:161
 msgid "Data"
 msgstr "Data"
 
-#: src/inc/template-tags.php:175
+#: src/inc/template-tags.php:179
 msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr "Pozostaw komentarz <span class=\"screen-reader-text\"> w %s</span>"
 
-#: src/inc/template-tags.php:451
+#: src/inc/template-tags.php:455
 msgid "Comment navigation"
 msgstr "Nawigacja komentarzy"
 
-#: src/inc/template-tags.php:457
+#: src/inc/template-tags.php:461
 msgid "Older Comments"
 msgstr "Starsze Komentarze"
 
-#: src/inc/template-tags.php:465
+#: src/inc/template-tags.php:469
 msgid "Newer Comments"
 msgstr "Nowesze Komentarze"
 
-#: src/inc/template-tags.php:985
+#: src/inc/template-tags.php:989
 msgid "Home"
 msgstr "Strona Główna"
 
-#: src/inc/template-tags.php:987
+#: src/inc/template-tags.php:991
 msgid "<span class=\"screen-reader-text\">Archive by Category</span> %s"
 msgstr "<span class=\"screen-reader-text\">Kategoria</span> %s"
 
-#: src/inc/template-tags.php:989
+#: src/inc/template-tags.php:993
 msgid "<span class=\"screen-reader-text\">Search Results for</span> %s"
 msgstr "<span class=\"screen-reader-text\">Wynik wyszukiwania dla:</span> %s"
 
-#: src/inc/template-tags.php:991
+#: src/inc/template-tags.php:995
 msgid "<span class=\"screen-reader-text\">Posts Tagged</span> %s"
 msgstr "<span class=\"screen-reader-text\">Tag</span> %s"
 
-#: src/inc/template-tags.php:993
+#: src/inc/template-tags.php:997
 msgid "<span class=\"screen-reader-text\">Articles Posted by</span> %s"
 msgstr ""
 "<span class=\"screen-reader-text\">Artykuł opublikowany przez</span> %s"
 
-#: src/inc/template-tags.php:995
+#: src/inc/template-tags.php:999
 msgid "<span class=\"screen-reader-text\">Error 404</span>"
 msgstr "<span class=\"screen-reader-text\">Błąd 404</span>"
 
-#: src/inc/template-tags.php:997
+#: src/inc/template-tags.php:1001
 msgid "<span class=\"screen-reader-text\">Page</span> %s"
 msgstr "<span class=\"screen-reader-text\">Strona</span> %s"
 
-#: src/inc/template-tags.php:999
+#: src/inc/template-tags.php:1003
 msgid "<span class=\"screen-reader-text\">Comment Pag</span>e %s"
 msgstr "<span class=\"screen-reader-text\">Strona komentarza</span>e %s"
 

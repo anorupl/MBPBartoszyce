@@ -18,7 +18,7 @@
     /*
      *  ul ul
      * -----------*/
-    .sub-menu                       {display: block; position: absolute; left: -999em; margin-top: 10px; font-family: $font-base; z-index: 3;}
+    .sub-menu                       {display: block; position: absolute; left: -999em; margin-top: 10px; max-width: 200px; font-family: $font-base; z-index: 3;}
     .sub-menu li                    {clear: both; padding: 0 10px; min-width: 210px; text-align: center;}
     .sub-menu li a                  {padding: 10px 15px;}
 
@@ -26,13 +26,22 @@
     .menu > li:hover > .sub-menu,
     .menu > li.focus > .sub-menu    {left:50%; -webkit-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); -o-transform: translate(-50%, 0); transform: translate(-50%, 0);}
 
+
     /*
      *  ul ul ul
      * -----------*/
     .sub-menu li > .sub-menu {border:0}
     /* li li - submenu active*/
     .menu ul.sub-menu li:hover > ul.sub-menu,
-    .menu ul.sub-menu li.focus > ul.sub-menu    {left: 100%; top: -10px;}
+    .menu ul.sub-menu li.focus > ul.sub-menu    {left: -100%; top: -10px;}
+
+
+    .menu > li.menu-item-has-children{
+      text-align: center;
+    }
+    .menu-item-has-children {
+      width: 200px;
+    }
 
     /*
      *  current li a
@@ -55,8 +64,8 @@
 
     .sub-menu li                {background: $hv-lili;}
     .sub-menu li a              {color: $hv-aa;}
-    .sub-menu li > a:hover      {color: $hv-aahover; background: $hv-lilihover; }
-    .sub-menu li li  > a:hover  {color: $hv-aahover; background: $hv-lilihover; }
+    .sub-menu li > a:hover      {color: $hv-aahover;}
+    .sub-menu li li  > a:hover  {color: $hv-aahover;}
 }
 
 .h-nav--arrow {
@@ -71,7 +80,6 @@
      .menu-item-has-children > a:after {
         display: inline;
         color: $hv-plus;
-        margin-left: 9px;
         font-weight: bold;
     }
     /* pierwszy poziom strzalka w dół */

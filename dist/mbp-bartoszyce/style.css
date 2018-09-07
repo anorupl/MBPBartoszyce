@@ -47,9 +47,6 @@ Text Domain: wpg_theme
 /* all */
 /* over */
 /*--------------------------------------------------------------
->>> Menu vertical
----------------------------------------------------------------*/
-/*--------------------------------------------------------------
 >>> Color Menu small
 ---------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -2395,6 +2392,7 @@ main {
 #breadcrumbs {
   background: rgba(247, 248, 250, 0.1);
   padding: 1%;
+  margin: 20px auto;
   -webkit-border-radius: 25px;
      -moz-border-radius: 25px;
           border-radius: 25px;
@@ -3117,8 +3115,6 @@ table.em-calendar td.eventful-today {
   position: relative;
   padding: 0 15px 15px;
   margin: 0 4.16667% 8.33333% 0;
-  font-size: 11px;
-  font-size: 1.1rem;
   background: #f7f8fa;
 }
 
@@ -3495,6 +3491,7 @@ a.skip-main:active {
   position: absolute;
   left: -999em;
   margin-top: 10px;
+  max-width: 200px;
   font-family: Lato, Arial, Helvetica, sans-serif;
   z-index: 3;
 }
@@ -3526,8 +3523,16 @@ a.skip-main:active {
 
 .h-nav .menu ul.sub-menu li:hover > ul.sub-menu,
 .h-nav .menu ul.sub-menu li.focus > ul.sub-menu {
-  left: 100%;
+  left: -100%;
   top: -10px;
+}
+
+.h-nav .menu > li.menu-item-has-children {
+  text-align: center;
+}
+
+.h-nav .menu-item-has-children {
+  width: 200px;
 }
 
 .h-nav .current_page_item > a,
@@ -3570,12 +3575,10 @@ a.skip-main:active {
 
 .h-nav--color .sub-menu li > a:hover {
   color: #f25e44;
-  background: #f7f8fa;
 }
 
 .h-nav--color .sub-menu li li > a:hover {
   color: #f25e44;
-  background: #f7f8fa;
 }
 
 .h-nav--arrow {
@@ -3611,7 +3614,6 @@ a.skip-main:active {
 .h-nav--arrow .menu-item-has-children > a:after {
   display: inline;
   color: #f25e44;
-  margin-left: 9px;
   font-weight: bold;
 }
 
@@ -3919,6 +3921,103 @@ a.skip-main:active {
 /*
 * All
 * */
+.v-nav .menu ul {
+  margin: 0 0 0 0.8em;
+}
+
+.v-nav .menu li {
+  position: relative;
+  padding: 0;
+}
+
+.v-nav .menu li a {
+  position: relative;
+  display: block;
+  padding: 1em 0;
+  border-bottom: 1px solid #efeff1;
+  color: #543d4f;
+}
+
+.v-nav .menu > li {
+  background: transparent;
+}
+
+.v-nav .menu > li > li {
+  background: transparent;
+}
+
+.v-nav .menu > li > li > li {
+  background: transparent;
+}
+
+.v-nav .menu a:hover,
+.v-nav .menu .current_page_item > a,
+.v-nav .menu .current-menu-item > a,
+.v-nav .menu .current_page_ancestor > a {
+  color: #f25e44;
+}
+
+.v-nav .menu .page_item_has_children > a,
+.v-nav .menu .menu-item-has-children > a {
+  padding-right: 48px;
+}
+
+.v-nav .menu .menu-item-description {
+  font-size: 11px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-top: 0.5em;
+}
+
+.v-nav.dropdown .menu .toggled-on {
+  display: block;
+}
+
+.v-nav.dropdown .menu ul {
+  display: none;
+}
+
+.v-nav.dropdown .no-js .menu ul {
+  display: block;
+}
+
+.v-nav.dropdown .menu .dropdown-toggle {
+  font-family: 'icomoon';
+  color: #543d4f;
+  background-color: transparent;
+  border: 0;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 42px;
+  padding: 0;
+  position: absolute;
+  text-transform: lowercase;
+  top: 3px;
+  right: 0;
+  width: 42px;
+}
+
+.v-nav.dropdown .menu .dropdown-toggle:after {
+  content: "\f107";
+  font-size: 24px;
+  line-height: 42px;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 42px;
+}
+
+.v-nav.dropdown .menu .dropdown-toggle.toggle-on:after {
+  content: "\f106";
+}
+
+.v-nav.dropdown .menu .dropdown-toggle:hover,
+.v-nav.dropdown .menu .dropdown-toggle:focus {
+  background-color: #f25e44;
+  color: #543d4f;
+}
+
 /*--------------------------------------------------------------
 -- Responsive breakpoint
 --------------------------------------------------------------*/
@@ -4111,6 +4210,14 @@ a.skip-main:active {
   .active-sidebar .col-secondary {
     width: 25%;
     float: left;
+  }
+  .page-template-page_left_sidebar .col-primary {
+    float: right;
+    width: 75%;
+  }
+  .page-template-page_left_sidebar .col-secondary {
+    float: left;
+    width: 25%;
   }
   /*--------------------------------------------------------------
 3.1 Header
@@ -4517,6 +4624,12 @@ a.skip-main:active {
     font-size: 1.8rem;
     line-height: 23px;
     line-height: 2.3rem;
+  }
+  /* Widget
+========================================================================== */
+  .widget {
+    font-size: 13px;
+    font-size: 1.3rem;
   }
 }
 

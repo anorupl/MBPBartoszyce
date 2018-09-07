@@ -62,6 +62,17 @@
   }
 }
 
+.page-template-page_left_sidebar {
+  .col-primary{
+    float: right;
+    width: span(9);
+  }
+  .col-secondary{
+    float: left;
+    width: span(3);
+  }
+}
+
 /*--------------------------------------------------------------
 3.1 Header
 --------------------------------------------------------------*/

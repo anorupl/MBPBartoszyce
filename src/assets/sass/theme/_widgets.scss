@@ -5,7 +5,6 @@
     position: relative;
     padding: 0 15px 15px;
     margin: 0 gutter(of 6) gutter(of 3) 0;
-    @include font-size($font-size-s);
     background: $four-bw;
 
     ul {

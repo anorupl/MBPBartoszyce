@@ -492,14 +492,17 @@ function wpg_the_thumbnail( $size='thumbnail' ){
 */
 function wpg_breadcrumbs() {
 	/* === OPTIONS === */
-	$text['home']     = __('Home','wpg_theme'); // text for the 'Home' link
-	$text['category'] = __('<span class="screen-reader-text">Archive by Category</span> %s','wpg_theme'); // text for a category page
-	$text['search']   = __('<span class="screen-reader-text">Search Results for</span> %s','wpg_theme'); // text for a search results page
-	$text['tag']      = __('<span class="screen-reader-text">Posts Tagged</span> %s','wpg_theme'); // text for a tag page
-	$text['author']   = __('<span class="screen-reader-text">Articles Posted by</span> %s','wpg_theme'); // text for an author page
-	$text['404']      = __('<span class="screen-reader-text">Error 404</span>','wpg_theme'); // text for the 404 page
-	$text['page']     = __('<span class="screen-reader-text">Page</span> %s','wpg_theme'); // text 'Page N'
-	$text['cpage']    = __('<span class="screen-reader-text">Comment Pag</span>e %s','wpg_theme'); // text 'Comment Page N'
+	$text['home']      = __('Home','wpg_theme'); // text for the 'Home' link
+  $text['home_blog'] = get_theme_mod('wpg_blog_title', __('Last post', 'wpg_theme')); // text for the 'Home' link
+	$text['category']  = __('<span class="screen-reader-text">Archive by Category</span> %s','wpg_theme'); // text for a category page
+	$text['search']    = __('<span class="screen-reader-text">Search Results for</span> %s','wpg_theme'); // text for a search results page
+	$text['tag']       = __('<span class="screen-reader-text">Posts Tagged</span> %s','wpg_theme'); // text for a tag page
+	$text['author']    = __('<span class="screen-reader-text">Articles Posted by</span> %s','wpg_theme'); // text for an author page
+	$text['404']       = __('<span class="screen-reader-text">Error 404</span>','wpg_theme'); // text for the 404 page
+	$text['page']      = __('<span class="screen-reader-text">Page</span> %s','wpg_theme'); // text 'Page N'
+	$text['cpage']     = __('<span class="screen-reader-text">Comment Pag</span>e %s','wpg_theme'); // text 'Comment Page N'
+
+
 
 
 	$wrap_before    = '<span class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">'; // the opening wrapper tag
@@ -508,13 +511,14 @@ function wpg_breadcrumbs() {
 		$sep_before     = '<span class="sep">'; // tag before separator
 		$sep_after      = '</span>'; // tag after separator
 		$show_home_link = 1; // 1 - show the 'Home' link, 0 - don't show
-		$show_on_home   = 0; // 1 - show breadcrumbs on the homepage, 0 - don't show
+		$show_on_home   = 1; // 1 - show breadcrumbs on the homepage, 0 - don't show
 		$show_current   = 1; // 1 - show current page title, 0 - don't show
 		$before         = '<span class="current">'; // tag before the current crumb
 		$after          = '</span>'; // tag after the current crumb
 		/* === END OF OPTIONS === */
 
 		global $post;
+    global $paged;
 
 		$home_url       = home_url('/');
 		$link_before    = '<span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">';
@@ -529,8 +533,17 @@ function wpg_breadcrumbs() {
 			$home_link      = $link_before . '<a href="' . $home_url . '"' . $link_attr . ' class="home">' . $link_in_before . $text['home'] . $link_in_after . '</a>' . $link_after;
 
 			if (is_home() || is_front_page()) {
-				if ($show_on_home) echo $wrap_before . $home_link . $wrap_after;
-			} else {
+
+				if ($show_on_home) {
+          if ( $paged > 1 ) {
+            echo $wrap_before .
+
+            $link_before . '<a href="' . $home_url . '"' . $link_attr . ' class="home">' . $link_in_before . $text['home_blog'] . $link_in_after . '</a>' . $link_after . $sep_before . $sep . $sep_after . $before . __('page: ', 'wpg_theme') . $paged . $after . $wrap_after;
+          } else {
+            echo $wrap_before . $home_link . $wrap_after;
+          }
+        }
+		} else {
 				echo $wrap_before;
 				if ($show_home_link) echo $home_link;
 				if(is_category() || is_tax() ){

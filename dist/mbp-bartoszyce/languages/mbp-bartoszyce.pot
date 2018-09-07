@@ -242,20 +242,12 @@ msgstr ""
 msgid "Select Category"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_blog.php:25, src/inc/customizer/wpg_customizer.php:443, src/index.php:129, src/index.php:179
+#: src/inc/customizer/setting_control/inc_setting_blog.php:25, src/inc/customizer/wpg_customizer.php:443, src/inc/template-tags.php:991, src/index.php:129, src/index.php:179
 msgid "Last post"
 msgstr ""
 
 #: src/inc/customizer/setting_control/inc_setting_blog.php:41, src/inc/customizer/setting_control/inc_setting_catl.php:79, src/inc/customizer/setting_control/inc_setting_club.php:79, src/inc/customizer/setting_control/inc_setting_featured_category.php:77, src/inc/customizer/setting_control/inc_setting_new.php:77, src/inc/customizer/setting_control/inc_setting_partners.php:79
 msgid "Title section"
-msgstr ""
-
-#: src/inc/customizer/setting_control/inc_setting_blog.php:73, src/inc/customizer/setting_control/inc_setting_club.php:143
-msgid "No of items"
-msgstr ""
-
-#: src/inc/customizer/setting_control/inc_setting_blog.php:75
-msgid "Enter number between %1s and %2s ."
 msgstr ""
 
 #: src/inc/customizer/setting_control/inc_setting_catl.php:43, src/inc/customizer/setting_control/inc_setting_club.php:43, src/inc/customizer/setting_control/inc_setting_events.php:41, src/inc/customizer/setting_control/inc_setting_featured_category.php:41, src/inc/customizer/setting_control/inc_setting_new.php:41, src/inc/customizer/setting_control/inc_setting_partners.php:43
@@ -288,6 +280,10 @@ msgstr ""
 
 #: src/inc/customizer/setting_control/inc_setting_club.php:109, src/inc/customizer/setting_control/inc_setting_club.php:237
 msgid "Description"
+msgstr ""
+
+#: src/inc/customizer/setting_control/inc_setting_club.php:143
+msgid "No of items"
 msgstr ""
 
 #: src/inc/customizer/setting_control/inc_setting_club.php:145
@@ -466,32 +462,36 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: src/inc/template-tags.php:991
+#: src/inc/template-tags.php:993
 msgid "<span class=\"screen-reader-text\">Archive by Category</span> %s"
 msgstr ""
 
-#: src/inc/template-tags.php:993
+#: src/inc/template-tags.php:995
 msgid "<span class=\"screen-reader-text\">Search Results for</span> %s"
 msgstr ""
 
-#: src/inc/template-tags.php:995
+#: src/inc/template-tags.php:997
 msgid "<span class=\"screen-reader-text\">Posts Tagged</span> %s"
 msgstr ""
 
-#: src/inc/template-tags.php:997
+#: src/inc/template-tags.php:999
 msgid "<span class=\"screen-reader-text\">Articles Posted by</span> %s"
 msgstr ""
 
-#: src/inc/template-tags.php:999
+#: src/inc/template-tags.php:1001
 msgid "<span class=\"screen-reader-text\">Error 404</span>"
 msgstr ""
 
-#: src/inc/template-tags.php:1001
+#: src/inc/template-tags.php:1003
 msgid "<span class=\"screen-reader-text\">Page</span> %s"
 msgstr ""
 
-#: src/inc/template-tags.php:1003
+#: src/inc/template-tags.php:1005
 msgid "<span class=\"screen-reader-text\">Comment Pag</span>e %s"
+msgstr ""
+
+#: src/inc/template-tags.php:1081
+msgid "page: "
 msgstr ""
 
 #: src/inc/wcga_form.php:205

@@ -239,4 +239,22 @@ function filterEventThumbnail($result, $EM_Event, $placeholder) {
     return $result;
 }
 
+
+
+
+function wpg_widget_nav_menu($nav_menu_args, $nav_menu, $args) {
+
+	$nav_menu_args = array(
+         'fallback_cb' => '',
+				 'container' => 'nav',
+				 'container_class'=> 'v-nav dropdown',
+         'menu'        => $nav_menu
+     );
+
+
+	return $nav_menu_args;
+}
+add_filter( 'widget_nav_menu_args', 'wpg_widget_nav_menu', 10, 3 );
+
+
 ?>
