@@ -24,24 +24,26 @@
   -moz-osx-font-smoothing: grayscale;
 	color: inherit;
 	line-height: 1;
-
 	display: inline-block;
 	padding: 0 10px;
 	min-width: 40px;
 	text-align: center;
 	bottom: -2px;
-	position: relative;	
+	position: relative;
+	margin-left: -0.05em; // fix for display inline blok margin
 }
 
 
 .l-icon,
 i.l-icon  {
 	font-size: 150%;
+	line-height: 150%;
 }
 
 .xl-icon,
 i.xl-icon {
 	font-size: 265%;
+	line-height: 265%;
 }
 
 

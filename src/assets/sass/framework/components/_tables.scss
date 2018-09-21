@@ -1,5 +1,10 @@
 /* Tables
 ========================================================================== */
+$th-text: $white;
+$th-bg: $two-color;
+$table-border: $light-border;
+$tr-even: #f5f5f5;
+
 table {
 	width: 100%;
 	margin: 0 0 20px;
@@ -25,30 +30,30 @@ td {
 }
 .entry-content {
 	table {
-		border-bottom: 1px solid $border-color;
+		border-bottom: 1px solid $table-border;
 	}
 	table caption {
-		border-bottom: 1px dotted $border-color;
-		border-top: 1px dotted $border-color;
+		border-bottom: 1px dotted $table-border;
+		border-top: 1px dotted $table-border;
 	}
 	th {
-		background: lighten($one-bw, 50%);
-		color: $one-bw;
+		background: $th-bg;
+		color: $th-text;
+		a {
+			color: $one-color;
+		}
 	}
 	td {
-		border-bottom: 1px solid $border-color;
+		border-bottom: 1px solid $table-border;
 	}
 	td[scope=col] {
-		border-right: 1px solid $border-color;
+		border-right: 1px solid $table-border;
 		width: 25%;
 		font-weight: bold;
 		text-align: right;
 		padding-right: 25px;
 	}
-	tr:nth-child(odd) {
-		background: $four-bw;
-	}
 	tr:nth-child(even) {
-		background: $three-bw;
+		background: $tr-even;
 	}
 }

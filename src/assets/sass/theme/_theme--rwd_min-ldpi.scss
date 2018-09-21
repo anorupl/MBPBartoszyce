@@ -1,0 +1,49 @@
+/* Theme style
+========================================================================== */
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS
+----------------------------------------------------------------
+4.7 Contact
+--------------------------------------------------------------*/
+
+
+.ev-wrapper::before {
+  content: '';
+  width: 400px;
+  height: 400px;
+  display: block;
+  border: 15px solid #f25e44;
+  position: absolute;
+  top: 25px;
+  right: -20px;
+  z-index: -1;
+}
+.green_bg::before {
+  content: '';
+  width: 400px;
+  height: 400px;
+  display: block;
+  border: 15px solid #0ad39d;
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+
+
+/*--------------------------------------------------------------
+4.7  Contact
+--------------------------------------------------------------*/
+#contact__tabs {
+ width: 60%;
+}
+#contact__map {
+ width: 40%;
+}
+/* map */
+#map-canvas {
+  height: 540px;
+}

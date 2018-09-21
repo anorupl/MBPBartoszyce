@@ -1,5 +1,5 @@
 <?php
-add_action( 'init', 'style' );
+add_action( 'wp_enqueue_scripts', 'style' );
 function style() {
 	if(isset($_POST['wcga'])) {
 		// fontsize
@@ -25,7 +25,7 @@ function style() {
 		switch ($_POST['wcga']) {
 
 			case 'contrast':
-				wp_enqueue_style( 'contrast-style' , get_template_directory_uri() . '/css/kontrast.css' );
+				wp_enqueue_style( 'contrast-style' , get_template_directory_uri() . '/css/contrast.css' );
 				setcookie('color', 'contrast', time() + 3600, '/');
 				break;
 			case 'normal':
@@ -34,7 +34,7 @@ function style() {
 				break;
 			default:
 				if (isset( $_COOKIE['color']) && $_COOKIE['color'] == 'contrast') {
-					wp_enqueue_style( 'contrast-style' , get_template_directory_uri() . '/css/kontrast.css' );
+					wp_enqueue_style( 'contrast-style' , get_template_directory_uri() . '/css/contrast.css' );
 				}
 				break;
 		}
@@ -42,7 +42,7 @@ function style() {
 	} else {
 
 		if (isset( $_COOKIE['color']) && $_COOKIE['color'] == 'contrast') {
-			wp_enqueue_style( 'contrast-style' , get_template_directory_uri() . '/css/kontrast.css' );
+			wp_enqueue_style( 'contrast-style' , get_template_directory_uri() . '/css/contrast.css' );
 		}
 		if (isset( $_COOKIE['font-size'])) {
 			wp_enqueue_style( 'font-size' , get_template_directory_uri() . '/css/'. $_COOKIE['font-size']. '.css' );

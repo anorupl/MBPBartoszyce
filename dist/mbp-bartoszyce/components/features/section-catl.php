@@ -7,7 +7,7 @@
  *
  */
  ?>
- <section id="catl" class="catl page-section clear-both">
+ <section id="catl" class="catl page-section clear-both pad-all">
    <div class="container clear-both">
    <div class="catl-svg hide-on-small">
      <?php echo wp_get_attachment_image( absint( get_theme_mod('wpg_catl_image')), 'full'); ?>
@@ -16,7 +16,7 @@
        <header class="header-section">
          <h2 class="h--xxl"><?php echo esc_html(get_theme_mod('wpg_catl_title','Digital archive of local tradition')); ?></h2>
        </header>
-       <div class="tab-home">
+       <div class="tab-catl">
          <div class="js-tabs">
            <ul class="js-tablist">
              <?php for ($i=1; $i <= 3; $i++) : ?>

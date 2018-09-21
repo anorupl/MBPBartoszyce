@@ -32,8 +32,8 @@
   background-color: $one-color;
 }
 .f-post {
-  border-bottom: dashed 1px $two-color;
-  margin-bottom: gutter();
+  padding-top: 300px;
+  border-bottom: solid 10px $two-color;
 }
 /*--------------------------------------------------------------
 3.3  Posts - multi loop
@@ -42,6 +42,13 @@
   .entry-meta {
     text-align: center;
   }
+}
+/*--------------------------------------------------------------
+4.5  New colections
+--------------------------------------------------------------*/
+.coletions-link {
+background-color: $one-color;
+border-bottom: 15px solid $two-color;
 }
 /*--------------------------------------------------------------
 4.7 Contact
@@ -59,11 +66,4 @@
 #catl .tabs__item,
 #contact .tabs__item {
   display: block;
-}
-
-/*--------------------------------------------------------------
-4.3 Events
---------------------------------------------------------------*/
-#upcoming_event {
-    text-align: center;
 }

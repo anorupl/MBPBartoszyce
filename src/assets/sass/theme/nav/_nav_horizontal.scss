@@ -19,12 +19,12 @@
      *  ul ul
      * -----------*/
     .sub-menu                       {display: block; position: absolute; left: -999em; margin-top: 10px; max-width: 200px; font-family: $font-base; z-index: 3;}
-    .sub-menu li                    {clear: both; padding: 0 10px; min-width: 210px; text-align: center;}
+    .sub-menu li                    {clear: both; padding: 0 10px; min-width: 210px; text-align: left;}
     .sub-menu li a                  {padding: 10px 15px;}
 
     /* li - submenu active*/
     .menu > li:hover > .sub-menu,
-    .menu > li.focus > .sub-menu    {left:50%; -webkit-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); -o-transform: translate(-50%, 0); transform: translate(-50%, 0);}
+    .menu > li.focus > .sub-menu    {left:50%; transform: translate(-50%, 0);}
 
 
     /*

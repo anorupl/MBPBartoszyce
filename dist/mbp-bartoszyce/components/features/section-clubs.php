@@ -15,7 +15,7 @@
              </div>
              <p><?php echo esc_html(get_theme_mod('wpg_clubs_desc','')); ?></p>
          </header>
-         <div class="wrap-continer clear-both">
+         <div class="wrap-continer clear-both pad-all">
 
 
          <?php

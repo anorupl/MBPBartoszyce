@@ -166,11 +166,11 @@ sass/
   display: inline-block;
   padding: 5px 35px;
   line-height: 30px;
-  color: #f7f8fa;
-  border: 2px solid #f7f8fa; }
+  color: #fbfafc;
+  border: 2px solid #fbfafc; }
   .btn-slider:hover {
     color: #f25e44;
-    background-color: #f7f8fa;
+    background-color: #fbfafc;
     border-color: #f25e44; }
 
 /* Icons */

@@ -26,28 +26,18 @@
 }
 .js {
     .hide-menu {
-        top:-9999px; 
-        position: absolute; 
+        top:-9999px;
+        position: absolute;
         height: 1px;
-    }
-}
-
-.small-menu {
-    .menu li a {
-    display: block;
-    padding: 1.6rem;
-    line-height: 1;
-    color: #00ade9;
-    border-bottom: 1px solid #eeeeee;
     }
 }
 
 .small-menu {
     .menu {
         display: flex;
-        flex-direction: column;       
-        margin: 0; 
-        z-index:9990;     
+        flex-direction: column;
+        margin: 0;
+        z-index:9990;
         background: $four-bw;
     }
     .menu ul                    {background: $three-bw; margin: 0;}
@@ -55,11 +45,7 @@
     .menu li a                  {display: block; padding: 1.6rem; line-height:1; color: $small-color-a; border-bottom: 1px solid $small-border;}
 
     .menu li li a               {padding-left: 50px;}
-    
+
     /*rozszerzenie ikony dodane recznie*/
     .menu li li.menu-item a:before { content: "\f105"; margin: 0 10px 0 -15px; font-weight: bold; color: $two-color;}
 }
-
-
-
-

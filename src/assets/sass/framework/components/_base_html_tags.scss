@@ -181,6 +181,9 @@ blockquote {
     padding: 10px 10px 10px 100px;
     margin: 0.5em 0 1.6667em 0;
     min-width: 35vw;
+    min-height: 80px;
+    min-height: 8rem;
+
 
     @include font-size-procent($font-size-xl);
 
@@ -197,7 +200,7 @@ blockquote {
         top: 0.1em;
         left: 18px;
         @include font-size(6.2, 0, true);
-        color: $two-bw;
+        color: $two-color;
     }
 
     em, i, cite {

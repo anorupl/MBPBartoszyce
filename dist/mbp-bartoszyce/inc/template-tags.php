@@ -697,7 +697,7 @@ function the_list_terms(){
 
 		if ( !empty( $terms ) ) {
 			foreach ( $terms as $term ) {
-				$out[] = '<a href="'.    get_term_link( $term->slug, $taxonomy_slug ) .'">'.$term->name."</a> ";
+				$out[] = '<a href="'.    get_term_link( $term->slug, $taxonomy_slug ) .'">'.$term->name."</a>, ";
 			}
 		}
 	}

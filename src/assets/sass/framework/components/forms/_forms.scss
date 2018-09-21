@@ -24,7 +24,7 @@ input[type="reset"] {
     white-space: normal;
     background: $fields-color;
     color: $fields-fff;
-    
+
     &:focus, &:active {
         color: $fields-fff;
         background: $fields-active;
@@ -41,7 +41,6 @@ input[type=file] {
     background: $fields-bg;
     color: $fields-text;
     border: 1px solid $fields-border;
-
 }
 input[type=file]::-ms-value {
     border:0;
@@ -69,7 +68,6 @@ textarea {
     :focus & {
         outline: $outline;
     }
-
 }
 input, textarea {
     width:100%;

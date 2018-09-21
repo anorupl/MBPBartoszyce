@@ -10,7 +10,7 @@
  <section id="new_colections" class="newitems page-section clear-both">
    <div class="container">
        <header class="header-section">
-           <h2 class="h--xxl"><?php echo esc_html(get_theme_mod('wpg_new_title',__('New in the library', 'wpg_theme'))); ?></h2>
+           <h2 class="h--xxl pad-all"><?php echo esc_html(get_theme_mod('wpg_new_title',__('New in the library', 'wpg_theme'))); ?></h2>
        </header>
    </div>
    <div class="container">
@@ -47,14 +47,11 @@
                <div id="id_<?php echo $term->slug;?>" class="js-tabcontent col-12">
                  <?php
 
-                 $args_colletion = [
-                   'post_type' =>'post_collection',
-                   'posts_per_page'=> 1,
-                   'tax_query' => [['taxonomy' => $terms_tax,'field' => 'slug','terms' => $term->slug]]
-                 ];
-
-
-                 $query_colletion = new WP_Query($args_colletion);
+                 $query_colletion = new WP_Query([
+                   'post_type'      =>'post_collection',
+                   'tax_query'      => [['taxonomy' => $terms_tax,'field' => 'slug','terms' => $term->slug]],
+                   'posts_per_page' => 1
+                 ]);
 
                  if ( $query_colletion->have_posts()) : while ($query_colletion->have_posts()) : $query_colletion->the_post(); ?>
 
@@ -75,12 +72,12 @@
                  <?php endwhile; endif; wp_reset_query(); ?>
 
                  <div class="coletions-link">
-                   <a id="colection_<?php echo $term->slug;?>" class="btn" href="<?php echo get_term_link($term, $terms_tax) ?>"><?php _e('Older collections of new products', 'wpg_theme'); ?></a>
+                   <a id="colection_<?php echo $term->slug;?>" class="btn" href="<?php echo get_term_link($term, $terms_tax) ?>"><?php _e('Show previous news', 'wpg_theme'); ?></a>
                  </div>
                </div>
              <?php endforeach; // tabs content ?>
            </div>
-         <?php endif; //chceck taxonomy?>
+         <?php endif; //chceck taxonomy ?>
        </div><!-- .js-tabs -->
    </div><!-- .continer -->
  </section>

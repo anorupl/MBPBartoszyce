@@ -56,14 +56,13 @@ h5, h6,.class-h5,.f-size-h5 { @include font-size(($size-base + 0.5),0,true);}
 4.1 Loop in header with post
 --------------------------------------------------------------*/
 .header-offslider {
-  max-width: 768px;
+  width: 660px;
 }
 .header-offslider article {
   width: 220px;
-  height: 440px;
 }
 .s-post-thumbnail,
 .s-post-content {
     width: 220px;
-    height: 220px;
+    height: 200px;
 }

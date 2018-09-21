@@ -24,7 +24,7 @@
         <div class="meta__item screen-reader-text">
           <i class="icon-user"></i><?php _e('Author', 'wpg_theme'); ?><?php the_author();?>
         </div>
-        <?php if (!is_page()) : ?>
+        <?php if ($post->post_type !== 'page') : ?>
             <div class="meta__item"><i class="icon-folder-open"></i><?php the_list_terms(); ?></div>
         <?php endif; ?>
       </div><!-- .entry-meta -->

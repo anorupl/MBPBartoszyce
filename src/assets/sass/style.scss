@@ -65,7 +65,7 @@
 /*--------------------------------------------------------------
 -- Responsive breakpoint
 --------------------------------------------------------------*/
-@media (max-width: $desktop) {
+@media (max-width: $tablet) {
 
     .hide-on-small {
         display: none;
@@ -104,6 +104,15 @@
 /*--------------------------------------------------------------
 -- Responsive breakpoint
 --------------------------------------------------------------*/
+@media (min-width: $desktop-ldpi) {
+  @import "theme/theme--rwd_min-ldpi";
+}
+
+
+
+/*--------------------------------------------------------------
+-- Responsive breakpoint
+--------------------------------------------------------------*/
 @media (min-width: $desktop-hdpi) {
 
   @import "theme/theme--rwd_min-hdpi";
@@ -113,22 +122,52 @@
 /*----------------------------------
 *  Special Breakpoint old desktop 1024
 * ---------------------------------*/
-@media (min-width: $desktop) and (max-width: #{pem(1200)}) {
-  #featured-cat.col-5,
-  #wpg-evets.col-7  {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    float:none;
-    clear: both;
+@media (min-width: $desktop) and (max-width: #{pem(1279)}) {
+.ev-wrapper .header-section.col-6 {
+  width: 100%;
+}
+.ev-wrapper .ev-top-title {
+  width: 180%;
+}
+.ev-wrapper .xl-icon,
+.ev-wrapper i.xl-icon {
+  font-size: 180%;
+}
+.ev-wrapper::after {
+  bottom: -40px;
+  left: 33%;
+  width: 150px;
+  height: 150px;
+}
+.ev-wrapper #calendar_events {
+width: 270px;
+height: 270px;
+top: auto;
+bottom: -15px;
+right: -10px;
+border: 5px solid $four-bw;
+}
+
+  .ev_block__icon {
+    padding: 0 0px 2%;
+    min-width: 10px;
   }
+  .ev_block__content {
+    max-width: 210px;
+  }
+
+
+
 }
 
 
 /*----------------------------------
-*  Special Breakpoint Tables
+*  Special Breakpoint
 * ---------------------------------*/
 @media (max-width: 360px) {
+  .ev_block > div.ev_block__icon {
+    display: none;
+  }
     table tbody td {
         word-break: break-all;
     }

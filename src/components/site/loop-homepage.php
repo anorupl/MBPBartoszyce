@@ -24,12 +24,12 @@
 
             if ($i == 0): ?>
             <article id="post-<?php the_ID();?>" <?php post_class('f-post col-8 white-two');?> style="background-image:url('<?php echo esc_url($url_thumb); ?>');">
-                <div class="f-post-content col-4 gutters">
+                <div class="f-post-content col-5 gutters">
                     <header class="entry-header">
                         <h2 class="entry-title"><a href="<?php the_permalink();?>" rel="bookmark"><?php the_title();?></a></h2>
                     </header>
                     <div class="entry-summary">
-                      <p><?php echo wpg_get_excerpt(50); ?></p>
+                      <p><?php echo wpg_get_excerpt(40); ?></p>
                       <a href="<?php the_permalink();?>" class="btn"><? printf(__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'wpg_theme' ), get_the_title()); ?> <i class="icon-angle-right"></i></a>
                     </div>
                 </div>
@@ -41,20 +41,13 @@
                 <article id="post-<?php the_ID();?>" <?php post_class();?>>
                     <div class="s-post-thumbnail" style="background-image:url('<?php echo esc_url($url_thumb); ?>');"></div>
                     <div class="s-post-content gutters">
-                        <header class="entry-header">
-                            <h2 class="entry-title"><a href="<?php the_permalink();?>" rel="bookmark"><?php the_title();?></a></h2>
-                        </header>
-                        <a class="icon-angle-right arrow-more-icon" href="<?php the_permalink();?>">
-                        <?php the_title();?>
-                        </a>
+                        <h2 class="entry-title"><a href="<?php the_permalink();?>" rel="bookmark"><?php the_title();?></a></h2>
+                        <a class="icon-angle-right arrow-more-icon" href="<?php the_permalink();?>"><?php the_title();?></a>
                     </div>
                 </article>
         <?php if ($i == 3) {echo '</div>';}?>
         <?php endif; $i++; endwhile;?>
-        <a class="arrow-allpost-icon" href="<?php echo get_next_posts_page_link(); ?>">
-            <?php _e('Show more ', 'wpg_theme');?>
-            <i class="icon-angle-right"></i>
-        </a>
+        <a class="arrow-allpost-icon" href="<?php echo get_next_posts_page_link(); ?>"><?php _e('Show more ', 'wpg_theme');?><i class="icon-angle-right"></i></a>
         <?php endif; ?>
     </main>
     <div id="header-nav-bottom" class="col-11 gutters">

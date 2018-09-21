@@ -41,8 +41,7 @@ $font-size-xxxl: 2.6;
 >>> Breakpoint
 ---------------------------------------------------------------*/
 $phone          : #{pem(576)};
-$tablet         : #{pem(768)};
-
+$tablet         : #{pem(991)};
 $desktop        : #{pem(992)};
 $desktop-ldpi   : #{pem(1280)};
 $desktop-mdpi   : #{pem(1440)};
@@ -61,10 +60,9 @@ $five-color     : #FCE9A6;
 $one-bw         : #2d3942;  // text
 $two-bw         : #192e43;  // icon
 $three-bw       : #ededed;
-$four-bw        : #f7f8fa;
+$four-bw        : #fbfafc;
 $five-bw        : #7e7e7e;
 $white          : #ffffff;
-
 
 $border-color   : #d5d4d9;
 $light-border   : #e9e9e9;
@@ -82,6 +80,7 @@ $fields-active  : $one-color;
 $button-border  : $two-color;
 
 $outline        : 1px solid $one-color;
+
 /*--------------------------------------------------------------
 >>> Menu horizontal
 ---------------------------------------------------------------*/
@@ -98,7 +97,7 @@ $hv-ahover:         $two-color;
 $hv-aa:             $one-color;
 $hv-aahover:        $two-color;
 
-$hv-border:         $border-color;
+$hv-border:         $light-border;
 $hv-plus:           $two-color;
 
 /* over */

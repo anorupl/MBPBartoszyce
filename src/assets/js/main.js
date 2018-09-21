@@ -9,14 +9,18 @@
   *********************************************************/
   $(document).ready(function () {
 
-    var $offset_header = $('#site-header').offset();
 
     /**
     *  Scroll
     */
-    $(window).scroll(function() {
+    var $offset_header = $('#top-bar').outerHeight();
 
-      if ( $(window).scrollTop() > ($offset_header.top)){
+    $(window).on('resize', function () {
+      $offset_header = $('#top-bar').outerHeight();
+    });
+
+    $(window).on('scroll resize',function() {
+      if ( $(this).scrollTop() > $offset_header){
         $('body').addClass('fixed-header');
       } else {
         $('body').removeClass('fixed-header');
@@ -175,7 +179,7 @@
       if (value == 'contrast' || value == 'normal') {
         switch(value) {
           case 'contrast':
-          $('head').append('<link id="contrast-style-css" rel="stylesheet" href="'+ datalanuge.url +'/css/kontrast.css" type="text/css" />');
+          $('head').append('<link id="contrast-style-css" rel="stylesheet" href="'+ datalanuge.url +'/css/contrast.css" type="text/css" />');
           $.cookie("color", 'contrast', {expires: 365, path: '/'});
           button.val('normal');
           button.html(datalanuge.offcontrast);

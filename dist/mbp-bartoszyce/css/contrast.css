@@ -1,0 +1,605 @@
+/* contrast
+========================================================================== */
+/*--------------------------------------------------------------
+-- setting/
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+>>> variables
+----------------------------------------------------------------
+|
+|-- Path
+|-- Font
+|-- Breakpoint (continer max-width 1300px)
+|
+|-- Color
+|----- Menu horizontal
+|----- Menu vertical
+|----- Menu small
+|----- Pagination
+|
+*/
+/*--------------------------------------------------------------
+>>> Path
+---------------------------------------------------------------*/
+/*--------------------------------------------------------------
+>>> Font
+---------------------------------------------------------------*/
+/*--------------------------------------------------------------
+>>> Breakpoint
+---------------------------------------------------------------*/
+/*--------------------------------------------------------------
+>>> Color
+---------------------------------------------------------------*/
+/*--------------------------------------------------------------
+>>> Menu horizontal
+---------------------------------------------------------------*/
+/* all */
+/* over */
+/*--------------------------------------------------------------
+>>> Color Menu small
+---------------------------------------------------------------*/
+/*--------------------------------------------------------------
+>>> Color Menu Pagination
+---------------------------------------------------------------*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS
+----------------------------------------------------------------
+1.0 Normalize
+2.0 Universal styles
+3.0 Layout
+  3.1 Header
+  3.2  Regular Content
+  3.3  Posts - multi loop
+  3.4  Posts & Page
+  3.5  Taxonomy
+  3.6  Attachment
+4 Sections
+  4.1 Loop in header with post
+  4.2 Featured category
+  4.3 Events
+  4.4 Clubs
+  4.5 New colections
+  4.6 Catl
+  4.7 Contact
+  4.8 Contact & Catl
+  4.9 Partners (slick slider css)
+  4.10 Copyright
+5.0  Widgets
+6.0  Event calander - plugin Events Manager by Marcus Sykes
+--------------------------------------------------------------*/
+body {
+  background: #000000;
+  color: #ffffff; }
+
+a {
+  color: #FFFE00; }
+  a:hover, a:active {
+    color: #FFFE00;
+    text-decoration: underline; }
+
+.h-nav--color .sub-menu li {
+  background: #000000; }
+
+.h-nav--color .menu li > a,
+.h-nav--color .sub-menu li a {
+  color: #FFFE00; }
+
+.h-nav--color .menu li > a:hover,
+.h-nav--color .sub-menu li > a:hover,
+.h-nav--color .sub-menu li li > a:hover {
+  color: #FFFE00;
+  text-decoration: underline; }
+
+.h-nav--arrow .menu > li > .sub-menu::before {
+  border-bottom-color: #FFFE00; }
+
+.h-nav--arrow .sub-menu {
+  border-top-color: #FFFE00; }
+
+.h-nav--arrow .sub-menu li {
+  border-bottom-color: #ffffff; }
+
+.h-nav--arrow .menu-item-has-children > a:after {
+  color: #ffffff; }
+
+.h-nav--desc .menu-item-description {
+  color: #FFFE00; }
+
+.v-nav .menu li a {
+  color: #FFFE00;
+  border-bottom-color: #ffffff; }
+
+.v-nav .menu a:hover,
+.v-nav .menu .current_page_item > a,
+.v-nav .menu .current-menu-item > a,
+.v-nav .menu .current_page_ancestor > a {
+  color: #FFFE00;
+  text-decoration: underline; }
+
+.v-nav.dropdown .menu .dropdown-toggle {
+  color: #FFFE00; }
+
+.v-nav.dropdown .menu .dropdown-toggle:hover,
+.v-nav.dropdown .menu .dropdown-toggle:focus {
+  background-color: #FFFE00;
+  color: #000000; }
+
+.icon-button-small-menu:before {
+  color: #FFFE00; }
+
+.small-menu .menu {
+  background-color: #000000; }
+
+.small-menu .menu ul {
+  background-color: #000000; }
+
+.small-menu .menu li a {
+  color: #FFFE00;
+  border-bottom-color: #ffffff; }
+
+.small-menu .menu li li.menu-item a:before {
+  color: #FFFE00; }
+
+.pagination a, .pagination span {
+  border-color: #FFFE00; }
+
+.pagination a {
+  background: #000000; }
+
+.pagination span {
+  color: #ffffff;
+  background-color: #000000; }
+
+.pagination a > span {
+  color: #000000;
+  background-color: #ffffff; }
+
+.pagination a:hover {
+  background: #FFFE00;
+  color: #000000; }
+
+.pagination a:hover > span {
+  color: #FFFE00;
+  background: #000000; }
+
+.pagination .current {
+  color: #000000;
+  background: #ffffff; }
+
+.pagination .dots {
+  color: #ffffff; }
+
+.pagination-inside a, .pagination-inside span {
+  border-color: #FFFE00; }
+
+.pagination-inside a {
+  color: #FFFE00;
+  background: #000000; }
+
+.pagination-inside span {
+  color: #ffffff;
+  background-color: #000000; }
+
+.pagination-inside a > span {
+  color: #000000;
+  background-color: #ffffff; }
+
+.pagination-inside a:hover {
+  background: #FFFE00;
+  color: #000000; }
+
+.pagination-inside a:hover > span {
+  color: #FFFE00;
+  background: #000000; }
+
+.post-navigation span.meta-nav {
+  color: #ffffff; }
+
+.post-navigation .nav-links div {
+  border-color: #FFFE00;
+  background-color: #000000; }
+
+.post-navigation .nav-links div:hover {
+  background-color: #FFFE00; }
+  .post-navigation .nav-links div:hover span.meta-nav {
+    color: #000000; }
+  .post-navigation .nav-links div:hover a {
+    color: #000000; }
+
+.comments-title {
+  color: #ffffff;
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff; }
+
+.comment-list .bypostauthor > .comment-body {
+  background: #000000; }
+
+.comment-list .reply a {
+  border-color: #FFFE00; }
+
+.comment-respond {
+  border: 5px solid #d5d4d9;
+  background-color: #000000; }
+
+mark,
+ins {
+  background-color: #ffffff;
+  color: #000000; }
+
+hr {
+  border-bottom-color: #ffffff; }
+
+blockquote {
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff; }
+  blockquote:before {
+    color: #ffffff; }
+
+abbr[title],
+abbr[data-original-title],
+acronym {
+  border-bottom-color: #ffffff; }
+
+kbd,
+var,
+samp,
+code,
+pre {
+  color: #000000;
+  background-color: #ffffff;
+  border-color: #ffffff; }
+
+.entry-content table {
+  border: 5px solid #ffffff; }
+
+.entry-content table caption,
+.entry-content td,
+.entry-content td[scope=col] {
+  border-bottom-color: #ffffff; }
+
+.entry-content th {
+  border: 1px solid;
+  background-color: #000000;
+  color: #ffffff; }
+  .entry-content th a {
+    color: #FFFE00; }
+
+.entry-content tr:nth-child(odd),
+.entry-content tr:nth-child(even) {
+  background-color: #000000; }
+
+/*--------------------------------------------------------------
+2.0 Universal styles
+--------------------------------------------------------------*/
+.btn {
+  color: #000000;
+  background-color: #FFFE00;
+  border: 1px solid #FFFE00; }
+  .btn:hover {
+    color: #FFFE00;
+    background-color: #000000; }
+
+/* color schemes */
+.white-one,
+.dark-two {
+  color: #ffffff; }
+  .white-one a,
+  .dark-two a {
+    color: #FFFE00; }
+  .white-one a:hover,
+  .dark-two a:hover {
+    color: #FFFE00;
+    text-decoration: underline; }
+
+.white-two,
+.white-three,
+.dark-four,
+.gray-content {
+  color: #ffffff; }
+  .white-two a,
+  .white-three a,
+  .dark-four a,
+  .gray-content a {
+    color: #000000; }
+  .white-two a:hover,
+  .white-three a:hover,
+  .dark-four a:hover,
+  .gray-content a:hover {
+    color: #FFFE00;
+    text-decoration: underline; }
+
+/*--------------------------------------------------------------
+3.1 Header
+--------------------------------------------------------------*/
+#top-bar {
+  border-bottom: 1px solid #ffffff; }
+
+.header-wrapper {
+  background-color: #000000;
+  border-color: #ffffff; }
+
+.form-wcga button {
+  background-color: #FFFE00;
+  border-color: #FFFE00; }
+
+/*--------------------------------------------------------------
+3.2  Regular Content
+--------------------------------------------------------------*/
+.header-content {
+  color: #000000;
+  background-color: #ffffff;
+  background-image: none; }
+
+#breadcrumbs {
+  color: #ffffff;
+  background-color: #000000; }
+  #breadcrumbs a {
+    color: #FFFE00; }
+
+/*--------------------------------------------------------------
+3.3  Posts - multi loop
+--------------------------------------------------------------*/
+.hentry-multi .hentry {
+  background-color: #000000;
+  border-color: #ffffff; }
+
+/*--------------------------------------------------------------
+3.4  Posts & Page
+--------------------------------------------------------------*/
+.entry-meta {
+  border-color: #ffffff; }
+
+/*--------------------------------------------------------------
+3.5  Taxonomy
+--------------------------------------------------------------*/
+#term_description {
+  border-bottom-color: #ffffff; }
+
+.desc_header {
+  background-color: #000000; }
+
+/*--------------------------------------------------------------
+3.6  Attachment
+--------------------------------------------------------------*/
+.attachment--other {
+  background: #000000;
+  border-color: #ffffff; }
+
+.attachment__header,
+.attachment__size {
+  border-bottom-color: #ffffff; }
+
+/*--------------------------------------------------------------
+4.1 Loop in header with post
+--------------------------------------------------------------*/
+.f-post {
+  background-color: #000000; }
+
+.f-post-content {
+  background-color: #000000; }
+
+.header-offslider article {
+  float: left;
+  background: #000000;
+  margin-bottom: 10px; }
+
+.s-post-content {
+  border: 1px solid #ffffff; }
+
+.arrow-allpost-icon {
+  color: #000000;
+  background-color: #FFFE00;
+  border-color: #FFFE00; }
+  .arrow-allpost-icon:hover {
+    background-color: #000000;
+    border-color: #FFFE00; }
+
+#header-nav-bottom {
+  background-color: #000000; }
+
+/*--------------------------------------------------------------
+4.2 Featured category
+--------------------------------------------------------------*/
+#featured-cat h2 {
+  background-color: #ffffff;
+  color: #000000; }
+
+#featured-cat .h-wrapper {
+  border-bottom-color: #ffffff; }
+
+#featured-cat .hentry {
+  border-bottom-color: #ffffff; }
+  #featured-cat .hentry:after {
+    background-color: #ffffff; }
+
+#featured-cat a {
+  color: #FFFE00; }
+
+/*--------------------------------------------------------------
+4.3 Events
+--------------------------------------------------------------*/
+#wpg-evets .header-section {
+  color: #ffffff; }
+
+.green_bg {
+  background-color: #000000;
+  background-image: none;
+  border: 5px solid #ffffff; }
+
+.green_bg::before,
+.ev-wrapper::before,
+.ev-wrapper::after {
+  display: none; }
+
+.ev-title {
+  color: #ffffff; }
+
+/* calander in section */
+#calendar_events {
+  background-color: #000000;
+  border: 5px solid #ffffff; }
+
+.em-calendar thead {
+  background-color: #000000; }
+  .em-calendar thead a {
+    color: #FFFE00; }
+
+tr.days-names {
+  color: #fbfafc; }
+
+/*--------------------------------------------------------------
+4.4 Clubs
+--------------------------------------------------------------*/
+.clubs {
+  background-color: #000000; }
+  .clubs::after {
+    background-color: #000000; }
+
+.club-item:first-child, .club-item:nth-child(2), .club-item:nth-child(3), .club-item:nth-child(4) {
+  background-color: #000000;
+  border: 1px solid #ffffff; }
+
+/*--------------------------------------------------------------
+4.5  New colections
+--------------------------------------------------------------*/
+.newitems .tabs__item {
+  border-bottom: 1px solid #ffffff; }
+  .newitems .tabs__item a[aria-selected=true] {
+    color: #000000;
+    background-color: #FFFE00; }
+
+.newitems .tabs__content {
+  border: 5px solid #ffffff; }
+
+.coletion-image,
+.coletion-content,
+.coletion-gallery {
+  background-color: #000000; }
+
+/*--------------------------------------------------------------
+4.6  Catl
+--------------------------------------------------------------*/
+#catl {
+  background-color: #000000; }
+  #catl .tabs__item a {
+    color: #FFFE00; }
+  #catl .tabs__item a:hover {
+    color: #FFFE00; }
+  #catl .tabs__item a[aria-selected=true] {
+    color: #000000;
+    background-color: #FFFE00;
+    border-bottom-color: #FFFE00; }
+  #catl .btn {
+    color: #000000;
+    background-color: #FFFE00;
+    border-color: #FFFE00; }
+    #catl .btn:hover {
+      color: #FFFE00;
+      background-color: #000000; }
+
+/*--------------------------------------------------------------
+4.7  Contact
+--------------------------------------------------------------*/
+#contact .header-section h2 {
+  background-color: #000000; }
+
+#contact .header-section::before {
+  display: none; }
+
+#contact .tabs__item a[aria-selected=true] {
+  color: #000000;
+  background-color: #FFFE00;
+  border-bottom-color: #FFFE00; }
+
+.home #contact {
+  background-color: #000000; }
+
+.home.paged #contact {
+  background-color: #000000; }
+
+/* contact tabs */
+#contact__content {
+  background-color: #000000; }
+
+/* contact social portal links */
+#contact-social {
+  border-top: 1px solid #ffffff; }
+
+#contact__map::before {
+  display: none; }
+
+/*--------------------------------------------------------------
+5.0  Widgets
+--------------------------------------------------------------*/
+.widget {
+  background-color: #000000; }
+
+.widget-title::after {
+  background-color: #d5d4d9; }
+
+/*--------------------------------------------------------------
+6.0  Event calander - plugin Events Manager by Marcus Sykes
+--------------------------------------------------------------*/
+table.em-calendar td.eventless-today,
+table.em-calendar td.eventful-today {
+  background-color: #ffffff;
+  color: #000000; }
+
+table.em-calendar td.eventful a,
+table.em-calendar td.eventful-today a {
+  color: #FFFE00; }
+
+/* Event list */
+.ev-item {
+  background: #000000;
+  border: 1px solid #ffffff; }
+
+.ev-item__date {
+  background-color: #ffffff;
+  color: #000000; }
+
+.ev-item__hour,
+.ev-item__location {
+  border-bottom-color: #ffffff; }
+
+/* Forms
+========================================================================== */
+fieldset,
+legend {
+  border-color: #ffffff; }
+
+button,
+input[type=submit],
+input[type=button],
+input[type="reset"] {
+  border-color: #FFFE00;
+  background: #FFFE00;
+  color: #000000; }
+  button:focus, button:active,
+  input[type=submit]:focus,
+  input[type=submit]:active,
+  input[type=button]:focus,
+  input[type=button]:active,
+  input[type="reset"]:focus,
+  input[type="reset"]:active {
+    color: #FFFE00;
+    background: #000000; }
+
+input[type=file] {
+  color: #000000;
+  background: #ffffff;
+  border-color: #ffffff; }
+
+input[type=file]::-ms-browse,
+input[type=file]::-webkit-file-upload-button,
+input[type=file] > input[type=button]::-moz-focus-inner {
+  color: #000000;
+  background-color: #ffffff;
+  border-color: #ffffff; }
+
+input, textarea {
+  color: #000000;
+  background: #ffffff;
+  border-color: #ffffff; }
+  input:focus, textarea:focus {
+    border-color: #FFFE00; }

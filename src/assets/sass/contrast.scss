@@ -1,0 +1,642 @@
+/* contrast
+========================================================================== */
+
+/*--------------------------------------------------------------
+-- setting/
+--------------------------------------------------------------*/
+@import "setting/function";
+@import "setting/mixin";
+@import "setting/variables";
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS
+----------------------------------------------------------------
+1.0 Normalize
+2.0 Universal styles
+3.0 Layout
+  3.1 Header
+  3.2  Regular Content
+  3.3  Posts - multi loop
+  3.4  Posts & Page
+  3.5  Taxonomy
+  3.6  Attachment
+4 Sections
+  4.1 Loop in header with post
+  4.2 Featured category
+  4.3 Events
+  4.4 Clubs
+  4.5 New colections
+  4.6 Catl
+  4.7 Contact
+  4.8 Contact & Catl
+  4.9 Partners (slick slider css)
+  4.10 Copyright
+5.0  Widgets
+6.0  Event calander - plugin Events Manager by Marcus Sykes
+--------------------------------------------------------------*/
+
+
+body {
+  background: $wcag-bg;
+  color: $wcag-text;
+}
+
+a {
+  color: $wcag-herf;
+  &:hover,
+  &:active {
+    color: $wcag-herf;
+    text-decoration: underline;
+  }
+}
+.h-nav--color {
+
+    .sub-menu li                {background: $wcag-bg;}
+
+    .menu li > a,
+    .sub-menu li a {color: $wcag-herf}
+
+    .menu li > a:hover,
+    .sub-menu li > a:hover,
+    .sub-menu li li  > a:hover  {color: $wcag-herf; text-decoration: underline;}
+}
+.h-nav--arrow {
+  .menu > li > .sub-menu::before {border-bottom-color: $wcag-herf;}
+  .sub-menu    {border-top-color: $wcag-herf;}
+  .sub-menu li {border-bottom-color: $wcag-text;}
+  .menu-item-has-children > a:after {
+     color: $wcag-text;
+ }
+}
+.h-nav--desc {
+  .menu-item-description {
+      color: $wcag-herf;
+    }
+}
+.v-nav {
+  .menu li a                      {color: $wcag-herf; border-bottom-color: $wcag-text;}
+
+  .menu a:hover,
+	.menu .current_page_item > a,
+	.menu .current-menu-item > a,
+	.menu .current_page_ancestor > a        {color: $wcag-herf; text-decoration: underline;}
+
+
+}
+.v-nav.dropdown {
+  .menu .dropdown-toggle					        { color: $wcag-herf;}
+  .menu .dropdown-toggle:hover,
+  .menu .dropdown-toggle:focus			      {background-color: $wcag-herf; color: $wcag-bg;}
+}
+.icon-button-small-menu {
+    &:before {
+        color: $wcag-herf;
+    }
+}
+.small-menu {
+    .menu {
+        background-color: $wcag-bg;
+    }
+    .menu ul                    {background-color: $wcag-bg;}
+    .menu li a                  {color: $wcag-herf; border-bottom-color: $wcag-text;}
+    .menu li li.menu-item a:before { color: $wcag-herf;}
+  }
+
+
+
+.pagination 						{
+	a, span	{
+		border-color: $wcag-herf;
+	}
+	a {
+		background: $wcag-bg;
+	}
+	span {
+		color: $wcag-text;
+		background-color: $wcag-bg;
+	}
+
+	a > span {
+		color: $wcag-bg;
+		background-color: $wcag-text;
+	}
+
+	a:hover {
+		background: $wcag-herf;
+		color: $wcag-bg;
+	}
+
+	a:hover > span {
+		color: $wcag-herf;
+		background: $wcag-bg;
+	}
+	 .current 				{
+		color: $wcag-bg;
+		background: $wcag-text;
+	}
+	.dots {
+		color: $wcag-text;
+	}
+}
+.pagination-inside {
+
+	a, span	{
+		border-color: $wcag-herf;
+	}
+	a {
+		color: $wcag-herf;
+		background: $wcag-bg;
+	}
+	span {
+    color: $wcag-text;
+		background-color: $wcag-bg;
+	}
+
+	a > span {
+    color: $wcag-bg;
+		background-color: $wcag-text;
+	}
+
+	a:hover {
+    background: $wcag-herf;
+		color: $wcag-bg;
+	}
+
+	a:hover > span {
+    color: $wcag-herf;
+		background: $wcag-bg;
+	}
+}
+.post-navigation {
+	span.meta-nav 	{
+    color: $wcag-text;
+  }
+
+	.nav-links {
+		 div {
+			border-color: $wcag-herf;
+			background-color: $wcag-bg;
+		}
+
+		div:hover {
+      span.meta-nav 	{
+        color: $wcag-bg;
+      }
+			background-color: $wcag-herf;
+			a {color: $wcag-bg;}
+		}
+	}
+}
+
+
+.comments-title {
+	color: $wcag-text;
+	border-top-color: $wcag-text;
+	border-bottom-color: $wcag-text;
+}
+.comment-list {
+	.bypostauthor {
+		> .comment-body {
+			background: $wcag-bg;
+		}
+	}
+  .reply a {
+			border-color: $wcag-herf;
+		}
+}
+
+.comment-respond {
+	border: 5px solid $border-color;
+	background-color: $wcag-bg;
+}
+////////// html base tags
+mark,
+ins {
+    background-color: $wcag-text;
+    color: $wcag-bg;
+}
+hr {
+    border-bottom-color: $wcag-text;
+  }
+blockquote {
+  border-top-color: $wcag-text;
+  border-bottom-color: $wcag-text;
+  &:before {
+    color: $wcag-text;
+  }
+}
+abbr[title],
+abbr[data-original-title],
+acronym {
+    border-bottom-color: $wcag-text;
+}
+
+kbd,
+var,
+samp,
+code,
+pre {
+    color:	$wcag-bg;
+    background-color: $wcag-text;
+    border-color: $wcag-text;
+}
+/// TABLE
+.entry-content {
+  table {
+		border: 5px solid $wcag-text;
+	}
+
+  table caption,
+  td,
+  td[scope=col] {
+    border-bottom-color:  $wcag-text;
+  }
+  th {
+    border: 1px solid;
+		background-color: $wcag-bg;
+		color: $wcag-text;
+    a {
+      color: $wcag-herf;
+    }
+	}
+  tr:nth-child(odd),
+  tr:nth-child(even) {
+    background-color: $wcag-bg;
+  }
+}
+
+
+
+/*--------------------------------------------------------------
+2.0 Universal styles
+--------------------------------------------------------------*/
+.btn {
+  color: $wcag-bg;
+  background-color: $wcag-herf;
+  border: 1px solid $wcag-herf;
+  &:hover {
+    color: $wcag-herf;
+    background-color: $wcag-bg;
+  }
+}
+
+/* color schemes */
+.white-one,
+.dark-two {
+  color: $wcag-text;
+  a {color: $wcag-herf;}
+  a:hover{ color: $wcag-herf; text-decoration: underline;}
+}
+
+.white-two,
+.white-three,
+.dark-four,
+.gray-content {
+  color: $wcag-text;
+  a {color: $wcag-bg; }
+  a:hover{ color: $wcag-herf; text-decoration: underline;}
+}
+/*--------------------------------------------------------------
+3.1 Header
+--------------------------------------------------------------*/
+#top-bar {
+
+  border-bottom: 1px solid $wcag-text;
+}
+.header-wrapper {
+  background-color: $wcag-bg;
+  border-color: $wcag-text;
+}
+
+
+.form-wcga  button {
+    background-color: $wcag-herf;
+    border-color: $wcag-herf;
+}
+
+/*--------------------------------------------------------------
+3.2  Regular Content
+--------------------------------------------------------------*/
+.header-content {
+  color: $wcag-bg;
+  background-color:$wcag-text;
+  background-image: none;
+}
+#breadcrumbs {
+  a {
+    color: $wcag-herf;
+  }
+  color: $wcag-text;
+  background-color: $wcag-bg;
+}
+/*--------------------------------------------------------------
+3.3  Posts - multi loop
+--------------------------------------------------------------*/
+.hentry-multi {
+  .hentry {
+
+    background-color: $wcag-bg;
+    border-color: $wcag-text;
+  }
+}
+/*--------------------------------------------------------------
+3.4  Posts & Page
+--------------------------------------------------------------*/
+.entry-meta {
+  border-color: $wcag-text;
+}
+/*--------------------------------------------------------------
+3.5  Taxonomy
+--------------------------------------------------------------*/
+#term_description {
+  border-bottom-color: $wcag-text;
+}
+.desc_header {
+  background-color: $wcag-bg;
+}
+/*--------------------------------------------------------------
+3.6  Attachment
+--------------------------------------------------------------*/
+.attachment--other {
+  background: $wcag-bg;
+  border-color: $wcag-text;
+}
+.attachment__header,
+.attachment__size {
+  border-bottom-color: $wcag-text;
+}
+/*--------------------------------------------------------------
+4.1 Loop in header with post
+--------------------------------------------------------------*/
+.f-post {
+  background-color: $wcag-bg;
+}
+.f-post-content {
+  background-color: $wcag-bg;
+}
+// Block w other post - small
+.header-offslider  article {
+    float: left;
+    background: $wcag-bg;
+    margin-bottom: 10px;
+}
+.s-post-content {
+  border: 1px solid $wcag-text;
+}
+.arrow-allpost-icon {
+  color: $wcag-bg;
+  background-color: $wcag-herf;
+  border-color:$wcag-herf;
+  &:hover {
+    background-color: $wcag-bg;
+    border-color:$wcag-herf;
+  }
+}
+// Continer for menu
+#header-nav-bottom {
+  background-color: $wcag-bg;
+}
+/*--------------------------------------------------------------
+4.2 Featured category
+--------------------------------------------------------------*/
+#featured-cat {
+  h2 {
+    background-color: $wcag-text;
+    color: $wcag-bg;
+  }
+  .h-wrapper {
+    border-bottom-color: $wcag-text;
+  }
+  .hentry {
+    border-bottom-color: $wcag-text;
+
+    &:after {
+      background-color:  $wcag-text;
+    }
+  }
+  a {
+    color:$wcag-herf;
+  }
+}
+
+/*--------------------------------------------------------------
+4.3 Events
+--------------------------------------------------------------*/
+#wpg-evets .header-section {
+    color: $wcag-text;
+}
+.green_bg {
+  background-color: $wcag-bg;
+  background-image: none;
+  border: 5px solid $wcag-text;
+}
+.green_bg::before,
+.ev-wrapper::before,
+.ev-wrapper::after {
+  display: none;
+}
+.ev-title {
+  color:$wcag-text;
+}
+/* calander in section */
+#calendar_events {
+  background-color: $wcag-bg;
+  border: 5px solid $wcag-text;
+}
+
+.em-calendar thead {
+  background-color:$wcag-bg;
+  a {
+    color: $wcag-herf;
+  }
+}
+tr.days-names {
+  color: $four-bw;
+}
+/*--------------------------------------------------------------
+4.4 Clubs
+--------------------------------------------------------------*/
+.clubs {
+  background-color: $wcag-bg;
+
+  &::after {
+    background-color: $wcag-bg;
+  }
+}
+.club-item {
+  &:first-child,
+  &:nth-child(2),
+  &:nth-child(3),
+  &:nth-child(4)
+   {
+    background-color: $wcag-bg;
+    border:1px solid $wcag-text;
+  }
+}
+/*--------------------------------------------------------------
+4.5  New colections
+--------------------------------------------------------------*/
+.newitems {
+  .tabs__item {
+    border-bottom: 1px solid $wcag-text;
+
+    a[aria-selected=true] {
+      color: $wcag-bg;
+      background-color: $wcag-herf;
+
+    }
+  }
+  .tabs__content {
+    border: 5px solid $wcag-text;
+  }
+}
+.coletion-image,
+.coletion-content,
+.coletion-gallery {
+  background-color: $wcag-bg;
+}
+/*--------------------------------------------------------------
+4.6  Catl
+--------------------------------------------------------------*/
+#catl {
+  background-color: $wcag-bg;
+  .tabs__item {
+    a {
+      color: $wcag-herf;
+    }
+    a:hover {
+      color: $wcag-herf;
+    }
+    a[aria-selected=true] {
+      color: $wcag-bg;
+      background-color: $wcag-herf;
+      border-bottom-color: $wcag-herf;
+    }
+  }
+
+  .btn {
+    color: $wcag-bg;
+    background-color: $wcag-herf;
+    border-color: $wcag-herf;
+
+    &:hover {
+      color: $wcag-herf;
+      background-color: $wcag-bg;
+    }
+  }
+}
+/*--------------------------------------------------------------
+4.7  Contact
+--------------------------------------------------------------*/
+#contact {
+  .header-section h2 {
+      background-color: $wcag-bg;
+    }
+  .header-section::before{
+      display: none;
+  }
+  .tabs__item {
+    a[aria-selected=true] {
+      color: $wcag-bg;
+      background-color: $wcag-herf;
+      border-bottom-color: $wcag-herf;
+    }
+  }
+}
+.home #contact {
+  background-color: $wcag-bg;
+}
+.home.paged #contact {
+  background-color: $wcag-bg;
+}
+/* contact tabs */
+#contact__content {
+  background-color: $wcag-bg;
+}
+/* contact social portal links */
+#contact-social {
+  border-top: 1px solid $wcag-text;
+}
+#contact__map::before {
+  display: none;
+}
+/*--------------------------------------------------------------
+5.0  Widgets
+--------------------------------------------------------------*/
+.widget {
+  background-color: $wcag-bg;
+}
+.widget-title::after {
+  background-color: $border-color;
+}
+/*--------------------------------------------------------------
+6.0  Event calander - plugin Events Manager by Marcus Sykes
+--------------------------------------------------------------*/
+
+table.em-calendar td.eventless-today,
+table.em-calendar td.eventful-today {
+  background-color: $wcag-text;
+  color: $wcag-bg;
+}
+table.em-calendar td.eventful a,
+table.em-calendar td.eventful-today a {
+    color: $wcag-herf;
+}
+
+
+
+
+/* Event list */
+.ev-item {
+  background: $wcag-bg;
+  border: 1px solid $wcag-text;
+}
+.ev-item__date {
+  background-color: $wcag-text;
+  color: $wcag-bg;
+}
+.ev-item__hour,
+.ev-item__location {
+  border-bottom-color: $wcag-text;
+}
+
+
+
+/* Forms
+========================================================================== */
+fieldset,
+legend {
+    border-color: $wcag-text;
+}
+button,
+input[type=submit],
+input[type=button],
+input[type="reset"] {
+    border-color: $wcag-herf;
+    background: $wcag-herf;
+    color: $wcag-bg;
+    &:focus, &:active {
+        color: $wcag-herf;
+        background: $wcag-bg;
+    }
+}
+input[type=file] {
+    color: $wcag-bg;
+    background: $wcag-text;
+    border-color: $wcag-text;
+}
+input[type=file]::-ms-browse,
+input[type=file]::-webkit-file-upload-button,
+input[type=file] > input[type=button]::-moz-focus-inner {
+    color: $wcag-bg;
+    background-color: $wcag-text;
+    border-color: $wcag-text;
+}
+input, textarea {
+    color: $wcag-bg;
+    background: $wcag-text;
+    border-color: $wcag-text;
+    &:focus {
+        border-color: $wcag-herf;
+    }
+}

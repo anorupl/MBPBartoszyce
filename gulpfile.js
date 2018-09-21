@@ -137,33 +137,24 @@ gulp.task('theme-js', function() {
 gulp.task('sass', function() {
 	//Base theme style sass
 	var style = gulp.src(theme.css.src + 'style.scss')
-		//.pipe(sourcemap.init())
 		.pipe(changed(theme.css.dist))
 		//Default:nestedValues:nested,expanded,compact,compressed
 		.pipe(sass({outputStyle: 'expanded' }).on('error', sass.logError))
-		//.pipe(sourcemap.write())
 		.pipe(prefixer())
 		.pipe(gulp.dest(theme.css.dist));
+
+  var other_sass = gulp.src(['!' + theme.css.src + 'style.scss', theme.css.src + '*.scss'])
+		.pipe(changed(theme.css.dist_css))
+		.pipe(sass().on('error', function(error) {console.log(error);this.emit('end');}))
+		.pipe(gulp.dest(theme.css.dist_css));
+
 	//copy css
 	var css = gulp.src(theme.css.src_css + '*.css').pipe(changed(theme.css.dist_css))
-		.pipe(sass().on('error', function(error) {
-			console.log(error);
-			this.emit('end');
-		}))
+		.pipe(sass().on('error', function(error) {console.log(error);this.emit('end');}))
 		.pipe(gulp.dest(theme.css.dist_css));
-	var ie = gulp.src(theme.css.src + 'ie.scss').pipe(changed(theme.css.dist_css))
-		.pipe(sass().on('error', function(error) {
-			console.log(error);
-			this.emit('end');
-		}))
-		.pipe(gulp.dest(theme.css.dist_css));
-	var slick = gulp.src(theme.css.src + 'slick.scss').pipe(changed(theme.css.dist_css))
-		.pipe(sass().on('error', function(error) {
-			console.log(error);
-			this.emit('end');
-		}))
-		.pipe(gulp.dest(theme.css.dist_css));
-	return merge(style, css, slick, ie);
+
+
+	return merge(style, css, other_sass);
 });
 
 

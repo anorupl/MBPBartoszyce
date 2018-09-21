@@ -134,19 +134,19 @@ msgstr ""
 msgid "New in the library"
 msgstr ""
 
-#: src/components/features/section-new.php:143
+#: src/components/features/section-new.php:137
 msgid "Show"
 msgstr ""
 
-#: src/components/features/section-new.php:155
-msgid "Older collections of new products"
+#: src/components/features/section-new.php:149
+msgid "Show previous news"
 msgstr ""
 
 #: src/components/features/section-partners.php:23, src/inc/customizer/setting_control/inc_setting_partners.php:63, src/inc/customizer/wpg_customizer.php:417
 msgid "Partners"
 msgstr ""
 
-#: src/components/site/loop-homepage.php:109
+#: src/components/site/loop-homepage.php:99
 msgid "Show more "
 msgstr ""
 
