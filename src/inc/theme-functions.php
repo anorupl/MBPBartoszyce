@@ -5,15 +5,46 @@
 * @package MBP Bartoszyce
 * @since 0.1.0
 */
-function wpg_post_per_page( $query ) {
-	if ( $query->is_main_query() && $query->is_home() && !is_paged()) {
-		$query->set('ignore_sticky_posts', 1);
-		$query->set('posts_per_page', 4);
-	} elseif ($query->is_main_query() && $query->is_home() && is_paged()) {
-		//$query->set('offset', 4);
+
+
+add_action( 'pre_get_posts', 'sk_query_offset', 1 );
+function sk_query_offset( $query) {
+
+	// Before anything else, make sure this is the right query...
+	if ( !is_admin() && $query->is_home() && $query->is_main_query() ) {
+		$query->set( 'ignore_sticky_posts', '-1' );
+
+		// First, define your desired offset...
+		$offset = 3;
+		// Next, determine how many posts per page you want (we'll use WordPress's settings)
+		$ppp = get_option( 'posts_per_page' );
+		// Next, detect and handle pagination...
+		if ( $query->is_paged ) {
+			// Manually determine page query offset (offset + current page (minus one) x posts per page)
+			$page_offset = 3 + ( ( $query->query_vars['paged']-2 ) * $ppp );
+			// Apply adjust page offset
+			$query->set( 'offset', $page_offset );
+		}
+		else {
+			// This is the first page. Set a different number for posts per page
+			$query->set( 'posts_per_page', 3 );
+		}
 	}
 }
-add_action( 'pre_get_posts', 'wpg_post_per_page' );
+
+add_filter( 'found_posts', 'sk_adjust_offset_pagination', 1, 2 );
+function sk_adjust_offset_pagination( $found_posts, $query ) {
+
+	// Define our offset again...
+	$offset = -3;
+
+	// Ensure we're modifying the right query object...
+	if ( $query->is_home() && $query->is_main_query() ) {
+		// Reduce WordPress's found_posts count by the offset...
+		return $found_posts - $offset;
+	}
+	return $found_posts;
+}
 
 
 /**

@@ -120,13 +120,13 @@
         //  = Tab content				=
         //  =============================================
 
-        $wp_customize->add_setting("wpg_catl_tabcontent_$i", array(
+        $wp_customize->add_setting("wpg_catl_tab_content_$i", array(
             'default'           => '',
             'sanitize_callback' => 'sanitize_text_field'
         ));
 
-        $wp_customize->add_control( "wpg_catl_tabcontent_$i", array(
-            'settings' => "wpg_catl_tabcontent_$i",
+        $wp_customize->add_control( "wpg_catl_tab_content_$i", array(
+            'settings' => "wpg_catl_tab_content_$i",
             'label'   => __('Tab Description', 'wpg_theme'),
             'section'  => $catl_section_id,
             'type'    => 'textarea'

@@ -51,18 +51,3 @@ h5, h6,.class-h5,.f-size-h5 { @include font-size(($size-base + 0.5),0,true);}
 #contact__map {
   width: 50%;
 }
-
-/*--------------------------------------------------------------
-4.1 Loop in header with post
---------------------------------------------------------------*/
-.header-offslider {
-  width: 660px;
-}
-.header-offslider article {
-  width: 220px;
-}
-.s-post-thumbnail,
-.s-post-content {
-    width: 220px;
-    height: 200px;
-}

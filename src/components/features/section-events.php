@@ -7,8 +7,9 @@
  *
  */
  ?>
- <section id="wpg-evets" class="page-section pad-all col-7">
-   <div class="ev-wrapper">
+ <section id="wpg-evets" class="page-section pad-all col-12">
+   <div class="container">
+   <div class="ev-wrapper pad-all">
      <header class="header-section col-6">
        <div class="h-wrapper">
          <h2 class="h--xxl"><?php _e('Upcoming events', 'wpg_theme'); ?></h2>
@@ -34,5 +35,6 @@
          }
          ?>
        </div>
+     </div>
      </div>
    </section>

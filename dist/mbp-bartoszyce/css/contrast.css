@@ -377,14 +377,14 @@ pre {
 
 .f-post-content {
   background-color: #000000; }
+  .f-post-content a {
+    color: #FFFE00; }
 
-.header-offslider article {
-  float: left;
-  background: #000000;
-  margin-bottom: 10px; }
+#posts-min article {
+  border-left-color: #000000; }
 
-.s-post-content {
-  border: 1px solid #ffffff; }
+#posts-min h2 {
+  background-color: #000000; }
 
 .arrow-allpost-icon {
   color: #000000;
@@ -395,25 +395,23 @@ pre {
     border-color: #FFFE00; }
 
 #header-nav-bottom {
-  background-color: #000000; }
+  background-color: #000000;
+  border: 5px solid #ffffff; }
 
 /*--------------------------------------------------------------
 4.2 Featured category
 --------------------------------------------------------------*/
-#featured-cat h2 {
-  background-color: #ffffff;
-  color: #000000; }
-
-#featured-cat .h-wrapper {
-  border-bottom-color: #ffffff; }
-
-#featured-cat .hentry {
-  border-bottom-color: #ffffff; }
-  #featured-cat .hentry:after {
-    background-color: #ffffff; }
+#featured-cat h3 {
+  background-color: #000000; }
 
 #featured-cat a {
   color: #FFFE00; }
+
+#featured-cat .header-section {
+  color: #ffffff; }
+
+#wpg-evets .header-section {
+  color: #000000; }
 
 /*--------------------------------------------------------------
 4.3 Events
@@ -524,6 +522,8 @@ tr.days-names {
 /* contact social portal links */
 #contact-social {
   border-top: 1px solid #ffffff; }
+  #contact-social a {
+    color: #FFFE00; }
 
 #contact__map::before {
   display: none; }

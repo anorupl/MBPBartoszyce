@@ -17,10 +17,11 @@
     /* Start the Loop */
         while (have_posts()): the_post();
 
-            $url_thumb = get_the_post_thumbnail_url($post, 'full');
+            $url_thumb = get_the_post_thumbnail_url($post, 'large');
             if ($url_thumb == false) {
                 $url_thumb = get_template_directory_uri() . '/img/default/no_image.jpg';
             }
+
 
             if ($i == 0): ?>
             <article id="post-<?php the_ID();?>" <?php post_class('f-post col-8 white-two');?> style="background-image:url('<?php echo esc_url($url_thumb); ?>');">
@@ -37,17 +38,15 @@
 
             <?php else: ?>
 
-        <?php if ($i == 1) {echo '<div id="posts-header__min" class="slider-header arrows-tr header-offslider hentry-header white-one">';}?>
-                <article id="post-<?php the_ID();?>" <?php post_class();?>>
-                    <div class="s-post-thumbnail" style="background-image:url('<?php echo esc_url($url_thumb); ?>');"></div>
+        <?php if ($i == 1) {echo '<div id="posts-min" class="arrows-tr col-4 white-one">';}?>
+                <article id="post-<?php the_ID();?>" <?php post_class();?> style="background-image:url('<?php echo esc_url($url_thumb); ?>');">
                     <div class="s-post-content gutters">
                         <h2 class="entry-title"><a href="<?php the_permalink();?>" rel="bookmark"><?php the_title();?></a></h2>
-                        <a class="icon-angle-right arrow-more-icon" href="<?php the_permalink();?>"><?php the_title();?></a>
                     </div>
                 </article>
-        <?php if ($i == 3) {echo '</div>';}?>
+        <?php if ($i == 2) {echo '</div>';}?>
         <?php endif; $i++; endwhile;?>
-        <a class="arrow-allpost-icon" href="<?php echo get_next_posts_page_link(); ?>"><?php _e('Show more ', 'wpg_theme');?><i class="icon-angle-right"></i></a>
+        <a class="arrow-allpost-icon text-center" href="<?php echo get_next_posts_page_link(); ?>"><?php _e('Show more news', 'wpg_theme');?><i class="icon-angle-right"></i></a>
         <?php endif; ?>
     </main>
     <div id="header-nav-bottom" class="col-11 gutters">

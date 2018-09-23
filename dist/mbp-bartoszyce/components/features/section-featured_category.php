@@ -7,12 +7,15 @@
  *
  */
  ?>
- <section id="featured-cat" class="page-section pad-all col-5">
- <header class="header-section">
-   <div class="h-wrapper">
-     <h2 class="h--xxl"><?php echo esc_html(get_theme_mod('wpg_featuredcat_title',__('In the library', 'wpg_theme'))); ?></h2>
-   </div>
- </header>
+ <section id="featured-cat" class="page-section col-12">
+   <div class="container">
+    <header class="header-section gutters">
+      <h2 class="h--xxl"><?php echo esc_html(get_theme_mod('wpg_featuredcat_title',__('In the library', 'wpg_theme'))); ?></h2>
+    </header>
+  </div>
+<div class="container">
+  <div class="wrap-continer clear-both pad-all featured-item">
+
  <?php
 
  $featuredcat_id = get_theme_mod('wpg_featuredcat', 0);
@@ -21,19 +24,30 @@
 
    $query_featuredcat = new WP_Query([
      'post_type'     =>'post',
-     'posts_per_page'=> 1,
+     'posts_per_page'=> 3,
      'tax_query'     => [['taxonomy' => 'category','field' => 'id','terms' => $featuredcat_id]]
    ]);
 
-   if ( $query_featuredcat->have_posts()) : while ($query_featuredcat->have_posts()) : $query_featuredcat->the_post(); ?>
+   if ( $query_featuredcat->have_posts()) : while ($query_featuredcat->have_posts()) : $query_featuredcat->the_post();
 
-   <div <?php post_class(); ?> >
-     <a href="<?php the_permalink(); ?>" aria-hidden="true">
-       <?php the_post_thumbnail('medium', array('alt' => get_the_title())); ?>
+   $url_thumb = get_the_post_thumbnail_url($post, 'medium');
+   if ($url_thumb == false) {
+       $url_thumb = get_template_directory_uri() . '/img/default/no_image.jpg';
+   }
+
+  ?>
+
+   <div class="col-4">
+     <div <?php post_class(); ?> style="background-image:url('<?php echo esc_url($url_thumb); ?>');">
+     <div class="featured-item__gradient"></div>
+     <a href="<?php the_permalink(); ?>">
+       <div class="entry-header">
+         <h3 class="entry-title"><?php wpg_title_shorten(); ?></h3>
+       </div>
      </a>
-     <div class="entry-header">
-       <h3 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php wpg_title_shorten(); ?></a></h3>
      </div>
    </div>
  <?php endwhile; endif; wp_reset_query(); endif;?>
+</div>
+ </div>
 </section>

@@ -33,7 +33,7 @@
                    if($i == 1) {
                      echo '<img src="'. THEME_URL .'img/logo_catl.png" alt="Logo Cyfrowego archiwum tradycji lokalnej" width="200px" height="82" />';
                    }
-                   echo esc_html(get_theme_mod("wpg_catl_tabcontent_$i",__('Tab content', 'wpg_theme')));
+                   echo esc_html(get_theme_mod("wpg_catl_tab_content_$i",__('Tab content', 'wpg_theme')));
                    ?>
                </div>
              <?php endfor; ?>

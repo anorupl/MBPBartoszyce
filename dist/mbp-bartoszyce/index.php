@@ -19,7 +19,7 @@ get_header();
 if (is_home() && !is_paged()) {
 
     get_template_part('components/site/loop', 'homepage' );
-    echo '<div class="wrapper">';
+  
     /* ====================
   	 * Section - featured category   *
   	 * ===================*/
@@ -34,7 +34,7 @@ if (is_home() && !is_paged()) {
       get_template_part('components/features/section', 'events' );
     }
 
-    echo '</div><!-- .wrapper --><div class="clear"></div>';
+
     /* ====================
   	 * Section - clubs    *
   	 * ===================*/

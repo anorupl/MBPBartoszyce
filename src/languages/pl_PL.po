@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: wpg-bezcieniowapl\n"
 "Report-Msgid-Bugs-To: http://biblioteka.bartoszyce.pl\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2018-09-06 13:51+0200\n"
+"PO-Revision-Date: 2018-09-23 21:32+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pl_PL\n"
@@ -77,7 +77,7 @@ msgstr "Czytaj dalej"
 #: src/components/content_multi/content-club.php:107,
 #: src/components/content_multi/content-collection.php:107,
 #: src/components/content_multi/content.php:101,
-#: src/components/site/loop-homepage.php:65
+#: src/components/site/loop-homepage.php:67
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "Czytaj dalej<span class=\"screen-reader-text\"> \"%s\"</span>"
 
@@ -145,7 +145,7 @@ msgid "Go to the website"
 msgstr "Przejdź do witryny"
 
 #: src/components/features/section-clubs.php:27,
-#: src/inc/customizer/setting_control/inc_setting_club.php:63,
+#: src/inc/customizer/setting_control/inc_setting_club.php:59,
 #: src/inc/customizer/wpg_customizer.php:277
 msgid "Clubs in the library"
 msgstr "Kluby w bibliotece"
@@ -175,7 +175,7 @@ msgstr "Numer telefonu"
 msgid "Opening Hours"
 msgstr "Godziny otwarcia"
 
-#: src/components/features/section-events.php:27
+#: src/components/features/section-events.php:29
 msgid "Upcoming events"
 msgstr "Nadchodzące wydarzenia"
 
@@ -189,13 +189,13 @@ msgstr "W bibliotece"
 msgid "New in the library"
 msgstr "Nowość w bibliotece"
 
-#: src/components/features/section-new.php:143
+#: src/components/features/section-new.php:137
 msgid "Show"
 msgstr "Pokaż"
 
-#: src/components/features/section-new.php:155
-msgid "Older collections of new products"
-msgstr "Starsze kolekcje nowości"
+#: src/components/features/section-new.php:149
+msgid "Show previous news"
+msgstr "Pokaż poprzednie nowości"
 
 #: src/components/features/section-partners.php:23,
 #: src/inc/customizer/setting_control/inc_setting_partners.php:63,
@@ -203,9 +203,9 @@ msgstr "Starsze kolekcje nowości"
 msgid "Partners"
 msgstr "Partnerzy"
 
-#: src/components/site/loop-homepage.php:109
-msgid "Show more "
-msgstr "Pokaż więcej "
+#: src/components/site/loop-homepage.php:97
+msgid "Show more news"
+msgstr "Pokaż więcej aktualności"
 
 #: src/footer-fidkar.php:53, src/footer-wfidkar.php:53, src/footer.php:57
 msgid "All Rights Reserved"
@@ -232,39 +232,39 @@ msgstr "Wyłącz kontrast"
 msgid "Włącz kontrast"
 msgstr "Włącz kontrast"
 
-#: src/functions.php:301
+#: src/functions.php:299
 msgid "Previous Image (left arrow key)"
 msgstr "Poprzednie zdjęcie"
 
-#: src/functions.php:303
+#: src/functions.php:301
 msgid "Next Image (right arrow key)"
 msgstr "Następne zdjęcie"
 
-#: src/functions.php:305
+#: src/functions.php:303
 msgid "of"
 msgstr "z"
 
-#: src/functions.php:307
+#: src/functions.php:305
 msgid "Close (Escape key)"
 msgstr "Zamknij"
 
-#: src/functions.php:309
+#: src/functions.php:307
 msgid "Loading ..."
 msgstr "Ładowanie ... "
 
-#: src/functions.php:311
+#: src/functions.php:309
 msgid "Image"
 msgstr "Zdjęcie"
 
-#: src/functions.php:313
+#: src/functions.php:311
 msgid "it cannot be loaded."
 msgstr "nie zostało załadowane."
 
-#: src/functions.php:357
+#: src/functions.php:355
 msgid "Right Sidebar"
 msgstr "Boczny pasek po prawej"
 
-#: src/functions.php:375
+#: src/functions.php:373
 msgid "Left Sidebar"
 msgstr "Boczny pasek - Lewa"
 
@@ -289,7 +289,7 @@ msgstr ""
 "artykule <a href=\"%4$s\" title=\"Powrót do %5$s\">%6$s</a>"
 
 #: src/inc/customizer/helpers/inc_helpers.php:199,
-#: src/inc/customizer/setting_control/inc_setting_club.php:175,
+#: src/inc/customizer/setting_control/inc_setting_club.php:125,
 #: src/inc/customizer/setting_control/inc_setting_new.php:95,
 #: src/inc/template-tags.php:203, src/inc/template-tags.php:263
 msgid "Category"
@@ -309,37 +309,28 @@ msgid "Find us on"
 msgstr "Odwiedź nas na"
 
 #: src/inc/customizer/helpers/inc_helpers.php:339,
-#: src/inc/customizer/setting_control/inc_setting_club.php:275,
+#: src/inc/customizer/setting_control/inc_setting_club.php:215,
 #: src/inc/customizer/setting_control/inc_setting_featured_category.php:113
 msgid "Select Category"
 msgstr "Wybierz kategorię"
 
 #: src/inc/customizer/setting_control/inc_setting_blog.php:25,
-#: src/inc/customizer/wpg_customizer.php:443, src/index.php:129,
-#: src/index.php:179
+#: src/inc/customizer/wpg_customizer.php:443, src/inc/template-tags.php:991,
+#: src/index.php:129, src/index.php:179
 msgid "Last post"
 msgstr "Ostanie wpisy"
 
 #: src/inc/customizer/setting_control/inc_setting_blog.php:41,
 #: src/inc/customizer/setting_control/inc_setting_catl.php:79,
-#: src/inc/customizer/setting_control/inc_setting_club.php:79,
+#: src/inc/customizer/setting_control/inc_setting_club.php:73,
 #: src/inc/customizer/setting_control/inc_setting_featured_category.php:77,
 #: src/inc/customizer/setting_control/inc_setting_new.php:77,
 #: src/inc/customizer/setting_control/inc_setting_partners.php:79
 msgid "Title section"
 msgstr "Tytuł sekcji"
 
-#: src/inc/customizer/setting_control/inc_setting_blog.php:73,
-#: src/inc/customizer/setting_control/inc_setting_club.php:143
-msgid "No of items"
-msgstr "Liczba elementów"
-
-#: src/inc/customizer/setting_control/inc_setting_blog.php:75
-msgid "Enter number between %1s and %2s ."
-msgstr "Wybierz liczbę między %1s a %2s ."
-
 #: src/inc/customizer/setting_control/inc_setting_catl.php:43,
-#: src/inc/customizer/setting_control/inc_setting_club.php:43,
+#: src/inc/customizer/setting_control/inc_setting_club.php:41,
 #: src/inc/customizer/setting_control/inc_setting_events.php:41,
 #: src/inc/customizer/setting_control/inc_setting_featured_category.php:41,
 #: src/inc/customizer/setting_control/inc_setting_new.php:41,
@@ -373,24 +364,16 @@ msgstr "Zakładka"
 msgid "Tab Description"
 msgstr "Opis zakładki"
 
-#: src/inc/customizer/setting_control/inc_setting_club.php:109,
-#: src/inc/customizer/setting_control/inc_setting_club.php:237
+#: src/inc/customizer/setting_control/inc_setting_club.php:103,
+#: src/inc/customizer/setting_control/inc_setting_club.php:183
 msgid "Description"
 msgstr "Opis"
 
-#: src/inc/customizer/setting_control/inc_setting_club.php:145
-msgid ""
-"Enter number between %1s and %2s .Save and refresh the page then number of "
-"Blocks is changed."
-msgstr ""
-"Wybierz liczbę między %1s a %2s . Zapisz i odśwież stronę aby zobaczyć nowe "
-"pola."
-
-#: src/inc/customizer/setting_control/inc_setting_club.php:207
+#: src/inc/customizer/setting_control/inc_setting_club.php:153
 msgid "Club title"
 msgstr "Nazwa Klubu"
 
-#: src/inc/customizer/setting_control/inc_setting_club.php:277,
+#: src/inc/customizer/setting_control/inc_setting_club.php:217,
 #: src/inc/customizer/setting_control/inc_setting_featured_category.php:115
 msgid "Select category to show in Section."
 msgstr "Wybierz kategorię do pokazania w sekcji."
@@ -570,34 +553,38 @@ msgstr "Nowesze Komentarze"
 msgid "Home"
 msgstr "Strona Główna"
 
-#: src/inc/template-tags.php:991
+#: src/inc/template-tags.php:993
 msgid "<span class=\"screen-reader-text\">Archive by Category</span> %s"
 msgstr "<span class=\"screen-reader-text\">Kategoria</span> %s"
 
-#: src/inc/template-tags.php:993
+#: src/inc/template-tags.php:995
 msgid "<span class=\"screen-reader-text\">Search Results for</span> %s"
 msgstr "<span class=\"screen-reader-text\">Wynik wyszukiwania dla:</span> %s"
 
-#: src/inc/template-tags.php:995
+#: src/inc/template-tags.php:997
 msgid "<span class=\"screen-reader-text\">Posts Tagged</span> %s"
 msgstr "<span class=\"screen-reader-text\">Tag</span> %s"
 
-#: src/inc/template-tags.php:997
+#: src/inc/template-tags.php:999
 msgid "<span class=\"screen-reader-text\">Articles Posted by</span> %s"
 msgstr ""
 "<span class=\"screen-reader-text\">Artykuł opublikowany przez</span> %s"
 
-#: src/inc/template-tags.php:999
+#: src/inc/template-tags.php:1001
 msgid "<span class=\"screen-reader-text\">Error 404</span>"
 msgstr "<span class=\"screen-reader-text\">Błąd 404</span>"
 
-#: src/inc/template-tags.php:1001
+#: src/inc/template-tags.php:1003
 msgid "<span class=\"screen-reader-text\">Page</span> %s"
 msgstr "<span class=\"screen-reader-text\">Strona</span> %s"
 
-#: src/inc/template-tags.php:1003
+#: src/inc/template-tags.php:1005
 msgid "<span class=\"screen-reader-text\">Comment Pag</span>e %s"
 msgstr "<span class=\"screen-reader-text\">Strona komentarza</span>e %s"
+
+#: src/inc/template-tags.php:1081
+msgid "page: "
+msgstr "strona:"
 
 #: src/inc/wcga_form.php:205
 msgid "Standard font size"
@@ -641,6 +628,3 @@ msgstr "Wyniki wyszukiwania dla: %s"
 #: src/searchform.php:25, src/searchform.php:27, src/searchform.php:29
 msgid "Search"
 msgstr "Szukaj"
-
-#~ msgid "Show older"
-#~ msgstr "Pokaż starsze"

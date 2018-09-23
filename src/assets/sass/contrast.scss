@@ -373,15 +373,16 @@ pre {
 }
 .f-post-content {
   background-color: $wcag-bg;
+  a {
+    color:$wcag-herf;
+  }
 }
 // Block w other post - small
-.header-offslider  article {
-    float: left;
-    background: $wcag-bg;
-    margin-bottom: 10px;
+#posts-min article {
+  border-left-color: $wcag-bg;
 }
-.s-post-content {
-  border: 1px solid $wcag-text;
+#posts-min h2 {
+  background-color: $wcag-bg;
 }
 .arrow-allpost-icon {
   color: $wcag-bg;
@@ -395,29 +396,21 @@ pre {
 // Continer for menu
 #header-nav-bottom {
   background-color: $wcag-bg;
+  border: 5px solid $wcag-text;
 }
 /*--------------------------------------------------------------
 4.2 Featured category
 --------------------------------------------------------------*/
 #featured-cat {
-  h2 {
-    background-color: $wcag-text;
-    color: $wcag-bg;
-  }
-  .h-wrapper {
-    border-bottom-color: $wcag-text;
-  }
-  .hentry {
-    border-bottom-color: $wcag-text;
-
-    &:after {
-      background-color:  $wcag-text;
-    }
+  h3 {
+    background-color:$wcag-bg;
   }
   a {
     color:$wcag-herf;
   }
 }
+#featured-cat .header-section {color: $wcag-text;}
+#wpg-evets .header-section {color: $wcag-bg;}
 
 /*--------------------------------------------------------------
 4.3 Events
@@ -556,6 +549,9 @@ tr.days-names {
 /* contact social portal links */
 #contact-social {
   border-top: 1px solid $wcag-text;
+  a {
+    color: $wcag-herf;
+  }
 }
 #contact__map::before {
   display: none;

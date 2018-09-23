@@ -1510,8 +1510,8 @@ form select {
   position: relative;
   width: 100%;
   float: left;
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* clear */
@@ -2286,7 +2286,11 @@ main {
 --------------------------------------------------------------*/
 /* Top bar - Header */
 #top-bar {
-  padding: 20px 2.08333%;
+  font-size: 13px;
+  font-size: 1.3rem;
+  line-height: 18px;
+  line-height: 1.8rem;
+  padding: 5px 2.08333%;
   border-bottom: 1px solid #e9e9e9;
 }
 
@@ -2294,10 +2298,6 @@ main {
   display: inline-block;
   margin-top: 10px;
   padding: 0 5px;
-  font-size: 13px;
-  font-size: 1.3rem;
-  line-height: 18px;
-  line-height: 1.8rem;
 }
 
 #top-bar__address {
@@ -2558,36 +2558,34 @@ main {
   background-color: #543d4f;
 }
 
-.header-offslider {
-  width: 100%;
-  margin: auto;
+#posts-min {
   overflow: hidden;
 }
 
-.header-offslider article {
+#posts-min article {
   float: left;
-  background: #f25e44;
-  margin-bottom: 10px;
+  position: relative;
+  width: 100%;
+  height: 220px;
+  background-position: center;
+  -moz-background-size: cover;
+       background-size: cover;
+  margin-bottom: 5px;
 }
 
-.header-offslider h2 {
+#posts-min h2 {
   font-size: 14px;
   font-size: 1.4rem;
   line-height: 19px;
   line-height: 1.9rem;
-}
-
-.s-post-thumbnail {
-  height: 200px;
-  background-position: center;
-  -moz-background-size: cover;
-       background-size: cover;
+  background-color: #f25e44;
+  padding: 1em;
 }
 
 .s-post-content {
-  position: relative;
-  height: 170px;
-  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .arrow-more-icon {
@@ -2608,23 +2606,20 @@ main {
 
 .arrow-allpost-icon {
   display: block;
-  width: 120px;
-  height: 70px;
-  padding: 10px;
+  width: 300px;
+  padding: 10px 35px;
   color: #fbfafc;
   background-color: #543d4f;
   border: 2px solid #fbfafc;
   margin: 10px auto;
+  -webkit-border-radius: 0.7em;
+     -moz-border-radius: 0.7em;
+          border-radius: 0.7em;
+  overflow: hidden;
 }
 
 .arrow-allpost-icon:hover {
   background-color: #f25e44;
-}
-
-.arrow-allpost-icon > i {
-  clear: both;
-  display: block;
-  text-align: right;
 }
 
 #header-nav-bottom {
@@ -2634,48 +2629,68 @@ main {
 /*--------------------------------------------------------------
 4.2 Featured category
 --------------------------------------------------------------*/
-#featured-cat h2 {
-  display: inline-block;
-  padding: 20px 10%;
-  background-color: #09af82;
-  color: #fbfafc;
-}
-
 #featured-cat h3 {
-  font-size: 14px;
-  font-size: 1.4rem;
-}
-
-#featured-cat .h-wrapper {
-  border-bottom: 5px solid #09af82;
-}
-
-#featured-cat .hentry {
-  position: relative;
-  padding: 7% 24.5%;
-  border-bottom: 5px solid #09af82;
-}
-
-#featured-cat .hentry:after {
-  content: '';
-  display: block;
-  width: 5px;
-  height: 50%;
-  background-color: #09af82;
-  position: absolute;
-  bottom: -5px;
-  right: 0;
+  min-height: 2.5em;
 }
 
 #featured-cat a {
+  color: #fbfafc;
+}
+
+.featured-item .hentry {
+  position: relative;
+  height: 0;
+  padding-bottom: 100%;
+  background-position: center;
+  -moz-background-size: cover;
+       background-size: cover;
+  border: 5px solid #ffffff;
+  margin: 10px;
+  -webkit-box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+     -moz-box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+.featured-item .entry-header {
+  position: absolute;
+  padding: 0 15px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: center;
+}
+
+.featured-item__gradient {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.8;
+  background: -webkit-gradient(linear, left bottom, right top, from(#0BD69F), to(#008152));
+  background: -webkit-linear-gradient(left bottom, #0BD69F, #008152);
+  background: -moz-linear-gradient(left bottom, #0BD69F, #008152);
+  background: -o-linear-gradient(left bottom, #0BD69F, #008152);
+  background: linear-gradient(to right top, #0BD69F, #008152);
+}
+
+#featured-cat .header-section,
+#wpg-evets .header-section {
   color: #09af82;
 }
 
 /*--------------------------------------------------------------
 4.3 Events
 --------------------------------------------------------------*/
-#wpg-evets .header-section {
-  color: #09af82;
+#wpg-evets {
+  background-color: #ffffff;
+  z-index: 0;
 }
 
 #wpg-evets .header-section h2 {
@@ -2753,10 +2768,6 @@ tr.days-names {
   height: 70px;
   background-color: #fbfafc;
   margin-top: -70px;
-}
-
-.club-item {
-  min-height: 400px;
 }
 
 .club-item img {
@@ -4074,6 +4085,14 @@ a.skip-main:active {
     text-align: center;
   }
   /*--------------------------------------------------------------
+4.2 Featured category
+--------------------------------------------------------------*/
+  .featured-item .col-4 {
+    max-width: 724px;
+    margin: auto;
+    float: none;
+  }
+  /*--------------------------------------------------------------
 4.5  New colections
 --------------------------------------------------------------*/
   .coletions-link {
@@ -4315,7 +4334,16 @@ a.skip-main:active {
   .f-post-content {
     height: 600px;
   }
-  .f-post::before {
+  .f-post .entry-summary {
+    -webkit-flex-basis: 60%;
+        -ms-flex-preferred-size: 60%;
+            flex-basis: 60%;
+  }
+  #posts-min article {
+    border-left: 5px solid #fbfafc;
+  }
+  .f-post::before,
+  #posts-min article::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -4323,24 +4351,8 @@ a.skip-main:active {
     background-color: #543d4f;
     opacity: 0.5;
   }
-  .f-post .entry-summary {
-    -webkit-flex-basis: 60%;
-        -ms-flex-preferred-size: 60%;
-            flex-basis: 60%;
-  }
-  .header-offslider {
-    position: absolute;
-    width: 510px;
-    top: 60px;
-    right: 3%;
-  }
-  .header-offslider article {
-    width: 170px;
-  }
   .arrow-allpost-icon {
-    position: absolute;
-    right: 1%;
-    top: 355px;
+    float: right;
   }
   #header-nav-bottom {
     position: absolute;
@@ -4353,6 +4365,19 @@ a.skip-main:active {
     -webkit-box-shadow: 0px 3px 10px 0px rgba(84, 61, 79, 0.3);
        -moz-box-shadow: 0px 3px 10px 0px rgba(84, 61, 79, 0.3);
             box-shadow: 0px 3px 10px 0px rgba(84, 61, 79, 0.3);
+  }
+  /*--------------------------------------------------------------
+4.2 Featured category
+--------------------------------------------------------------*/
+  #featured-cat {
+    background-image: url(img/brk_element.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    -moz-background-size: contain;
+         background-size: contain;
+  }
+  .featured-item .col-4 {
+    max-width: 340px;
   }
   /*--------------------------------------------------------------
 4.3 Events
@@ -4377,12 +4402,21 @@ a.skip-main:active {
     z-index: -1;
   }
   /* calander in section */
+  .ev-wrapper {
+    margin-bottom: 6.08333%;
+  }
   .ev-wrapper #calendar_events {
     position: absolute;
     top: 50px;
     right: 30px;
     width: 300px;
     height: 300px;
+  }
+  /*--------------------------------------------------------------
+4.4 Clubs
+--------------------------------------------------------------*/
+  .club-item {
+    min-height: 435px;
   }
   /*--------------------------------------------------------------
 4.5  New colections
@@ -4735,59 +4769,11 @@ a.skip-main:active {
   #contact__map {
     width: 50%;
   }
-  /*--------------------------------------------------------------
-4.1 Loop in header with post
---------------------------------------------------------------*/
-  .header-offslider {
-    width: 660px;
-  }
-  .header-offslider article {
-    width: 220px;
-  }
-  .s-post-thumbnail,
-  .s-post-content {
-    width: 220px;
-    height: 200px;
-  }
 }
 
 /*----------------------------------
 *  Special Breakpoint old desktop 1024
 * ---------------------------------*/
-@media (min-width: 62em) and (max-width: 79.9375em) {
-  .ev-wrapper .header-section.col-6 {
-    width: 100%;
-  }
-  .ev-wrapper .ev-top-title {
-    width: 180%;
-  }
-  .ev-wrapper .xl-icon,
-  .ev-wrapper i.xl-icon {
-    font-size: 180%;
-  }
-  .ev-wrapper::after {
-    bottom: -40px;
-    left: 33%;
-    width: 150px;
-    height: 150px;
-  }
-  .ev-wrapper #calendar_events {
-    width: 270px;
-    height: 270px;
-    top: auto;
-    bottom: -15px;
-    right: -10px;
-    border: 5px solid #fbfafc;
-  }
-  .ev_block__icon {
-    padding: 0 0px 2%;
-    min-width: 10px;
-  }
-  .ev_block__content {
-    max-width: 210px;
-  }
-}
-
 /*----------------------------------
 *  Special Breakpoint
 * ---------------------------------*/

@@ -1,25 +1,6 @@
 *:before, *:after {
   box-sizing: border-box; }
 
-#customize-control-wpg_contact_maps {
-    margin-bottom: 40px;
-}
-#sub-accordion-section-wpg_contact_stc li[id$="_1"],
-#sub-accordion-section-wpg_contact_stc li[id$="_2"],
-#sub-accordion-section-wpg_contact_stc li[id$="_3"],
-#sub-accordion-section-wpg_contact_stc li[id$="_4"] {
-    background: #fff;
-    padding: 7% 5%;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -5%;
-}
-.customize-control-google_map {
-  margin-bottom: 40px;
-}
-
-
 #customize-control-wpg_body_font,
 #customize-control-wpg_body_google_font,
 #customize-control-wpg_body_google_variants,
@@ -63,6 +44,23 @@
 
 
 /*----------------------------
+ * Change setting_club
+ *---------------------------- */
+[id^="customize-control-wpg_club_"],
+[id^="customize-control-wpg_contact"],
+[id^="customize-control-wpg_catl_tab"] {
+    background-color: #ffffff;
+    margin-bottom: 0;
+    width: 90%;
+    padding: 5px 5% 15px;
+}
+[id^="customize-control-wpg_club_terms"],
+[id^="customize-control-wpg_contact_map_latlong"],
+[id^="customize-control-wpg_catl_tab_content"] {
+    margin-bottom: 30px;
+}
+
+/*----------------------------
  * Change checkbox to Swip
  *---------------------------- */
 input.onoffswitch-checkbox:empty {
@@ -90,7 +88,7 @@ input.onoffswitch-checkbox:empty ~ label.onoffswitch-label {
   text-indent: 7em;
   cursor: pointer;
   font-size: 16px;
-  
+
   line-height: 32px;
    }
 
@@ -142,8 +140,3 @@ input.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
 
 input.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
   right: 0px; }
-
-
-
-
-

@@ -86,7 +86,7 @@
     /**
     * Slick slider active
     */
-    $('#posts-header__min').slick_small_sllider(settings = {});
+    $('#posts-min').slick_small_sllider();
     $('#partner-slider').slick({
       dots: false,
       arrows: false,
@@ -110,9 +110,10 @@
     * Search toggle
     */
     $( '#top-bar__btn-search' ).on( 'click', function( event ) {
+
       var that    = $( this ),
-      wrapper = $( '#top-bar__search' ),
-      container = that.find( 'a' );
+          wrapper = $( '#top-bar__search' ),
+          container = that.find( 'a' );
 
       that.toggleClass( 'active' );
       wrapper.toggleClass( 'hide' );
@@ -122,11 +123,11 @@
       } else {
         container.attr( 'aria-expanded', 'false' );
       }
-
       if ( that.is( '.active' )) {
         wrapper.find( '.search-field' ).focus();
       }
-    } );
+      $offset_header = $('#top-bar').outerHeight();
+    });
 
 
     /**

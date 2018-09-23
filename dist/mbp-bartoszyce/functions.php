@@ -52,7 +52,7 @@ if ( ! function_exists( 'wpg_setup' ) ) :
 		*
 		* array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video','audio', 'chat' ) );
 		*/
-		add_theme_support( 'post-formats', array('gallery','video'));
+		//add_theme_support( 'post-formats', array('gallery','video'));
 
 		/**
 		* Add default posts and comments RSS feed links to head.
@@ -146,14 +146,13 @@ function wpg_enqueue() {
 	wp_localize_script('wpg-main', 'datalanuge', array(
 		'offcontrast' => __('Wyłącz kontrast', 'wpg_theme'),
 		'oncontrast' => __('Włącz kontrast', 'wpg_theme'),
-
-		'url' 		    => get_bloginfo('template_directory'),
-		'next'=> __('Previous Image (left arrow key)', 'wpg_theme'),
-		'prev'=> __('Next Image (right arrow key)', 'wpg_theme'),
-		'of'  => __('of', 'wpg_theme'),
-		'close'   => __('Close (Escape key)', 'wpg_theme'),
+		'url' => get_bloginfo('template_directory'),
+		'next' => __('Previous Image (left arrow key)', 'wpg_theme'),
+		'prev' => __('Next Image (right arrow key)', 'wpg_theme'),
+		'of' => __('of', 'wpg_theme'),
+		'close' => __('Close (Escape key)', 'wpg_theme'),
 		'load'=> __('Loading ...', 'wpg_theme'),
-		'image'   => __('Image', 'wpg_theme'),
+		'image' => __('Image', 'wpg_theme'),
 		'error_image' => __('it cannot be loaded.', 'wpg_theme')
 	));
 
