@@ -1,0 +1,30 @@
+/* contrast
+========================================================================== */
+
+/*--------------------------------------------------------------
+-- setting/
+--------------------------------------------------------------*/
+@import "setting/function";
+@import "setting/mixin";
+@import "setting/variables";
+
+$wcga-size-s        : ($font-size-s + ($font-size-s/2));
+$wcga-size-m        : ($font-size-m + ($font-size-m/2));
+$wcga-font-base     : ($size-base + ($size-base/2));  //14,21,28
+$wcga-size-xl       : ($font-size-xl + ($font-size-xl/2));
+$wcga-size-xxl      : ($font-size-xxl + ($font-size-xxl/2));
+$wcga-size-xxxl     : ($font-size-xxxl + ($font-size-xxxl/2));
+
+
+
+
+
+body {
+  @include font-size($wcga-font-base);
+}
+
+@media (min-width: $desktop-hdpi) {
+  body {
+    @include font-size(($wcga-font-base+0.3));
+  }
+}
