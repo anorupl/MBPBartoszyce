@@ -4,7 +4,8 @@
     height: 44px;
     width: 44px;
     padding: 0;
-    @include font-size(4.2,0.1,true);
+    @include font-size(4.2);
+    line-height: 1em;
     &.center-button	{
         margin: gutter() auto;
     }

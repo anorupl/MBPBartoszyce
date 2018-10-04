@@ -36,7 +36,7 @@
 2.0 Universal styles
 --------------------------------------------------------------*/
 .h--xxl {
-  @include font-size(($font-size-xxl + 2),0,true);
+  @include font-size(($font-size-xxl + 2));
 }
 // tabs
 .js-tablist {

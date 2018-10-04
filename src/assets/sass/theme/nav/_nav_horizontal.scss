@@ -95,14 +95,14 @@
 }
 
 .h-nav--desc {
-    @include font-size(($size-base+0.2),0,false);
+    @include font-size(($size-base+0.2));
     text-transform: uppercase;
 
     .menu-item-description {
         display: block;
         clear: both;
         text-transform: initial;
-        font-size: 14px;
+        font-size: 88%;
         color: $five-bw;
         margin-top: 10px;
     }

@@ -22,7 +22,7 @@
            echo EM_Events::output( array(
              'limit'=>1,
              'format_header' => '',
-             'format' => '<div class="ev-top-title white-one"><h3 class="two-line">#_EVENTLINK</h3></div><div class="ev_block"><div class="ev_block__icon white-one xl-icon"><i class="icon-calendar"></i></div><div class="ev_block__content"><div class="ev-title class-h4">Kiedy:</div><div class="ev-content white-one"><span>#_EVENTDATES</span> | <span>#_EVENTTIMES</span></div></div></div><!-- ev_block--><div class="ev_block"><div class="ev_block__icon  white-one xl-icon"><i class="icon-map-marker"></i></div><div class="ev_block__content"><div class="ev-title class-h4">Gdzie:</div><div class="ev-content white-one">{has_location}#_LOCATIONNAME<br/> #_LOCATIONTOWN, #_LOCATIONADDRESS{/has_location}</div></div></div><!-- ev_block-->',
+             'format' => '<div class="ev-top-title text-light a-light a-hover-one"><h3 class="two-line">#_EVENTLINK</h3></div><div class="ev_block"><div class="ev_block__icon text-light a-light a-hover-one xl-icon"><i class="icon-calendar"></i></div><div class="ev_block__content"><div class="ev-title class-h4">Kiedy:</div><div class="ev-content text-light a-light a-hover-one"><span>#_EVENTDATES</span> | <span>#_EVENTTIMES</span></div></div></div><!-- ev_block--><div class="ev_block"><div class="ev_block__icon  text-light a-light a-hover-one xl-icon"><i class="icon-map-marker"></i></div><div class="ev_block__content"><div class="ev-title class-h4">Gdzie:</div><div class="ev-content text-light a-light a-hover-one">{has_location}#_LOCATIONNAME<br/> #_LOCATIONTOWN, #_LOCATIONADDRESS{/has_location}</div></div></div><!-- ev_block-->',
              'format_footer' => ''
            ) );
          }

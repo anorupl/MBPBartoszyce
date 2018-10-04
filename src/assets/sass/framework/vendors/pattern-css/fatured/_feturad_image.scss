@@ -28,7 +28,7 @@
 }
 .overlay i {
     color: $four-bw;
-    @include font-size(4.8,0,true);
+    @include font-size(4.8);
     display: block;
     position: absolute;
     top: 50%;
@@ -77,7 +77,7 @@
         transform: scale(1);
 
         h3 {
-            @include font-size(($size-base),0,true);
+            @include font-size(($size-base));
         }
     }
 }

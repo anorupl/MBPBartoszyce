@@ -55,14 +55,14 @@
 
                  if ( $query_colletion->have_posts()) : while ($query_colletion->have_posts()) : $query_colletion->the_post(); ?>
 
-                 <div class="coletion-image white-one col-3">
+                 <div class="coletion-image text-light a-light a-hover-one col-3">
                    <a tabindex="-1" href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php wpg_the_thumbnail(); ?></a>
                  </div>
-                 <div class="coletion-content white-one col-4">
+                 <div class="coletion-content text-light a-light a-hover-one col-4">
                    <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                    <?php echo wpg_get_excerpt(40); ?>
                  </div>
-                 <div class="coletion-gallery white-two col-4">
+                 <div class="coletion-gallery text-light col-4">
                    <div class="coletion-gallery__gallery clear-both">
                      <?php wpg_the_image_attachment('thumbnail', 3);?>
                    </div>

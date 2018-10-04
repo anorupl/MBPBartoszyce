@@ -199,7 +199,8 @@ blockquote {
         position:absolute;
         top: 0.1em;
         left: 18px;
-        @include font-size(6.2, 0, true);
+        @include font-size(6.2);
+        line-height: 1em;
         color: $two-color;
     }
 

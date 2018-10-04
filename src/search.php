@@ -11,7 +11,7 @@
 
 get_header(); ?>
 <div id="content" class="site-content clear-both">
-  <div class="header-content pad-all white-two text-center">
+  <div class="header-content pad-all text-light a-light a-hover-two text-center">
     <div class="class-h2 h--xxl" aria-hidden="true">
       <?php printf( __( 'Search Results for: %s', 'wpg_theme' ), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?>
     </div>

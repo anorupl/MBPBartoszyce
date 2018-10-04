@@ -270,7 +270,8 @@ pre {
 /*--------------------------------------------------------------
 2.0 Universal styles
 --------------------------------------------------------------*/
-.btn {
+.btn,
+.btn--three {
   color: $wcag-bg;
   background-color: $wcag-herf;
   border: 1px solid $wcag-herf;
@@ -280,22 +281,39 @@ pre {
   }
 }
 
-/* color schemes */
-.white-one,
-.dark-two {
-  color: $wcag-text;
-  a {color: $wcag-herf;}
-  a:hover{ color: $wcag-herf; text-decoration: underline;}
-}
 
-.white-two,
-.white-three,
-.dark-four,
+/* color schemes */
+.text-dark {color: $white;}
+
+.a-light a {color: $wcag-herf; }
+.a-dark a  {color: $wcag-herf; }
+
+.a-hover-one a:hover,
+.a-hover-two a:hover,
+.a-hover-three a:hover,
+.a-hover-light a:hover {
+  color: $wcag-herf;
+}
 .gray-content {
   color: $wcag-text;
-  a {color: $wcag-bg; }
-  a:hover{ color: $wcag-herf; text-decoration: underline;}
+  a {
+    color: $wcag-bg;
+  }
+  a:hover{
+    color: $wcag-herf;
+    text-decoration: underline;}
 }
+
+
+
+
+
+
+
+
+
+
+
 /*--------------------------------------------------------------
 3.1 Header
 --------------------------------------------------------------*/
@@ -368,22 +386,15 @@ pre {
 /*--------------------------------------------------------------
 4.1 Loop in header with post
 --------------------------------------------------------------*/
-.f-post {
+.f-post,
+.f-post-content,
+#posts-min article,
+#posts-min h2,
+#header-nav-bottom {
   background-color: $wcag-bg;
 }
-.f-post-content {
-  background-color: $wcag-bg;
-  a {
-    color:$wcag-herf;
-  }
-}
-// Block w other post - small
-#posts-min article {
-  border-left-color: $wcag-bg;
-}
-#posts-min h2 {
-  background-color: $wcag-bg;
-}
+
+
 .arrow-allpost-icon {
   color: $wcag-bg;
   background-color: $wcag-herf;
@@ -395,22 +406,23 @@ pre {
 }
 // Continer for menu
 #header-nav-bottom {
-  background-color: $wcag-bg;
   border: 5px solid $wcag-text;
 }
 /*--------------------------------------------------------------
 4.2 Featured category
 --------------------------------------------------------------*/
-#featured-cat {
-  h3 {
-    background-color:$wcag-bg;
-  }
-  a {
+#featured-cat h3 {
+  background-color:$wcag-bg;
+}
+#featured-cat a {
     color:$wcag-herf;
   }
+#featured-cat .header-section {
+  color: $wcag-text;
 }
-#featured-cat .header-section {color: $wcag-text;}
-#wpg-evets .header-section {color: $wcag-bg;}
+#wpg-evets .header-section {
+  color: $wcag-bg;
+}
 
 /*--------------------------------------------------------------
 4.3 Events
@@ -466,6 +478,7 @@ tr.days-names {
     border:1px solid $wcag-text;
   }
 }
+
 /*--------------------------------------------------------------
 4.5  New colections
 --------------------------------------------------------------*/
@@ -488,6 +501,7 @@ tr.days-names {
 .coletion-gallery {
   background-color: $wcag-bg;
 }
+
 /*--------------------------------------------------------------
 4.6  Catl
 --------------------------------------------------------------*/
@@ -518,6 +532,7 @@ tr.days-names {
     }
   }
 }
+
 /*--------------------------------------------------------------
 4.7  Contact
 --------------------------------------------------------------*/
@@ -556,6 +571,14 @@ tr.days-names {
 #contact__map::before {
   display: none;
 }
+
+/*--------------------------------------------------------------
+4.9  Partners (slick slider css)
+--------------------------------------------------------------*/
+#partners {
+  background-color: $wcag-bg;
+}
+
 /*--------------------------------------------------------------
 5.0  Widgets
 --------------------------------------------------------------*/
@@ -565,10 +588,10 @@ tr.days-names {
 .widget-title::after {
   background-color: $border-color;
 }
+
 /*--------------------------------------------------------------
 6.0  Event calander - plugin Events Manager by Marcus Sykes
 --------------------------------------------------------------*/
-
 table.em-calendar td.eventless-today,
 table.em-calendar td.eventful-today {
   background-color: $wcag-text;
@@ -578,9 +601,6 @@ table.em-calendar td.eventful a,
 table.em-calendar td.eventful-today a {
     color: $wcag-herf;
 }
-
-
-
 
 /* Event list */
 .ev-item {
@@ -595,8 +615,6 @@ table.em-calendar td.eventful-today a {
 .ev-item__location {
   border-bottom-color: $wcag-text;
 }
-
-
 
 /* Forms
 ========================================================================== */

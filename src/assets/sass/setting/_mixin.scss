@@ -31,7 +31,7 @@
        min-height: 40px;
        background: hsla(random(365), 90, 50, 1);
 
- 
+
 }
 
 
@@ -42,9 +42,6 @@
 
     @if $line != 'false' {
         @if $plus > 0 {
-
-
-
             line-height: ((10*($size+$plus))+5) + px;
             line-height: (($size+$plus)+0.5)+rem;
         }
@@ -52,8 +49,6 @@
             line-height: ((10*$size)+5) + px;
             line-height: ($size+0.5)+rem;
         }
-
-
     }
 }
 

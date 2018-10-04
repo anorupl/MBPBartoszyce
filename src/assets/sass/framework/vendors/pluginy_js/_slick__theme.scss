@@ -70,7 +70,7 @@ $slick-opacity-not-active: 0.25 !default;
     padding: 2%;
     z-index: 2;
     h2 {
-        @include font-size(2.1,0,false);
+        @include font-size(2.1);
     }
 }
 .btn-slider {

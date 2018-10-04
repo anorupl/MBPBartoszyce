@@ -10,7 +10,7 @@ get_header();
 
 ?>
 <div id="content" class="site-content clear-both">
-  <div class="header-content pad-all white-two text-center">
+  <div class="header-content pad-all text-light a-light a-hover-two text-center">
     <div class="class-h2 h--xxl" aria-hidden="true">
       <?php the_archive_title(); ?>
     </div>
@@ -27,7 +27,7 @@ get_header();
       $description = get_term_field( 'description', $term_object->term_id, $term_object->taxonomy );
     ?>
       <div id="term_description">
-        <div class="desc_header pad-all white-one clear-both">
+        <div class="desc_header pad-all text-light a-light a-hover-one clear-both">
           <header class="col-9">
             <h2><?php echo $term_object->name ?></h2>
           </header>

@@ -90,35 +90,30 @@ main {
     background-color: $one-color;
   }
 }
+.btn--three {
+  color: $three-color;
+  background-color: $one-color;
+  border-color: $three-color;
+  &:hover {
+    color: $one-color;
+    background-color: $three-color;
+  }
+}
+
 
 
 /* color schemes */
-.white-one {
-  color: $white;
-  a {color: $white; }
-  a:hover{ color: $one-color;}
-}
-.white-two {
-  color: $white;
-  a {color: $white;}
-  a:hover{color: $two-color;}
-}
-.white-three {
-  color: $white;
-  a {color: $white;}
-  a:hover{color: $three-color;}
-}
+.text-light {color: $white;}
+.text-dark {color: $one-color;}
 
-.dark-four {
-  color: $one-color;
-  a {color: $one-color;}
-  a:hover {color: $four-bw;}
-}
-.dark-two {
-  color: $one-color;
-  a {color: $one-color;}
-  a:hover {color: $two-color;}
-}
+.a-light a {color: $white; }
+.a-dark a  {color: $one-color;}
+
+.a-hover-one a:hover{ color: $one-color;}
+.a-hover-two a:hover {color: $two-color;}
+.a-hover-three a:hover{color: $three-color;}
+.a-hover-light a:hover{color: $four-bw;}
+
 .gray-content {
   color:$five-bw;
   a {
@@ -142,7 +137,7 @@ main {
 }
 .tabs__item {
   display: inline-block;
-  @include font-size($font-size-xl,0,false);
+  @include font-size($font-size-xl);
   font-family: Roboto, Tahoma, Geneva, sans-serif;
   a {
     padding: 10px 5px;
@@ -191,7 +186,7 @@ main {
 --------------------------------------------------------------*/
 /* Top bar - Header */
 #top-bar {
-  @include font-size($font-size-m,0,false);
+  @include font-size($font-size-m);
   padding: 5px gutter();
   border-bottom: 1px solid lighten($five-bw, 42%);
 
@@ -396,7 +391,7 @@ main {
     margin-bottom: 5px;
   }
   h2 {
-    @include font-size($size-base,0,false);
+    @include font-size($size-base);
     background-color: $two-color;
     padding: 1em;
   }
@@ -407,18 +402,7 @@ main {
   bottom: 0;
   left: 0;
 }
-.arrow-more-icon {
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 20px;
-  border: none;
-  overflow:hidden;
-  height: 44px;
-  width: 44px;
-  padding: 0;
-  @include font-size(4.2,0.1,true);
-}
+
 .arrow-allpost-icon {
   display: block;
   width: 300px;
@@ -642,17 +626,6 @@ tr.days-names {
       border-bottom: 2px solid $three-color;
     }
   }
-
-  .btn {
-    color: $three-color;
-    background-color: $one-color;
-    border-color: $three-color;
-
-    &:hover {
-      color: $one-color;
-      background-color: $three-color;
-    }
-  }
 }
 .catl-svg,
 .catl-content {
@@ -777,6 +750,7 @@ tr.days-names {
 #partners {
   padding-top: gutter();
   padding-bottom: gutter();
+  background-color: $white;
 }
 
 /*--------------------------------------------------------------
@@ -826,6 +800,9 @@ tr.days-names {
   color: $four-bw;
   visibility: visible;
   display: block;
+}
+.em-calendar tbody {
+  background-color: $four-bw;
 }
 
 

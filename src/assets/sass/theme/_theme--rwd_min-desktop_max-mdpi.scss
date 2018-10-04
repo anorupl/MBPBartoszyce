@@ -33,5 +33,5 @@
 --------------------------------------------------------------*/
 
 .tabs__item {
-  @include font-size(($size-base + 0.4),0,false);
+  @include font-size(($size-base + 0.4));
 }

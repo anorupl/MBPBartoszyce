@@ -7,7 +7,7 @@
 */
 get_header(); ?>
 <div id="content" class="site-content clear-both">
-  <div class="header-content pad-all white-two text-center">
+  <div class="header-content pad-all text-light a-light a-hover-two text-center">
         <div class="class-h1 h--xxl">
             <?php _e('Oops! That page can&rsquo;t be found.', 'wpg_theme'); ?>
         </div>

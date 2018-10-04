@@ -26,8 +26,8 @@
    ?>
    <div id="contact__content" class=" clear-both">
      <div class="wrapper">
-     <div id="contact__tabs" class="pad-all">
-       <div class="js-tabs white-one">
+     <div id="contact__tabs" class="gutters">
+       <div class="js-tabs text-light a-light a-hover-one">
          <!-- Tabs Contact -->
          <ul class="js-tablist">
            <?php for ($i=1; $i <= 4; $i++) : ?>
@@ -109,7 +109,7 @@
            <?php endfor; ?>
          </div><!-- .js-tabs__contents -->
        </div><!-- .js-tabs -->
-     <div id="contact-social" class="xl-icon dark-four text-center clear-both">
+     <div id="contact-social" class="xl-icon text-dark a-dark a-hover-light text-center clear-both">
        <?php wpg_social_net_link('<span class="screen-reader-text">%1$s</span>%2$s');?>
      </div>
      </div><!-- #contact__tabs -->

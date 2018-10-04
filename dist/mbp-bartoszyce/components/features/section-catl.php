@@ -41,7 +41,7 @@
          </div>
        </div>
        <div class="catl-links">
-         <a id="catl-btn" class="btn btn--catl" href="<?php echo esc_url(get_theme_mod("wpg_catl_btn_url",'#')); ?>">
+         <a class="btn btn--three" href="<?php echo esc_url(get_theme_mod("wpg_catl_btn_url",'#')); ?>">
              <?php echo esc_html(get_theme_mod("wpg_catl_btn_title",__('Go to the website', 'wpg_theme'))); ?>
          </a>
        </div>

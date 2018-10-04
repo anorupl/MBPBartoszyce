@@ -7,7 +7,7 @@
 *
 */
 ?>
-<section class="clubs white-one page-section">
+<section class="clubs text-light a-light a-hover-one page-section">
   <div class="container">
     <header class="header-section text-center">
       <div class="h-wrapper">

@@ -158,9 +158,7 @@ sass/
   z-index: 2; }
   .slides-caption h2 {
     font-size: 21px;
-    font-size: 2.1rem;
-    line-height: 26px;
-    line-height: 2.6rem; }
+    font-size: 2.1rem; }
 
 .btn-slider {
   display: inline-block;

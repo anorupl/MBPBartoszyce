@@ -29,20 +29,20 @@
 1.0 Normalize
 --------------------------------------------------------------*/
 body {
-     @include font-size(($size-base + 0.2),0,false);
+     @include font-size(($size-base + 0.2));
 }
 
-h1,.class-h1,.f-size-h1     { @include font-size(($size-base + 2.5),0,true);}
-h2,.class-h2,.f-size-h2     { @include font-size(($size-base + 1.8),0,true);}
-h3,.class-h3,.f-size-h3     { @include font-size(($size-base + 1.3),0,true);}
-h4,.class-h4,.f-size-h4     { @include font-size(($size-base + 0.8),0,true);}
-h5, h6,.class-h5,.f-size-h5 { @include font-size(($size-base + 0.5),0,true);}
+h1,.class-h1,.f-size-h1     { @include font-size(($size-base + 2.5));}
+h2,.class-h2,.f-size-h2     { @include font-size(($size-base + 1.8));}
+h3,.class-h3,.f-size-h3     { @include font-size(($size-base + 1.3));}
+h4,.class-h4,.f-size-h4     { @include font-size(($size-base + 0.8));}
+h5, h6,.class-h5,.f-size-h5 { @include font-size(($size-base + 0.5));}
 
 /*--------------------------------------------------------------
 2.0 Universal styles
 --------------------------------------------------------------*/
 .h--xxl {
-  @include font-size(($font-size-xxl + 3),0,true);
+  @include font-size(($font-size-xxl + 3));
 }
 /*--------------------------------------------------------------
 4.7 Contact

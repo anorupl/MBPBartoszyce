@@ -1,0 +1,64 @@
+/* contrast
+========================================================================== */
+
+/*--------------------------------------------------------------
+-- setting/
+--------------------------------------------------------------*/
+@import "setting/function";
+@import "setting/mixin";
+@import "setting/variables";
+
+$wcga-a-size-s        : 1.8;
+$wcga-a-font-m        : 2.0;
+$wcga-a-font-base     : 2.1;
+$wcga-a-size-xl       : 2.4;
+$wcga-a-size-xxl      : 2.4;
+$wcga-a-size-xxxl     : 2.8;
+
+
+
+body {
+  @include font-size($wcga-a-font-base);
+}
+
+h1,.class-h1,.f-size-h1         { @include font-size(($wcga-a-font-base + 1.3));}
+h2,.class-h2,.f-size-h2         { @include font-size(($wcga-a-font-base + 1.0));}
+h3,.class-h3,.f-size-h3         { @include font-size(($wcga-a-font-base + 0.7));}
+h4,.class-h4,.f-size-h4         { @include font-size(($wcga-a-font-base + 0.4));}
+h5, h6, .class-h5,.f-size-h5    { @include font-size(($wcga-a-font-base + 0.2));}
+
+blockquote {
+  @include font-size-procent($font-size-xl);
+}
+
+.tabs__item {
+  @include font-size($wcga-a-size-xl );
+}
+#top-bar {
+  @include font-size($wcga-a-font-m );
+}
+#posts-min h2 {
+    @include font-size($wcga-a-font-base);
+}
+
+.h-nav--desc {
+    @include font-size(($wcga-a-font-base+0.2));
+}
+
+
+
+/*--------------------------------------------------------------
+-- Responsive breakpoint
+--------------------------------------------------------------*/
+@media (min-width: $desktop-hdpi) {
+
+  body {
+    @include font-size(($wcga-a-font-base+0.2));
+  }
+  h1,.class-h1,.f-size-h1     { @include font-size(($wcga-a-font-base + 2.5));}
+  h2,.class-h2,.f-size-h2     { @include font-size(($wcga-a-font-base + 1.8));}
+  h3,.class-h3,.f-size-h3     { @include font-size(($wcga-a-font-base + 1.3));}
+  h4,.class-h4,.f-size-h4     { @include font-size(($wcga-a-font-base + 0.8));}
+  h5, h6,.class-h5,.f-size-h5 { @include font-size(($wcga-a-font-base + 0.5));}
+
+}

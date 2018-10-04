@@ -19,7 +19,7 @@
     z-index: 1;
     display: inline-block;
     vertical-align: middle;
-    @include font-size(5.3,0,true);
+    @include font-size(5.3);
 }
 .icon-wrapper:hover {
     background: $two-color;

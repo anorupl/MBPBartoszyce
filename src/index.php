@@ -57,7 +57,7 @@ if (is_home() && !is_paged()) {
 } else {
 ?>
   <div id="content" class="site-content clear-both">
-    <div class="header-content pad-all white-two text-center">
+    <div class="header-content pad-all text-light a-light a-hover-two text-center">
       <div class="class-h2 h--xxl" aria-hidden="true">
             <?php
             if ( is_front_page() && is_home() ) {

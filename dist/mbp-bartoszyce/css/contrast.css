@@ -271,39 +271,36 @@ pre {
 /*--------------------------------------------------------------
 2.0 Universal styles
 --------------------------------------------------------------*/
-.btn {
+.btn,
+.btn--three {
   color: #000000;
   background-color: #FFFE00;
   border: 1px solid #FFFE00; }
-  .btn:hover {
+  .btn:hover,
+  .btn--three:hover {
     color: #FFFE00;
     background-color: #000000; }
 
 /* color schemes */
-.white-one,
-.dark-two {
+.text-dark {
   color: #ffffff; }
-  .white-one a,
-  .dark-two a {
-    color: #FFFE00; }
-  .white-one a:hover,
-  .dark-two a:hover {
-    color: #FFFE00;
-    text-decoration: underline; }
 
-.white-two,
-.white-three,
-.dark-four,
+.a-light a {
+  color: #FFFE00; }
+
+.a-dark a {
+  color: #FFFE00; }
+
+.a-hover-one a:hover,
+.a-hover-two a:hover,
+.a-hover-three a:hover,
+.a-hover-light a:hover {
+  color: #FFFE00; }
+
 .gray-content {
   color: #ffffff; }
-  .white-two a,
-  .white-three a,
-  .dark-four a,
   .gray-content a {
     color: #000000; }
-  .white-two a:hover,
-  .white-three a:hover,
-  .dark-four a:hover,
   .gray-content a:hover {
     color: #FFFE00;
     text-decoration: underline; }
@@ -372,18 +369,11 @@ pre {
 /*--------------------------------------------------------------
 4.1 Loop in header with post
 --------------------------------------------------------------*/
-.f-post {
-  background-color: #000000; }
-
-.f-post-content {
-  background-color: #000000; }
-  .f-post-content a {
-    color: #FFFE00; }
-
-#posts-min article {
-  border-left-color: #000000; }
-
-#posts-min h2 {
+.f-post,
+.f-post-content,
+#posts-min article,
+#posts-min h2,
+#header-nav-bottom {
   background-color: #000000; }
 
 .arrow-allpost-icon {
@@ -395,7 +385,6 @@ pre {
     border-color: #FFFE00; }
 
 #header-nav-bottom {
-  background-color: #000000;
   border: 5px solid #ffffff; }
 
 /*--------------------------------------------------------------
@@ -527,6 +516,12 @@ tr.days-names {
 
 #contact__map::before {
   display: none; }
+
+/*--------------------------------------------------------------
+4.9  Partners (slick slider css)
+--------------------------------------------------------------*/
+#partners {
+  background-color: #000000; }
 
 /*--------------------------------------------------------------
 5.0  Widgets

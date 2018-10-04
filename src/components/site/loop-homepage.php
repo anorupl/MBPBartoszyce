@@ -24,9 +24,9 @@
 
 
             if ($i == 0): ?>
-            <article id="post-<?php the_ID();?>" <?php post_class('f-post col-8 white-two');?> style="background-image:url('<?php echo esc_url($url_thumb); ?>');">
-                <div class="f-post-content col-5 gutters">
-                    <header class="entry-header">
+            <article id="post-<?php the_ID();?>" <?php post_class('f-post col-8');?> style="background-image:url('<?php echo esc_url($url_thumb); ?>');">
+                <div class="f-post-content col-5 gutters text-light">
+                    <header class="entry-header a-light a-hover-two">
                         <h2 class="entry-title"><a href="<?php the_permalink();?>" rel="bookmark"><?php the_title();?></a></h2>
                     </header>
                     <div class="entry-summary">
@@ -38,7 +38,7 @@
 
             <?php else: ?>
 
-        <?php if ($i == 1) {echo '<div id="posts-min" class="arrows-tr col-4 white-one">';}?>
+        <?php if ($i == 1) {echo '<div id="posts-min" class="arrows-tr col-4 text-light a-light a-hover-one">';}?>
                 <article id="post-<?php the_ID();?>" <?php post_class();?> style="background-image:url('<?php echo esc_url($url_thumb); ?>');">
                     <div class="s-post-content gutters">
                         <h2 class="entry-title"><a href="<?php the_permalink();?>" rel="bookmark"><?php the_title();?></a></h2>
