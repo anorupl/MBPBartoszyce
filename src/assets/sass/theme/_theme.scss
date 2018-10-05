@@ -72,8 +72,11 @@ main {
 .h-font {
   font-family: $font-second;
 }
-.two-line {
-  min-height: 2.3704em;
+.two-line-h {
+  min-height: 2.6em;
+}
+.eight-line {
+  min-height: 12em;
 }
 
 .btn {
@@ -541,9 +544,9 @@ tr.days-names {
     content: '';
     display: block;
     width: 100%;
-    height: 70px;
+    height: 80px;
     background-color: $four-bw;
-    margin-top: -70px;
+    margin-top: -75px;
   }
 }
 .club-item {
@@ -589,6 +592,9 @@ tr.days-names {
     max-height: 370px;
     margin: auto;
   }
+}
+.coletion-content {
+  overflow: hidden;
 }
 .coletion-gallery {
   background-color: $one-color;

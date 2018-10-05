@@ -33,8 +33,8 @@
           ?>
           <div class="club-item col-4 pad-all">
             <?php echo the_term_thumbnail($term->term_id); ?>
-            <h3 class="two-line"><a href="<?php echo esc_url( get_term_link( $term->term_id ) ); ?>" ><?php echo get_theme_mod("wpg_club_title_$i",''); ?></a></h3>
-            <p><?php echo get_theme_mod("wpg_club_desc_$i",''); ?></p>
+            <h3 class="two-line-h"><a href="<?php echo esc_url( get_term_link( $term->term_id ) ); ?>" ><?php echo get_theme_mod("wpg_club_title_$i",''); ?></a></h3>
+            <p class="eight-line"><?php echo get_theme_mod("wpg_club_desc_$i",''); ?></p>
           </div>
         <?php }
       }

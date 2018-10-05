@@ -2107,8 +2107,12 @@ main {
   font-family: Roboto, "Open Sans", sans-serif;
 }
 
-.two-line {
-  min-height: 2.3704em;
+.two-line-h {
+  min-height: 2.6em;
+}
+
+.eight-line {
+  min-height: 12em;
 }
 
 .btn {
@@ -2716,9 +2720,9 @@ tr.days-names {
   content: '';
   display: block;
   width: 100%;
-  height: 70px;
+  height: 80px;
   background-color: #fbfafc;
-  margin-top: -70px;
+  margin-top: -75px;
 }
 
 .club-item img {
@@ -2767,6 +2771,10 @@ tr.days-names {
   width: auto;
   max-height: 370px;
   margin: auto;
+}
+
+.coletion-content {
+  overflow: hidden;
 }
 
 .coletion-gallery {
@@ -4422,9 +4430,11 @@ a.skip-main:active {
   #catl .js-tablist {
     border-bottom: 2px solid #fbfafc;
   }
-  .catl-svg,
+  .catl-svg {
+    width: 40%;
+  }
   .catl-content {
-    width: 50%;
+    width: 60%;
   }
   .catl-links {
     text-align: right;

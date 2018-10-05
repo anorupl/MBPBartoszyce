@@ -40,13 +40,48 @@ blockquote {
 #posts-min h2 {
     @include font-size($wcga-a-font-base);
 }
+.coletion-image,
+.coletion-content,
+.coletion-gallery {
+    height: 600px;
+}
 
 .h-nav--desc {
     @include font-size(($wcga-a-font-base+0.2));
 }
 
 
+/*--------------------------------------------------------------
+-- Responsive breakpoint
+--------------------------------------------------------------*/
+@media (min-width: $desktop) and (max-width: $desktop-ldpi) {
+  .two-line-h {
+    min-height: 3.9em;
+  }
+  .eight-line {
+    min-height: 15em;
+  }
+  .f-post-content {
+      height: 800px;
+  }
+  #map-canvas {
+    height: 630px;
+  }
 
+}
+/*--------------------------------------------------------------
+-- Responsive breakpoint
+--------------------------------------------------------------*/
+@media (min-width: $desktop-ldpi) {
+  .f-post-content {
+      height: 700px;
+  }
+  .coletion-image,
+  .coletion-content,
+  .coletion-gallery {
+      height: 430px;
+  }    
+}
 /*--------------------------------------------------------------
 -- Responsive breakpoint
 --------------------------------------------------------------*/

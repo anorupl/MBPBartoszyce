@@ -294,9 +294,11 @@
     border-bottom: 2px solid $four-bw;
   }
 }
-.catl-svg,
+.catl-svg {
+  width: 40%;
+}
 .catl-content  {
-  width: 50%;
+  width: 60%;
 }
 .catl-links {
   text-align: right;

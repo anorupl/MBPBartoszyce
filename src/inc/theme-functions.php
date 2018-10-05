@@ -12,7 +12,10 @@ function sk_query_offset( $query) {
 
 	// Before anything else, make sure this is the right query...
 	if ( !is_admin() && $query->is_home() && $query->is_main_query() ) {
+
 		$query->set( 'ignore_sticky_posts', '-1' );
+
+		$query->set( 'post_type', array('post', 'clubnews') );
 
 		// First, define your desired offset...
 		$offset = 3;

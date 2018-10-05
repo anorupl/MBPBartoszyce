@@ -80,9 +80,38 @@ blockquote {
   font-size: 18px;
   font-size: 1.8rem; }
 
+.coletion-image,
+.coletion-content,
+.coletion-gallery {
+  height: 600px; }
+
 .h-nav--desc {
   font-size: 20px;
   font-size: 2rem; }
+
+/*--------------------------------------------------------------
+-- Responsive breakpoint
+--------------------------------------------------------------*/
+@media (min-width: 62em) and (max-width: 80em) {
+  .two-line-h {
+    min-height: 3.9em; }
+  .eight-line {
+    min-height: 15em; }
+  .f-post-content {
+    height: 800px; }
+  #map-canvas {
+    height: 630px; } }
+
+/*--------------------------------------------------------------
+-- Responsive breakpoint
+--------------------------------------------------------------*/
+@media (min-width: 80em) {
+  .f-post-content {
+    height: 700px; }
+  .coletion-image,
+  .coletion-content,
+  .coletion-gallery {
+    height: 430px; } }
 
 /*--------------------------------------------------------------
 -- Responsive breakpoint

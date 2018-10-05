@@ -80,9 +80,44 @@ blockquote {
   font-size: 21px;
   font-size: 2.1rem; }
 
+#map-canvas {
+  height: 630px; }
+
 .h-nav--desc {
   font-size: 23px;
   font-size: 2.3rem; }
+
+.coletion-image,
+.coletion-content,
+.coletion-gallery {
+  height: 630px; }
+
+/*--------------------------------------------------------------
+-- Responsive breakpoint
+--------------------------------------------------------------*/
+@media (min-width: 62em) and (max-width: 80em) {
+  .two-line-h {
+    min-height: 3.9em; }
+  .eight-line {
+    min-height: 16.5em; }
+  .f-post-content {
+    height: 1000px; } }
+
+/*--------------------------------------------------------------
+-- Responsive breakpoint
+--------------------------------------------------------------*/
+@media (min-width: 80em) {
+  .f-post-content {
+    height: 800px; } }
+
+/*--------------------------------------------------------------
+-- Responsive breakpoint
+--------------------------------------------------------------*/
+@media (min-width: 90em) {
+  .coletion-image,
+  .coletion-content,
+  .coletion-gallery {
+    height: 450px; } }
 
 /*--------------------------------------------------------------
 -- Responsive breakpoint
@@ -105,4 +140,8 @@ blockquote {
     font-size: 2.9rem; }
   h5, h6, .class-h5, .f-size-h5 {
     font-size: 26px;
-    font-size: 2.6rem; } }
+    font-size: 2.6rem; }
+  .coletion-image,
+  .coletion-content,
+  .coletion-gallery {
+    height: 580px; } }

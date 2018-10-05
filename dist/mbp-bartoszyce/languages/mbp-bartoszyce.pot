@@ -46,27 +46,27 @@ msgstr[1] ""
 msgid "Comments are closed."
 msgstr ""
 
-#: src/components/content_multi/content-club.php:47, src/components/content_multi/content-club.php:83, src/components/content_multi/content-collection.php:47, src/components/content_multi/content-collection.php:83, src/components/content_multi/content.php:49, src/components/content_multi/content.php:81, src/components/content_single/content-club.php:37, src/components/content_single/content-collection.php:37, src/components/content_single/content-page.php:43, src/components/content_single/content.php:37, src/inc/template-tags.php:139
-msgid "Author"
-msgstr ""
-
-#: src/components/content_multi/content-club.php:67, src/components/content_multi/content-collection.php:67, src/components/content_multi/content.php:65
-msgid "Continue reading"
-msgstr ""
-
-#: src/components/content_multi/content-club.php:107, src/components/content_multi/content-collection.php:107, src/components/content_multi/content.php:101, src/components/site/loop-homepage.php:67
-msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr ""
-
 #: src/components/content_multi/content-none.php:23
 msgid "Nothing Found"
 msgstr ""
 
-#: src/components/content_single/content-club.php:57, src/components/content_single/content-collection.php:57, src/components/content_single/content-event.php:41, src/components/content_single/content-page.php:59, src/components/content_single/content.php:57
+#: src/components/content_multi/content.php:49, src/components/content_multi/content.php:81, src/components/content_single/content-club.php:37, src/components/content_single/content-collection.php:37, src/components/content_single/content.php:37, src/inc/template-tags.php:139, src/page.php:83
+msgid "Author"
+msgstr ""
+
+#: src/components/content_multi/content.php:65
+msgid "Continue reading"
+msgstr ""
+
+#: src/components/content_multi/content.php:101, src/components/site/loop-homepage.php:67
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: src/components/content_single/content-club.php:57, src/components/content_single/content-collection.php:57, src/components/content_single/content-event.php:41, src/components/content_single/content.php:57, src/page.php:99
 msgid "Pages:"
 msgstr ""
 
-#: src/components/content_single/content-club.php:65, src/components/content_single/content-collection.php:65, src/components/content_single/content-event.php:49, src/components/content_single/content-page.php:67, src/components/content_single/content.php:65, src/index.php:241, src/search.php:83, src/taxonomy.php:127
+#: src/components/content_single/content-club.php:65, src/components/content_single/content-collection.php:65, src/components/content_single/content-event.php:49, src/components/content_single/content.php:65, src/index.php:241, src/page.php:107, src/search.php:83, src/taxonomy.php:119
 msgid "Page"
 msgstr ""
 
@@ -506,11 +506,11 @@ msgstr ""
 msgid "You are here: &nbsp;"
 msgstr ""
 
-#: src/index.php:237, src/search.php:79, src/taxonomy.php:123
+#: src/index.php:237, src/search.php:79, src/taxonomy.php:115
 msgid "Previous page"
 msgstr ""
 
-#: src/index.php:239, src/search.php:81, src/taxonomy.php:125
+#: src/index.php:239, src/search.php:81, src/taxonomy.php:117
 msgid "Next page"
 msgstr ""
 

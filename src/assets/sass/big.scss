@@ -40,13 +40,51 @@ blockquote {
 #posts-min h2 {
     @include font-size($wcga-a-font-base);
 }
+#map-canvas {
+  height: 630px;
+}
 
 .h-nav--desc {
     @include font-size(($wcga-a-font-base+0.2));
 }
 
-
-
+.coletion-image,
+.coletion-content,
+.coletion-gallery {
+    height: 630px;
+}
+/*--------------------------------------------------------------
+-- Responsive breakpoint
+--------------------------------------------------------------*/
+@media (min-width: $desktop) and (max-width: $desktop-ldpi) {
+  .two-line-h {
+    min-height: 3.9em;
+  }
+  .eight-line {
+    min-height: 16.5em;
+  }
+  .f-post-content {
+      height: 1000px;
+  }
+}
+/*--------------------------------------------------------------
+-- Responsive breakpoint
+--------------------------------------------------------------*/
+@media (min-width: $desktop-ldpi) {
+  .f-post-content {
+      height: 800px;
+  }
+}
+/*--------------------------------------------------------------
+-- Responsive breakpoint
+--------------------------------------------------------------*/
+@media (min-width: $desktop-mdpi) {
+  .coletion-image,
+  .coletion-content,
+  .coletion-gallery {
+      height: 450px;
+  }
+}
 /*--------------------------------------------------------------
 -- Responsive breakpoint
 --------------------------------------------------------------*/
@@ -55,10 +93,17 @@ blockquote {
   body {
     @include font-size(($wcga-a-font-base+0.2));
   }
+
   h1,.class-h1,.f-size-h1     { @include font-size(($wcga-a-font-base + 2.5));}
   h2,.class-h2,.f-size-h2     { @include font-size(($wcga-a-font-base + 1.8));}
   h3,.class-h3,.f-size-h3     { @include font-size(($wcga-a-font-base + 1.3));}
   h4,.class-h4,.f-size-h4     { @include font-size(($wcga-a-font-base + 0.8));}
   h5, h6,.class-h5,.f-size-h5 { @include font-size(($wcga-a-font-base + 0.5));}
+
+  .coletion-image,
+  .coletion-content,
+  .coletion-gallery {
+      height: 580px;
+  }
 
 }

@@ -9,7 +9,7 @@
  ?>
  <section id="featured-cat" class="page-section col-12">
    <div class="container">
-    <header class="header-section gutters">
+    <header class="header-section pad-all">
       <h2 class="h--xxl"><?php echo esc_html(get_theme_mod('wpg_featuredcat_title',__('In the library', 'wpg_theme'))); ?></h2>
     </header>
   </div>
