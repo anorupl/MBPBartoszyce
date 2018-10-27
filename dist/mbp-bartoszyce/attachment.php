@@ -15,10 +15,8 @@ get_header(); ?>
   $attachment_data = wp_prepare_attachment_for_js($post->ID);
 
   ?>
-  <div class="header-content pad-all text-light a-light a-hover-two text-center">
-    <div class="class-h1 h--xxl" aria-hidden="true">
-      <?php the_title(); ?>
-    </div>
+  <div class="header-content pad-all text-light text-center">
+    <div class="class-h1 h--xxl" aria-hidden="true"><?php the_title(); ?></div>
   </div><!-- header-content -->
   <div class="container clear-both">
     <div id="primary" class="content-area col-primary--12 gutters">

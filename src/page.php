@@ -20,19 +20,15 @@ get_header(); ?>
   while ( have_posts() ) :
     the_post();
   ?>
-  <div class="header-content pad-all text-light a-light a-hover-two text-center">
-        <div class="class-h1 h--xxl">
-            <?php the_title(); ?>
-        </div>
+  <div class="header-content pad-all text-light text-center">
+    <div class="class-h1 h--xxl"><?php the_title(); ?></div>
   </div><!-- header-content -->
   <div class="container clear-both">
     <div id="primary" class="content-area col-primary gutters">
       <main id="main" class="site-main ">
         <article>
           <header class="entry-header screen-reader">
-              <h2 class="entry-title h--xxl">
-                  <?php the_title(); ?>
-              </h2>
+              <h2 class="entry-title h--xxl"><?php the_title(); ?></h2>
           </header>
           <div class="entry-meta">
             <div class="meta__item">

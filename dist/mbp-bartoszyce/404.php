@@ -7,10 +7,8 @@
 */
 get_header(); ?>
 <div id="content" class="site-content clear-both">
-  <div class="header-content pad-all text-light a-light a-hover-two text-center">
-        <div class="class-h1 h--xxl">
-            <?php _e('Oops! That page can&rsquo;t be found.', 'wpg_theme'); ?>
-        </div>
+  <div class="header-content pad-all text-light text-center">
+        <div class="class-h1 h--xxl"><?php _e('Oops! That page can&rsquo;t be found.', 'wpg_theme'); ?></div>
   </div><!-- header-content -->
   <div class="container clear-both">
     <section>
@@ -22,7 +20,6 @@ get_header(); ?>
             </header>
             <div class="entry-content class-h2 text-center">
                 <?php _e('It looks like nothing was found at this location.', 'wpg_theme'); ?>
-
                 <?php get_search_form(); ?>
             </div>
         </div>

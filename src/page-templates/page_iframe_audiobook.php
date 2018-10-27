@@ -13,10 +13,8 @@ get_header(); ?>
   while ( have_posts() ) :
     the_post();
   ?>
-  <div class="header-content pad-all text-light a-light a-hover-two text-center">
-        <div>
-            <h2 class="h--xxl"><?php the_title(); ?></h2>
-        </div>
+  <div class="header-content pad-all text-light text-center">
+    <div><h2 class="h--xxl"><?php the_title(); ?></h2></div>
   </div><!-- header-content -->
     <div id="primary" class="content-area col-primary--12 fidkar-white">
       <main id="main" class="site-main ">

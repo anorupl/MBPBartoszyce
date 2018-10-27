@@ -14,23 +14,21 @@ get_header(); ?>
   /* Start the Loop */
   while ( have_posts() ) :
     the_post();
-  ?>
-  <div class="header-content pad-all text-light a-light a-hover-two text-center">
-        <div class="class-h1 h--xxl">
-            <?php the_title(); ?>
-        </div>
-        <div id="breadcrumbs">
-          <span><?php _e('You are here: &nbsp;', 'wpg_theme'); ?></span><?php if (function_exists('wpg_breadcrumbs')) wpg_breadcrumbs(); ?>
-        </div>
-  </div><!-- header-content -->
-  <div class="container clear-both">
-    <div id="primary" class="content-area col-primary gutters">
-      <main id="main" class="site-main ">
-        <?php get_template_part( 'components/content_single/content', 'event' ); ?>
-      </main>
-    </div><!-- #primary -->
-    <?php get_sidebar(); ?>
-  </div><!-- .container -->
+    ?>
+    <div class="header-content pad-all text-light text-center">
+      <div class="class-h1 h--xxl"><?php the_title(); ?></div>
+      <div id="breadcrumbs" class="a-light a-hover-two">
+        <span><?php _e('You are here: &nbsp;', 'wpg_theme'); ?></span><?php if (function_exists('wpg_breadcrumbs')) wpg_breadcrumbs(); ?>
+      </div>
+    </div><!-- header-content -->
+    <div class="container clear-both">
+      <div id="primary" class="content-area col-primary gutters">
+        <main id="main" class="site-main ">
+          <?php get_template_part( 'components/content_single/content', 'event' ); ?>
+        </main>
+      </div><!-- #primary -->
+      <?php get_sidebar(); ?>
+    </div><!-- .container -->
   <?php endwhile; ?>
 </div><!-- #content -->
 <?php get_footer();  ?>

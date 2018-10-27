@@ -10,11 +10,9 @@ get_header();
 
 ?>
 <div id="content" class="site-content clear-both">
-  <div class="header-content pad-all text-light a-light a-hover-two text-center">
-    <div class="class-h2 h--xxl" aria-hidden="true">
-      <?php the_archive_title(); ?>
-    </div>
-    <div id="breadcrumbs">
+  <div class="header-content pad-all text-light text-center">
+    <div class="class-h2 h--xxl" aria-hidden="true"><?php the_archive_title(); ?></div>
+    <div id="breadcrumbs" class="a-light a-hover-two">
       <span><?php _e('You are here: &nbsp;', 'wpg_theme'); ?></span><?php if (function_exists('wpg_breadcrumbs')) wpg_breadcrumbs(); ?>
     </div>
   </div><!-- .header-content -->
@@ -52,15 +50,12 @@ get_header();
            */
           get_template_part( 'components/content_multi/content', get_post_format() );
         endwhile;
-
           // Previous/next page navigation.
           the_posts_pagination( array(
             'prev_text'          => __( 'Previous page', 'wpg_theme' ),
             'next_text'          => __( 'Next page', 'wpg_theme' ),
             'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'wpg_theme' ) . ' </span>',
           ));
-
-
       else :
         get_template_part( 'components/content_multi/content', 'none' );
       endif; ?>

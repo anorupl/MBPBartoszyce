@@ -15,11 +15,9 @@ get_header(); ?>
   while ( have_posts() ) :
     the_post();
   ?>
-  <div class="header-content pad-all text-light a-light a-hover-two text-center">
-        <div class="class-h1 h--xxl">
-            <?php the_title(); ?>
-        </div>
-        <div id="breadcrumbs">
+  <div class="header-content pad-all text-light text-center">
+        <div class="class-h1 h--xxl" aria-hidden="true"><?php the_title(); ?></div>
+        <div id="breadcrumbs" class="a-light a-hover-two">
           <span><?php _e('You are here: &nbsp;', 'wpg_theme'); ?></span><?php if (function_exists('wpg_breadcrumbs')) wpg_breadcrumbs(); ?>
         </div>
   </div><!-- header-content -->
