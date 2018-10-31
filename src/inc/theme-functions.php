@@ -6,15 +6,15 @@
 * @since 0.1.0
 */
 
-
-add_action( 'pre_get_posts', 'sk_query_offset', 1 );
-function sk_query_offset( $query) {
+/**
+* The Code below will modify the main WordPress loop, before the queries fired
+*/
+function wpg_query_offset( $query) {
 
 	// Before anything else, make sure this is the right query...
 	if ( !is_admin() && $query->is_home() && $query->is_main_query() ) {
 
 		$query->set( 'ignore_sticky_posts', '-1' );
-
 		$query->set( 'post_type', array('post', 'clubnews') );
 
 		// First, define your desired offset...
@@ -34,9 +34,12 @@ function sk_query_offset( $query) {
 		}
 	}
 }
+add_action( 'pre_get_posts', 'wpg_query_offset', 1 );
 
-add_filter( 'found_posts', 'sk_adjust_offset_pagination', 1, 2 );
-function sk_adjust_offset_pagination( $found_posts, $query ) {
+/**
+* The Code below will modify the number of found posts for the query.
+*/
+function wpg_adjust_offset_pagination( $found_posts, $query ) {
 
 	// Define our offset again...
 	$offset = -3;
@@ -48,13 +51,13 @@ function sk_adjust_offset_pagination( $found_posts, $query ) {
 	}
 	return $found_posts;
 }
-
+add_filter( 'found_posts', 'wpg_adjust_offset_pagination', 1, 2 );
 
 /**
 * Adds custom classes to the array of body classes.
 *
 * @see 	Function Reference/body class
-* @link 	https://codex.wordpress.org/Function_Reference/body_class
+* @link https://codex.wordpress.org/Function_Reference/body_class
 *
 * @param 	array $classes Classes for the body element.
 */
@@ -81,22 +84,26 @@ function wpg_post_class($class) {
 }
 add_filter( 'post_class', 'wpg_post_class' );
 
-
-
-
-
-
 /**
 * Handles JavaScript detection.
 *
 * Adds a `js` class to the root `<html>` element when JavaScript is detected.
-*
-* @since Twenty Seventeen 1.0
 */
 function wpg_javascript_detection() {
 	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
 }
 add_action( 'wp_head', 'wpg_javascript_detection', 0 );
+
+/**
+ * Filtr mark Posts/Pages as Untiled when no title is used
+ *
+ * @param 	string $title
+ * @return 	string
+ */
+function wpg_no_title( $title ) {
+  return $title == '' ? __('Untitled', 'wpg_theme') : $title;
+}
+add_filter( 'the_title', 'wpg_no_title' );
 
 /**
 * Filtr add responsive container to video embeds.
@@ -175,7 +182,6 @@ function wpg_add_linked_images_class($html, $id, $caption, $title, $align, $url,
 }
 add_filter('image_send_to_editor','wpg_add_linked_images_class',10,8);
 
-
 /**
 * Add the visual editor to the edit tag screen
 *
@@ -210,8 +216,6 @@ function render_field_edit($term, $taxonomy){
 	<?php
 }
 add_action('clubs_edit_form_fields', 'render_field_edit', 10, 2);
-//add_action('categorycollection_edit_form_fields', 'render_field_edit', 10, 2);
-
 
 /**
 * Add the visual editor to the add new tag screen
@@ -249,20 +253,17 @@ function render_field_add( $taxonomy ) {
 	<?php
 }
 add_action('clubs_add_form_fields', 'render_field_add', 10, 2);
-//add_action('categorycollection_add_form_fields', 'render_field_add', 10, 2);
-
-
-add_filter('em_event_output_placeholder', 'filterEventThumbnail', 10, 3);
 
 /**
 * get event image as regular WordPress thumbnail
 * (or any registered WordPress image size)
+*
 * @param string $result
 * @param EM_Event $EM_Event
 * @param string $placeholder
 * @return string
 */
-function filterEventThumbnail($result, $EM_Event, $placeholder) {
+function wpg_filterEventThumbnail($result, $EM_Event, $placeholder) {
     if ($placeholder == '#_CUSTOMEVENTIMAGETHUMB') {
         $imageID = get_post_thumbnail_id($EM_Event->post_id);
         if ($imageID) {
@@ -272,23 +273,28 @@ function filterEventThumbnail($result, $EM_Event, $placeholder) {
 
     return $result;
 }
+add_filter('em_event_output_placeholder', 'wpg_filterEventThumbnail', 10, 3);
 
-
-
-
+/**
+ * Modifies the menu container and adds class
+ *
+ * @see https://developer.wordpress.org/reference/hooks/widget_nav_menu_args/
+ * @param array $nav_menu_args An array of arguments passed to wp_nav_menu() to retrieve a custom menu.
+ * @param stdClass $nav_menu Nav menu object for the current menu.
+ * @param array $args Display arguments for the current widget.
+ * @return array $args Updated menu args.
+ */
 function wpg_widget_nav_menu($nav_menu_args, $nav_menu, $args) {
 
 	$nav_menu_args = array(
-         'fallback_cb' => '',
-				 'container' => 'nav',
-				 'container_class'=> 'v-nav dropdown',
-         'menu'        => $nav_menu
-     );
 
+				 'container'       => 'nav',
+				 'container_class' => 'v-nav dropdown',
+         'menu'            => $nav_menu,
+				 'fallback_cb'     => ''
+     );
 
 	return $nav_menu_args;
 }
 add_filter( 'widget_nav_menu_args', 'wpg_widget_nav_menu', 10, 3 );
-
-
 ?>

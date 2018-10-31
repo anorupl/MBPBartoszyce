@@ -18,6 +18,7 @@
         while (have_posts()): the_post();
 
             $url_thumb = get_the_post_thumbnail_url($post, 'large');
+
             if ($url_thumb == false) {
                 $url_thumb = get_template_directory_uri() . '/img/default/no_image.jpg';
             }
@@ -47,6 +48,17 @@
         <?php if ($i == 2) {echo '</div>';}?>
         <?php endif; $i++; endwhile;?>
         <a class="arrow-allpost-icon text-center" href="<?php echo get_next_posts_page_link(); ?>"><?php _e('Show more news', 'wpg_theme');?><i class="icon-angle-right"></i></a>
+        <?php else: ?>
+        <article id="post-nopost" class="f-post col-8" style="background-image:url('<?php echo get_template_directory_uri() . '/img/default/no_image.jpg'; ?>');">
+              <div class="f-post-content col-5 gutters text-light">
+                  <header class="entry-header a-light a-hover-two">
+                      <h2 class="entry-title"><?php _e('Nothing Found', 'wpg_theme') ?></h2>
+                  </header>
+                  <div class="entry-summary">
+                    <p><?php _e('It looks like nothing was found at this location.', 'wpg_theme'); ?></p>
+                  </div>
+              </div>
+        </article>
         <?php endif; ?>
     </main>
     <div id="header-nav-bottom" class="col-11 gutters">
