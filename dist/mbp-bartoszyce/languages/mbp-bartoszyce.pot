@@ -15,23 +15,23 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/404.php:23, src/404.php:41
+#: src/404.php:21, src/404.php:37
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: src/404.php:47, src/components/content_multi/content-none.php:29
+#: src/404.php:43, src/components/content_multi/content-none.php:29, src/components/site/loop-homepage.php:115
 msgid "It looks like nothing was found at this location."
 msgstr ""
 
-#: src/attachment.php:59
+#: src/attachment.php:55
 msgid "File name: "
 msgstr ""
 
-#: src/attachment.php:73
+#: src/attachment.php:69
 msgid "File size: "
 msgstr ""
 
-#: src/attachment.php:89
+#: src/attachment.php:85
 msgid "Click to download"
 msgstr ""
 
@@ -46,11 +46,11 @@ msgstr[1] ""
 msgid "Comments are closed."
 msgstr ""
 
-#: src/components/content_multi/content-none.php:23
+#: src/components/content_multi/content-none.php:23, src/components/site/loop-homepage.php:109
 msgid "Nothing Found"
 msgstr ""
 
-#: src/components/content_multi/content.php:49, src/components/content_multi/content.php:81, src/components/content_single/content-club.php:37, src/components/content_single/content-collection.php:37, src/components/content_single/content.php:37, src/inc/template-tags.php:139, src/page.php:83
+#: src/components/content_multi/content.php:49, src/components/content_multi/content.php:81, src/components/content_single/content-club.php:37, src/components/content_single/content-collection.php:37, src/components/content_single/content.php:37, src/inc/template-tags.php:139, src/page.php:75
 msgid "Author"
 msgstr ""
 
@@ -58,15 +58,15 @@ msgstr ""
 msgid "Continue reading"
 msgstr ""
 
-#: src/components/content_multi/content.php:101, src/components/site/loop-homepage.php:67
+#: src/components/content_multi/content.php:101, src/components/site/loop-homepage.php:69
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: src/components/content_single/content-club.php:57, src/components/content_single/content-collection.php:57, src/components/content_single/content-event.php:41, src/components/content_single/content.php:57, src/page.php:99
+#: src/components/content_single/content-club.php:57, src/components/content_single/content-collection.php:57, src/components/content_single/content-event.php:41, src/components/content_single/content.php:57, src/page.php:91
 msgid "Pages:"
 msgstr ""
 
-#: src/components/content_single/content-club.php:65, src/components/content_single/content-collection.php:65, src/components/content_single/content-event.php:49, src/components/content_single/content.php:65, src/index.php:241, src/page.php:107, src/search.php:83, src/taxonomy.php:119
+#: src/components/content_single/content-club.php:65, src/components/content_single/content-collection.php:65, src/components/content_single/content-event.php:49, src/components/content_single/content.php:65, src/index.php:241, src/page.php:99, src/search.php:79, src/taxonomy.php:113
 msgid "Page"
 msgstr ""
 
@@ -126,7 +126,7 @@ msgstr ""
 msgid "Upcoming events"
 msgstr ""
 
-#: src/components/features/section-featured_category.php:25, src/inc/customizer/setting_control/inc_setting_featured_category.php:61
+#: src/components/features/section-featured_category.php:59, src/inc/customizer/setting_control/inc_setting_featured_category.php:61
 msgid "In the library"
 msgstr ""
 
@@ -146,7 +146,7 @@ msgstr ""
 msgid "Partners"
 msgstr ""
 
-#: src/components/site/loop-homepage.php:97
+#: src/components/site/loop-homepage.php:99
 msgid "Show more news"
 msgstr ""
 
@@ -218,7 +218,7 @@ msgstr ""
 msgid "Add menu"
 msgstr ""
 
-#: src/image.php:57
+#: src/image.php:53
 msgid "Photo published in size <a href=\"%1$s\" title=\"Link to original file\">%2$s pixels <span class=\"screen-reader-text\">(Image Width)</span> to %3$s pixels <span class=\"screen-reader-text\">(Image Height)</span></a> in the article <a href=\"%4$s\" title=\"Back to %5$s\" rel=\"gallery\">%6$s</a>"
 msgstr ""
 
@@ -486,6 +486,10 @@ msgstr ""
 msgid "page: "
 msgstr ""
 
+#: src/inc/theme-functions.php:207
+msgid "Untitled"
+msgstr ""
+
 #: src/inc/wcga_form.php:205
 msgid "Standard font size"
 msgstr ""
@@ -502,23 +506,23 @@ msgstr ""
 msgid " - page: "
 msgstr ""
 
-#: src/index.php:155, src/single-event.php:45, src/single.php:45, src/taxonomy.php:35
+#: src/index.php:155, src/single-event.php:41, src/single.php:41, src/taxonomy.php:31
 msgid "You are here: &nbsp;"
 msgstr ""
 
-#: src/index.php:237, src/search.php:79, src/taxonomy.php:115
+#: src/index.php:237, src/search.php:75, src/taxonomy.php:109
 msgid "Previous page"
 msgstr ""
 
-#: src/index.php:239, src/search.php:81, src/taxonomy.php:117
+#: src/index.php:239, src/search.php:77, src/taxonomy.php:111
 msgid "Next page"
 msgstr ""
 
-#: src/page-templates/page_iframe_audiobook.php:47, src/page-templates/page_iframe_book.php:47, src/page-templates/page_iframe_regio.php:47
+#: src/page-templates/page_iframe_audiobook.php:43, src/page-templates/page_iframe_book.php:43, src/page-templates/page_iframe_regio.php:43
 msgid "This page is visible only in browsers that support frames."
 msgstr ""
 
-#: src/search.php:31, src/search.php:45
+#: src/search.php:29, src/search.php:41
 msgid "Search Results for: %s"
 msgstr ""
 

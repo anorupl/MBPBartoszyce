@@ -52,6 +52,7 @@
     $( function() {
       $( '.h-nav' ).find( 'a' ).on( 'focus blur', function() {
         $( this ).parents().toggleClass( 'focus' );
+        $( this ).removeClass("hover")
       });
     });
 
@@ -68,10 +69,22 @@
 			_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
 			_this.html( _this.html() === screenReaderText.expand ? screenReaderText.collapse : screenReaderText.expand );
 		});
+    if ("ontouchstart" in document.documentElement) {
+      $(".h-nav a").on( 'click', function(e) {
 
+        var link = $(this);
 
-
-
+        if (link.parent().hasClass('menu-item-has-children')) {
+          if (link.hasClass('hover')) {
+              return true;
+          } else {
+            link.addClass("hover");
+            $(".h-nav a").not(this).removeClass("hover");
+            return false;
+          }
+        }
+      });
+    }
 
 
 
