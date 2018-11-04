@@ -22,10 +22,14 @@
 
  if ($featuredcat_id !== 0) :
 
+   $sticky = get_option( 'sticky_posts' );
+
    $query_featuredcat = new WP_Query([
-     'post_type'     =>'post',
-     'posts_per_page'=> 3,
-     'tax_query'     => [['taxonomy' => 'category','field' => 'id','terms' => $featuredcat_id]]
+     'post_type'           =>'post',
+     'posts_per_page'      => 3,
+     'ignore_sticky_posts' => 1,
+     'tax_query'           => [['taxonomy' => 'category','field' => 'id','terms' => $featuredcat_id]],
+     'post__in'            => $sticky
    ]);
 
    if ( $query_featuredcat->have_posts()) : while ($query_featuredcat->have_posts()) : $query_featuredcat->the_post();
