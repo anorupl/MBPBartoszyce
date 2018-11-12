@@ -69,14 +69,13 @@
 			_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
 			_this.html( _this.html() === screenReaderText.expand ? screenReaderText.collapse : screenReaderText.expand );
 		});
+
     if ("ontouchstart" in document.documentElement) {
-      $(".h-nav a").on( 'click', function(e) {
-
-        var link = $(this);
-
-        if (link.parent().hasClass('menu-item-has-children')) {
+      $(".h-nav li.menu-item-has-children > a").on( 'click', function(e) {
+        if ($(window)["0"].innerWidth > 992) {
+          var link = $(this);
           if (link.hasClass('hover')) {
-              return true;
+            return true;
           } else {
             link.addClass("hover");
             $(".h-nav a").not(this).removeClass("hover");
@@ -85,16 +84,6 @@
         }
       });
     }
-
-
-
-
-
-
-
-
-
-
 
     /**
     * Slick slider active
