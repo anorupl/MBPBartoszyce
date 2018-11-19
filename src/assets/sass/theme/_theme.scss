@@ -161,6 +161,9 @@ main {
     float: left;
     padding: gutter() gutter() gutter() 0;
   }
+  ul {
+    list-style-position: outside;
+  }
 }
 /*--------------------------------------------------------------
 3.0 Layout

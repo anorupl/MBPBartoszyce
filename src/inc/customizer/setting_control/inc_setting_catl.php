@@ -128,7 +128,7 @@
 						'label'       => __('Tab Description', 'wpg_theme'),
 						'section'     => $catl_section_id,
 						'input_attrs' => array(
-							'toolbar1' => 'bold italic bullist numlist alignleft aligncenter alignright link',
+							'toolbar1' => 'bold italic bullist numlist alignjustify link',
 						)
 					)
 				) );
