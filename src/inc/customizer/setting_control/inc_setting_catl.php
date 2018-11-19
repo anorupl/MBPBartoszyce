@@ -116,19 +116,25 @@
             'type'    => 'text'
         ));
 
-        // ==============================================
-        //  = Tab content				=
-        //  =============================================
+				// Test of TinyMCE control
+				$wp_customize->add_setting( "wpg_catl_tinymce_$i",
+					array(
+						'default' => '',
+						'sanitize_callback' => 'wp_kses_post'
+					)
+				);
+				$wp_customize->add_control( new WPG_TinyMCE_Custom_control( $wp_customize, "wpg_catl_tinymce_$i",
+					array(
+						'label'       => __('Tab Description', 'wpg_theme'),
+						'section'     => $catl_section_id,
+						'input_attrs' => array(
+							'toolbar1' => 'bold italic bullist numlist alignleft aligncenter alignright link',
+						)
+					)
+				) );
 
-        $wp_customize->add_setting("wpg_catl_tab_content_$i", array(
-            'default'           => '',
-            'sanitize_callback' => 'sanitize_text_field'
-        ));
 
-        $wp_customize->add_control( "wpg_catl_tab_content_$i", array(
-            'settings' => "wpg_catl_tab_content_$i",
-            'label'   => __('Tab Description', 'wpg_theme'),
-            'section'  => $catl_section_id,
-            'type'    => 'textarea'
-        ));
+
+
+
     }

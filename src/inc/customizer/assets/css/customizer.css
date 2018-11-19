@@ -48,7 +48,8 @@
  *---------------------------- */
 [id^="customize-control-wpg_club_"],
 [id^="customize-control-wpg_contact"],
-[id^="customize-control-wpg_catl_tab"] {
+[id^="customize-control-wpg_catl_tab"],
+[id^="customize-control-wpg_catl_tinymce"] {
     background-color: #ffffff;
     margin-bottom: 0;
     width: 90%;
@@ -56,7 +57,7 @@
 }
 [id^="customize-control-wpg_club_terms"],
 [id^="customize-control-wpg_contact_map_latlong"],
-[id^="customize-control-wpg_catl_tab_content"] {
+[id^="customize-control-wpg_catl_tinymce"] {
     margin-bottom: 30px;
 }
 

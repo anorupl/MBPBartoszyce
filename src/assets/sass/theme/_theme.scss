@@ -632,6 +632,9 @@ tr.days-names {
       border-bottom: 2px solid $three-color;
     }
   }
+  .tabs__content {
+    white-space: pre-line;
+  }
 }
 .catl-svg,
 .catl-content {

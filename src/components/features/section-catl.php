@@ -28,13 +28,11 @@
            <div class="js-tabs__contents">
              <?php for ($i=1; $i <= 3; $i++) : ?>
                <div id="id_catl_tab_<?php echo $i; ?>" class="js-tabcontent">
-                   <?php
-
-                   if($i == 1) {
-                     echo '<img src="'. THEME_URL .'img/logo_catl.png" alt="Logo Cyfrowego archiwum tradycji lokalnej" width="200px" height="82" />';
-                   }
-                   echo esc_html(get_theme_mod("wpg_catl_tab_content_$i",__('Tab content', 'wpg_theme')));
-                   ?>
+                 <?php if ($i == 1) {
+                   echo '<img src="'. THEME_URL .'img/logo_catl.png" alt="Logo Cyfrowego archiwum tradycji lokalnej" width="200px" height="82" />';
+                 }
+                 echo get_theme_mod("wpg_catl_tinymce_$i",__('Tab content', 'wpg_theme'));
+                 ?>
                </div>
              <?php endfor; ?>
            </div>

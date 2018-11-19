@@ -2817,6 +2817,10 @@ tr.days-names {
   border-bottom: 2px solid #0bd69f;
 }
 
+#catl .tabs__content {
+  white-space: pre-line;
+}
+
 .catl-svg,
 .catl-content {
   width: 100%;

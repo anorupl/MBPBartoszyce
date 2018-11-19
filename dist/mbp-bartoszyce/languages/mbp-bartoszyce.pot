@@ -90,15 +90,15 @@ msgstr ""
 msgid "Tab "
 msgstr ""
 
-#: src/components/features/section-catl.php:71
+#: src/components/features/section-catl.php:67
 msgid "Tab content"
 msgstr ""
 
-#: src/components/features/section-catl.php:89, src/inc/customizer/setting_control/inc_setting_catl.php:97
+#: src/components/features/section-catl.php:85, src/inc/customizer/setting_control/inc_setting_catl.php:97
 msgid "Go to the website"
 msgstr ""
 
-#: src/components/features/section-clubs.php:27, src/inc/customizer/setting_control/inc_setting_club.php:59, src/inc/customizer/wpg_customizer.php:277
+#: src/components/features/section-clubs.php:27, src/inc/customizer/setting_control/inc_setting_club.php:59, src/inc/customizer/wpg_customizer.php:279
 msgid "Clubs in the library"
 msgstr ""
 
@@ -142,7 +142,7 @@ msgstr ""
 msgid "Show previous news"
 msgstr ""
 
-#: src/components/features/section-partners.php:23, src/inc/customizer/setting_control/inc_setting_partners.php:63, src/inc/customizer/wpg_customizer.php:417
+#: src/components/features/section-partners.php:23, src/inc/customizer/setting_control/inc_setting_partners.php:63, src/inc/customizer/wpg_customizer.php:419
 msgid "Partners"
 msgstr ""
 
@@ -242,7 +242,7 @@ msgstr ""
 msgid "Select Category"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_blog.php:25, src/inc/customizer/wpg_customizer.php:443, src/inc/template-tags.php:991, src/index.php:129, src/index.php:179
+#: src/inc/customizer/setting_control/inc_setting_blog.php:25, src/inc/customizer/wpg_customizer.php:445, src/inc/template-tags.php:991, src/index.php:129, src/index.php:179
 msgid "Last post"
 msgstr ""
 
@@ -274,7 +274,7 @@ msgstr ""
 msgid "Tab"
 msgstr ""
 
-#: src/inc/customizer/setting_control/inc_setting_catl.php:259
+#: src/inc/customizer/setting_control/inc_setting_catl.php:255
 msgid "Tab Description"
 msgstr ""
 
@@ -382,35 +382,35 @@ msgstr ""
 msgid "Link to  %1$s"
 msgstr ""
 
-#: src/inc/customizer/wpg_customizer.php:149
+#: src/inc/customizer/wpg_customizer.php:151
 msgid "Theme Settings"
 msgstr ""
 
-#: src/inc/customizer/wpg_customizer.php:195
+#: src/inc/customizer/wpg_customizer.php:197
 msgid "Typography"
 msgstr ""
 
-#: src/inc/customizer/wpg_customizer.php:223
+#: src/inc/customizer/wpg_customizer.php:225
 msgid "Events"
 msgstr ""
 
-#: src/inc/customizer/wpg_customizer.php:249
+#: src/inc/customizer/wpg_customizer.php:251
 msgid "Featured category "
 msgstr ""
 
-#: src/inc/customizer/wpg_customizer.php:309
+#: src/inc/customizer/wpg_customizer.php:311
 msgid "New releases"
 msgstr ""
 
-#: src/inc/customizer/wpg_customizer.php:339
+#: src/inc/customizer/wpg_customizer.php:341
 msgid "Catl"
 msgstr ""
 
-#: src/inc/customizer/wpg_customizer.php:365
+#: src/inc/customizer/wpg_customizer.php:367
 msgid "Contact"
 msgstr ""
 
-#: src/inc/customizer/wpg_customizer.php:391
+#: src/inc/customizer/wpg_customizer.php:393
 msgid "Social networks"
 msgstr ""
 

@@ -25,12 +25,33 @@
 
          openingHours.init();
 
-         /* === FIX - Upadte google map when display:none === */
-         $('#accordion-section-wpg_contact_theme_section').bind('click', function () {
+         /**
+       	 * TinyMCE Custom Control
+       	 *
+       	 * @author Anthony Hortin <http://maddisondesigns.com>
+       	 * @license http://www.gnu.org/licenses/gpl-2.0.html
+       	 * @link https://github.com/maddisondesigns
+       	 */
 
-             //var center = map.getCenter();
-             //google.maps.event.trigger(map, "resize");
-             //map.setCenter(center);
+         $('.customize-control-tinymce-editor').each(function(){
+           // Get the toolbar strings that were passed from the PHP Class
+           var tinyMCEToolbar1String = _wpCustomizeSettings.controls[$(this).attr('id')].wpgtinymcetoolbar1;
+           var tinyMCEToolbar2String = _wpCustomizeSettings.controls[$(this).attr('id')].wpgtinymcetoolbar2;
+
+           wp.editor.initialize( $(this).attr('id'), {
+             tinymce: {
+               wpautop: true,
+               toolbar1: tinyMCEToolbar1String,
+               toolbar2: tinyMCEToolbar2String
+             },
+             quicktags: true
+           });
+         });
+         $(document).on( 'tinymce-editor-init', function( event, editor ) {
+           editor.on('change', function(e) {
+             tinyMCE.triggerSave();
+             $('#'+editor.id).trigger('change');
+           });
          });
 
 
