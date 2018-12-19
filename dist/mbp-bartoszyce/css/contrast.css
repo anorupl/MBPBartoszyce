@@ -376,11 +376,11 @@ pre {
 #header-nav-bottom {
   background-color: #000000; }
 
-.arrow-allpost-icon {
+a.arrow-allpost-icon {
   color: #000000;
   background-color: #FFFE00;
   border-color: #FFFE00; }
-  .arrow-allpost-icon:hover {
+  a.arrow-allpost-icon:hover {
     background-color: #000000;
     border-color: #FFFE00; }
 
