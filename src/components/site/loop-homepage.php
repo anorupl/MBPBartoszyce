@@ -43,9 +43,12 @@
               <h2 class="entry-title"><a href="<?php the_permalink();?>" rel="bookmark"><?php the_title();?></a></h2>
             </div>
           </article>
-          <?php if ($i == 2) {echo '</div>';}?>
         <?php endif; ?>
-        <?php $i++; endwhile;?>
+        <?php
+          $i++;
+        endwhile;
+        if ($i > 0) echo '</div>';
+        ?>
         <a class="arrow-allpost-icon text-center" href="<?php echo get_next_posts_page_link(); ?>"><?php _e('Show more news', 'wpg_theme');?><i class="icon-angle-right"></i></a>
         <?php else: ?>
         <article id="post-nopost" class="f-post col-8" style="background-image:url('<?php echo get_template_directory_uri() . '/img/default/no_image.jpg'; ?>');">
